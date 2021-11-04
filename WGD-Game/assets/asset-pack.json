@@ -106,11 +106,6 @@
                 "key": "Level_1"
             },
             {
-                "url": "assets/tiled/level_test1.json",
-                "type": "tilemapTiledJSON",
-                "key": "level_test1"
-            },
-            {
                 "url": "assets/animation/level-end-anim.json",
                 "type": "animation",
                 "key": "level-end-anim"

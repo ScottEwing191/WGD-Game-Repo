@@ -1,0 +1,87 @@
+{
+    "components": [
+        {
+            "name": "CirclePhysics",
+            "baseClass": "",
+            "gameObjectType": "Phaser.GameObjects.Image",
+            "properties": [
+                {
+                    "name": "radius",
+                    "label": "Radius",
+                    "tooltip": "Circle Collider radius",
+                    "defValue": 32,
+                    "customDefinition": false,
+                    "type": {
+                        "id": "number"
+                    }
+                },
+                {
+                    "name": "bounce",
+                    "label": "Bounce",
+                    "tooltip": "The bounciness of the ball",
+                    "defValue": 0.8,
+                    "customDefinition": false,
+                    "type": {
+                        "id": "number"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "RectanglePhysics",
+            "baseClass": "",
+            "gameObjectType": "Phaser.GameObjects.Image",
+            "properties": []
+        },
+        {
+            "name": "ControllableObject",
+            "baseClass": "",
+            "gameObjectType": "Phaser.GameObjects.Image",
+            "properties": [
+                {
+                    "name": "moveDst",
+                    "label": "Move Distance",
+                    "tooltip": "How much the object will move with each key press",
+                    "defValue": 32,
+                    "customDefinition": false,
+                    "type": {
+                        "id": "number"
+                    }
+                },
+                {
+                    "name": "rotateDegrees",
+                    "label": "Rotate Degrees",
+                    "tooltip": "How many degrees the objects will rotate with each key press",
+                    "defValue": 15,
+                    "customDefinition": false,
+                    "type": {
+                        "id": "number"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Respawn",
+            "baseClass": "",
+            "gameObjectType": "Phaser.GameObjects.Image",
+            "properties": []
+        },
+        {
+            "name": "GameManager",
+            "baseClass": "",
+            "gameObjectType": "Phaser.GameObjects.Rectangle",
+            "properties": []
+        },
+        {
+            "name": "Component",
+            "baseClass": "",
+            "gameObjectType": "Phaser.GameObjects.Image",
+            "properties": []
+        }
+    ],
+    "meta": {
+        "app": "Phaser Editor 2D - Object Script Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType"
+    }
+}

@@ -1,0 +1,229 @@
+{
+    "id": "ae65f18b-c4ea-4d58-a1f6-8605c41a2ebe",
+    "sceneType": "SCENE",
+    "settings": {
+        "snapEnabled": true,
+        "snapWidth": 32,
+        "snapHeight": 32,
+        "preloadPackFiles": [],
+        "createMethodName": "editorCreate",
+        "sceneKey": "Level1",
+        "borderWidth": 960,
+        "borderHeight": 720
+    },
+    "displayList": [
+        {
+            "type": "TileSprite",
+            "id": "3bcea626-195e-4f0b-8744-3b151c4b8a21",
+            "label": "tilesprite",
+            "components": [],
+            "texture": {
+                "key": "Square Paper 2 Seamless_On Grid"
+            },
+            "originX": 0,
+            "originY": 0,
+            "width": 960,
+            "height": 720,
+            "tileScaleX": 0.177,
+            "tileScaleY": 0.177
+        },
+        {
+            "type": "Image",
+            "id": "84e7952d-f2da-4691-be7c-18f2fe99dfc5",
+            "label": "pencil_ball_256",
+            "components": [
+                "CirclePhysics",
+                "Respawn"
+            ],
+            "CirclePhysics.radius": 24,
+            "CirclePhysics.bounce": 0.5,
+            "texture": {
+                "key": "Pencil_ball_256"
+            },
+            "x": 128,
+            "y": 96,
+            "scaleX": 0.25,
+            "scaleY": 0.25
+        },
+        {
+            "type": "Image",
+            "id": "db86d749-90b1-49e5-a5f4-b8bce3fe5824",
+            "label": "pencil_grass_dirt_2",
+            "components": [
+                "RectanglePhysics",
+                "ControllableObject"
+            ],
+            "texture": {
+                "key": "platform_pencil_grass_2"
+            },
+            "x": 256,
+            "y": 224,
+            "scaleX": 0.25,
+            "scaleY": 0.25
+        },
+        {
+            "type": "TilemapLayer",
+            "id": "7532352d-e84f-4428-84e5-7c5c8516222a",
+            "label": "ground",
+            "components": [],
+            "x": -64,
+            "y": -64,
+            "scaleX": 0.25,
+            "scaleY": 0.25,
+            "tilemapId": "f78d0687-02e8-4d82-82bc-e491814f484f",
+            "layerName": "Ground",
+            "tilesets": [
+                "Pencil_64",
+                "PencilTileset_256"
+            ]
+        },
+        {
+            "type": "TilemapLayer",
+            "id": "a3f523e7-db5f-4809-a8da-64ab26c9817d",
+            "label": "border_1",
+            "components": [],
+            "x": -64,
+            "y": -64,
+            "scaleX": 0.25,
+            "scaleY": 0.25,
+            "tilemapId": "f78d0687-02e8-4d82-82bc-e491814f484f",
+            "layerName": "Border",
+            "tilesets": [
+                "Pencil_64",
+                "PencilTileset_256"
+            ]
+        },
+        {
+            "type": "Image",
+            "id": "7a622efe-1722-491d-b0b1-dfc3cd616d99",
+            "label": "pencil_grass_dirt_2_2",
+            "components": [
+                "RectanglePhysics",
+                "ControllableObject"
+            ],
+            "texture": {
+                "key": "platform_pencil_grass_2"
+            },
+            "x": 416,
+            "y": 224,
+            "scaleX": 0.25,
+            "scaleY": 0.25
+        },
+        {
+            "type": "Image",
+            "id": "2701bf7d-4d5a-4ca9-8acd-8dbf1f534045",
+            "label": "pencil_grass_dirt_2_3",
+            "components": [
+                "RectanglePhysics",
+                "ControllableObject"
+            ],
+            "texture": {
+                "key": "platform_pencil_grass_2"
+            },
+            "x": 576,
+            "y": 224,
+            "scaleX": 0.25,
+            "scaleY": 0.25
+        },
+        {
+            "type": "Image",
+            "id": "14db8323-3757-40c6-ac1b-c6864c6140e3",
+            "label": "crayon_256100",
+            "components": [],
+            "texture": {
+                "key": "Crayon_256",
+                "frame": 100
+            },
+            "x": 128,
+            "y": 288,
+            "scaleX": 0.25,
+            "scaleY": 0.25
+        },
+        {
+            "type": "Image",
+            "id": "e9348c34-0a23-46b8-8539-008f3c089544",
+            "label": "crayon_256100_1",
+            "components": [],
+            "texture": {
+                "key": "Crayon_256",
+                "frame": 100
+            },
+            "x": 224,
+            "y": 416,
+            "scaleX": 0.25,
+            "scaleY": 0.25
+        },
+        {
+            "type": "Image",
+            "id": "2e9dfb81-a26d-4f53-bb8e-08190d98d148",
+            "label": "crayon_256100_1_1",
+            "components": [],
+            "texture": {
+                "key": "Crayon_256",
+                "frame": 100
+            },
+            "x": 352,
+            "y": 416,
+            "scaleX": 0.25,
+            "scaleY": 0.25
+        },
+        {
+            "type": "Image",
+            "id": "e470f5a8-671e-40d2-a811-27747dc4e0ba",
+            "label": "crayon_25679",
+            "components": [],
+            "texture": {
+                "key": "Crayon_256",
+                "frame": 79
+            },
+            "x": 800,
+            "y": 608,
+            "scaleX": 0.25,
+            "scaleY": 0.25
+        },
+        {
+            "type": "Image",
+            "id": "a3270cb1-ec9c-45fd-b2f4-9a9c9952339c",
+            "label": "crayon_25680",
+            "components": [],
+            "texture": {
+                "key": "Crayon_256",
+                "frame": 80
+            },
+            "x": 574,
+            "y": 367,
+            "scaleX": 0.25,
+            "scaleY": 0.25
+        }
+    ],
+    "plainObjects": [
+        {
+            "id": "f78d0687-02e8-4d82-82bc-e491814f484f",
+            "type": "Tilemap",
+            "label": "level_1",
+            "key": "Level_1",
+            "tilesets": [
+                {
+                    "name": "Pencil_64",
+                    "imageKey": "Pencil_64"
+                },
+                {
+                    "name": "PencilTileset_256",
+                    "imageKey": "Pencil_256"
+                }
+            ]
+        }
+    ],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 2
+    },
+    "lists": [
+        {
+            "id": "59de9739-b636-47c9-9a9d-578289aef6d9",
+            "label": "MovableObjects"
+        }
+    ]
+}

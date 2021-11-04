@@ -1,0 +1,261 @@
+{
+    "section1": {
+        "files": [
+            {
+                "url": "assets/animation/boost-pad-anim.json",
+                "type": "animation",
+                "key": "boost-pad-anim"
+            },
+            {
+                "url": "src/components/user-components/CirclePhysics.js",
+                "type": "script",
+                "key": "CirclePhysics"
+            },
+            {
+                "url": "src/components/user-components/ControllableObject.js",
+                "type": "script",
+                "key": "ControllableObject"
+            },
+            {
+                "url": "assets/images/crayon/Crayon_128.png",
+                "frameConfig": {
+                    "frameWidth": 128,
+                    "frameHeight": 128,
+                    "startFrame": 0,
+                    "endFrame": -1,
+                    "spacing": 0,
+                    "margin": 0
+                },
+                "type": "spritesheet",
+                "key": "Crayon_128"
+            },
+            {
+                "url": "assets/images/crayon/Crayon_256.png",
+                "frameConfig": {
+                    "frameWidth": 256,
+                    "frameHeight": 256,
+                    "startFrame": 0,
+                    "endFrame": -1,
+                    "spacing": 0,
+                    "margin": 0
+                },
+                "type": "spritesheet",
+                "key": "Crayon_256"
+            },
+            {
+                "url": "assets/images/crayon/Crayon_64.png",
+                "frameConfig": {
+                    "frameWidth": 64,
+                    "frameHeight": 64,
+                    "startFrame": 0,
+                    "endFrame": -1,
+                    "spacing": 0,
+                    "margin": 0
+                },
+                "type": "spritesheet",
+                "key": "Crayon_64"
+            },
+            {
+                "url": "assets/images/crayon/Crayon_boost_1_128x128.png",
+                "type": "image",
+                "key": "Crayon_boost_1_128x128"
+            },
+            {
+                "url": "assets/images/crayon/Crayon_dirt_2.png",
+                "type": "image",
+                "key": "Crayon_dirt_2"
+            },
+            {
+                "url": "assets/images/crayon/Crayon_dirt_3.png",
+                "type": "image",
+                "key": "Crayon_dirt_3"
+            },
+            {
+                "url": "assets/images/crayon/Crayon_grass_dirt_2.png",
+                "type": "image",
+                "key": "Crayon_grass_dirt_2"
+            },
+            {
+                "url": "assets/images/crayon/Crayon_grass_dirt_3.png",
+                "type": "image",
+                "key": "Crayon_grass_dirt_3"
+            },
+            {
+                "url": "assets/images/crayon/Crayon_rock_2.png",
+                "type": "image",
+                "key": "Crayon_rock_2"
+            },
+            {
+                "url": "assets/images/crayon/Crayon_rock_3.png",
+                "type": "image",
+                "key": "Crayon_rock_3"
+            },
+            {
+                "url": "assets/dino.png",
+                "key": "dino",
+                "type": "image"
+            },
+            {
+                "url": "src/components/user-components/GameManager.js",
+                "type": "script",
+                "key": "GameManager"
+            },
+            {
+                "url": "assets/tiled/Level_1_256px_16x13.json",
+                "type": "tilemapTiledJSON",
+                "key": "Level_1"
+            },
+            {
+                "url": "assets/tiled/level_test1.json",
+                "type": "tilemapTiledJSON",
+                "key": "level_test1"
+            },
+            {
+                "url": "assets/animation/level-end-anim.json",
+                "type": "animation",
+                "key": "level-end-anim"
+            },
+            {
+                "url": "assets/images/pencil/Pencil_128.png",
+                "frameConfig": {
+                    "frameWidth": 128,
+                    "frameHeight": 128,
+                    "startFrame": 0,
+                    "endFrame": -1,
+                    "spacing": 0,
+                    "margin": 0
+                },
+                "type": "spritesheet",
+                "key": "Pencil_128"
+            },
+            {
+                "url": "assets/images/pencil/Pencil_256.png",
+                "frameConfig": {
+                    "frameWidth": 256,
+                    "frameHeight": 256,
+                    "startFrame": 0,
+                    "endFrame": -1,
+                    "spacing": 0,
+                    "margin": 0
+                },
+                "type": "spritesheet",
+                "key": "Pencil_256"
+            },
+            {
+                "url": "assets/images/pencil/Pencil_64.png",
+                "frameConfig": {
+                    "frameWidth": 64,
+                    "frameHeight": 64,
+                    "startFrame": 0,
+                    "endFrame": -1,
+                    "spacing": 0,
+                    "margin": 0
+                },
+                "type": "spritesheet",
+                "key": "Pencil_64"
+            },
+            {
+                "url": "assets/images/pencil/Pencil_ball_256.png",
+                "type": "image",
+                "key": "Pencil_ball_256"
+            },
+            {
+                "url": "assets/images/pencil/Pencil_boost_1_128x128.png",
+                "type": "image",
+                "key": "Pencil_boost_1_128x128"
+            },
+            {
+                "url": "assets/images/pencil/Pencil_dirt_2.png",
+                "type": "image",
+                "key": "Pencil_dirt_2"
+            },
+            {
+                "url": "assets/images/pencil/Pencil_dirt_3.png",
+                "type": "image",
+                "key": "Pencil_dirt_3"
+            },
+            {
+                "url": "assets/images/pencil/Pencil_grass_dirt_2.png",
+                "type": "image",
+                "key": "Pencil_grass_dirt_2"
+            },
+            {
+                "url": "assets/images/pencil/Pencil_grass_dirt_3.png",
+                "type": "image",
+                "key": "Pencil_grass_dirt_3"
+            },
+            {
+                "url": "assets/images/pencil/Pencil_rainbow_1_big.png",
+                "type": "image",
+                "key": "Pencil_rainbow_1_big"
+            },
+            {
+                "url": "assets/images/pencil/Pencil_rainbow_1_small.png",
+                "type": "image",
+                "key": "Pencil_rainbow_1_small"
+            },
+            {
+                "url": "assets/images/pencil/Pencil_rainbow_2_big.png",
+                "type": "image",
+                "key": "Pencil_rainbow_2_big"
+            },
+            {
+                "url": "assets/images/pencil/Pencil_rainbow_2_small.png",
+                "type": "image",
+                "key": "Pencil_rainbow_2_small"
+            },
+            {
+                "url": "assets/images/pencil/Pencil_rainbow_3_big.png",
+                "type": "image",
+                "key": "Pencil_rainbow_3_big"
+            },
+            {
+                "url": "assets/images/pencil/Pencil_rainbow_3_small.png",
+                "type": "image",
+                "key": "Pencil_rainbow_3_small"
+            },
+            {
+                "url": "assets/images/pencil/Pencil_rock_2.png",
+                "type": "image",
+                "key": "Pencil_rock_2"
+            },
+            {
+                "url": "assets/images/pencil/Pencil_rock_3.png",
+                "type": "image",
+                "key": "Pencil_rock_3"
+            },
+            {
+                "url": "assets/images/pencil/Pencil_grass_rock_2_crop.png",
+                "type": "image",
+                "key": "platform_pencil_grass_2"
+            },
+            {
+                "url": "assets/images/pencil/Pencil_grass_rock_3_crop.png",
+                "type": "image",
+                "key": "platform_pencil_grass_3"
+            },
+            {
+                "url": "src/components/user-components/RectanglePhysics.js",
+                "type": "script",
+                "key": "RectanglePhysics"
+            },
+            {
+                "url": "src/components/user-components/Respawn.js",
+                "type": "script",
+                "key": "Respawn"
+            },
+            {
+                "url": "assets/images/backgrounds/Square Paper 2 Seamless_On Grid.png",
+                "type": "image",
+                "key": "Square Paper 2 Seamless_On Grid"
+            }
+        ]
+    },
+    "meta": {
+        "app": "Phaser Editor 2D - Asset Pack Editor",
+        "contentType": "phasereditor2d.pack.core.AssetContentType",
+        "url": "https://phasereditor2d.com",
+        "version": 2,
+        "showAllFilesInBlocks": false
+    }
+}

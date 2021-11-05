@@ -50,10 +50,12 @@ class ControllableObject {
         //-- Input Event Method
         //-- Add event listeners for each input.
         //-- Not sure how to disable once started
+
         //--Up Event
         /*this.input.up.on('down', function (){
             this.gameObject.y -= this.moveDst;
         },this);
+
         //--Down Event
         this.input.down.on('down', function (){
             this.gameObject.y += this.moveDst;
@@ -143,8 +145,9 @@ class ControllableObject {
         this.input.rotateRight.enabled = true;
     }
 
-    update(time) {
+    update() {
         //this.gameObject.y = this.testInput(this.input.up.isDown, this.isUpOnce, this.gameObject.y, -1, this.moveDst);
+
 
         //--UP
         if (this.input.up.isDown && this.isSelected && !this.isUpOnce) {
@@ -197,15 +200,15 @@ class ControllableObject {
     testInput(inputDown, isPressedOnce, direction, multiplier, translateBy) {
         console.log(isPressedOnce.valueOf());
 
-        if (inputDown && this.isSelected && !isPressedOnce.valueOf()) {
+        if (inputDown && this.isSelected && !isPressedOnce.once) {
             console.log('Selected');
             console.log('Inside Before: ' + direction);
-            isPressedOnce = true;
+            isPressedOnce.once = true;
             //isPressedOnce = new Boolean(true);
             direction += (multiplier * translateBy);
             console.log('Inside After: ' + direction);
         } else if (!inputDown)
-            isPressedOnce = false;
+            isPressedOnce.once = false;
             //isPressedOnce = new Boolean(false);
 
         return direction

@@ -57,33 +57,8 @@ class Level1 extends Phaser.Scene {
 		pencil_grass_dirt_2_3.scaleX = 0.25;
 		pencil_grass_dirt_2_3.scaleY = 0.25;
 
-		// crayon_256100
-		const crayon_256100 = this.add.image(128, 288, "Crayon_256", 100);
-		crayon_256100.scaleX = 0.25;
-		crayon_256100.scaleY = 0.25;
-
-		// crayon_256100_1
-		const crayon_256100_1 = this.add.image(224, 416, "Crayon_256", 100);
-		crayon_256100_1.scaleX = 0.25;
-		crayon_256100_1.scaleY = 0.25;
-
-		// crayon_256100_1_1
-		const crayon_256100_1_1 = this.add.image(352, 416, "Crayon_256", 100);
-		crayon_256100_1_1.scaleX = 0.25;
-		crayon_256100_1_1.scaleY = 0.25;
-
-		// crayon_25679
-		const crayon_25679 = this.add.image(800, 608, "Crayon_256", 79);
-		crayon_25679.scaleX = 0.25;
-		crayon_25679.scaleY = 0.25;
-
-		// crayon_25680
-		const crayon_25680 = this.add.image(574, 367, "Crayon_256", 80);
-		crayon_25680.scaleX = 0.25;
-		crayon_25680.scaleY = 0.25;
-
 		// lists
-		const movableObjects = []
+		const movableObjects = [pencil_grass_dirt_2, pencil_grass_dirt_2_2, pencil_grass_dirt_2_3]
 
 		// pencil_ball_256 (components)
 		const pencil_ball_256CirclePhysics = new CirclePhysics(pencil_ball_256);
@@ -109,7 +84,7 @@ class Level1 extends Phaser.Scene {
 		this.events.emit("scene-awake");
 	}
 
-	/** @type {Array<any>} */
+	/** @type {Phaser.GameObjects.Image[]} */
 	movableObjects;
 
 	/* START-USER-CODE */
@@ -119,6 +94,7 @@ class Level1 extends Phaser.Scene {
 	create() {
 		this.editorCreate();
 		this.matter.world.setBounds(16,16, 848, 762, 64,true, true, true, false);
+		console.log(this.movableObjects.length);
 	}
 
 	/* END-USER-CODE */

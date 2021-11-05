@@ -10,7 +10,11 @@ class GameManager {
 		gameObject["__GameManager"] = this;
 
 		/* START-USER-CTR-CODE */
-		// Write your code here.
+		this.scene = this.gameObject.scene;
+		//--Start
+		this.scene.events.once(Phaser.Scenes.Events.UPDATE, this.start, this);
+		//--Update
+		this.scene.events.on(Phaser.Scenes.Events.UPDATE, this.update, this);
 		/* END-USER-CTR-CODE */
 	}
 
@@ -24,7 +28,26 @@ class GameManager {
 
 	/* START-USER-CODE */
 
-	// Write your code here.
+	start(){
+
+	}
+	update(){
+
+	}
+
+	switchToPlayMode(){
+		//--Turn off Draggable on movable objects
+		//--Turn off WASD movement for movable objects
+		//--Turn off static for ball
+	}
+
+	switchToEditMode(){
+		//--Respawn Ball
+		//--Respawn moving platforms
+		//--Turn on Draggable on movable objects
+		//--Turn on WASD movement for movable objects
+		//--Turn on static for ball
+	}
 
 	/* END-USER-CODE */
 }

@@ -124,76 +124,6 @@
             "y": 224,
             "scaleX": 0.25,
             "scaleY": 0.25
-        },
-        {
-            "type": "Image",
-            "id": "14db8323-3757-40c6-ac1b-c6864c6140e3",
-            "label": "crayon_256100",
-            "components": [],
-            "texture": {
-                "key": "Crayon_256",
-                "frame": 100
-            },
-            "x": 128,
-            "y": 288,
-            "scaleX": 0.25,
-            "scaleY": 0.25
-        },
-        {
-            "type": "Image",
-            "id": "e9348c34-0a23-46b8-8539-008f3c089544",
-            "label": "crayon_256100_1",
-            "components": [],
-            "texture": {
-                "key": "Crayon_256",
-                "frame": 100
-            },
-            "x": 224,
-            "y": 416,
-            "scaleX": 0.25,
-            "scaleY": 0.25
-        },
-        {
-            "type": "Image",
-            "id": "2e9dfb81-a26d-4f53-bb8e-08190d98d148",
-            "label": "crayon_256100_1_1",
-            "components": [],
-            "texture": {
-                "key": "Crayon_256",
-                "frame": 100
-            },
-            "x": 352,
-            "y": 416,
-            "scaleX": 0.25,
-            "scaleY": 0.25
-        },
-        {
-            "type": "Image",
-            "id": "e470f5a8-671e-40d2-a811-27747dc4e0ba",
-            "label": "crayon_25679",
-            "components": [],
-            "texture": {
-                "key": "Crayon_256",
-                "frame": 79
-            },
-            "x": 800,
-            "y": 608,
-            "scaleX": 0.25,
-            "scaleY": 0.25
-        },
-        {
-            "type": "Image",
-            "id": "a3270cb1-ec9c-45fd-b2f4-9a9c9952339c",
-            "label": "crayon_25680",
-            "components": [],
-            "texture": {
-                "key": "Crayon_256",
-                "frame": 80
-            },
-            "x": 574,
-            "y": 367,
-            "scaleX": 0.25,
-            "scaleY": 0.25
         }
     ],
     "plainObjects": [
@@ -223,7 +153,12 @@
     "lists": [
         {
             "id": "59de9739-b636-47c9-9a9d-578289aef6d9",
-            "label": "MovableObjects"
+            "label": "MovableObjects",
+            "objectIds": [
+                "db86d749-90b1-49e5-a5f4-b8bce3fe5824",
+                "7a622efe-1722-491d-b0b1-dfc3cd616d99",
+                "2701bf7d-4d5a-4ca9-8acd-8dbf1f534045"
+            ]
         }
     ]
 }

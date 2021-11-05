@@ -61,7 +61,7 @@ class Level1 extends Phaser.Scene {
 		gameManager.isFilled = true;
 
 		// jump_pad
-		const jump_pad = this.add.sprite(256, 192, "Pencil_256", 73);
+		const jump_pad = this.add.sprite(224, 192, "Pencil_256", 73);
 		jump_pad.scaleX = 0.25;
 		jump_pad.scaleY = 0.25;
 
@@ -161,7 +161,11 @@ class Level1 extends Phaser.Scene {
 
 		// jump_pad_1 (components)
 		new JumpPad(jump_pad_1);
-		new RectanglePhysics(jump_pad_1);
+		const jump_pad_1RectanglePhysics = new RectanglePhysics(jump_pad_1);
+		jump_pad_1RectanglePhysics.modifyBodyWidth = -16;
+		jump_pad_1RectanglePhysics.modifyBodyHeight = -56;
+		jump_pad_1RectanglePhysics.modifyYPosition = 4;
+		jump_pad_1RectanglePhysics.spriteYOffset = 0.4375;
 
 		this.player = player;
 		this.gameManager = gameManager;

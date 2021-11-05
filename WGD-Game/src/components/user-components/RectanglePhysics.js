@@ -41,12 +41,12 @@ class RectanglePhysics {
     /* START-USER-CODE */
 
     awake() {
-        this.rect = this.scene.matter.add.gameObject(this.gameObject);
-
+        // Doing this in awake cause the position of the gameobjects to chenge when the game starts
+        //this.rect = this.scene.matter.add.gameObject(this.gameObject);
     }
 
-    /*start() {
-        //this.rect = this.scene.matter.add.gameObject(this.gameObject);
+    start() {
+        this.rect = this.scene.matter.add.gameObject(this.gameObject);
         this.gameObject.setBody({
             x: this.gameObject.x,
             y: this.gameObject.y - this.modifyYPosition,       //display height = 64 | 64 - 56 = 8 | Shift the collider up by half of 8 (i.e 4) to get it on the grid
@@ -65,28 +65,28 @@ class RectanglePhysics {
                 }
             }
         })
-    }*/
-    start() {
-        //this.rect = this.scene.matter.add.gameObject(this.gameObject);
+    }
+    /*start() {
+        this.rect = this.scene.matter.add.gameObject(this.gameObject);
         this.gameObject.setBody({
             //x: this.gameObject.x,
-            y: this.gameObject.y,       //display height = 64 | 64 - 56 = 8 | Shift the collider up by half of 8 (i.e 4) to get it on the grid
+            y: this.gameObject.y  - this.modifyYPosition,       //display height = 64 | 64 - 56 = 8 | Shift the collider up by half of 8 (i.e 4) to get it on the grid
             width: this.gameObject.displayWidth,
             height: this.gameObject.displayHeight,
         }, {
             isStatic: true,
             ignoreGravity: true,
             isSensor: this.isSensor,
-            /*render: {
+            /!*render: {
                 sprite: {
                     xOffset: 0,
                     //--4 / 64 = 0.0625     | 1 square paper cell is yOffset of 0.5 So shift the image up by 0.5 - 0.0625 = 0.4375
                     //-- Not totally sure why this works
                     yOffset: 0
                 }
-            }*/
+            }*!/
         })
-    }
+    }*/
 
     update() {
 

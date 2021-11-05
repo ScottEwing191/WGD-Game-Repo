@@ -118,7 +118,7 @@ class ControllableObject {
         let gridY = Math.floor(dragY / 32);
         this.gameObject.x = gridX * 32;
         this.gameObject.y = gridY * 32;
-        //this.gameObject.y -= this.yPositionOffset;  // this account for some objects colliders and sprite position being different from the default positions that
+        this.gameObject.y -= this.yPositionOffset;  // this account for some objects colliders and sprite position being different from the default positions that
                                                     //... resulted from the sprite
 
         //--clamp the center of the game object to the bounds of the scene. Problem with only clamping the center is the sides of the object can go out of bounds

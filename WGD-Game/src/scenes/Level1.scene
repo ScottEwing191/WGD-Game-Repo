@@ -161,7 +161,7 @@
                 "key": "Pencil_256",
                 "frame": 73
             },
-            "x": 256,
+            "x": 224,
             "y": 192,
             "scaleX": 0.25,
             "scaleY": 0.25
@@ -265,6 +265,10 @@
                 "JumpPad",
                 "RectanglePhysics"
             ],
+            "RectanglePhysics.modifyBodyWidth": -16,
+            "RectanglePhysics.modifyBodyHeight": -56,
+            "RectanglePhysics.modifyYPosition": 4,
+            "RectanglePhysics.spriteYOffset": 0.4375,
             "texture": {
                 "key": "Pencil_256",
                 "frame": 73

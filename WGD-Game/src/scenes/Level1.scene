@@ -28,40 +28,6 @@
             "tileScaleY": 0.177
         },
         {
-            "type": "Image",
-            "id": "84e7952d-f2da-4691-be7c-18f2fe99dfc5",
-            "label": "pencil_ball_256",
-            "components": [
-                "CirclePhysics",
-                "Respawn"
-            ],
-            "CirclePhysics.radius": 24,
-            "CirclePhysics.bounce": 0.5,
-            "texture": {
-                "key": "Pencil_ball_256"
-            },
-            "x": 128,
-            "y": 96,
-            "scaleX": 0.25,
-            "scaleY": 0.25
-        },
-        {
-            "type": "Image",
-            "id": "db86d749-90b1-49e5-a5f4-b8bce3fe5824",
-            "label": "pencil_grass_dirt_2",
-            "components": [
-                "RectanglePhysics",
-                "ControllableObject"
-            ],
-            "texture": {
-                "key": "platform_pencil_grass_2"
-            },
-            "x": 256,
-            "y": 224,
-            "scaleX": 0.25,
-            "scaleY": 0.25
-        },
-        {
             "type": "TilemapLayer",
             "id": "7532352d-e84f-4428-84e5-7c5c8516222a",
             "label": "ground",
@@ -95,17 +61,54 @@
         },
         {
             "type": "Image",
+            "id": "84e7952d-f2da-4691-be7c-18f2fe99dfc5",
+            "label": "player",
+            "scope": "PUBLIC",
+            "components": [
+                "CirclePhysics",
+                "Respawn",
+                "Player"
+            ],
+            "CirclePhysics.radius": 24,
+            "CirclePhysics.bounce": 1,
+            "texture": {
+                "key": "Pencil_ball_256"
+            },
+            "x": 128,
+            "y": 96,
+            "scaleX": 0.25,
+            "scaleY": 0.25
+        },
+        {
+            "type": "Image",
+            "id": "db86d749-90b1-49e5-a5f4-b8bce3fe5824",
+            "label": "pencil_grass_dirt_2",
+            "components": [
+                "RectanglePhysics",
+                "ControllableObject"
+            ],
+            "RectanglePhysics.modifyYPosition": 16,
+            "texture": {
+                "key": "platform_pencil_grass_2"
+            },
+            "x": 320,
+            "y": 288,
+            "scaleY": 0.25
+        },
+        {
+            "type": "Image",
             "id": "7a622efe-1722-491d-b0b1-dfc3cd616d99",
             "label": "pencil_grass_dirt_2_2",
             "components": [
                 "RectanglePhysics",
                 "ControllableObject"
             ],
+            "RectanglePhysics.modifyYPosition": 16,
             "texture": {
                 "key": "platform_pencil_grass_2"
             },
-            "x": 416,
-            "y": 224,
+            "x": 448,
+            "y": 96,
             "scaleX": 0.25,
             "scaleY": 0.25
         },
@@ -117,11 +120,157 @@
                 "RectanglePhysics",
                 "ControllableObject"
             ],
+            "RectanglePhysics.modifyYPosition": 16,
             "texture": {
                 "key": "platform_pencil_grass_2"
             },
-            "x": 576,
-            "y": 224,
+            "x": 704,
+            "y": 96,
+            "scaleX": 0.25,
+            "scaleY": 0.25
+        },
+        {
+            "type": "Rectangle",
+            "id": "d09b91f8-d7b9-4a59-9db8-ab4728c19a99",
+            "label": "gameManager",
+            "scope": "PUBLIC",
+            "components": [
+                "GameManager"
+            ],
+            "x": 1056,
+            "y": 64,
+            "isFilled": true,
+            "width": 128,
+            "height": 128
+        },
+        {
+            "type": "Sprite",
+            "id": "acea5255-2fc5-480d-bddd-9a6555b5fa67",
+            "label": "jump_pad",
+            "scope": "CLASS",
+            "components": [
+                "JumpPad",
+                "RectanglePhysics",
+                "ControllableObject"
+            ],
+            "RectanglePhysics.modifyBodyWidth": -16,
+            "RectanglePhysics.modifyBodyHeight": -56,
+            "RectanglePhysics.modifyYPosition": 4,
+            "RectanglePhysics.spriteYOffset": 0.4375,
+            "texture": {
+                "key": "Pencil_256",
+                "frame": 73
+            },
+            "x": 256,
+            "y": 192,
+            "scaleX": 0.25,
+            "scaleY": 0.25
+        },
+        {
+            "type": "Image",
+            "id": "4e30e58c-d887-4325-8521-3d7abeca831a",
+            "label": "pencil_25627",
+            "components": [
+                "RectanglePhysics"
+            ],
+            "RectanglePhysics.modifyBodyHeight": -48,
+            "RectanglePhysics.modifyYPosition": 8,
+            "RectanglePhysics.spriteYOffset": 0.375,
+            "texture": {
+                "key": "Pencil_256",
+                "frame": 27
+            },
+            "x": 320,
+            "y": 352,
+            "scaleX": 0.25,
+            "scaleY": 0.25
+        },
+        {
+            "type": "Image",
+            "id": "7b6e7482-ea91-460a-96bf-2b24f5a176bb",
+            "label": "pencil_rock_3",
+            "components": [
+                "RectanglePhysics",
+                "ControllableObject"
+            ],
+            "RectanglePhysics.modifyBodyHeight": -32,
+            "RectanglePhysics.modifyYPosition": 16,
+            "RectanglePhysics.spriteYOffset": -0.25,
+            "texture": {
+                "key": "Pencil_rock_3"
+            },
+            "x": 512,
+            "y": 480,
+            "scaleX": 0.25,
+            "scaleY": 0.25
+        },
+        {
+            "type": "Image",
+            "id": "127bc2cf-b8b4-45b7-b742-66ab3f7d5fb2",
+            "label": "pencil_rock_3_1",
+            "components": [
+                "RectanglePhysics"
+            ],
+            "texture": {
+                "key": "Pencil_rock_3"
+            },
+            "x": 704,
+            "y": 480,
+            "scaleX": 0.25,
+            "scaleY": 0.25
+        },
+        {
+            "type": "Image",
+            "id": "c1afa9a7-efee-4564-8a32-3b05d89b8faa",
+            "label": "pencil_25692",
+            "components": [
+                "RectanglePhysics",
+                "ControllableObject"
+            ],
+            "RectanglePhysics.modifyBodyHeight": -16,
+            "RectanglePhysics.modifyYPosition": -8,
+            "RectanglePhysics.spriteYOffset": 0.125,
+            "texture": {
+                "key": "Pencil_256",
+                "frame": 92
+            },
+            "x": 192,
+            "y": 448,
+            "scaleX": 0.25,
+            "scaleY": 0.25
+        },
+        {
+            "type": "Image",
+            "id": "357a5213-2c1f-43c9-95bf-f6ec28599745",
+            "label": "pencil_25692_1",
+            "components": [
+                "RectanglePhysics",
+                "ControllableObject"
+            ],
+            "texture": {
+                "key": "Pencil_256",
+                "frame": 92
+            },
+            "x": 256,
+            "y": 448,
+            "scaleX": 0.25,
+            "scaleY": 0.25
+        },
+        {
+            "type": "Sprite",
+            "id": "29f64809-1e3e-4631-ac9f-4d30aeb89f87",
+            "label": "jump_pad_1",
+            "scope": "CLASS",
+            "components": [
+                "JumpPad",
+                "RectanglePhysics"
+            ],
+            "texture": {
+                "key": "Pencil_256",
+                "frame": 73
+            },
+            "x": 320,
+            "y": 192,
             "scaleX": 0.25,
             "scaleY": 0.25
         }
@@ -134,8 +283,7 @@
             "key": "Level_1",
             "tilesets": [
                 {
-                    "name": "Pencil_64",
-                    "imageKey": "Pencil_64"
+                    "name": "Pencil_64"
                 },
                 {
                     "name": "PencilTileset_256",
@@ -158,7 +306,8 @@
                 "db86d749-90b1-49e5-a5f4-b8bce3fe5824",
                 "7a622efe-1722-491d-b0b1-dfc3cd616d99",
                 "2701bf7d-4d5a-4ca9-8acd-8dbf1f534045"
-            ]
+            ],
+            "scope": "PUBLIC"
         }
     ]
 }

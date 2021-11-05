@@ -10,13 +10,10 @@ class ControllableObject {
 
 		/* START-USER-CTR-CODE */
         this.scene = gameObject.scene;
-        // first time the scene is updated, call the `start` method
-        this.scene.events.once(Phaser.Scenes.Events.UPDATE, this.start, this);
+        this.scene.events.once(Phaser.Scenes.Events.UPDATE, this.start, this);        // set up start method. Done by UserComponent so not needed here
+        this.scene.events.on(Phaser.Scenes.Events.UPDATE, this.update, this);         // set up update method. Done by UserComponent so not needed here
 
-        this.scene.events.on(Phaser.Scenes.Events.UPDATE, this.update, this);
-        this.cursors = this.scene.input.keyboard.createCursorKeys();
-
-
+        // Set up movement inputs Keyboard plugin
         this.input = this.scene.input.keyboard.addKeys({
                 'up': Phaser.Input.Keyboard.KeyCodes.W,
                 'down': Phaser.Input.Keyboard.KeyCodes.S,
@@ -27,8 +24,10 @@ class ControllableObject {
             }, false, false
         );
 
-        //this.upDownOnce = false;
+        //--set up variables
         this.isSelected = false;
+
+
         /* END-USER-CTR-CODE */
 	}
 
@@ -47,38 +46,18 @@ class ControllableObject {
 	/* START-USER-CODE */
 
     start() {
+        //this.refToGameManager = GameManager.getComponent(this.scene.manager[0]);
+        this.refToGameManager = GameManager.getComponent(this.scene.gameManager);
+        this.yPositionOffset = RectanglePhysics.getComponent(this.gameObject).modifyYPosition;
+
         //-- Input Event Method
         //-- Add event listeners for each input.
-        //-- Not sure how to disable once started
-
         //--Up Event
         /*this.input.up.on('down', function (){
             this.gameObject.y -= this.moveDst;
-        },this);
-
-        //--Down Event
-        this.input.down.on('down', function (){
-            this.gameObject.y += this.moveDst;
-        },this);
-        //--Left Event
-        this.input.left.on('down', function (){
-            this.gameObject.x -= this.moveDst;
-        },this);
-        //--Right Event
-        this.input.right.on('down', function (){
-            this.gameObject.x += this.moveDst;
-        },this);
-        //--Rotate Left Event
-        this.input.rotateLeft.on('down', function (){
-            this.gameObject.angle -= this.rotateDegrees;
-            //this.gameObject.angle -= 5
-        },this);
-        //--Rotate Right Event
-        this.input.rotateRight.on('down', function (){
-            this.gameObject.angle += this.rotateDegrees;
-            //this.gameObject.angle += 5;
         },this);*/
 
+        //--Start Event Listener for mouse click
         this.scene.input.on('pointerdown', (event) => {
             this.checkIfPointInBox(event.x, event.y);
         });
@@ -91,6 +70,7 @@ class ControllableObject {
         this.isRotateLeftOnce = false;
         this.isRotateRightOnce = false;
 
+        //--Allow user to drag object
         this.gameObject.setInteractive({draggable: true});
         //this.scene.input.setDraggable(this.gameObject);
         //this.gameObject.input.draggable = true;
@@ -98,13 +78,11 @@ class ControllableObject {
         this.gameObject.on('dragstart', function (pointer, dragX, dragY) {
             //console.debug('Drag Start');
         });
-        this.gameObject.on('drag', function (pointer, dragX, dragY) {
-            // Move the game object with the mouse but snap it to the grid (each grid cell is 32x32 pixels)
-            let gridX = Math.floor(dragX / 32);
-            let gridY = Math.floor(dragY / 32);
-            this.gameObject.x = gridX * 32;
-            this.gameObject.y = gridY * 32;
-        }, this);
+
+        this.gameObject.on('drag', (pointer, dragX, dragY) => {
+            this.dragObject(dragX, dragY);
+        });
+
         this.gameObject.on('dragend', function (pointer, dragX, dragY, dropped) {
             //console.debug('Drag End');
         });
@@ -113,42 +91,47 @@ class ControllableObject {
 
 //=== END START
 
+
+
+    update() {
+        //this.gameObject.y = this.testInput(this.input.up.isDown, this.isUpOnce, this.gameObject.y, -1, this.moveDst);
+        if (this.refToGameManager.currentMode === 'EDIT_MODE'){
+            this.pollMovementInput();
+        }
+    }
+    //--If the point the player clicked is inside the collision box of the object then mark the object as selected
+    //--Multiple objects can be selected at once
     checkIfPointInBox(pX, pY) {
-        //let body = this.gameObject.body;
         let matterPhysics = new Phaser.Physics.Matter.MatterPhysics(this.scene);
-        let bodiesArray = [this.gameObject.body];
+        let bodiesArray = [this.gameObject.body];           // intersectPoint method requires an array so make one just containing one element
         let intersectingBodies = matterPhysics.intersectPoint(pX, pY, bodiesArray);
         if (intersectingBodies.length > 0) {
-            //this.enableEvents();
             this.isSelected = true;
         } else {
-            //this.disableEvents();
             this.isSelected = false;
         }
     }
 
-    disableEvents() {
-        this.input.up.enabled = false;
-        this.input.down.enabled = false;
-        this.input.left.enabled = false;
-        this.input.right.enabled = false;
-        this.input.rotateLeft.enabled = false;
-        this.input.rotateRight.enabled = false;
+    dragObject(dragX,dragY){
+        // Move the game object with the mouse but snap it to the grid (each grid cell is 32x32 pixels)
+        let gridX = Math.floor(dragX / 32);
+        let gridY = Math.floor(dragY / 32);
+        this.gameObject.x = gridX * 32;
+        this.gameObject.y = gridY * 32;
+        //this.gameObject.y -= this.yPositionOffset;  // this account for some objects colliders and sprite position being different from the default positions that
+                                                    //... resulted from the sprite
+
+        //--clamp the center of the game object to the bounds of the scene. Problem with only clamping the center is the sides of the object can go out of bounds
+        let xMin = 32;
+        let yMin = 32;
+        let xMax = this.scene.cameras.main.width - 32;
+        let yMax = this.scene.cameras.main.height - 32;
+        this.gameObject.x = Math.min(Math.max(this.gameObject.x, xMin), xMax)
+        this.gameObject.y = Math.min(Math.max(this.gameObject.y, yMin), yMax)
     }
 
-    enableEvents() {
-        this.input.up.enabled = true;
-        this.input.down.enabled = true;
-        this.input.left.enabled = true;
-        this.input.right.enabled = true;
-        this.input.rotateLeft.enabled = true;
-        this.input.rotateRight.enabled = true;
-    }
 
-    update() {
-        //this.gameObject.y = this.testInput(this.input.up.isDown, this.isUpOnce, this.gameObject.y, -1, this.moveDst);
-
-
+    pollMovementInput(){
         //--UP
         if (this.input.up.isDown && this.isSelected && !this.isUpOnce) {
             this.isUpOnce = true
@@ -190,14 +173,21 @@ class ControllableObject {
             this.gameObject.angle += this.rotateDegrees;
         } else if (!this.input.rotateRight.isDown)
             this.isRotateRightOnce = false;
+    }
 
-		if(this.cursors.space.isDown){
-            RectanglePhysics.getComponent(this.gameObject).rect.setStatic(true);
-        }
+    playModeEntered(){
+        console.log('platform PLAY');
+        //this.gameObject.disableInteractive();                 // works
+        this.gameObject.input.draggable = false;                // also works
+    }
+    editModeEntered(){
+        console.log('platform EDIT');
+        //this.gameObject.setInteractive({draggable: true});    // works
+        this.gameObject.input.draggable = true;                 // also works
     }
 
     //--Not Working direction is passed in by value so game object position does not get changed
-    testInput(inputDown, isPressedOnce, direction, multiplier, translateBy) {
+    /*testInput(inputDown, isPressedOnce, direction, multiplier, translateBy) {
         console.log(isPressedOnce.valueOf());
 
         if (inputDown && this.isSelected && !isPressedOnce.once) {
@@ -210,9 +200,8 @@ class ControllableObject {
         } else if (!inputDown)
             isPressedOnce.once = false;
             //isPressedOnce = new Boolean(false);
-
         return direction
-    }
+    }*/
 
     /* END-USER-CODE */
 }

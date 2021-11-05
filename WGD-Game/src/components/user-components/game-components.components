@@ -31,7 +31,58 @@
             "name": "RectanglePhysics",
             "baseClass": "",
             "gameObjectType": "Phaser.GameObjects.Image",
-            "properties": []
+            "properties": [
+                {
+                    "name": "isSensor",
+                    "label": "Is Sensor",
+                    "tooltip": "Is theis Physics body Static ",
+                    "defValue": false,
+                    "customDefinition": false,
+                    "type": {
+                        "id": "boolean"
+                    }
+                },
+                {
+                    "name": "modifyBodyWidth",
+                    "label": "Modify Body Width",
+                    "tooltip": "Increase or decrees the width of the physics body ",
+                    "defValue": 0,
+                    "customDefinition": false,
+                    "type": {
+                        "id": "number"
+                    }
+                },
+                {
+                    "name": "modifyBodyHeight",
+                    "label": "Modify Body Height",
+                    "tooltip": "Increase or decrees the height of the physics body ",
+                    "defValue": 0,
+                    "customDefinition": false,
+                    "type": {
+                        "id": "number"
+                    }
+                },
+                {
+                    "name": "modifyYPosition",
+                    "label": "Modify Y Position",
+                    "tooltip": "Increase or decrees the Y Position of the gameObject (+ve for Up) ",
+                    "defValue": 0,
+                    "customDefinition": false,
+                    "type": {
+                        "id": "number"
+                    }
+                },
+                {
+                    "name": "spriteYOffset",
+                    "label": "Sprite Y Offset",
+                    "tooltip": "The offset of the sprite relative to the game object (Guide: 0.5 - (modify Y Position))",
+                    "defValue": 0,
+                    "customDefinition": false,
+                    "type": {
+                        "id": "number"
+                    }
+                }
+            ]
         },
         {
             "name": "ControllableObject",
@@ -73,9 +124,36 @@
             "properties": []
         },
         {
-            "name": "Component",
-            "baseClass": "",
+            "name": "Player",
+            "baseClass": "UserComponent",
             "gameObjectType": "Phaser.GameObjects.Image",
+            "properties": [
+                {
+                    "name": "xVelocity",
+                    "label": "X Velocity",
+                    "tooltip": "The X velocity the plyer will have when play mode starts",
+                    "defValue": 0,
+                    "customDefinition": false,
+                    "type": {
+                        "id": "number"
+                    }
+                },
+                {
+                    "name": "yVelocity",
+                    "label": "Y Velocity",
+                    "tooltip": "The Y velocity the plyer will have when play mode starts",
+                    "defValue": 0,
+                    "customDefinition": false,
+                    "type": {
+                        "id": "number"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "JumpPad",
+            "baseClass": "UserComponent",
+            "gameObjectType": "Phaser.GameObjects.Sprite",
             "properties": []
         }
     ],

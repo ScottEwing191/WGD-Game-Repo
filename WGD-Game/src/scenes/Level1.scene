@@ -144,29 +144,6 @@
             "height": 128
         },
         {
-            "type": "Sprite",
-            "id": "acea5255-2fc5-480d-bddd-9a6555b5fa67",
-            "label": "jump_pad",
-            "scope": "CLASS",
-            "components": [
-                "JumpPad",
-                "RectanglePhysics",
-                "ControllableObject"
-            ],
-            "RectanglePhysics.modifyBodyWidth": -16,
-            "RectanglePhysics.modifyBodyHeight": -56,
-            "RectanglePhysics.modifyYPosition": 4,
-            "RectanglePhysics.spriteYOffset": 0.4375,
-            "texture": {
-                "key": "Pencil_256",
-                "frame": 73
-            },
-            "x": 224,
-            "y": 192,
-            "scaleX": 0.25,
-            "scaleY": 0.25
-        },
-        {
             "type": "Image",
             "id": "4e30e58c-d887-4325-8521-3d7abeca831a",
             "label": "pencil_25627",
@@ -258,14 +235,40 @@
         },
         {
             "type": "Sprite",
-            "id": "29f64809-1e3e-4631-ac9f-4d30aeb89f87",
-            "label": "jump_pad_1",
-            "scope": "CLASS",
+            "id": "acea5255-2fc5-480d-bddd-9a6555b5fa67",
+            "label": "jump_pad",
             "components": [
                 "JumpPad",
-                "RectanglePhysics"
+                "RectanglePhysics",
+                "ControllableObject"
             ],
-            "RectanglePhysics.modifyBodyWidth": -16,
+            "JumpPad.force": 8,
+            "RectanglePhysics.isSensor": true,
+            "RectanglePhysics.modifyBodyWidth": -24,
+            "RectanglePhysics.modifyBodyHeight": -56,
+            "RectanglePhysics.modifyYPosition": 4,
+            "RectanglePhysics.spriteYOffset": 0.4375,
+            "texture": {
+                "key": "Pencil_256",
+                "frame": 73
+            },
+            "x": 128,
+            "y": 192,
+            "scaleX": 0.25,
+            "scaleY": 0.25
+        },
+        {
+            "type": "Sprite",
+            "id": "29f64809-1e3e-4631-ac9f-4d30aeb89f87",
+            "label": "jump_pad_1",
+            "components": [
+                "JumpPad",
+                "RectanglePhysics",
+                "ControllableObject"
+            ],
+            "JumpPad.force": 8,
+            "RectanglePhysics.isSensor": true,
+            "RectanglePhysics.modifyBodyWidth": -24,
             "RectanglePhysics.modifyBodyHeight": -56,
             "RectanglePhysics.modifyYPosition": 4,
             "RectanglePhysics.spriteYOffset": 0.4375,
@@ -274,6 +277,20 @@
                 "frame": 73
             },
             "x": 320,
+            "y": 192,
+            "scaleX": 0.25,
+            "scaleY": 0.25
+        },
+        {
+            "type": "Image",
+            "id": "ea5c90b2-0ffd-4cae-8588-fb6b5a02753e",
+            "label": "crayon_25673",
+            "components": [],
+            "texture": {
+                "key": "Crayon_256",
+                "frame": 73
+            },
+            "x": 192,
             "y": 192,
             "scaleX": 0.25,
             "scaleY": 0.25
@@ -309,7 +326,18 @@
             "objectIds": [
                 "db86d749-90b1-49e5-a5f4-b8bce3fe5824",
                 "7a622efe-1722-491d-b0b1-dfc3cd616d99",
-                "2701bf7d-4d5a-4ca9-8acd-8dbf1f534045"
+                "2701bf7d-4d5a-4ca9-8acd-8dbf1f534045",
+                "acea5255-2fc5-480d-bddd-9a6555b5fa67",
+                "29f64809-1e3e-4631-ac9f-4d30aeb89f87"
+            ],
+            "scope": "PUBLIC"
+        },
+        {
+            "id": "a6d0d8e5-11fd-4ec0-95c5-1659cac487ff",
+            "label": "JumpPads",
+            "objectIds": [
+                "acea5255-2fc5-480d-bddd-9a6555b5fa67",
+                "29f64809-1e3e-4631-ac9f-4d30aeb89f87"
             ],
             "scope": "PUBLIC"
         }

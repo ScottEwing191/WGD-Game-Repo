@@ -30,6 +30,8 @@ class Player extends UserComponent {
 
 	/* START-USER-CODE */
 
+
+
 	start(){
 		this.startPosition = this.gameObject.getCenter();
 		this.editModeEntered();

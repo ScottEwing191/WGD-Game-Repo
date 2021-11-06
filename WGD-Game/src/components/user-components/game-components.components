@@ -154,7 +154,18 @@
             "name": "JumpPad",
             "baseClass": "UserComponent",
             "gameObjectType": "Phaser.GameObjects.Sprite",
-            "properties": []
+            "properties": [
+                {
+                    "name": "force",
+                    "label": "Force",
+                    "tooltip": "How big a forrce does the jamp pad apply to the ball",
+                    "defValue": 5,
+                    "customDefinition": false,
+                    "type": {
+                        "id": "number"
+                    }
+                }
+            ]
         }
     ],
     "meta": {

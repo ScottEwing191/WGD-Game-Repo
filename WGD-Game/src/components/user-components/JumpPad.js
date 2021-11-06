@@ -23,24 +23,39 @@ class JumpPad extends UserComponent {
 
 	/** @type {Phaser.GameObjects.Sprite} */
 	gameObject;
+	/** @type {number} */
+	force = 5;
 
 	/* START-USER-CODE */
 
 	start(){
-		//this.gameObject.play('jump-pad-idle')
+		this.gameObject.play('jump-pad-idle')
 		//this.gameObject.body.setOnCollideWith(this.scene.player, this.collideWithPlayer())
 		//console.log(this.scene.movableObjects);
 
 	}
 
 	update(){
-		//this.gameObject.body.setBoundsRectangle()
 	}
 
 	collideWithPlayer(){
-		console.log('Collision with player');
 		this.gameObject.play('jump-pad-active');
-		//this.gameObject.pl
+		this.scene.player.setVelocity(0,0);
+		let velocity = new Phaser.Math.Vector2(0,-this.force);
+		let rotatedVelocity = this.scene.matter.vector.rotate(velocity,this.gameObject.rotation)
+		this.scene.player.setVelocity(rotatedVelocity.x,rotatedVelocity.y);
+	}
+
+	playModeEntered(){
+		this.gameObject.body.setOnCollideWith(this.scene.player.body, () => {
+			this.collideWithPlayer()
+		} );
+	}
+
+	editModeEntered(){
+
+
+
 	}
 
 	/* END-USER-CODE */

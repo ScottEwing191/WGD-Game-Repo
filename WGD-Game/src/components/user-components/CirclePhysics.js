@@ -13,6 +13,14 @@ class CirclePhysics {
 
         // first time the scene is updated, call the `start` method
         this.scene.events.once(Phaser.Scenes.Events.UPDATE, this.start, this);
+
+		//-- JUST FOR TESTING  - TAKE OUT WHENEVER
+		/*gameObject.scene.events.once("scene-awake", () => {
+			//this.scene.matter.add.gameObject(this.gameObject);
+			console.log("Awake: " +this.gameObject.y);
+
+		});*/
+
         /* END-USER-CTR-CODE */
 	}
 
@@ -31,15 +39,17 @@ class CirclePhysics {
 	/* START-USER-CODE */
 
     start() {
-        let circleBody = this.scene.matter.add.gameObject(this.gameObject);
-        circleBody.setBody({
-            type: 'circle',
+        this.scene.matter.add.gameObject(this.gameObject);
+		this.gameObject.setBody({
+			x: this.gameObject.x,
+			y: this.gameObject.y,
+			type: 'circle',
             radius: this.radius
         }, {
             mass: 25,
             inverseMass: (1 / 25)
         });
-        circleBody.setBounce(this.bounce, this.bounce);
+		this.gameObject.setBounce(this.bounce, this.bounce);
     }
 
     /* END-USER-CODE */

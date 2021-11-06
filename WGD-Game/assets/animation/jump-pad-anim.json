@@ -41,11 +41,16 @@
                     "frame": 75,
                     "duration": 0,
                     "keyframe": false
+                },
+                {
+                    "key": "Pencil_256",
+                    "frame": 75,
+                    "duration": 0,
+                    "keyframe": false
                 }
             ],
-            "frameRate": 12,
+            "frameRate": 15,
             "skipMissedFrames": true,
-            "repeat": -1,
             "repeatDelay": 1000,
             "yoyo": true
         }

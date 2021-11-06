@@ -46,16 +46,22 @@ class GameManager {
 	}
 
 	switchToPlayMode(){
+		//--Set current mode
 		if(this.currentMode === 'PLAY_MODE')
 			return;
 		this.currentMode = 'PLAY_MODE';
+
 		//--Turn off Draggable on movable objects
 		for(let i = 0 ; i< this.scene.movableObjects.length; i++){
 			ControllableObject.getComponent(this.scene.movableObjects[i]).playModeEntered();
 		}
-		//--Turn off WASD movement for movable objects
 		//--Turn off static for ball
-		Player.getComponent(this.scene.player).playModeEntered();
+		 Player.getComponent(this.scene.player).playModeEntered();
+
+		//--Turn on collision jump-pad Player collision event on each jump pad
+		for(let i = 0 ; i< this.scene.jumpPads.length; i++){
+			JumpPad.getComponent(this.scene.jumpPads[i]).playModeEntered();
+		}
 	}
 
 	switchToEditMode(){
@@ -65,7 +71,6 @@ class GameManager {
 		for(let i = 0 ; i< this.scene.movableObjects.length; i++){
 			ControllableObject.getComponent(this.scene.movableObjects[i]).editModeEntered();
 		}
-		console.debug('SWITCH TO EDIT');
 
 		//--Respawn Ball
 		//--Respawn moving platforms

@@ -37,20 +37,25 @@ class Player extends UserComponent {
 		this.editModeEntered();
 	}
 
-
+update(){
+		console.log(this.gameObject.getCenter())
+}
 	playModeEntered(){
 		this.gameObject.setStatic(false);
 		//this.gameObject.body.setVelocity(this.xVelocity, this.yVelocity);
 		this.gameObject.setVelocity(this.xVelocity, -this.yVelocity);
-
-
 	}
 
 	editModeEntered(){
-		this.gameObject.setStatic(true);
+		if (this.gameObject.body.isStatic === false){
+			this.gameObject.setStatic(true);
+		}
 		this.gameObject.x = this.startPosition.x;
 		this.gameObject.y = this.startPosition.y;
+	}
 
+	playerDeath(){
+		this.gameObject.setStatic(true);
 
 	}
 	/* END-USER-CODE */

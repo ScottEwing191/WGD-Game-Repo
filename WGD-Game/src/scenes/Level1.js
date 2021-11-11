@@ -37,19 +37,14 @@ class Level1 extends Phaser.Scene {
 		border_1.scaleX = 0.25;
 		border_1.scaleY = 0.25;
 
-		// player
-		const player = this.add.image(128, 96, "Pencil_ball_256");
-		player.scaleX = 0.25;
-		player.scaleY = 0.25;
-
 		// pencil_grass_dirt_2
 		const pencil_grass_dirt_2 = this.add.image(320, 288, "platform_pencil_grass_2");
 		pencil_grass_dirt_2.scaleY = 0.25;
 
-		// pencil_grass_dirt_2_2
-		const pencil_grass_dirt_2_2 = this.add.image(448, 96, "platform_pencil_grass_2");
-		pencil_grass_dirt_2_2.scaleX = 0.25;
-		pencil_grass_dirt_2_2.scaleY = 0.25;
+		// platformGrassSmall
+		const platformGrassSmall = this.add.image(576, 192, "platform_pencil_grass_2");
+		platformGrassSmall.scaleX = 0.25;
+		platformGrassSmall.scaleY = 0.25;
 
 		// pencil_grass_dirt_2_3
 		const pencil_grass_dirt_2_3 = this.add.image(704, 96, "platform_pencil_grass_2");
@@ -75,51 +70,38 @@ class Level1 extends Phaser.Scene {
 		pencil_rock_3_1.scaleX = 0.25;
 		pencil_rock_3_1.scaleY = 0.25;
 
-		// pencil_25692
-		const pencil_25692 = this.add.image(192, 448, "Pencil_256", 92);
-		pencil_25692.scaleX = 0.25;
-		pencil_25692.scaleY = 0.25;
+		// jumpPadUnmovable
+		const jumpPadUnmovable = new JumpPadUnmovable(this, 480, 192);
+		this.add.existing(jumpPadUnmovable);
 
-		// pencil_25692_1
-		const pencil_25692_1 = this.add.image(256, 448, "Pencil_256", 92);
-		pencil_25692_1.scaleX = 0.25;
-		pencil_25692_1.scaleY = 0.25;
+		// jump_Pad
+		const jump_Pad = new Jump_Pad(this, 288, 128);
+		this.add.existing(jump_Pad);
 
-		// jump_pad
-		const jump_pad = this.add.sprite(128, 192, "Pencil_256", 73);
-		jump_pad.scaleX = 0.25;
-		jump_pad.scaleY = 0.25;
+		// spikes_1
+		const spikes_1 = this.add.image(480, 64, "Pencil_256", 71);
+		spikes_1.scaleX = 0.25;
+		spikes_1.scaleY = 0.25;
 
-		// jump_pad_1
-		const jump_pad_1 = this.add.sprite(320, 192, "Pencil_256", 73);
-		jump_pad_1.scaleX = 0.25;
-		jump_pad_1.scaleY = 0.25;
-
-		// crayon_25673
-		const crayon_25673 = this.add.image(192, 192, "Crayon_256", 73);
-		crayon_25673.scaleX = 0.25;
-		crayon_25673.scaleY = 0.25;
+		// player
+		const player = this.add.image(128, 96, "Pencil_ball_256");
+		player.scaleX = 0.25;
+		player.scaleY = 0.25;
 
 		// lists
-		const movableObjects = [pencil_grass_dirt_2, pencil_grass_dirt_2_2, pencil_grass_dirt_2_3, jump_pad, jump_pad_1]
-		const jumpPads = [jump_pad, jump_pad_1]
-
-		// player (components)
-		const playerCirclePhysics = new CirclePhysics(player);
-		playerCirclePhysics.radius = 24;
-		playerCirclePhysics.bounce = 1;
-		new Respawn(player);
-		new Player(player);
+		const movableObjects = []
+		const jumpPads = []
+		const spikes = [spikes_1]
 
 		// pencil_grass_dirt_2 (components)
 		const pencil_grass_dirt_2RectanglePhysics = new RectanglePhysics(pencil_grass_dirt_2);
 		pencil_grass_dirt_2RectanglePhysics.modifyYPosition = 16;
 		new ControllableObject(pencil_grass_dirt_2);
 
-		// pencil_grass_dirt_2_2 (components)
-		const pencil_grass_dirt_2_2RectanglePhysics = new RectanglePhysics(pencil_grass_dirt_2_2);
-		pencil_grass_dirt_2_2RectanglePhysics.modifyYPosition = 16;
-		new ControllableObject(pencil_grass_dirt_2_2);
+		// platformGrassSmall (components)
+		const platformGrassSmallRectanglePhysics = new RectanglePhysics(platformGrassSmall);
+		platformGrassSmallRectanglePhysics.modifyYPosition = 16;
+		new ControllableObject(platformGrassSmall);
 
 		// pencil_grass_dirt_2_3 (components)
 		const pencil_grass_dirt_2_3RectanglePhysics = new RectanglePhysics(pencil_grass_dirt_2_3);
@@ -145,56 +127,40 @@ class Level1 extends Phaser.Scene {
 		// pencil_rock_3_1 (components)
 		new RectanglePhysics(pencil_rock_3_1);
 
-		// pencil_25692 (components)
-		const pencil_25692RectanglePhysics = new RectanglePhysics(pencil_25692);
-		pencil_25692RectanglePhysics.modifyBodyHeight = -16;
-		pencil_25692RectanglePhysics.modifyYPosition = -8;
-		pencil_25692RectanglePhysics.spriteYOffset = 0.125;
-		new ControllableObject(pencil_25692);
+		// spikes_1 (components)
+		const spikes_1RectanglePhysics = new RectanglePhysics(spikes_1);
+		spikes_1RectanglePhysics.modifyBodyHeight = -44;
+		spikes_1RectanglePhysics.modifyYPosition = 10;
+		spikes_1RectanglePhysics.spriteYOffset = 0.34375;
+		new Spike(spikes_1);
 
-		// pencil_25692_1 (components)
-		new RectanglePhysics(pencil_25692_1);
-		new ControllableObject(pencil_25692_1);
+		// player (components)
+		const playerCirclePhysics = new CirclePhysics(player);
+		playerCirclePhysics.radius = 24;
+		playerCirclePhysics.bounce = 1;
+		new Respawn(player);
+		new Player(player);
 
-		// jump_pad (components)
-		const jump_padJumpPad = new JumpPad(jump_pad);
-		jump_padJumpPad.force = 8;
-		const jump_padRectanglePhysics = new RectanglePhysics(jump_pad);
-		jump_padRectanglePhysics.isSensor = true;
-		jump_padRectanglePhysics.modifyBodyWidth = -24;
-		jump_padRectanglePhysics.modifyBodyHeight = -56;
-		jump_padRectanglePhysics.modifyYPosition = 4;
-		jump_padRectanglePhysics.spriteYOffset = 0.4375;
-		new ControllableObject(jump_pad);
-
-		// jump_pad_1 (components)
-		const jump_pad_1JumpPad = new JumpPad(jump_pad_1);
-		jump_pad_1JumpPad.force = 8;
-		const jump_pad_1RectanglePhysics = new RectanglePhysics(jump_pad_1);
-		jump_pad_1RectanglePhysics.isSensor = true;
-		jump_pad_1RectanglePhysics.modifyBodyWidth = -24;
-		jump_pad_1RectanglePhysics.modifyBodyHeight = -56;
-		jump_pad_1RectanglePhysics.modifyYPosition = 4;
-		jump_pad_1RectanglePhysics.spriteYOffset = 0.4375;
-		new ControllableObject(jump_pad_1);
-
-		this.player = player;
 		this.gameManager = gameManager;
+		this.player = player;
 		this.level_1 = level_1;
 		this.movableObjects = movableObjects;
 		this.jumpPads = jumpPads;
+		this.spikes = spikes;
 
 		this.events.emit("scene-awake");
 	}
 
-	/** @type {Phaser.GameObjects.Image} */
-	player;
 	/** @type {Phaser.GameObjects.Rectangle} */
 	gameManager;
-	/** @type {Array<Phaser.GameObjects.Image|Phaser.GameObjects.Sprite>} */
+	/** @type {Phaser.GameObjects.Image} */
+	player;
+	/** @type {Array<any>} */
 	movableObjects;
-	/** @type {Phaser.GameObjects.Sprite[]} */
+	/** @type {Array<any>} */
 	jumpPads;
+	/** @type {Phaser.GameObjects.Image[]} */
+	spikes;
 
 	/* START-USER-CODE */
 

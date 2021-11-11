@@ -46,12 +46,12 @@ class GameManager {
 	}
 
 	switchToPlayMode(){
-		//--Set current mode
+		//--Check if already in PLAY MODE and if not set current mode
 		if(this.currentMode === 'PLAY_MODE')
 			return;
 		this.currentMode = 'PLAY_MODE';
 
-		//--Turn off Draggable on movable objects
+		//--Tell all ControllableObjects to go into PLAY MODE
 		for(let i = 0 ; i< this.scene.movableObjects.length; i++){
 			ControllableObject.getComponent(this.scene.movableObjects[i]).playModeEntered();
 		}
@@ -62,24 +62,31 @@ class GameManager {
 		for(let i = 0 ; i< this.scene.jumpPads.length; i++){
 			JumpPad.getComponent(this.scene.jumpPads[i]).playModeEntered();
 		}
+
+		//--Turn On Spike-Player Collision
+		for(let i = 0 ; i < this.scene.spikes.length; i++){
+			Spike.getComponent(this.scene.spikes[i]).playModeEntered();
+		}
 	}
 
 	switchToEditMode(){
+		//--Check if already in EDIT MODE and if not set current mode
 		if(this.currentMode === 'EDIT_MODE')
 			return;
 		this.currentMode = 'EDIT_MODE';
+
+		//--Tell all ControllableObjects to go into EDIT MODE
 		for(let i = 0 ; i< this.scene.movableObjects.length; i++){
 			ControllableObject.getComponent(this.scene.movableObjects[i]).editModeEntered();
 		}
 
-		//--Respawn Ball
-		//--Respawn moving platforms
-		//--Turn on Draggable on movable objects
-		//--Turn on WASD movement for movable objects
-		//--Turn on static for ball
+		//--Tell player to go into EDIT MODE
 		Player.getComponent(this.scene.player).editModeEntered();
 	}
 
+	levelFailed(){
+	console.log("Level Failed");
+	}
 	/* END-USER-CODE */
 }
 

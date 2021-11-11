@@ -164,8 +164,24 @@
                     "type": {
                         "id": "number"
                     }
+                },
+                {
+                    "name": "isMovable",
+                    "label": "IsMovable",
+                    "tooltip": "Can this Jump Pad be moved by the player?",
+                    "defValue": true,
+                    "customDefinition": false,
+                    "type": {
+                        "id": "boolean"
+                    }
                 }
             ]
+        },
+        {
+            "name": "Spike",
+            "baseClass": "UserComponent",
+            "gameObjectType": "Phaser.GameObjects.Image",
+            "properties": []
         }
     ],
     "meta": {

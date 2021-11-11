@@ -46,6 +46,9 @@ class ControllableObject {
 	/* START-USER-CODE */
 
     start() {
+        //--Adds this object into the movable objects array in the scene
+        this.scene.movableObjects.push(this.gameObject);
+
         //this.refToGameManager = GameManager.getComponent(this.scene.manager[0]);
         this.refToGameManager = GameManager.getComponent(this.scene.gameManager);
         this.yPositionOffset = RectanglePhysics.getComponent(this.gameObject).modifyYPosition;
@@ -176,7 +179,6 @@ class ControllableObject {
     }
 
     playModeEntered(){
-        console.log('platform PLAY');
         //this.gameObject.disableInteractive();                 // works
         this.gameObject.input.draggable = false;                // also works
     }

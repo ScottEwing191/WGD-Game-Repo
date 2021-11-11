@@ -53,6 +53,60 @@
             "skipMissedFrames": true,
             "repeatDelay": 1000,
             "yoyo": true
+        },
+        {
+            "key": "jump-pad-unmovable-idle",
+            "type": "frame",
+            "frames": [
+                {
+                    "key": "Crayon_256",
+                    "frame": 73,
+                    "duration": 0,
+                    "keyframe": false
+                }
+            ],
+            "frameRate": 24,
+            "skipMissedFrames": true
+        },
+        {
+            "key": "jump-pad-unmovable-active",
+            "type": "frame",
+            "frames": [
+                {
+                    "key": "Crayon_256",
+                    "frame": 73,
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "Crayon_256",
+                    "frame": 74,
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "Crayon_256",
+                    "frame": 75,
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "Crayon_256",
+                    "frame": 75,
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "Crayon_256",
+                    "frame": 75,
+                    "duration": 0,
+                    "keyframe": false
+                }
+            ],
+            "frameRate": 15,
+            "skipMissedFrames": true,
+            "repeatDelay": 1000,
+            "yoyo": true
         }
     ],
     "globalTimeScale": 1,

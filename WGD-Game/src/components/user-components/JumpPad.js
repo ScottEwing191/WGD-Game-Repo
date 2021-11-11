@@ -25,21 +25,36 @@ class JumpPad extends UserComponent {
 	gameObject;
 	/** @type {number} */
 	force = 5;
+	/** @type {boolean} */
+	isMovable = true;
 
 	/* START-USER-CODE */
 
 	start(){
-		this.gameObject.play('jump-pad-idle')
-		//this.gameObject.body.setOnCollideWith(this.scene.player, this.collideWithPlayer())
-		//console.log(this.scene.movableObjects);
+		//--Set Idle Animation
+		//this.gameObject.play('jump-pad-idle')
+		//--Add Jump Pad into the Jump Pad array in the scene
+		this.scene.jumpPads.push(this.gameObject);
+		// this.scene.time.delayedCall(1000, this.addPadsToArray, null, this)		// delay 1000ms before calling methods. Originally thought that jumpPads was not..
+																					//.. found in scene because start Methods were called out of order but it was just a typo
 
 	}
 
+	/*addPadsToArray(){
+		console.log("Jump Pad Added");
+		this.scene.jumpPads.push(this.gameObject);
+	}*/
 	update(){
 	}
 
 	collideWithPlayer(){
-		this.gameObject.play('jump-pad-active');
+		//--Set Active Animation
+		if(this.isMovable){
+			this.gameObject.play('jump-pad-active');
+		}else{
+			this.gameObject.play('jump-pad-unmovable-active');
+		}
+
 		this.scene.player.setVelocity(0,0);
 		let velocity = new Phaser.Math.Vector2(0,-this.force);
 		let rotatedVelocity = this.scene.matter.vector.rotate(velocity,this.gameObject.rotation)

@@ -61,26 +61,6 @@
         },
         {
             "type": "Image",
-            "id": "84e7952d-f2da-4691-be7c-18f2fe99dfc5",
-            "label": "player",
-            "scope": "PUBLIC",
-            "components": [
-                "CirclePhysics",
-                "Respawn",
-                "Player"
-            ],
-            "CirclePhysics.radius": 24,
-            "CirclePhysics.bounce": 1,
-            "texture": {
-                "key": "Pencil_ball_256"
-            },
-            "x": 128,
-            "y": 96,
-            "scaleX": 0.25,
-            "scaleY": 0.25
-        },
-        {
-            "type": "Image",
             "id": "db86d749-90b1-49e5-a5f4-b8bce3fe5824",
             "label": "pencil_grass_dirt_2",
             "components": [
@@ -98,7 +78,7 @@
         {
             "type": "Image",
             "id": "7a622efe-1722-491d-b0b1-dfc3cd616d99",
-            "label": "pencil_grass_dirt_2_2",
+            "label": "platformGrassSmall",
             "components": [
                 "RectanglePhysics",
                 "ControllableObject"
@@ -107,8 +87,8 @@
             "texture": {
                 "key": "platform_pencil_grass_2"
             },
-            "x": 448,
-            "y": 96,
+            "x": 576,
+            "y": 192,
             "scaleX": 0.25,
             "scaleY": 0.25
         },
@@ -197,101 +177,66 @@
             "scaleY": 0.25
         },
         {
+            "prefabId": "0e346f50-687e-4921-8ee4-b493a15f351e",
+            "id": "472d9394-0a72-4fd1-bd64-fca48e1a0de2",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "jumpPadUnmovable",
+            "components": [],
+            "x": 480,
+            "y": 192
+        },
+        {
+            "prefabId": "ed55f365-5162-403a-b28b-f0655a7227a5",
+            "id": "57a66dd0-6977-4d16-9894-5343fdfb0d61",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "jump_Pad",
+            "components": [],
+            "x": 288,
+            "y": 128
+        },
+        {
             "type": "Image",
-            "id": "c1afa9a7-efee-4564-8a32-3b05d89b8faa",
-            "label": "pencil_25692",
+            "id": "9aa22f29-8ff9-4cb5-badf-934a56eb3da3",
+            "label": "spikes_1",
             "components": [
                 "RectanglePhysics",
-                "ControllableObject"
+                "Spike"
             ],
-            "RectanglePhysics.modifyBodyHeight": -16,
-            "RectanglePhysics.modifyYPosition": -8,
-            "RectanglePhysics.spriteYOffset": 0.125,
+            "RectanglePhysics.modifyBodyHeight": -44,
+            "RectanglePhysics.modifyYPosition": 10,
+            "RectanglePhysics.spriteYOffset": 0.34375,
             "texture": {
                 "key": "Pencil_256",
-                "frame": 92
+                "frame": 71
             },
-            "x": 192,
-            "y": 448,
+            "x": 480,
+            "y": 64,
             "scaleX": 0.25,
             "scaleY": 0.25
         },
         {
             "type": "Image",
-            "id": "357a5213-2c1f-43c9-95bf-f6ec28599745",
-            "label": "pencil_25692_1",
+            "id": "84e7952d-f2da-4691-be7c-18f2fe99dfc5",
+            "label": "player",
+            "scope": "PUBLIC",
             "components": [
-                "RectanglePhysics",
-                "ControllableObject"
+                "CirclePhysics",
+                "Respawn",
+                "Player"
             ],
+            "CirclePhysics.radius": 24,
+            "CirclePhysics.bounce": 1,
             "texture": {
-                "key": "Pencil_256",
-                "frame": 92
-            },
-            "x": 256,
-            "y": 448,
-            "scaleX": 0.25,
-            "scaleY": 0.25
-        },
-        {
-            "type": "Sprite",
-            "id": "acea5255-2fc5-480d-bddd-9a6555b5fa67",
-            "label": "jump_pad",
-            "components": [
-                "JumpPad",
-                "RectanglePhysics",
-                "ControllableObject"
-            ],
-            "JumpPad.force": 8,
-            "RectanglePhysics.isSensor": true,
-            "RectanglePhysics.modifyBodyWidth": -24,
-            "RectanglePhysics.modifyBodyHeight": -56,
-            "RectanglePhysics.modifyYPosition": 4,
-            "RectanglePhysics.spriteYOffset": 0.4375,
-            "texture": {
-                "key": "Pencil_256",
-                "frame": 73
+                "key": "Pencil_ball_256"
             },
             "x": 128,
-            "y": 192,
-            "scaleX": 0.25,
-            "scaleY": 0.25
-        },
-        {
-            "type": "Sprite",
-            "id": "29f64809-1e3e-4631-ac9f-4d30aeb89f87",
-            "label": "jump_pad_1",
-            "components": [
-                "JumpPad",
-                "RectanglePhysics",
-                "ControllableObject"
-            ],
-            "JumpPad.force": 8,
-            "RectanglePhysics.isSensor": true,
-            "RectanglePhysics.modifyBodyWidth": -24,
-            "RectanglePhysics.modifyBodyHeight": -56,
-            "RectanglePhysics.modifyYPosition": 4,
-            "RectanglePhysics.spriteYOffset": 0.4375,
-            "texture": {
-                "key": "Pencil_256",
-                "frame": 73
-            },
-            "x": 320,
-            "y": 192,
-            "scaleX": 0.25,
-            "scaleY": 0.25
-        },
-        {
-            "type": "Image",
-            "id": "ea5c90b2-0ffd-4cae-8588-fb6b5a02753e",
-            "label": "crayon_25673",
-            "components": [],
-            "texture": {
-                "key": "Crayon_256",
-                "frame": 73
-            },
-            "x": 192,
-            "y": 192,
+            "y": 96,
             "scaleX": 0.25,
             "scaleY": 0.25
         }
@@ -323,21 +268,18 @@
         {
             "id": "59de9739-b636-47c9-9a9d-578289aef6d9",
             "label": "MovableObjects",
-            "objectIds": [
-                "db86d749-90b1-49e5-a5f4-b8bce3fe5824",
-                "7a622efe-1722-491d-b0b1-dfc3cd616d99",
-                "2701bf7d-4d5a-4ca9-8acd-8dbf1f534045",
-                "acea5255-2fc5-480d-bddd-9a6555b5fa67",
-                "29f64809-1e3e-4631-ac9f-4d30aeb89f87"
-            ],
             "scope": "PUBLIC"
         },
         {
             "id": "a6d0d8e5-11fd-4ec0-95c5-1659cac487ff",
             "label": "JumpPads",
+            "scope": "PUBLIC"
+        },
+        {
+            "id": "4d64b840-8abc-4522-9ab8-0b835f920dfe",
+            "label": "Spikes",
             "objectIds": [
-                "acea5255-2fc5-480d-bddd-9a6555b5fa67",
-                "29f64809-1e3e-4631-ac9f-4d30aeb89f87"
+                "9aa22f29-8ff9-4cb5-badf-934a56eb3da3"
             ],
             "scope": "PUBLIC"
         }

@@ -75,6 +75,16 @@
                 "key": "GameManager"
             },
             {
+                "url": "prefabs/Jump_Pad.js",
+                "type": "script",
+                "key": "Jump_Pad"
+            },
+            {
+                "url": "prefabs/Movable/Jump_Pad.js",
+                "type": "script",
+                "key": "Jump_Pad_1"
+            },
+            {
                 "url": "assets/animation/jump-pad-anim.json",
                 "type": "animation",
                 "key": "jump-pad-anim"
@@ -83,6 +93,16 @@
                 "url": "src/components/user-components/JumpPad.js",
                 "type": "script",
                 "key": "JumpPad"
+            },
+            {
+                "url": "prefabs/JumpPadUnmovable.js",
+                "type": "script",
+                "key": "JumpPadUnmovable"
+            },
+            {
+                "url": "prefabs/Unmovable/JumpPadUnmovable.js",
+                "type": "script",
+                "key": "JumpPadUnmovable_1"
             },
             {
                 "url": "assets/tiled/Level_1_256px_16x13.json",
@@ -201,6 +221,11 @@
                 "url": "src/components/user-components/Respawn.js",
                 "type": "script",
                 "key": "Respawn"
+            },
+            {
+                "url": "src/components/user-components/Spike.js",
+                "type": "script",
+                "key": "Spike"
             },
             {
                 "url": "assets/images/backgrounds/Square Paper 2 Seamless_On Grid.png",

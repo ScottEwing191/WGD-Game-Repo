@@ -215,13 +215,13 @@
                 "key": "Pencil_256",
                 "frame": 71
             },
-            "x": 480,
-            "y": 64,
+            "x": 128,
+            "y": 224,
             "scaleX": 0.25,
             "scaleY": 0.25
         },
         {
-            "type": "Image",
+            "type": "Sprite",
             "id": "84e7952d-f2da-4691-be7c-18f2fe99dfc5",
             "label": "player",
             "scope": "PUBLIC",
@@ -233,9 +233,24 @@
             "CirclePhysics.radius": 24,
             "CirclePhysics.bounce": 1,
             "texture": {
-                "key": "Pencil_ball_256"
+                "key": "BallPop_256",
+                "frame": 0
             },
             "x": 128,
+            "y": 96,
+            "scaleX": 0.25,
+            "scaleY": 0.25
+        },
+        {
+            "type": "Image",
+            "id": "971b046a-671c-47e0-be17-6a47b8283ebe",
+            "label": "ballPop_2560",
+            "components": [],
+            "texture": {
+                "key": "BallPop_256",
+                "frame": 0
+            },
+            "x": 192,
             "y": 96,
             "scaleX": 0.25,
             "scaleY": 0.25

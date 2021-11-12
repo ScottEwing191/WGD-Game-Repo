@@ -126,7 +126,7 @@
         {
             "name": "Player",
             "baseClass": "UserComponent",
-            "gameObjectType": "Phaser.GameObjects.Image",
+            "gameObjectType": "Phaser.GameObjects.Sprite",
             "properties": [
                 {
                     "name": "xVelocity",

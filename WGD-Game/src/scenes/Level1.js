@@ -79,14 +79,19 @@ class Level1 extends Phaser.Scene {
 		this.add.existing(jump_Pad);
 
 		// spikes_1
-		const spikes_1 = this.add.image(480, 64, "Pencil_256", 71);
+		const spikes_1 = this.add.image(128, 224, "Pencil_256", 71);
 		spikes_1.scaleX = 0.25;
 		spikes_1.scaleY = 0.25;
 
 		// player
-		const player = this.add.image(128, 96, "Pencil_ball_256");
+		const player = this.add.sprite(128, 96, "BallPop_256", 0);
 		player.scaleX = 0.25;
 		player.scaleY = 0.25;
+
+		// ballPop_2560
+		const ballPop_2560 = this.add.image(192, 96, "BallPop_256", 0);
+		ballPop_2560.scaleX = 0.25;
+		ballPop_2560.scaleY = 0.25;
 
 		// lists
 		const movableObjects = []
@@ -153,7 +158,7 @@ class Level1 extends Phaser.Scene {
 
 	/** @type {Phaser.GameObjects.Rectangle} */
 	gameManager;
-	/** @type {Phaser.GameObjects.Image} */
+	/** @type {Phaser.GameObjects.Sprite} */
 	player;
 	/** @type {Array<any>} */
 	movableObjects;

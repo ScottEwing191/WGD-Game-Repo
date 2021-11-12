@@ -21,7 +21,7 @@ class Player extends UserComponent {
 		return gameObject["__Player"];
 	}
 
-	/** @type {Phaser.GameObjects.Image} */
+	/** @type {Phaser.GameObjects.Sprite} */
 	gameObject;
 	/** @type {number} */
 	xVelocity = 0;
@@ -38,7 +38,7 @@ class Player extends UserComponent {
 	}
 
 update(){
-		console.log(this.gameObject.getCenter())
+
 }
 	playModeEntered(){
 		this.gameObject.setStatic(false);
@@ -56,7 +56,7 @@ update(){
 
 	playerDeath(){
 		this.gameObject.setStatic(true);
-
+		this.gameObject.play('ball-pop');
 	}
 	/* END-USER-CODE */
 }

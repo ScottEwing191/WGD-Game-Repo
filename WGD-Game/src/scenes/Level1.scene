@@ -71,7 +71,7 @@
             "texture": {
                 "key": "platform_pencil_grass_2"
             },
-            "x": 320,
+            "x": 576,
             "y": 288,
             "scaleY": 0.25
         },
@@ -124,59 +124,6 @@
             "height": 128
         },
         {
-            "type": "Image",
-            "id": "4e30e58c-d887-4325-8521-3d7abeca831a",
-            "label": "pencil_25627",
-            "components": [
-                "RectanglePhysics"
-            ],
-            "RectanglePhysics.modifyBodyHeight": -48,
-            "RectanglePhysics.modifyYPosition": 8,
-            "RectanglePhysics.spriteYOffset": 0.375,
-            "texture": {
-                "key": "Pencil_256",
-                "frame": 27
-            },
-            "x": 320,
-            "y": 352,
-            "scaleX": 0.25,
-            "scaleY": 0.25
-        },
-        {
-            "type": "Image",
-            "id": "7b6e7482-ea91-460a-96bf-2b24f5a176bb",
-            "label": "pencil_rock_3",
-            "components": [
-                "RectanglePhysics",
-                "ControllableObject"
-            ],
-            "RectanglePhysics.modifyBodyHeight": -32,
-            "RectanglePhysics.modifyYPosition": 16,
-            "RectanglePhysics.spriteYOffset": -0.25,
-            "texture": {
-                "key": "Pencil_rock_3"
-            },
-            "x": 512,
-            "y": 480,
-            "scaleX": 0.25,
-            "scaleY": 0.25
-        },
-        {
-            "type": "Image",
-            "id": "127bc2cf-b8b4-45b7-b742-66ab3f7d5fb2",
-            "label": "pencil_rock_3_1",
-            "components": [
-                "RectanglePhysics"
-            ],
-            "texture": {
-                "key": "Pencil_rock_3"
-            },
-            "x": 704,
-            "y": 480,
-            "scaleX": 0.25,
-            "scaleY": 0.25
-        },
-        {
             "prefabId": "0e346f50-687e-4921-8ee4-b493a15f351e",
             "id": "472d9394-0a72-4fd1-bd64-fca48e1a0de2",
             "unlock": [
@@ -215,8 +162,8 @@
                 "key": "Pencil_256",
                 "frame": 71
             },
-            "x": 128,
-            "y": 224,
+            "x": 288,
+            "y": 192,
             "scaleX": 0.25,
             "scaleY": 0.25
         },
@@ -236,24 +183,47 @@
                 "key": "BallPop_256",
                 "frame": 0
             },
-            "x": 128,
-            "y": 96,
-            "scaleX": 0.25,
-            "scaleY": 0.25
+            "x": 288,
+            "y": 448,
+            "scaleX": 0.3,
+            "scaleY": 0.3
         },
         {
             "type": "Image",
-            "id": "971b046a-671c-47e0-be17-6a47b8283ebe",
-            "label": "ballPop_2560",
-            "components": [],
+            "id": "ea6394f4-a149-4850-984b-efea967f087b",
+            "label": "boostZone",
+            "components": [
+                "RectanglePhysics",
+                "BoostZone",
+                "ControllableObject",
+                "AntiGravZone"
+            ],
+            "RectanglePhysics.isSensor": true,
             "texture": {
-                "key": "BallPop_256",
-                "frame": 0
+                "key": "Pencil_boost_1_128x128"
             },
-            "x": 192,
-            "y": 96,
+            "x": 416,
+            "y": 160,
+            "scaleX": 0.5,
+            "scaleY": 0.5
+        },
+        {
+            "type": "TilemapLayer",
+            "id": "99ab0004-bc38-42de-aa56-0bec2b68b7a6",
+            "label": "collision_1_1",
+            "scope": "CLASS",
+            "components": [],
+            "x": 32,
+            "y": 32,
             "scaleX": 0.25,
-            "scaleY": 0.25
+            "scaleY": 0.25,
+            "tilemapId": "6b1bd2ce-22a7-4a6a-a80d-43036795db5b",
+            "layerName": "Collision",
+            "tilesets": [
+                "PencilTileset_256",
+                "Crayon_Tileset",
+                "Pencil_Tileset"
+            ]
         }
     ],
     "plainObjects": [
@@ -268,6 +238,26 @@
                 },
                 {
                     "name": "PencilTileset_256",
+                    "imageKey": "Pencil_256"
+                }
+            ]
+        },
+        {
+            "id": "6b1bd2ce-22a7-4a6a-a80d-43036795db5b",
+            "type": "Tilemap",
+            "label": "collisionTest2_map",
+            "key": "CollisionTest2_map",
+            "tilesets": [
+                {
+                    "name": "PencilTileset_256",
+                    "imageKey": "Pencil_256"
+                },
+                {
+                    "name": "Crayon_Tileset",
+                    "imageKey": "Crayon_256"
+                },
+                {
+                    "name": "Pencil_Tileset",
                     "imageKey": "Pencil_256"
                 }
             ]

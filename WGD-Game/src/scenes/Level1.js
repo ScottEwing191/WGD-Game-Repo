@@ -21,6 +21,12 @@ class Level1 extends Phaser.Scene {
 		level_1.addTilesetImage("Pencil_64");
 		level_1.addTilesetImage("PencilTileset_256", "Pencil_256");
 
+		// collisionTest2_map
+		const collisionTest2_map = this.add.tilemap("CollisionTest2_map");
+		collisionTest2_map.addTilesetImage("PencilTileset_256", "Pencil_256");
+		collisionTest2_map.addTilesetImage("Crayon_Tileset", "Crayon_256");
+		collisionTest2_map.addTilesetImage("Pencil_Tileset", "Pencil_256");
+
 		// tilesprite
 		const tilesprite = this.add.tileSprite(0, 0, 960, 720, "Square Paper 2 Seamless_On Grid");
 		tilesprite.setOrigin(0, 0);
@@ -38,7 +44,7 @@ class Level1 extends Phaser.Scene {
 		border_1.scaleY = 0.25;
 
 		// pencil_grass_dirt_2
-		const pencil_grass_dirt_2 = this.add.image(320, 288, "platform_pencil_grass_2");
+		const pencil_grass_dirt_2 = this.add.image(576, 288, "platform_pencil_grass_2");
 		pencil_grass_dirt_2.scaleY = 0.25;
 
 		// platformGrassSmall
@@ -55,21 +61,6 @@ class Level1 extends Phaser.Scene {
 		const gameManager = this.add.rectangle(1056, 64, 128, 128);
 		gameManager.isFilled = true;
 
-		// pencil_25627
-		const pencil_25627 = this.add.image(320, 352, "Pencil_256", 27);
-		pencil_25627.scaleX = 0.25;
-		pencil_25627.scaleY = 0.25;
-
-		// pencil_rock_3
-		const pencil_rock_3 = this.add.image(512, 480, "Pencil_rock_3");
-		pencil_rock_3.scaleX = 0.25;
-		pencil_rock_3.scaleY = 0.25;
-
-		// pencil_rock_3_1
-		const pencil_rock_3_1 = this.add.image(704, 480, "Pencil_rock_3");
-		pencil_rock_3_1.scaleX = 0.25;
-		pencil_rock_3_1.scaleY = 0.25;
-
 		// jumpPadUnmovable
 		const jumpPadUnmovable = new JumpPadUnmovable(this, 480, 192);
 		this.add.existing(jumpPadUnmovable);
@@ -79,19 +70,24 @@ class Level1 extends Phaser.Scene {
 		this.add.existing(jump_Pad);
 
 		// spikes_1
-		const spikes_1 = this.add.image(128, 224, "Pencil_256", 71);
+		const spikes_1 = this.add.image(288, 192, "Pencil_256", 71);
 		spikes_1.scaleX = 0.25;
 		spikes_1.scaleY = 0.25;
 
 		// player
-		const player = this.add.sprite(128, 96, "BallPop_256", 0);
-		player.scaleX = 0.25;
-		player.scaleY = 0.25;
+		const player = this.add.sprite(288, 448, "BallPop_256", 0);
+		player.scaleX = 0.3;
+		player.scaleY = 0.3;
 
-		// ballPop_2560
-		const ballPop_2560 = this.add.image(192, 96, "BallPop_256", 0);
-		ballPop_2560.scaleX = 0.25;
-		ballPop_2560.scaleY = 0.25;
+		// boostZone
+		const boostZone = this.add.image(416, 160, "Pencil_boost_1_128x128");
+		boostZone.scaleX = 0.5;
+		boostZone.scaleY = 0.5;
+
+		// collision_1_1
+		const collision_1_1 = collisionTest2_map.createLayer("Collision", ["Crayon_Tileset","Pencil_Tileset"], 32, 32);
+		collision_1_1.scaleX = 0.25;
+		collision_1_1.scaleY = 0.25;
 
 		// lists
 		const movableObjects = []
@@ -116,22 +112,6 @@ class Level1 extends Phaser.Scene {
 		// gameManager (components)
 		new GameManager(gameManager);
 
-		// pencil_25627 (components)
-		const pencil_25627RectanglePhysics = new RectanglePhysics(pencil_25627);
-		pencil_25627RectanglePhysics.modifyBodyHeight = -48;
-		pencil_25627RectanglePhysics.modifyYPosition = 8;
-		pencil_25627RectanglePhysics.spriteYOffset = 0.375;
-
-		// pencil_rock_3 (components)
-		const pencil_rock_3RectanglePhysics = new RectanglePhysics(pencil_rock_3);
-		pencil_rock_3RectanglePhysics.modifyBodyHeight = -32;
-		pencil_rock_3RectanglePhysics.modifyYPosition = 16;
-		pencil_rock_3RectanglePhysics.spriteYOffset = -0.25;
-		new ControllableObject(pencil_rock_3);
-
-		// pencil_rock_3_1 (components)
-		new RectanglePhysics(pencil_rock_3_1);
-
 		// spikes_1 (components)
 		const spikes_1RectanglePhysics = new RectanglePhysics(spikes_1);
 		spikes_1RectanglePhysics.modifyBodyHeight = -44;
@@ -146,9 +126,17 @@ class Level1 extends Phaser.Scene {
 		new Respawn(player);
 		new Player(player);
 
+		// boostZone (components)
+		const boostZoneRectanglePhysics = new RectanglePhysics(boostZone);
+		boostZoneRectanglePhysics.isSensor = true;
+		new ControllableObject(boostZone);
+		new AntiGravZone(boostZone);
+
 		this.gameManager = gameManager;
 		this.player = player;
+		this.collision_1_1 = collision_1_1;
 		this.level_1 = level_1;
+		this.collisionTest2_map = collisionTest2_map;
 		this.movableObjects = movableObjects;
 		this.jumpPads = jumpPads;
 		this.spikes = spikes;
@@ -160,6 +148,8 @@ class Level1 extends Phaser.Scene {
 	gameManager;
 	/** @type {Phaser.GameObjects.Sprite} */
 	player;
+	/** @type {Phaser.Tilemaps.TilemapLayer} */
+	collision_1_1;
 	/** @type {Array<any>} */
 	movableObjects;
 	/** @type {Array<any>} */
@@ -175,7 +165,13 @@ class Level1 extends Phaser.Scene {
 		this.editorCreate();
 		this.matter.world.setBounds(16,16, 848, 762, 64,true, true, true, false);
 
-		//this.jump_pad.play('jump-pad-active');
+		//this.collisionTest_map.createStaticLayer()
+		//this.collisionTest_map.setCollisionByProperty({collides:true}, true, true, this.collision_1);
+		this.collisionTest2_map.setCollisionByProperty({collider :true});
+		this.matter.world.convertTilemapLayer(this.collision_1_1);
+
+
+
 	}
 
 	/* END-USER-CODE */

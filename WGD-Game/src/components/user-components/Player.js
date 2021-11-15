@@ -35,10 +35,12 @@ class Player extends UserComponent {
 	start(){
 		this.startPosition = this.gameObject.getCenter();
 		this.editModeEntered();
+		this.gameObject.on(Phaser.Animations.Events.ANIMATION_COMPLETE_KEY + 'ball-pop', () =>{
+			this.playerDeathAnimComplete();
+		});
 	}
 
 update(){
-
 }
 	playModeEntered(){
 		this.gameObject.setStatic(false);
@@ -57,6 +59,10 @@ update(){
 	playerDeath(){
 		this.gameObject.setStatic(true);
 		this.gameObject.play('ball-pop');
+	}
+	playerDeathAnimComplete(){
+		GameManager.getComponent(this.scene.gameManager).levelFailed();
+		this.gameObject.play('ball-reform');
 	}
 	/* END-USER-CODE */
 }

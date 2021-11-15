@@ -35,7 +35,7 @@ class Spike extends UserComponent {
 			//--Kill the player
 			Player.getComponent(this.scene.player).playerDeath();
 			//--Tell Game Manager Level Was Failed
-			GameManager.getComponent(this.scene.gameManager).levelFailed();
+			//GameManager.getComponent(this.scene.gameManager).levelFailed();
 		} );
 
 	}

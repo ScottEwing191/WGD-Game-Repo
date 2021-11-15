@@ -86,6 +86,9 @@ class GameManager {
 
 	levelFailed(){
 	console.log("Level Failed");
+	//Score
+	//ResetPlayer
+	this.switchToEditMode();
 	}
 	/* END-USER-CODE */
 }

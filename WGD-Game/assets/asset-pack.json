@@ -2,6 +2,11 @@
     "section1": {
         "files": [
             {
+                "url": "src/components/user-components/AntiGravZone.js",
+                "type": "script",
+                "key": "AntiGravZone"
+            },
+            {
                 "url": "assets/animation/ball-anim.json",
                 "type": "animation",
                 "key": "ball-anim"
@@ -28,6 +33,16 @@
                 "url": "src/components/user-components/CirclePhysics.js",
                 "type": "script",
                 "key": "CirclePhysics"
+            },
+            {
+                "url": "assets/tiled/Test/CollisionTest_map.json",
+                "type": "tilemapTiledJSON",
+                "key": "CollisionTest_map"
+            },
+            {
+                "url": "assets/tiled/Test/CollisionTest2_map.json",
+                "type": "tilemapTiledJSON",
+                "key": "CollisionTest2_map"
             },
             {
                 "url": "src/components/user-components/ControllableObject.js",

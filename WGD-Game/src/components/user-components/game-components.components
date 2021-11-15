@@ -182,6 +182,12 @@
             "baseClass": "UserComponent",
             "gameObjectType": "Phaser.GameObjects.Image",
             "properties": []
+        },
+        {
+            "name": "AntiGravZone",
+            "baseClass": "UserComponent",
+            "gameObjectType": "Phaser.GameObjects.Image",
+            "properties": []
         }
     ],
     "meta": {

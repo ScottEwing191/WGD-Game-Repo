@@ -62,6 +62,83 @@
             "frameRate": 15,
             "skipMissedFrames": true,
             "repeatDelay": 100
+        },
+        {
+            "key": "ball-idle",
+            "type": "frame",
+            "frames": [
+                {
+                    "key": "BallPop_256",
+                    "frame": 0,
+                    "duration": 0,
+                    "keyframe": false
+                }
+            ],
+            "frameRate": 0,
+            "skipMissedFrames": true
+        },
+        {
+            "key": "ball-reform",
+            "type": "frame",
+            "frames": [
+                {
+                    "key": "BallPop_256",
+                    "frame": 8,
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "BallPop_256",
+                    "frame": 7,
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "BallPop_256",
+                    "frame": 6,
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "BallPop_256",
+                    "frame": 5,
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "BallPop_256",
+                    "frame": 4,
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "BallPop_256",
+                    "frame": 3,
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "BallPop_256",
+                    "frame": 2,
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "BallPop_256",
+                    "frame": 1,
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "BallPop_256",
+                    "frame": 0,
+                    "duration": 0,
+                    "keyframe": false
+                }
+            ],
+            "frameRate": 15,
+            "skipMissedFrames": true,
+            "repeatDelay": 100
         }
     ],
     "globalTimeScale": 1,

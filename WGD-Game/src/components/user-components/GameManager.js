@@ -18,6 +18,7 @@ class GameManager {
 		this.modeInput = this.scene.input.keyboard.addKeys({
 			'enterPlay': Phaser.Input.Keyboard.KeyCodes.SPACE,
 			'enterEdit': Phaser.Input.Keyboard.KeyCodes.R,
+			'newScene': Phaser.Input.Keyboard.KeyCodes.ENTER
 		});
 
 		this.currentMode = 'EDIT_MODE';
@@ -39,6 +40,9 @@ class GameManager {
 		});
 		this.modeInput.enterPlay.on('down',() => {
 			this.switchToPlayMode();
+		});
+		this.modeInput.newScene.on('down',() => {
+			this.newScene();
 		});
 	}
 	update(){
@@ -89,6 +93,10 @@ class GameManager {
 	//Score
 	//ResetPlayer
 	this.switchToEditMode();
+	}
+
+	newScene(){
+		//his.scene.start("LevelTest");
 	}
 	/* END-USER-CODE */
 }

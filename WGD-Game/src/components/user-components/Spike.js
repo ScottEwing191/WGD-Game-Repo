@@ -27,7 +27,8 @@ class Spike extends UserComponent {
 	/* START-USER-CODE */
 
 	start(){
-		//this.scene.spikes.push(this.gameObject);
+		this.scene.spikes.push(this.gameObject);
+		console.log(this.scene.spikes.length);
 	}
 
 	playModeEntered(){

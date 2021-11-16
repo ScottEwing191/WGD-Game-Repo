@@ -7,6 +7,11 @@
                 "key": "AntiGravZone"
             },
             {
+                "url": "prefabs/Movable/AntiGravZonePrefab.js",
+                "type": "script",
+                "key": "AntiGravZonePrefab"
+            },
+            {
                 "url": "assets/animation/ball-anim.json",
                 "type": "animation",
                 "key": "ball-anim"
@@ -33,16 +38,6 @@
                 "url": "src/components/user-components/CirclePhysics.js",
                 "type": "script",
                 "key": "CirclePhysics"
-            },
-            {
-                "url": "assets/tiled/Test/CollisionTest_map.json",
-                "type": "tilemapTiledJSON",
-                "key": "CollisionTest_map"
-            },
-            {
-                "url": "assets/tiled/Test/CollisionTest2_map.json",
-                "type": "tilemapTiledJSON",
-                "key": "CollisionTest2_map"
             },
             {
                 "url": "src/components/user-components/ControllableObject.js",
@@ -231,6 +226,11 @@
                 "key": "platform_pencil_grass_3"
             },
             {
+                "url": "prefabs/Movable/PlatformGrassSmall.js",
+                "type": "script",
+                "key": "PlatformGrassSmall"
+            },
+            {
                 "url": "src/components/user-components/Player.js",
                 "type": "script",
                 "key": "Player"
@@ -249,6 +249,11 @@
                 "url": "src/components/user-components/Spike.js",
                 "type": "script",
                 "key": "Spike"
+            },
+            {
+                "url": "prefabs/Unmovable/SpikePrefab.js",
+                "type": "script",
+                "key": "SpikePrefab"
             },
             {
                 "url": "assets/images/backgrounds/Square Paper 2 Seamless_On Grid.png",

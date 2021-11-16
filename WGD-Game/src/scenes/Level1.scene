@@ -60,56 +60,6 @@
             ]
         },
         {
-            "type": "Image",
-            "id": "db86d749-90b1-49e5-a5f4-b8bce3fe5824",
-            "label": "pencil_grass_dirt_2",
-            "components": [
-                "RectanglePhysics",
-                "ControllableObject"
-            ],
-            "RectanglePhysics.modifyYPosition": 16,
-            "texture": {
-                "key": "platform_pencil_grass_2"
-            },
-            "x": 576,
-            "y": 288,
-            "scaleY": 0.25
-        },
-        {
-            "type": "Image",
-            "id": "7a622efe-1722-491d-b0b1-dfc3cd616d99",
-            "label": "platformGrassSmall",
-            "components": [
-                "RectanglePhysics",
-                "ControllableObject"
-            ],
-            "RectanglePhysics.modifyYPosition": 16,
-            "texture": {
-                "key": "platform_pencil_grass_2"
-            },
-            "x": 576,
-            "y": 192,
-            "scaleX": 0.25,
-            "scaleY": 0.25
-        },
-        {
-            "type": "Image",
-            "id": "2701bf7d-4d5a-4ca9-8acd-8dbf1f534045",
-            "label": "pencil_grass_dirt_2_3",
-            "components": [
-                "RectanglePhysics",
-                "ControllableObject"
-            ],
-            "RectanglePhysics.modifyYPosition": 16,
-            "texture": {
-                "key": "platform_pencil_grass_2"
-            },
-            "x": 704,
-            "y": 96,
-            "scaleX": 0.25,
-            "scaleY": 0.25
-        },
-        {
             "type": "Rectangle",
             "id": "d09b91f8-d7b9-4a59-9db8-ab4728c19a99",
             "label": "gameManager",
@@ -148,26 +98,6 @@
             "y": 128
         },
         {
-            "type": "Image",
-            "id": "9aa22f29-8ff9-4cb5-badf-934a56eb3da3",
-            "label": "spikes_1",
-            "components": [
-                "RectanglePhysics",
-                "Spike"
-            ],
-            "RectanglePhysics.modifyBodyHeight": -44,
-            "RectanglePhysics.modifyYPosition": 10,
-            "RectanglePhysics.spriteYOffset": 0.34375,
-            "texture": {
-                "key": "Pencil_256",
-                "frame": 71
-            },
-            "x": 288,
-            "y": 192,
-            "scaleX": 0.25,
-            "scaleY": 0.25
-        },
-        {
             "type": "Sprite",
             "id": "84e7952d-f2da-4691-be7c-18f2fe99dfc5",
             "label": "player",
@@ -183,47 +113,58 @@
                 "key": "BallPop_256",
                 "frame": 0
             },
-            "x": 288,
-            "y": 448,
+            "x": 96,
+            "y": 96,
             "scaleX": 0.3,
             "scaleY": 0.3
         },
         {
-            "type": "Image",
-            "id": "ea6394f4-a149-4850-984b-efea967f087b",
-            "label": "boostZone",
-            "components": [
-                "RectanglePhysics",
-                "BoostZone",
-                "ControllableObject",
-                "AntiGravZone"
+            "prefabId": "ec4256ea-8d89-44c7-ad6e-23916b2f440f",
+            "id": "15fbe61a-4e8c-486e-9ab8-eda904674fc3",
+            "unlock": [
+                "x",
+                "y"
             ],
-            "RectanglePhysics.isSensor": true,
-            "texture": {
-                "key": "Pencil_boost_1_128x128"
-            },
-            "x": 416,
-            "y": 160,
-            "scaleX": 0.5,
-            "scaleY": 0.5
+            "label": "spikePrefab",
+            "components": [],
+            "x": 288,
+            "y": 544
         },
         {
-            "type": "TilemapLayer",
-            "id": "99ab0004-bc38-42de-aa56-0bec2b68b7a6",
-            "label": "collision_1_1",
-            "scope": "CLASS",
+            "prefabId": "4ea8129b-0371-4dd3-a1ae-7dfbf189ef70",
+            "id": "e9dfbd77-d467-412a-82f5-6f8cfbb2c29c",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "platformGrassSmall",
             "components": [],
-            "x": 32,
-            "y": 32,
-            "scaleX": 0.25,
-            "scaleY": 0.25,
-            "tilemapId": "6b1bd2ce-22a7-4a6a-a80d-43036795db5b",
-            "layerName": "Collision",
-            "tilesets": [
-                "PencilTileset_256",
-                "Crayon_Tileset",
-                "Pencil_Tileset"
-            ]
+            "x": 640,
+            "y": 192
+        },
+        {
+            "prefabId": "4ea8129b-0371-4dd3-a1ae-7dfbf189ef70",
+            "id": "1961b163-7811-4260-89a8-b376e437bac6",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "platformGrassSmall_1",
+            "components": [],
+            "x": 512,
+            "y": 128
+        },
+        {
+            "prefabId": "6c6124bf-0368-4efa-a5ff-6f7e4b79645d",
+            "id": "4b00d048-fb09-4b78-af4d-8abf28c18cd2",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "antiGravZonePrefab",
+            "components": [],
+            "x": 173,
+            "y": 204
         }
     ],
     "plainObjects": [
@@ -238,26 +179,6 @@
                 },
                 {
                     "name": "PencilTileset_256",
-                    "imageKey": "Pencil_256"
-                }
-            ]
-        },
-        {
-            "id": "6b1bd2ce-22a7-4a6a-a80d-43036795db5b",
-            "type": "Tilemap",
-            "label": "collisionTest2_map",
-            "key": "CollisionTest2_map",
-            "tilesets": [
-                {
-                    "name": "PencilTileset_256",
-                    "imageKey": "Pencil_256"
-                },
-                {
-                    "name": "Crayon_Tileset",
-                    "imageKey": "Crayon_256"
-                },
-                {
-                    "name": "Pencil_Tileset",
                     "imageKey": "Pencil_256"
                 }
             ]
@@ -283,9 +204,6 @@
         {
             "id": "4d64b840-8abc-4522-9ab8-0b835f920dfe",
             "label": "Spikes",
-            "objectIds": [
-                "9aa22f29-8ff9-4cb5-badf-934a56eb3da3"
-            ],
             "scope": "PUBLIC"
         }
     ]

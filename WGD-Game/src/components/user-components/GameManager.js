@@ -85,18 +85,23 @@ class GameManager {
 		}
 
 		//--Tell player to go into EDIT MODE
+		let player  = Player.getComponent(this.scene.player);
 		Player.getComponent(this.scene.player).editModeEntered();
+		if (player.gameObject.getCenter().x !== player.startPosition.x){
+			console.log("Went Wrong");
+			this.scene.resetPlayer();
+		}
 	}
 
 	levelFailed(){
-	console.log("Level Failed");
 	//Score
 	//ResetPlayer
 	this.switchToEditMode();
 	}
 
 	newScene(){
-		//his.scene.start("LevelTest");
+		this.scene.nextLevel();
+		//this.scene.launch('LevelStart');
 	}
 	/* END-USER-CODE */
 }

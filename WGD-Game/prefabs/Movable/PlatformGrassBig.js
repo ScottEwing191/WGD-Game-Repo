@@ -3,21 +3,18 @@
 
 /* START OF COMPILED CODE */
 
-class SpikePrefab extends Phaser.GameObjects.Image {
+class PlatformGrassBig extends Phaser.GameObjects.Image {
 
 	constructor(scene, x, y, texture, frame) {
-		super(scene, x ?? 0, y ?? 0, texture || "Crayon_256", frame ?? 77);
+		super(scene, x ?? 0, y ?? 0, texture || "platform_pencil_grass_3", frame);
 
 		this.scaleX = 0.25;
 		this.scaleY = 0.25;
 
 		// this (components)
 		const thisRectanglePhysics = new RectanglePhysics(this);
-		thisRectanglePhysics.modifyBodyWidth = -16;
-		thisRectanglePhysics.modifyBodyHeight = -44;
-		thisRectanglePhysics.modifyYPosition = -22;
-		thisRectanglePhysics.spriteYOffset = 0.34375;
-		new Spike(this);
+		thisRectanglePhysics.modifyYPosition = 16;
+		new ControllableObject(this);
 
 		/* START-USER-CTR-CODE */
 		// Write your code here.

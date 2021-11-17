@@ -24,6 +24,16 @@
                     "type": {
                         "id": "number"
                     }
+                },
+                {
+                    "name": "isStatic",
+                    "label": "IsStatic",
+                    "tooltip": "Property 1",
+                    "defValue": false,
+                    "customDefinition": false,
+                    "type": {
+                        "id": "boolean"
+                    }
                 }
             ]
         },
@@ -76,6 +86,16 @@
                     "name": "spriteYOffset",
                     "label": "Sprite Y Offset",
                     "tooltip": "The offset of the sprite relative to the game object (Guide: 0.5 - (modify Y Position))",
+                    "defValue": 0,
+                    "customDefinition": false,
+                    "type": {
+                        "id": "number"
+                    }
+                },
+                {
+                    "name": "angle",
+                    "label": "Angle",
+                    "tooltip": "Property 1",
                     "defValue": 0,
                     "customDefinition": false,
                     "type": {
@@ -185,6 +205,12 @@
         },
         {
             "name": "AntiGravZone",
+            "baseClass": "UserComponent",
+            "gameObjectType": "Phaser.GameObjects.Image",
+            "properties": []
+        },
+        {
+            "name": "CircleCollider",
             "baseClass": "UserComponent",
             "gameObjectType": "Phaser.GameObjects.Image",
             "properties": []

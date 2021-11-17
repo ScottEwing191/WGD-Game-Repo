@@ -1,0 +1,267 @@
+{
+    "id": "2f19d6a8-d28e-4edd-aac1-1bd7090c09c1",
+    "sceneType": "SCENE",
+    "settings": {
+        "snapEnabled": true,
+        "snapWidth": 32,
+        "snapHeight": 32,
+        "preloadPackFiles": [],
+        "createMethodName": "editorCreate",
+        "sceneKey": "LevelTest",
+        "borderWidth": 960,
+        "borderHeight": 720
+    },
+    "displayList": [
+        {
+            "type": "TileSprite",
+            "id": "eb0b2671-4a69-4ae5-9a11-94a9a558b4bc",
+            "label": "square_Paper_2_Seamless_On_Grid",
+            "components": [],
+            "texture": {
+                "key": "Square Paper 2 Seamless_On Grid"
+            },
+            "originX": 0,
+            "originY": 0,
+            "width": 960,
+            "height": 720,
+            "tilePositionX": 100,
+            "tileScaleX": 0.177,
+            "tileScaleY": 0.177
+        },
+        {
+            "type": "Rectangle",
+            "id": "79fa7a9e-beee-4d91-beee-0779ebf37341",
+            "label": "gameManager",
+            "scope": "PUBLIC",
+            "components": [
+                "GameManager"
+            ],
+            "x": 1056,
+            "y": 64,
+            "isFilled": true,
+            "width": 128,
+            "height": 128
+        },
+        {
+            "type": "TilemapLayer",
+            "id": "fd6c766e-c281-4f14-be9c-b9408b24e996",
+            "label": "spring_Spikes_etc_Guide",
+            "components": [],
+            "scaleX": 0.25,
+            "scaleY": 0.25,
+            "visible": false,
+            "tilemapId": "fada1b6a-9646-4200-9444-2e5d7a39f89e",
+            "layerName": "Spring/Spikes etc Guide",
+            "tilesets": [
+                "Crayon_Tileset",
+                "Pencil_Tileset"
+            ]
+        },
+        {
+            "type": "TilemapLayer",
+            "id": "cb2816dd-ed30-4186-85ec-76e2f1a5c1eb",
+            "label": "border_1",
+            "scope": "CLASS",
+            "components": [],
+            "scaleX": 0.25,
+            "scaleY": 0.25,
+            "tilemapId": "fada1b6a-9646-4200-9444-2e5d7a39f89e",
+            "layerName": "Border",
+            "tilesets": [
+                "Crayon_Tileset",
+                "Pencil_Tileset"
+            ]
+        },
+        {
+            "type": "TilemapLayer",
+            "id": "fedf45c9-3720-4466-ac40-189141dff4d0",
+            "label": "ground",
+            "scope": "CLASS",
+            "components": [],
+            "scaleX": 0.25,
+            "scaleY": 0.25,
+            "tilemapId": "fada1b6a-9646-4200-9444-2e5d7a39f89e",
+            "layerName": "Ground",
+            "tilesets": [
+                "Crayon_Tileset",
+                "Pencil_Tileset"
+            ]
+        },
+        {
+            "prefabId": "ec4256ea-8d89-44c7-ad6e-23916b2f440f",
+            "id": "175730c9-e452-412b-b917-b880e5c848f8",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "spikePrefab",
+            "components": [],
+            "x": 32,
+            "y": 224
+        },
+        {
+            "prefabId": "ec4256ea-8d89-44c7-ad6e-23916b2f440f",
+            "id": "08cb05b1-75ac-4a9b-9393-93360854d3a5",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "spikePrefab_1",
+            "components": [],
+            "x": 96,
+            "y": 224
+        },
+        {
+            "prefabId": "ec4256ea-8d89-44c7-ad6e-23916b2f440f",
+            "id": "9424b974-a486-4d7a-95b7-f6b78b3203ef",
+            "unlock": [
+                "x",
+                "y",
+                "RectanglePhysics.spriteYOffset",
+                "RectanglePhysics.modifyYPosition",
+                "RectanglePhysics.modifyBodyHeight",
+                "RectanglePhysics.modifyBodyWidth",
+                "RectanglePhysics.isSensor"
+            ],
+            "label": "spikePrefab_1_1",
+            "components": [],
+            "RectanglePhysics.modifyBodyWidth": -16,
+            "RectanglePhysics.modifyBodyHeight": -44,
+            "RectanglePhysics.modifyYPosition": -22,
+            "RectanglePhysics.spriteYOffset": 0.34375,
+            "x": 160,
+            "y": 224
+        },
+        {
+            "prefabId": "ed55f365-5162-403a-b28b-f0655a7227a5",
+            "id": "feaf3aff-c326-48c2-923b-ac16506778ca",
+            "unlock": [
+                "x",
+                "y",
+                "RectanglePhysics.modifyYPosition"
+            ],
+            "label": "jump_Pad",
+            "components": [],
+            "RectanglePhysics.modifyYPosition": -28,
+            "x": 96,
+            "y": 160
+        },
+        {
+            "prefabId": "4ea8129b-0371-4dd3-a1ae-7dfbf189ef70",
+            "id": "d43313f8-2ee5-4349-b771-480766432356",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "platformGrassSmall",
+            "components": [],
+            "x": 256,
+            "y": 96
+        },
+        {
+            "prefabId": "4ea8129b-0371-4dd3-a1ae-7dfbf189ef70",
+            "id": "3393ee04-64ef-4f76-ab76-44243e69d4c8",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "platformGrassSmall_1",
+            "components": [],
+            "x": 608,
+            "y": 96
+        },
+        {
+            "prefabId": "4ea8129b-0371-4dd3-a1ae-7dfbf189ef70",
+            "id": "9ae41074-1293-468b-8513-4016971c649f",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "platformGrassSmall_2",
+            "components": [],
+            "x": 256,
+            "y": 544
+        },
+        {
+            "prefabId": "ed55f365-5162-403a-b28b-f0655a7227a5",
+            "id": "4708faad-3adf-4989-b0c8-71a1f5240774",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "jump_Pad_1",
+            "components": [],
+            "x": 480,
+            "y": 480
+        },
+        {
+            "prefabId": "087f3cc7-41c9-46b0-833a-38a6197b98f1",
+            "id": "89a67961-c9e5-45ce-90dd-c8f7239da9f5",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "player",
+            "scope": "PUBLIC",
+            "components": [],
+            "x": 96,
+            "y": 64
+        },
+        {
+            "prefabId": "6c6124bf-0368-4efa-a5ff-6f7e4b79645d",
+            "id": "cc6f95a5-c766-441a-b6e5-b6e5dec33b6a",
+            "unlock": [
+                "x",
+                "y",
+                "scaleX",
+                "scaleY"
+            ],
+            "label": "antiGravZonePrefab",
+            "components": [],
+            "x": 512,
+            "y": 160,
+            "scaleX": 0.5,
+            "scaleY": 2
+        }
+    ],
+    "plainObjects": [
+        {
+            "id": "fada1b6a-9646-4200-9444-2e5d7a39f89e",
+            "type": "Tilemap",
+            "label": "levelTest_map",
+            "key": "LevelTest_map",
+            "tilesets": [
+                {
+                    "name": "Crayon_Tileset",
+                    "imageKey": "Crayon_256"
+                },
+                {
+                    "name": "Pencil_Tileset",
+                    "imageKey": "Pencil_256"
+                }
+            ]
+        }
+    ],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 2
+    },
+    "lists": [
+        {
+            "id": "05eb9921-06b7-4f45-bc5b-31104531ffea",
+            "label": "MovableObjects"
+        },
+        {
+            "id": "0fc97d54-495f-4e94-89c5-44c55fc93ed6",
+            "label": "JumpPads",
+            "scope": "PUBLIC"
+        },
+        {
+            "id": "d686cf9c-23d6-4a9d-96c9-48ba8db43e73",
+            "label": "Spikes",
+            "scope": "PUBLIC"
+        }
+    ]
+}

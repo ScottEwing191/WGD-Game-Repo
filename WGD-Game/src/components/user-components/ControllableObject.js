@@ -51,14 +51,15 @@ class ControllableObject {
 
         //this.refToGameManager = GameManager.getComponent(this.scene.manager[0]);
         this.refToGameManager = GameManager.getComponent(this.scene.gameManager);
-        this.yPositionOffset = RectanglePhysics.getComponent(this.gameObject).modifyYPosition;
+        if (RectanglePhysics.getComponent(this.gameObject) !== undefined){
+            this.yPositionOffset = RectanglePhysics.getComponent(this.gameObject).modifyYPosition;
+        }else{
+            //--Do Circle Physics Alternative
+            this.yPositionOffset = 0;
+            console.log('circle stuff');
+        }
 
-        //-- Input Event Method
-        //-- Add event listeners for each input.
-        //--Up Event
-        /*this.input.up.on('down', function (){
-            this.gameObject.y -= this.moveDst;
-        },this);*/
+
 
         //--Start Event Listener for mouse click
         this.scene.input.on('pointerdown', (event) => {
@@ -79,15 +80,16 @@ class ControllableObject {
         //this.gameObject.input.draggable = true;
 
         this.gameObject.on('dragstart', function (pointer, dragX, dragY) {
-            //console.debug('Drag Start');
+            console.debug('Drag Start');
         });
 
         this.gameObject.on('drag', (pointer, dragX, dragY) => {
             this.dragObject(dragX, dragY);
+            console.debug('Drag');
         });
 
         this.gameObject.on('dragend', function (pointer, dragX, dragY, dropped) {
-            //console.debug('Drag End');
+            console.debug('Drag End');
         });
 
     }
@@ -121,7 +123,7 @@ class ControllableObject {
         let gridY = Math.floor(dragY / 32);
         this.gameObject.x = gridX * 32;
         this.gameObject.y = gridY * 32;
-        this.gameObject.y -= this.yPositionOffset;  // this account for some objects colliders and sprite position being different from the default positions that
+        this.gameObject.y -= this.yPositionOffset;  // this accounts for some objects colliders and sprite position being different from the default positions that
                                                     //... resulted from the sprite
 
         //--clamp the center of the game object to the bounds of the scene. Problem with only clamping the center is the sides of the object can go out of bounds

@@ -46,29 +46,47 @@ class Level1 extends Phaser.Scene {
 		this.add.existing(jumpPadUnmovable);
 
 		// jump_Pad
-		const jump_Pad = new Jump_Pad(this, 288, 128);
+		const jump_Pad = new Jump_Pad(this, 384, 96);
 		this.add.existing(jump_Pad);
-
-		// player
-		const player = this.add.sprite(96, 96, "BallPop_256", 0);
-		player.scaleX = 0.3;
-		player.scaleY = 0.3;
 
 		// spikePrefab
 		const spikePrefab = new SpikePrefab(this, 288, 544);
 		this.add.existing(spikePrefab);
 
 		// platformGrassSmall
-		const platformGrassSmall = new PlatformGrassSmall(this, 640, 192);
+		const platformGrassSmall = new PlatformGrassSmall(this, 640, 192, "platform_pencil_grass_2");
 		this.add.existing(platformGrassSmall);
 
 		// platformGrassSmall_1
-		const platformGrassSmall_1 = new PlatformGrassSmall(this, 512, 128);
+		const platformGrassSmall_1 = new PlatformGrassSmall(this, 640, 96);
 		this.add.existing(platformGrassSmall_1);
 
 		// antiGravZonePrefab
 		const antiGravZonePrefab = new AntiGravZonePrefab(this, 173, 204);
 		this.add.existing(antiGravZonePrefab);
+
+		// player
+		const player = new PlayerPrefab(this, 224, 96);
+		this.add.existing(player);
+
+		// platformGrassBig_1
+		const platformGrassBig_1 = new PlatformGrassBig(this, 416, 192);
+		this.add.existing(platformGrassBig_1);
+
+		// pencil_256100
+		const pencil_256100 = this.add.image(416, 320, "Pencil_256", 100);
+		pencil_256100.scaleX = 0.25;
+		pencil_256100.scaleY = 0.25;
+
+		// pencil_256100_1
+		const pencil_256100_1 = this.add.image(320, 320, "Pencil_256", 100);
+		pencil_256100_1.scaleX = 0.25;
+		pencil_256100_1.scaleY = 0.25;
+
+		// pencil_256100_1_1
+		const pencil_256100_1_1 = this.add.image(224, 320, "Pencil_256", 100);
+		pencil_256100_1_1.scaleX = 0.25;
+		pencil_256100_1_1.scaleY = 0.25;
 
 		// lists
 		const movableObjects = []
@@ -78,12 +96,23 @@ class Level1 extends Phaser.Scene {
 		// gameManager (components)
 		new GameManager(gameManager);
 
-		// player (components)
-		const playerCirclePhysics = new CirclePhysics(player);
-		playerCirclePhysics.radius = 24;
-		playerCirclePhysics.bounce = 1;
-		new Respawn(player);
-		new Player(player);
+		// pencil_256100 (components)
+		new ControllableObject(pencil_256100);
+		const pencil_256100CirclePhysics = new CirclePhysics(pencil_256100);
+		pencil_256100CirclePhysics.bounce = 0;
+		pencil_256100CirclePhysics.isStatic = true;
+
+		// pencil_256100_1 (components)
+		new ControllableObject(pencil_256100_1);
+		const pencil_256100_1CirclePhysics = new CirclePhysics(pencil_256100_1);
+		pencil_256100_1CirclePhysics.bounce = 0;
+		pencil_256100_1CirclePhysics.isStatic = true;
+
+		// pencil_256100_1_1 (components)
+		new ControllableObject(pencil_256100_1_1);
+		const pencil_256100_1_1CirclePhysics = new CirclePhysics(pencil_256100_1_1);
+		pencil_256100_1_1CirclePhysics.bounce = 0;
+		pencil_256100_1_1CirclePhysics.isStatic = true;
 
 		this.gameManager = gameManager;
 		this.player = player;
@@ -97,7 +126,7 @@ class Level1 extends Phaser.Scene {
 
 	/** @type {Phaser.GameObjects.Rectangle} */
 	gameManager;
-	/** @type {Phaser.GameObjects.Sprite} */
+	/** @type {PlayerPrefab} */
 	player;
 	/** @type {Array<any>} */
 	movableObjects;
@@ -110,6 +139,7 @@ class Level1 extends Phaser.Scene {
 
 	// Write your code here
 
+
 	create() {
 		this.editorCreate();
 		this.matter.world.setBounds(16,16, 848, 762, 64,true, true, true, false);
@@ -117,8 +147,13 @@ class Level1 extends Phaser.Scene {
 		//this.collisionTest2_map.setCollisionByProperty({collider :true});
 		//this.matter.world.convertTilemapLayer(this.collision_1_1);
 
+		//this.scene.start("LevelTest");
 
 
+	}
+
+	nextLevel(){
+		this.scene.start("LevelTest");
 	}
 
 	/* END-USER-CODE */

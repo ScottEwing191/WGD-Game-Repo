@@ -94,29 +94,8 @@
             ],
             "label": "jump_Pad",
             "components": [],
-            "x": 288,
-            "y": 128
-        },
-        {
-            "type": "Sprite",
-            "id": "84e7952d-f2da-4691-be7c-18f2fe99dfc5",
-            "label": "player",
-            "scope": "PUBLIC",
-            "components": [
-                "CirclePhysics",
-                "Respawn",
-                "Player"
-            ],
-            "CirclePhysics.radius": 24,
-            "CirclePhysics.bounce": 1,
-            "texture": {
-                "key": "BallPop_256",
-                "frame": 0
-            },
-            "x": 96,
-            "y": 96,
-            "scaleX": 0.3,
-            "scaleY": 0.3
+            "x": 384,
+            "y": 96
         },
         {
             "prefabId": "ec4256ea-8d89-44c7-ad6e-23916b2f440f",
@@ -135,10 +114,14 @@
             "id": "e9dfbd77-d467-412a-82f5-6f8cfbb2c29c",
             "unlock": [
                 "x",
-                "y"
+                "y",
+                "texture"
             ],
             "label": "platformGrassSmall",
             "components": [],
+            "texture": {
+                "key": "platform_pencil_grass_2"
+            },
             "x": 640,
             "y": 192
         },
@@ -147,12 +130,13 @@
             "id": "1961b163-7811-4260-89a8-b376e437bac6",
             "unlock": [
                 "x",
-                "y"
+                "y",
+                "RectanglePhysics.angle"
             ],
             "label": "platformGrassSmall_1",
             "components": [],
-            "x": 512,
-            "y": 128
+            "x": 640,
+            "y": 96
         },
         {
             "prefabId": "6c6124bf-0368-4efa-a5ff-6f7e4b79645d",
@@ -165,6 +149,88 @@
             "components": [],
             "x": 173,
             "y": 204
+        },
+        {
+            "prefabId": "087f3cc7-41c9-46b0-833a-38a6197b98f1",
+            "id": "b612e812-d89b-4a49-871f-aadcb78dcde1",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "player",
+            "scope": "PUBLIC",
+            "components": [],
+            "x": 224,
+            "y": 96
+        },
+        {
+            "prefabId": "78f1afa5-31bd-4118-a357-1ee073f288bb",
+            "id": "2ff81caf-24f4-42a9-a800-2378eb389d1f",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "platformGrassBig_1",
+            "components": [],
+            "x": 416,
+            "y": 192
+        },
+        {
+            "type": "Image",
+            "id": "20341337-392b-4a60-bd57-dc2c6cc15a7b",
+            "label": "pencil_256100",
+            "components": [
+                "ControllableObject",
+                "CirclePhysics"
+            ],
+            "CirclePhysics.bounce": 0,
+            "CirclePhysics.isStatic": true,
+            "texture": {
+                "key": "Pencil_256",
+                "frame": 100
+            },
+            "x": 416,
+            "y": 320,
+            "scaleX": 0.25,
+            "scaleY": 0.25
+        },
+        {
+            "type": "Image",
+            "id": "e372353c-f201-4c1b-ae6c-eae8cd760b8a",
+            "label": "pencil_256100_1",
+            "components": [
+                "ControllableObject",
+                "CirclePhysics"
+            ],
+            "CirclePhysics.bounce": 0,
+            "CirclePhysics.isStatic": true,
+            "texture": {
+                "key": "Pencil_256",
+                "frame": 100
+            },
+            "x": 320,
+            "y": 320,
+            "scaleX": 0.25,
+            "scaleY": 0.25
+        },
+        {
+            "type": "Image",
+            "id": "260a48fd-5623-45c7-baef-1669827ca60d",
+            "label": "pencil_256100_1_1",
+            "components": [
+                "ControllableObject",
+                "CirclePhysics"
+            ],
+            "CirclePhysics.bounce": 0,
+            "CirclePhysics.isStatic": true,
+            "texture": {
+                "key": "Pencil_256",
+                "frame": 100
+            },
+            "x": 224,
+            "y": 320,
+            "scaleX": 0.25,
+            "scaleY": 0.25
         }
     ],
     "plainObjects": [

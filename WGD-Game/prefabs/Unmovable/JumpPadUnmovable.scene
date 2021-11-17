@@ -22,7 +22,7 @@
             "RectanglePhysics.isSensor": true,
             "RectanglePhysics.modifyBodyWidth": -24,
             "RectanglePhysics.modifyBodyHeight": -56,
-            "RectanglePhysics.modifyYPosition": 4,
+            "RectanglePhysics.modifyYPosition": -28,
             "RectanglePhysics.spriteYOffset": 0.4375,
             "texture": {
                 "key": "Crayon_256",

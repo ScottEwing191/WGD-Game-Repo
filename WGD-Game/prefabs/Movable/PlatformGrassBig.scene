@@ -1,5 +1,5 @@
 {
-    "id": "ec4256ea-8d89-44c7-ad6e-23916b2f440f",
+    "id": "78f1afa5-31bd-4118-a357-1ee073f288bb",
     "sceneType": "PREFAB",
     "settings": {
         "preloadMethodName": "",
@@ -11,19 +11,15 @@
     "displayList": [
         {
             "type": "Image",
-            "id": "23e32ad2-4931-40e3-9a07-474ca4cdb695",
-            "label": "spike",
+            "id": "5248bbcb-b52a-4055-8001-1f7c1fc6530f",
+            "label": "platformGrassBig",
             "components": [
                 "RectanglePhysics",
-                "Spike"
+                "ControllableObject"
             ],
-            "RectanglePhysics.modifyBodyWidth": -16,
-            "RectanglePhysics.modifyBodyHeight": -44,
-            "RectanglePhysics.modifyYPosition": -22,
-            "RectanglePhysics.spriteYOffset": 0.34375,
+            "RectanglePhysics.modifyYPosition": 16,
             "texture": {
-                "key": "Crayon_256",
-                "frame": 77
+                "key": "platform_pencil_grass_3"
             },
             "scaleX": 0.25,
             "scaleY": 0.25

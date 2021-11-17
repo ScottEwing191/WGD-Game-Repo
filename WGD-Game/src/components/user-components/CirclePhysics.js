@@ -35,6 +35,8 @@ class CirclePhysics {
 	radius = 32;
 	/** @type {number} */
 	bounce = 0.8;
+	/** @type {boolean} */
+	isStatic = false;
 
 	/* START-USER-CODE */
 
@@ -46,6 +48,7 @@ class CirclePhysics {
 			type: 'circle',
             radius: this.radius
         }, {
+			isStatic: this.isStatic,
             mass: 25,
             inverseMass: (1 / 25)
         });

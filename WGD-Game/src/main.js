@@ -29,6 +29,7 @@ window.addEventListener('load', function () {
     game.scene.add("Preload", Preload);
     game.scene.add("Level", Level);
     game.scene.add("Level1", Level1);
+    game.scene.add("LevelTest", LevelTest);
     game.scene.add("Boot", Boot, true);
 });
 

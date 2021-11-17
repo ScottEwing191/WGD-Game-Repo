@@ -41,6 +41,8 @@ class RectanglePhysics {
 	modifyYPosition = 0;
 	/** @type {number} */
 	spriteYOffset = 0;
+	/** @type {number} */
+	angle = 0;
 
 	/* START-USER-CODE */
 
@@ -60,6 +62,7 @@ class RectanglePhysics {
             isStatic: true,
             ignoreGravity: true,
             isSensor : this.isSensor,
+            angle: this.angle * Math.PI / 180,          // convert to degrees
             render: {
                 sprite: {
                     xOffset: 0,

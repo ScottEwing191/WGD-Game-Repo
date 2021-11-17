@@ -18,7 +18,7 @@ class Jump_Pad extends Phaser.GameObjects.Sprite {
 		thisRectanglePhysics.isSensor = true;
 		thisRectanglePhysics.modifyBodyWidth = -24;
 		thisRectanglePhysics.modifyBodyHeight = -56;
-		thisRectanglePhysics.modifyYPosition = 4;
+		thisRectanglePhysics.modifyYPosition = -28;
 		thisRectanglePhysics.spriteYOffset = 0.4375;
 		new ControllableObject(this);
 

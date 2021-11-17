@@ -1,5 +1,5 @@
 {
-    "id": "ec4256ea-8d89-44c7-ad6e-23916b2f440f",
+    "id": "087f3cc7-41c9-46b0-833a-38a6197b98f1",
     "sceneType": "PREFAB",
     "settings": {
         "preloadMethodName": "",
@@ -10,23 +10,22 @@
     },
     "displayList": [
         {
-            "type": "Image",
-            "id": "23e32ad2-4931-40e3-9a07-474ca4cdb695",
-            "label": "spike",
+            "type": "Sprite",
+            "id": "4068c1f5-6e12-4a26-9389-265819f8c4ab",
+            "label": "player",
+            "scope": "PUBLIC",
             "components": [
-                "RectanglePhysics",
-                "Spike"
+                "CirclePhysics",
+                "Player"
             ],
-            "RectanglePhysics.modifyBodyWidth": -16,
-            "RectanglePhysics.modifyBodyHeight": -44,
-            "RectanglePhysics.modifyYPosition": -22,
-            "RectanglePhysics.spriteYOffset": 0.34375,
+            "CirclePhysics.radius": 24,
+            "CirclePhysics.bounce": 1,
             "texture": {
-                "key": "Crayon_256",
-                "frame": 77
+                "key": "BallPop_256",
+                "frame": 0
             },
-            "scaleX": 0.25,
-            "scaleY": 0.25
+            "scaleX": 0.3,
+            "scaleY": 0.3
         }
     ],
     "plainObjects": [],

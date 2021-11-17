@@ -35,6 +35,11 @@
                 "key": "boost-pad-anim"
             },
             {
+                "url": "src/components/user-components/CircleCollider.js",
+                "type": "script",
+                "key": "CircleCollider"
+            },
+            {
                 "url": "src/components/user-components/CirclePhysics.js",
                 "type": "script",
                 "key": "CirclePhysics"
@@ -143,6 +148,11 @@
                 "key": "level-end-anim"
             },
             {
+                "url": "assets/tiled/Test/LevelTest_map.json",
+                "type": "tilemapTiledJSON",
+                "key": "LevelTest_map"
+            },
+            {
                 "url": "assets/images/pencil/Pencil_256.png",
                 "frameConfig": {
                     "frameWidth": 256,
@@ -226,6 +236,11 @@
                 "key": "platform_pencil_grass_3"
             },
             {
+                "url": "prefabs/Movable/PlatformGrassBig.js",
+                "type": "script",
+                "key": "PlatformGrassBig"
+            },
+            {
                 "url": "prefabs/Movable/PlatformGrassSmall.js",
                 "type": "script",
                 "key": "PlatformGrassSmall"
@@ -234,6 +249,11 @@
                 "url": "src/components/user-components/Player.js",
                 "type": "script",
                 "key": "Player"
+            },
+            {
+                "url": "prefabs/Movable/PlayerPrefab.js",
+                "type": "script",
+                "key": "PlayerPrefab"
             },
             {
                 "url": "src/components/user-components/RectanglePhysics.js",

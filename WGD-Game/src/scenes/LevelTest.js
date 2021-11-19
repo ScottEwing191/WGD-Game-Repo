@@ -139,12 +139,11 @@ class LevelTest extends Phaser.Scene {
 		this.matter.world.convertTilemapLayer(this.ground);
 	}
 
-	//--Workaround to bug where player XY value's are set to NaN. Should be fixed now
-	/*resetPlayer(){
+	resetPlayer(){
 		const newPlayer = new PlayerPrefab(this, 96, 64);
 		this.add.existing(newPlayer);
 		this.player = newPlayer;
-	}*/
+	}
 	/* END-USER-CODE */
 }
 

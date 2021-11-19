@@ -7,6 +7,11 @@
                 "key": "AntiGravZone"
             },
             {
+                "url": "prefabs/Movable/AntiGravZone1x2Prefab.js",
+                "type": "script",
+                "key": "AntiGravZone1x2Prefab"
+            },
+            {
                 "url": "prefabs/Movable/AntiGravZonePrefab.js",
                 "type": "script",
                 "key": "AntiGravZonePrefab"
@@ -264,6 +269,16 @@
                 "url": "src/components/user-components/Respawn.js",
                 "type": "script",
                 "key": "Respawn"
+            },
+            {
+                "url": "assets/images/space/Space_1x2_512px.png",
+                "type": "image",
+                "key": "Space_1x2_512px"
+            },
+            {
+                "url": "assets/images/space/Space2_1x1_512px.png",
+                "type": "image",
+                "key": "Space2_1x1_512px"
             },
             {
                 "url": "src/components/user-components/Spike.js",

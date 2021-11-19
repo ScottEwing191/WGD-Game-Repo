@@ -106,7 +106,7 @@
             ],
             "label": "spikePrefab",
             "components": [],
-            "x": 288,
+            "x": 224,
             "y": 544
         },
         {
@@ -147,8 +147,8 @@
             ],
             "label": "antiGravZonePrefab",
             "components": [],
-            "x": 224,
-            "y": 192
+            "x": 480,
+            "y": 448
         },
         {
             "prefabId": "087f3cc7-41c9-46b0-833a-38a6197b98f1",
@@ -241,8 +241,8 @@
             ],
             "label": "antiGravZonePrefab_1",
             "components": [],
-            "x": 224,
-            "y": 256
+            "x": 352,
+            "y": 448
         },
         {
             "prefabId": "6c6124bf-0368-4efa-a5ff-6f7e4b79645d",
@@ -253,20 +253,8 @@
             ],
             "label": "antiGravZonePrefab_1_1",
             "components": [],
-            "x": 224,
-            "y": 320
-        },
-        {
-            "prefabId": "6c6124bf-0368-4efa-a5ff-6f7e4b79645d",
-            "id": "693e020b-19fc-449d-be76-0c51cfb66071",
-            "unlock": [
-                "x",
-                "y"
-            ],
-            "label": "antiGravZonePrefab_1_2",
-            "components": [],
-            "x": 224,
-            "y": 384
+            "x": 96,
+            "y": 448
         },
         {
             "prefabId": "6c6124bf-0368-4efa-a5ff-6f7e4b79645d",
@@ -279,6 +267,30 @@
             "components": [],
             "x": 224,
             "y": 448
+        },
+        {
+            "prefabId": "c9974d39-92b8-4294-bcd4-b8cce4f2fb93",
+            "id": "2d5dddc7-f7e3-4fa5-821b-fd4557ea5fbe",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "antiGravZone1x2Prefab",
+            "components": [],
+            "x": 224,
+            "y": 256
+        },
+        {
+            "prefabId": "c9974d39-92b8-4294-bcd4-b8cce4f2fb93",
+            "id": "d6b7a819-fe82-445c-93be-994f13948e42",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "antiGravZone1x2Prefab_1",
+            "components": [],
+            "x": 608,
+            "y": 384
         }
     ],
     "plainObjects": [

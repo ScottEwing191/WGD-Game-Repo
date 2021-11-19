@@ -3,10 +3,10 @@
 
 /* START OF COMPILED CODE */
 
-class AntiGravZonePrefab extends Phaser.GameObjects.Image {
+class AntiGravZone1x2Prefab extends Phaser.GameObjects.Image {
 
 	constructor(scene, x, y, texture, frame) {
-		super(scene, x ?? 0, y ?? 0, texture || "Space2_1x1_512px", frame);
+		super(scene, x ?? 0, y ?? 0, texture || "Space_1x2_512px", frame);
 
 		this.scaleX = 0.25;
 		this.scaleY = 0.25;

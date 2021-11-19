@@ -50,7 +50,7 @@ class Level1 extends Phaser.Scene {
 		this.add.existing(jump_Pad);
 
 		// spikePrefab
-		const spikePrefab = new SpikePrefab(this, 288, 544);
+		const spikePrefab = new SpikePrefab(this, 224, 544);
 		this.add.existing(spikePrefab);
 
 		// platformGrassSmall
@@ -62,7 +62,7 @@ class Level1 extends Phaser.Scene {
 		this.add.existing(platformGrassSmall_1);
 
 		// antiGravZonePrefab
-		const antiGravZonePrefab = new AntiGravZonePrefab(this, 224, 192);
+		const antiGravZonePrefab = new AntiGravZonePrefab(this, 480, 448);
 		this.add.existing(antiGravZonePrefab);
 
 		// player
@@ -89,20 +89,24 @@ class Level1 extends Phaser.Scene {
 		pencil_256100_1_1.scaleY = 0.25;
 
 		// antiGravZonePrefab_1
-		const antiGravZonePrefab_1 = new AntiGravZonePrefab(this, 224, 256);
+		const antiGravZonePrefab_1 = new AntiGravZonePrefab(this, 352, 448);
 		this.add.existing(antiGravZonePrefab_1);
 
 		// antiGravZonePrefab_1_1
-		const antiGravZonePrefab_1_1 = new AntiGravZonePrefab(this, 224, 320);
+		const antiGravZonePrefab_1_1 = new AntiGravZonePrefab(this, 96, 448);
 		this.add.existing(antiGravZonePrefab_1_1);
-
-		// antiGravZonePrefab_1_2
-		const antiGravZonePrefab_1_2 = new AntiGravZonePrefab(this, 224, 384);
-		this.add.existing(antiGravZonePrefab_1_2);
 
 		// antiGravZonePrefab_1_3
 		const antiGravZonePrefab_1_3 = new AntiGravZonePrefab(this, 224, 448);
 		this.add.existing(antiGravZonePrefab_1_3);
+
+		// antiGravZone1x2Prefab
+		const antiGravZone1x2Prefab = new AntiGravZone1x2Prefab(this, 224, 256);
+		this.add.existing(antiGravZone1x2Prefab);
+
+		// antiGravZone1x2Prefab_1
+		const antiGravZone1x2Prefab_1 = new AntiGravZone1x2Prefab(this, 608, 384);
+		this.add.existing(antiGravZone1x2Prefab_1);
 
 		// lists
 		const movableObjects = []

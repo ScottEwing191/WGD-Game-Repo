@@ -41,6 +41,7 @@ class Player extends UserComponent {
 	}
 
 	playModeEntered(){
+		this.gravZoneCount = 0;				// reset the grave zone count. If player is in gravity zone when Play Mode start then that gravity zone will be ignored
 		this.gameObject.setStatic(false);
 		//this.gameObject.body.setVelocity(this.xVelocity, this.yVelocity);
 		this.gameObject.setVelocity(this.xVelocity, -this.yVelocity);
@@ -50,6 +51,8 @@ class Player extends UserComponent {
 		if (this.gameObject.body.isStatic === false){
 			this.gameObject.setStatic(true);
 		}
+
+
 		this.gameObject.setIgnoreGravity(false);    // make sure gravity is on after being turned off in player death method. Ball still won't move just now since isStatic = true
 		this.gameObject.x = this.startPosition.x;
 		this.gameObject.y = this.startPosition.y;

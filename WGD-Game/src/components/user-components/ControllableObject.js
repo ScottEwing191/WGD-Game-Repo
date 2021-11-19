@@ -56,7 +56,6 @@ class ControllableObject {
         }else{
             //--Do Circle Physics Alternative
             this.yPositionOffset = 0;
-            console.log('circle stuff');
         }
 
 
@@ -80,16 +79,16 @@ class ControllableObject {
         //this.gameObject.input.draggable = true;
 
         this.gameObject.on('dragstart', function (pointer, dragX, dragY) {
-            console.debug('Drag Start');
+            //console.debug('Drag Start');
         });
 
         this.gameObject.on('drag', (pointer, dragX, dragY) => {
             this.dragObject(dragX, dragY);
-            console.debug('Drag');
+            //console.debug('Drag');
         });
 
         this.gameObject.on('dragend', function (pointer, dragX, dragY, dropped) {
-            console.debug('Drag End');
+            //console.debug('Drag End');
         });
 
     }

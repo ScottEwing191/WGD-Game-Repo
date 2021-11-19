@@ -1,5 +1,5 @@
 {
-    "id": "6c6124bf-0368-4efa-a5ff-6f7e4b79645d",
+    "id": "c9974d39-92b8-4294-bcd4-b8cce4f2fb93",
     "sceneType": "PREFAB",
     "settings": {
         "preloadMethodName": "",
@@ -11,8 +11,8 @@
     "displayList": [
         {
             "type": "Image",
-            "id": "d4437b1f-b953-4be6-956c-045fcb084721",
-            "label": "antiGravZone",
+            "id": "7a9a4a8c-b943-40ba-b1ae-eebe26821313",
+            "label": "antiGravZone1x2",
             "components": [
                 "RectanglePhysics",
                 "ControllableObject",
@@ -21,7 +21,7 @@
             "RectanglePhysics.isSensor": true,
             "AntiGravZone.zoneAirFriction": 0.001,
             "texture": {
-                "key": "Space2_1x1_512px"
+                "key": "Space_1x2_512px"
             },
             "scaleX": 0.25,
             "scaleY": 0.25

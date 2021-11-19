@@ -28,7 +28,6 @@ class Spike extends UserComponent {
 
 	start(){
 		this.scene.spikes.push(this.gameObject);
-		console.log(this.scene.spikes.length);
 	}
 
 	playModeEntered(){

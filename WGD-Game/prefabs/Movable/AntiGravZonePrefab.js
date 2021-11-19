@@ -15,7 +15,8 @@ class AntiGravZonePrefab extends Phaser.GameObjects.Image {
 		const thisRectanglePhysics = new RectanglePhysics(this);
 		thisRectanglePhysics.isSensor = true;
 		new ControllableObject(this);
-		new AntiGravZone(this);
+		const thisAntiGravZone = new AntiGravZone(this);
+		thisAntiGravZone.zoneAirFriction = 0.001;
 
 		/* START-USER-CTR-CODE */
 		// Write your code here.

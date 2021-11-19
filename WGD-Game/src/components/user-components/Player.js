@@ -12,7 +12,7 @@ class Player extends UserComponent {
 		gameObject["__Player"] = this;
 
 		/* START-USER-CTR-CODE */
-		// Write your code here.
+		this.gravZoneCount = 0;
 		/* END-USER-CTR-CODE */
 	}
 
@@ -40,8 +40,6 @@ class Player extends UserComponent {
 		});
 	}
 
-update(){
-}
 	playModeEntered(){
 		this.gameObject.setStatic(false);
 		//this.gameObject.body.setVelocity(this.xVelocity, this.yVelocity);
@@ -52,14 +50,16 @@ update(){
 		if (this.gameObject.body.isStatic === false){
 			this.gameObject.setStatic(true);
 		}
+		this.gameObject.setIgnoreGravity(false);    // make sure gravity is on after being turned off in player death method. Ball still won't move just now since isStatic = true
 		this.gameObject.x = this.startPosition.x;
 		this.gameObject.y = this.startPosition.y;
 	}
 
 	playerDeath(){
-		this.gameObject.setStatic(true);
+		this.gameObject.setStatic(true);			// stop ball from moving when colliding with spikes
+		this.gameObject.setIgnoreGravity(true);    	// isStatic is about to be set to true to fix a bug. So this will make is so the ball will not start falling if the spikes are on a wall
 		this.gameObject.play('ball-pop');
-		this.gameObject.setStatic(false);
+		this.gameObject.setStatic(false);			// this line seams to fix the bug where the ball disappears when colliding with a wal after being killed by a spike
 	}
 	playerDeathAnimComplete(){
 		GameManager.getComponent(this.scene.gameManager).levelFailed();

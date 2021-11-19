@@ -207,7 +207,18 @@
             "name": "AntiGravZone",
             "baseClass": "UserComponent",
             "gameObjectType": "Phaser.GameObjects.Image",
-            "properties": []
+            "properties": [
+                {
+                    "name": "zoneAirFriction",
+                    "label": "Zone Air Friction",
+                    "tooltip": "The air friction which will be applied to the ball while in the gravity zone",
+                    "defValue": 0,
+                    "customDefinition": false,
+                    "type": {
+                        "id": "number"
+                    }
+                }
+            ]
         },
         {
             "name": "CircleCollider",

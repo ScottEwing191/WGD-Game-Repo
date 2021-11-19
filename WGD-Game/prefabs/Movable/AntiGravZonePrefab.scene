@@ -19,6 +19,7 @@
                 "AntiGravZone"
             ],
             "RectanglePhysics.isSensor": true,
+            "AntiGravZone.zoneAirFriction": 0.001,
             "texture": {
                 "key": "Pencil_256",
                 "frame": 105

@@ -62,7 +62,7 @@ class Level1 extends Phaser.Scene {
 		this.add.existing(platformGrassSmall_1);
 
 		// antiGravZonePrefab
-		const antiGravZonePrefab = new AntiGravZonePrefab(this, 173, 204);
+		const antiGravZonePrefab = new AntiGravZonePrefab(this, 224, 192);
 		this.add.existing(antiGravZonePrefab);
 
 		// player
@@ -84,9 +84,25 @@ class Level1 extends Phaser.Scene {
 		pencil_256100_1.scaleY = 0.25;
 
 		// pencil_256100_1_1
-		const pencil_256100_1_1 = this.add.image(224, 320, "Pencil_256", 100);
+		const pencil_256100_1_1 = this.add.image(384, 256, "Pencil_256", 100);
 		pencil_256100_1_1.scaleX = 0.25;
 		pencil_256100_1_1.scaleY = 0.25;
+
+		// antiGravZonePrefab_1
+		const antiGravZonePrefab_1 = new AntiGravZonePrefab(this, 224, 256);
+		this.add.existing(antiGravZonePrefab_1);
+
+		// antiGravZonePrefab_1_1
+		const antiGravZonePrefab_1_1 = new AntiGravZonePrefab(this, 224, 320);
+		this.add.existing(antiGravZonePrefab_1_1);
+
+		// antiGravZonePrefab_1_2
+		const antiGravZonePrefab_1_2 = new AntiGravZonePrefab(this, 224, 384);
+		this.add.existing(antiGravZonePrefab_1_2);
+
+		// antiGravZonePrefab_1_3
+		const antiGravZonePrefab_1_3 = new AntiGravZonePrefab(this, 224, 448);
+		this.add.existing(antiGravZonePrefab_1_3);
 
 		// lists
 		const movableObjects = []

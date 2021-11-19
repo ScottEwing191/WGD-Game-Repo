@@ -23,17 +23,17 @@ class AntiGravZone extends UserComponent {
 
 	/** @type {Phaser.GameObjects.Image} */
 	gameObject;
+	/** @type {number} */
+	zoneAirFriction = 0;
 
 	/* START-USER-CODE */
 
 	start(){
-		this.playerAirFriction = this.scene.player.frictionAir;
 		//--Start checking collision start events for if this Anti-Grav zone is touching the player
 		this.scene.matter.world.on('collisionstart', function(event, bodyA, bodyB){
 			if ((bodyA.gameObject === this.gameObject && bodyB.gameObject === this.scene.player) ||
 				bodyA.gameObject === this.scene.player && bodyB.gameObject === this.gameObject){
-				this.scene.player.setIgnoreGravity(true);
-				//this.scene.player.setFrictionAir(0);
+				this.enterGravZone();
 			}
 		},this);
 
@@ -41,11 +41,34 @@ class AntiGravZone extends UserComponent {
 		this.scene.matter.world.on('collisionend', function(event, bodyA, bodyB){
 			if (bodyA.gameObject === this.gameObject && bodyB.gameObject === this.scene.player ||
 				bodyA.gameObject === this.scene.player && bodyB.gameObject === this.gameObject){
-				this.scene.player.setIgnoreGravity(false);
-				//this.scene.player.setFrictionAir(this.playerAirFriction);
+				this.leaveGravZone();
 			}
 		},this);
 
+
+	}
+	//--Controls the player behaviour when they enter an anti gravity zone
+	enterGravZone() {
+		const playerScript =  Player.getComponent(this.scene.player);
+		//--If there are multiple anti gravity zones beside each other it is possible for the ball to enter one zone while...
+		//--it is still in another. In this case the ball doesnt need to set the setIgnoreGravity and setFrictionAir again.
+		//--gravZoneCount is used to keep track of whether the player is still in a ant gravity zone or not.
+		if (playerScript.gravZoneCount == 0) {
+			playerScript.gameObject.setIgnoreGravity(true);
+			playerScript.gameObject.setFrictionAir(this.zoneAirFriction);
+		}
+		playerScript.gravZoneCount++;
+	}
+
+	//--Controls the player behaviour when they leave an anti gravity zone
+	leaveGravZone() {
+		const playerScript =  Player.getComponent(this.scene.player);
+		//--The setIgnoreGravity and setFrictionAir only need to be set if the ball is leaving this anti gravity zone and is also NOT still in another anti gravity zone
+		playerScript.gravZoneCount--;
+		if (playerScript.gravZoneCount == 0) {
+			playerScript.gameObject.setIgnoreGravity(false);
+			playerScript.gameObject.setFrictionAir(0.01);
+		}
 
 	}
 

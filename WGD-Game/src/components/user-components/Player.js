@@ -59,6 +59,7 @@ update(){
 	playerDeath(){
 		this.gameObject.setStatic(true);
 		this.gameObject.play('ball-pop');
+		this.gameObject.setStatic(false);
 	}
 	playerDeathAnimComplete(){
 		GameManager.getComponent(this.scene.gameManager).levelFailed();

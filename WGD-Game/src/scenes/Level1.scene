@@ -60,6 +60,20 @@
             ]
         },
         {
+            "type": "Rectangle",
+            "id": "d09b91f8-d7b9-4a59-9db8-ab4728c19a99",
+            "label": "gameManager",
+            "scope": "PUBLIC",
+            "components": [
+                "GameManager"
+            ],
+            "x": 1056,
+            "y": 64,
+            "isFilled": true,
+            "width": 128,
+            "height": 128
+        },
+        {
             "prefabId": "0e346f50-687e-4921-8ee4-b493a15f351e",
             "id": "472d9394-0a72-4fd1-bd64-fca48e1a0de2",
             "unlock": [
@@ -277,20 +291,6 @@
             "components": [],
             "x": 608,
             "y": 384
-        },
-        {
-            "type": "Rectangle",
-            "id": "7d76f238-b9cb-4561-b9c3-5058425fb586",
-            "label": "gameManager",
-            "scope": "PUBLIC",
-            "components": [
-                "GameManager"
-            ],
-            "x": 1024,
-            "y": 64,
-            "isFilled": true,
-            "width": 128,
-            "height": 128
         }
     ],
     "plainObjects": [

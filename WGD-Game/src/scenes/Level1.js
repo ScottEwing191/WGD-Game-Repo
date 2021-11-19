@@ -37,10 +37,6 @@ class Level1 extends Phaser.Scene {
 		border_1.scaleX = 0.25;
 		border_1.scaleY = 0.25;
 
-		// gameManager
-		const gameManager = this.add.rectangle(1056, 64, 128, 128);
-		gameManager.isFilled = true;
-
 		// jumpPadUnmovable
 		const jumpPadUnmovable = new JumpPadUnmovable(this, 480, 192);
 		this.add.existing(jumpPadUnmovable);
@@ -108,13 +104,14 @@ class Level1 extends Phaser.Scene {
 		const antiGravZone1x2Prefab_1 = new AntiGravZone1x2Prefab(this, 608, 384);
 		this.add.existing(antiGravZone1x2Prefab_1);
 
+		// gameManager
+		const gameManager = this.add.rectangle(1024, 64, 128, 128);
+		gameManager.isFilled = true;
+
 		// lists
 		const movableObjects = []
 		const jumpPads = []
 		const spikes = []
-
-		// gameManager (components)
-		new GameManager(gameManager);
 
 		// pencil_256100 (components)
 		new ControllableObject(pencil_256100);
@@ -134,8 +131,11 @@ class Level1 extends Phaser.Scene {
 		pencil_256100_1_1CirclePhysics.bounce = 0;
 		pencil_256100_1_1CirclePhysics.isStatic = true;
 
-		this.gameManager = gameManager;
+		// gameManager (components)
+		new GameManager(gameManager);
+
 		this.player = player;
+		this.gameManager = gameManager;
 		this.level_1 = level_1;
 		this.movableObjects = movableObjects;
 		this.jumpPads = jumpPads;
@@ -144,10 +144,10 @@ class Level1 extends Phaser.Scene {
 		this.events.emit("scene-awake");
 	}
 
-	/** @type {Phaser.GameObjects.Rectangle} */
-	gameManager;
 	/** @type {PlayerPrefab} */
 	player;
+	/** @type {Phaser.GameObjects.Rectangle} */
+	gameManager;
 	/** @type {Array<any>} */
 	movableObjects;
 	/** @type {Array<any>} */

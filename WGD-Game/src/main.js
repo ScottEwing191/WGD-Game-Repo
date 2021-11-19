@@ -1,10 +1,10 @@
 window.addEventListener('load', function () {
 
     var game = new Phaser.Game({
-        //width: 896,
-        //height: 704,
-        width: 1024,
-        height: 382,
+        width: 896,
+        height: 704,
+        //width: 1024,
+        //height: 832,
         type: Phaser.AUTO,
         backgroundColor: "#242424",
         scale: {
@@ -32,6 +32,7 @@ window.addEventListener('load', function () {
     game.scene.add("Level", Level);
     game.scene.add("Level1", Level1);
     game.scene.add("LevelTest", LevelTest);
+    //game.scene.add("Level01", Level01);
     game.scene.add("Boot", Boot, true);
 });
 

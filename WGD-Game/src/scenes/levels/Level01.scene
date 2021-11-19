@@ -1,0 +1,94 @@
+{
+    "id": "b658ac34-3698-4466-ba57-c6c20222e77b",
+    "sceneType": "SCENE",
+    "settings": {
+        "snapEnabled": true,
+        "snapWidth": 32,
+        "snapHeight": 32,
+        "preloadPackFiles": [],
+        "createMethodName": "editorCreate",
+        "sceneKey": "Level01",
+        "borderWidth": 1024,
+        "borderHeight": 832
+    },
+    "displayList": [
+        {
+            "type": "TileSprite",
+            "id": "5df4088b-1692-44f3-b228-3b45e30a478d",
+            "label": "tilesprite",
+            "components": [],
+            "texture": {
+                "key": "Square Paper 2 Seamless_On Grid"
+            },
+            "originX": 0,
+            "originY": 0,
+            "width": 1024,
+            "height": 832,
+            "tileScaleX": 0.177,
+            "tileScaleY": 0.177
+        },
+        {
+            "type": "Rectangle",
+            "id": "fa57d575-d010-48fe-b1c2-81e5859cf66e",
+            "label": "gameManager",
+            "scope": "PUBLIC",
+            "components": [
+                "GameManager"
+            ],
+            "x": 960,
+            "y": 64,
+            "isFilled": true,
+            "width": 128,
+            "height": 128
+        },
+        {
+            "prefabId": "c9974d39-92b8-4294-bcd4-b8cce4f2fb93",
+            "id": "262c9ffc-26be-468c-81b6-8c6813288b22",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "antiGravZone1x2Prefab",
+            "components": [],
+            "x": 128,
+            "y": 352
+        },
+        {
+            "prefabId": "087f3cc7-41c9-46b0-833a-38a6197b98f1",
+            "id": "1c26a65b-91ea-4a45-90ee-4e576348cfb9",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "player",
+            "scope": "PUBLIC",
+            "components": [],
+            "x": 155,
+            "y": 119
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 2
+    },
+    "lists": [
+        {
+            "id": "de35db31-1dcd-4632-acca-633af3829e06",
+            "label": "movableObjects",
+            "scope": "PUBLIC"
+        },
+        {
+            "id": "5b2a7e14-302f-44ae-b861-d7412b995a1a",
+            "label": "jumpPads",
+            "scope": "PUBLIC"
+        },
+        {
+            "id": "1caee800-9db5-42fe-a106-4ceb15a1fe52",
+            "label": "spikes",
+            "scope": "PUBLIC"
+        }
+    ]
+}

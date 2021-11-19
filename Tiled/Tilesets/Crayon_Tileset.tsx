@@ -6,7 +6,7 @@
    <property name="collider" type="bool" value="true"/>
   </properties>
   <objectgroup draworder="index" id="2">
-   <object id="1" x="0" y="0" width="256" height="256"/>
+   <object id="1" x="0" y="0" width="128" height="256"/>
   </objectgroup>
  </tile>
  <tile id="1">
@@ -23,7 +23,7 @@
   </properties>
   <objectgroup draworder="index" id="2">
    <object id="1" x="0" y="0" width="256" height="256"/>
-   <object id="2" x="0" y="0" width="256" height="256"/>
+   <object id="2" x="128" y="0" width="128" height="256"/>
   </objectgroup>
  </tile>
  <tile id="3">
@@ -31,7 +31,7 @@
    <property name="collider" type="bool" value="true"/>
   </properties>
   <objectgroup draworder="index" id="2">
-   <object id="1" x="0" y="0" width="256" height="256"/>
+   <object id="1" x="0" y="0" width="128" height="256"/>
   </objectgroup>
  </tile>
  <tile id="4">
@@ -47,7 +47,7 @@
    <property name="collider" type="bool" value="true"/>
   </properties>
   <objectgroup draworder="index" id="2">
-   <object id="1" x="0" y="0" width="256" height="256"/>
+   <object id="1" x="128" y="0" width="128" height="256"/>
   </objectgroup>
  </tile>
  <tile id="6">
@@ -55,7 +55,7 @@
    <property name="collider" type="bool" value="true"/>
   </properties>
   <objectgroup draworder="index" id="2">
-   <object id="1" x="0" y="0" width="256" height="256"/>
+   <object id="1" x="0" y="0" width="128" height="256"/>
   </objectgroup>
  </tile>
  <tile id="7">
@@ -71,7 +71,7 @@
    <property name="collider" type="bool" value="true"/>
   </properties>
   <objectgroup draworder="index" id="2">
-   <object id="1" x="0" y="0" width="256" height="256"/>
+   <object id="1" x="128" y="0" width="128" height="256"/>
   </objectgroup>
  </tile>
  <tile id="10">
@@ -151,7 +151,7 @@
    <property name="collider" type="bool" value="true"/>
   </properties>
   <objectgroup draworder="index" id="2">
-   <object id="1" x="0" y="0" width="256" height="256"/>
+   <object id="1" x="0" y="0" width="128" height="256"/>
   </objectgroup>
  </tile>
  <tile id="21">
@@ -167,7 +167,7 @@
    <property name="collider" type="bool" value="true"/>
   </properties>
   <objectgroup draworder="index" id="2">
-   <object id="1" x="0" y="0" width="256" height="256"/>
+   <object id="1" x="128" y="0" width="128" height="256"/>
   </objectgroup>
  </tile>
  <tile id="23">
@@ -175,7 +175,7 @@
    <property name="collider" type="bool" value="true"/>
   </properties>
   <objectgroup draworder="index" id="2">
-   <object id="1" x="0" y="0" width="256" height="256"/>
+   <object id="1" x="0" y="0" width="128" height="256"/>
   </objectgroup>
  </tile>
  <tile id="24">
@@ -191,7 +191,7 @@
    <property name="collider" type="bool" value="true"/>
   </properties>
   <objectgroup draworder="index" id="2">
-   <object id="1" x="0" y="0" width="256" height="256"/>
+   <object id="1" x="128" y="0" width="128" height="256"/>
   </objectgroup>
  </tile>
  <tile id="26">
@@ -199,7 +199,7 @@
    <property name="collider" type="bool" value="true"/>
   </properties>
   <objectgroup draworder="index" id="2">
-   <object id="1" x="0" y="0" width="256" height="256"/>
+   <object id="1" x="0" y="0" width="128" height="256"/>
   </objectgroup>
  </tile>
  <tile id="27">
@@ -215,7 +215,7 @@
    <property name="collider" type="bool" value="true"/>
   </properties>
   <objectgroup draworder="index" id="2">
-   <object id="1" x="0" y="0" width="256" height="256"/>
+   <object id="1" x="128" y="0" width="128" height="256"/>
   </objectgroup>
  </tile>
  <tile id="30">

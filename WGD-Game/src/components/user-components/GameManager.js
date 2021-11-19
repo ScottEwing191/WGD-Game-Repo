@@ -45,9 +45,7 @@ class GameManager {
 			this.newScene();
 		});
 	}
-	update(){
 
-	}
 
 	switchToPlayMode(){
 		//--Check if already in PLAY MODE and if not set current mode
@@ -87,10 +85,11 @@ class GameManager {
 		//--Tell player to go into EDIT MODE
 		let player  = Player.getComponent(this.scene.player);
 		Player.getComponent(this.scene.player).editModeEntered();
-		if (player.gameObject.getCenter().x !== player.startPosition.x){
+		//-- catches a bug where the player XY are set to Nan, but it should be fixed now
+		/*if (player.gameObject.getCenter().x !== player.startPosition.x){
 			console.log("Went Wrong");
 			this.scene.resetPlayer();
-		}
+		}*/
 	}
 
 	levelFailed(){
@@ -101,7 +100,6 @@ class GameManager {
 
 	newScene(){
 		this.scene.nextLevel();
-		//this.scene.launch('LevelStart');
 	}
 	/* END-USER-CODE */
 }

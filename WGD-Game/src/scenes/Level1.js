@@ -83,10 +83,10 @@ class Level1 extends Phaser.Scene {
 		pencil_256100_1.scaleX = 0.25;
 		pencil_256100_1.scaleY = 0.25;
 
-		// pencil_256100_1_1
-		const pencil_256100_1_1 = this.add.image(384, 256, "Pencil_256", 100);
-		pencil_256100_1_1.scaleX = 0.25;
-		pencil_256100_1_1.scaleY = 0.25;
+		// roundNoBounce
+		const roundNoBounce = this.add.image(384, 256, "Pencil_256", 100);
+		roundNoBounce.scaleX = 0.25;
+		roundNoBounce.scaleY = 0.25;
 
 		// antiGravZonePrefab_1
 		const antiGravZonePrefab_1 = new AntiGravZonePrefab(this, 352, 448);
@@ -128,11 +128,11 @@ class Level1 extends Phaser.Scene {
 		pencil_256100_1CirclePhysics.bounce = 0;
 		pencil_256100_1CirclePhysics.isStatic = true;
 
-		// pencil_256100_1_1 (components)
-		new ControllableObject(pencil_256100_1_1);
-		const pencil_256100_1_1CirclePhysics = new CirclePhysics(pencil_256100_1_1);
-		pencil_256100_1_1CirclePhysics.bounce = 0;
-		pencil_256100_1_1CirclePhysics.isStatic = true;
+		// roundNoBounce (components)
+		new ControllableObject(roundNoBounce);
+		const roundNoBounceCirclePhysics = new CirclePhysics(roundNoBounce);
+		roundNoBounceCirclePhysics.bounce = 0;
+		roundNoBounceCirclePhysics.isStatic = true;
 
 		this.gameManager = gameManager;
 		this.player = player;

@@ -139,6 +139,10 @@ class LevelTest extends Phaser.Scene {
 		this.matter.world.convertTilemapLayer(this.ground);
 	}
 
+	nextLevel(){
+		this.scene.start("Level01");
+	}
+
 	resetPlayer(){
 		const newPlayer = new PlayerPrefab(this, 96, 64);
 		this.add.existing(newPlayer);

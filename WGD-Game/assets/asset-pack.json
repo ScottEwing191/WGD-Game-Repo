@@ -153,6 +153,11 @@
                 "key": "level-end-anim"
             },
             {
+                "url": "assets/tiled/Level01.json",
+                "type": "tilemapTiledJSON",
+                "key": "Level01"
+            },
+            {
                 "url": "assets/tiled/Test/LevelTest_map.json",
                 "type": "tilemapTiledJSON",
                 "key": "LevelTest_map"

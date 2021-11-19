@@ -216,7 +216,7 @@
         {
             "type": "Image",
             "id": "260a48fd-5623-45c7-baef-1669827ca60d",
-            "label": "pencil_256100_1_1",
+            "label": "roundNoBounce",
             "components": [
                 "ControllableObject",
                 "CirclePhysics"

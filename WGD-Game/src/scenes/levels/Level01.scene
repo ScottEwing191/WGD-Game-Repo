@@ -35,23 +35,76 @@
             "components": [
                 "GameManager"
             ],
-            "x": 960,
-            "y": 64,
+            "x": 1152,
+            "y": 96,
             "isFilled": true,
             "width": 128,
             "height": 128
         },
         {
-            "prefabId": "c9974d39-92b8-4294-bcd4-b8cce4f2fb93",
-            "id": "262c9ffc-26be-468c-81b6-8c6813288b22",
+            "type": "TilemapLayer",
+            "id": "ccb691ce-7497-4ff7-924b-2177d6cbb221",
+            "label": "decoration",
+            "components": [],
+            "scaleX": 0.25,
+            "scaleY": 0.25,
+            "tilemapId": "fa02bd71-2abe-4566-b9bb-f48e05fd0942",
+            "layerName": "Decoration",
+            "tilesets": [
+                "Crayon_Tileset",
+                "Pencil_Tileset"
+            ]
+        },
+        {
+            "type": "TilemapLayer",
+            "id": "5f3fed89-2a00-40c5-88d1-fa18f402b06d",
+            "label": "solid_1",
+            "scope": "CLASS",
+            "components": [],
+            "scaleX": 0.25,
+            "scaleY": 0.25,
+            "tilemapId": "fa02bd71-2abe-4566-b9bb-f48e05fd0942",
+            "layerName": "Solid",
+            "tilesets": [
+                "Crayon_Tileset",
+                "Pencil_Tileset"
+            ]
+        },
+        {
+            "prefabId": "4ea8129b-0371-4dd3-a1ae-7dfbf189ef70",
+            "id": "205c8996-6de1-42f0-b901-daee35d89f3a",
             "unlock": [
                 "x",
                 "y"
             ],
-            "label": "antiGravZone1x2Prefab",
+            "label": "platformGrassSmall",
             "components": [],
-            "x": 128,
+            "x": 832,
+            "y": 256
+        },
+        {
+            "prefabId": "78f1afa5-31bd-4118-a357-1ee073f288bb",
+            "id": "a9aff4b4-eb96-4465-9bcf-d113823c547c",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "platformGrassBig",
+            "components": [],
+            "x": 832,
             "y": 352
+        },
+        {
+            "prefabId": "78f1afa5-31bd-4118-a357-1ee073f288bb",
+            "id": "f3efe5a9-72f9-4417-8ee2-bef954a40fae",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "platformGrassBig_1",
+            "components": [],
+            "x": 832,
+            "y": 448
         },
         {
             "prefabId": "087f3cc7-41c9-46b0-833a-38a6197b98f1",
@@ -63,11 +116,28 @@
             "label": "player",
             "scope": "PUBLIC",
             "components": [],
-            "x": 155,
-            "y": 119
+            "x": 192,
+            "y": 192
         }
     ],
-    "plainObjects": [],
+    "plainObjects": [
+        {
+            "id": "fa02bd71-2abe-4566-b9bb-f48e05fd0942",
+            "type": "Tilemap",
+            "label": "level01",
+            "key": "Level01",
+            "tilesets": [
+                {
+                    "name": "Crayon_Tileset",
+                    "imageKey": "Crayon_256"
+                },
+                {
+                    "name": "Pencil_Tileset",
+                    "imageKey": "Pencil_256"
+                }
+            ]
+        }
+    ],
     "meta": {
         "app": "Phaser Editor 2D - Scene Editor",
         "url": "https://phasereditor2d.com",

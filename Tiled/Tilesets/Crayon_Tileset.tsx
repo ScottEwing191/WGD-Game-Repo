@@ -22,7 +22,6 @@
    <property name="collider" type="bool" value="true"/>
   </properties>
   <objectgroup draworder="index" id="2">
-   <object id="1" x="0" y="0" width="256" height="256"/>
    <object id="3" x="128" y="0" width="128" height="256"/>
   </objectgroup>
  </tile>

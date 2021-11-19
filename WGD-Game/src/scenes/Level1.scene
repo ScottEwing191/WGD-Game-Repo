@@ -106,8 +106,8 @@
             ],
             "label": "spikePrefab",
             "components": [],
-            "x": 224,
-            "y": 544
+            "x": 192,
+            "y": 192
         },
         {
             "prefabId": "4ea8129b-0371-4dd3-a1ae-7dfbf189ef70",
@@ -277,8 +277,8 @@
             ],
             "label": "antiGravZone1x2Prefab",
             "components": [],
-            "x": 224,
-            "y": 256
+            "x": 768,
+            "y": 384
         },
         {
             "prefabId": "c9974d39-92b8-4294-bcd4-b8cce4f2fb93",

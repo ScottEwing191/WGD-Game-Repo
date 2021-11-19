@@ -189,22 +189,7 @@ class ControllableObject {
         this.gameObject.input.draggable = true;                 // also works
     }
 
-    //--Not Working direction is passed in by value so game object position does not get changed
-    /*testInput(inputDown, isPressedOnce, direction, multiplier, translateBy) {
-        console.log(isPressedOnce.valueOf());
 
-        if (inputDown && this.isSelected && !isPressedOnce.once) {
-            console.log('Selected');
-            console.log('Inside Before: ' + direction);
-            isPressedOnce.once = true;
-            //isPressedOnce = new Boolean(true);
-            direction += (multiplier * translateBy);
-            console.log('Inside After: ' + direction);
-        } else if (!inputDown)
-            isPressedOnce.once = false;
-            //isPressedOnce = new Boolean(false);
-        return direction
-    }*/
 
     /* END-USER-CODE */
 }

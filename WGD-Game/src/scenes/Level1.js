@@ -50,7 +50,7 @@ class Level1 extends Phaser.Scene {
 		this.add.existing(jump_Pad);
 
 		// spikePrefab
-		const spikePrefab = new SpikePrefab(this, 224, 544);
+		const spikePrefab = new SpikePrefab(this, 192, 192);
 		this.add.existing(spikePrefab);
 
 		// platformGrassSmall
@@ -101,7 +101,7 @@ class Level1 extends Phaser.Scene {
 		this.add.existing(antiGravZonePrefab_1_3);
 
 		// antiGravZone1x2Prefab
-		const antiGravZone1x2Prefab = new AntiGravZone1x2Prefab(this, 224, 256);
+		const antiGravZone1x2Prefab = new AntiGravZone1x2Prefab(this, 768, 384);
 		this.add.existing(antiGravZone1x2Prefab);
 
 		// antiGravZone1x2Prefab_1

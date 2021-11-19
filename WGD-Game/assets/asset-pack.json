@@ -158,6 +158,11 @@
                 "key": "Level01"
             },
             {
+                "url": "assets/tiled/Level02.json",
+                "type": "tilemapTiledJSON",
+                "key": "Level02"
+            },
+            {
                 "url": "assets/tiled/Test/LevelTest_map.json",
                 "type": "tilemapTiledJSON",
                 "key": "LevelTest_map"
@@ -291,9 +296,75 @@
                 "key": "Spike"
             },
             {
+                "url": "prefabs/spikes/Spike1Down.js",
+                "type": "script",
+                "key": "Spike1Down"
+            },
+            {
+                "url": "prefabs/spikes/Spike1Left.js",
+                "type": "script",
+                "key": "Spike1Left"
+            },
+            {
+                "url": "prefabs/spikes/Spike1Right.js",
+                "type": "script",
+                "key": "Spike1Right"
+            },
+            {
+                "url": "prefabs/spikes/Spike1Up.js",
+                "type": "script",
+                "key": "Spike1Up"
+            },
+            {
+                "url": "prefabs/spikes/Spike4Down.js",
+                "type": "script",
+                "key": "Spike4Down"
+            },
+            {
+                "url": "prefabs/spikes/Spike4Left.js",
+                "type": "script",
+                "key": "Spike4Left"
+            },
+            {
+                "url": "prefabs/spikes/Spike4Right.js",
+                "type": "script",
+                "key": "Spike4Right"
+            },
+            {
+                "url": "prefabs/spikes/Spike4Up.js",
+                "type": "script",
+                "key": "Spike4Up"
+            },
+            {
                 "url": "prefabs/Unmovable/SpikePrefab.js",
                 "type": "script",
                 "key": "SpikePrefab"
+            },
+            {
+                "url": "assets/images/crayon/Spikes_Crayon.png",
+                "frameConfig": {
+                    "frameWidth": 256,
+                    "frameHeight": 256,
+                    "startFrame": 0,
+                    "endFrame": -1,
+                    "spacing": 0,
+                    "margin": 0
+                },
+                "type": "spritesheet",
+                "key": "Spikes_Crayon"
+            },
+            {
+                "url": "assets/images/pencil/Spikes_Pencill.png",
+                "frameConfig": {
+                    "frameWidth": 256,
+                    "frameHeight": 256,
+                    "startFrame": 0,
+                    "endFrame": -1,
+                    "spacing": 0,
+                    "margin": 0
+                },
+                "type": "spritesheet",
+                "key": "Spikes_Pencill"
             },
             {
                 "url": "assets/images/backgrounds/Square Paper 2 Seamless_On Grid.png",

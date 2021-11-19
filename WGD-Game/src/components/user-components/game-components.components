@@ -85,7 +85,27 @@
                 {
                     "name": "spriteYOffset",
                     "label": "Sprite Y Offset",
-                    "tooltip": "The offset of the sprite relative to the game object (Guide: 0.5 - (modify Y Position))",
+                    "tooltip": "The offset of the sprite relative to the game object (Guide: 0.5 - (modify Y Position / 64))",
+                    "defValue": 0,
+                    "customDefinition": false,
+                    "type": {
+                        "id": "number"
+                    }
+                },
+                {
+                    "name": "modifyXPosition",
+                    "label": "Modify X Position",
+                    "tooltip": "Increase or decrees the X Position of the gameObject (+ve for??) ",
+                    "defValue": 0,
+                    "customDefinition": false,
+                    "type": {
+                        "id": "number"
+                    }
+                },
+                {
+                    "name": "spriteXOffset",
+                    "label": "Sprite X Offset",
+                    "tooltip": "The offset of the sprite relative to the game object (Guide: 0.5 - (modify X Position))",
                     "defValue": 0,
                     "customDefinition": false,
                     "type": {

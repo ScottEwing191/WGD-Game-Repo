@@ -31,6 +31,7 @@ class Spike extends UserComponent {
 	}
 
 	playModeEntered(){
+		console.log(this.gameObject.getCenter());
 		this.gameObject.body.setOnCollideWith(this.scene.player.body, () =>{
 			//--Kill the player
 			Player.getComponent(this.scene.player).playerDeath();

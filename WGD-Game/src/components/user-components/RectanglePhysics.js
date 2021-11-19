@@ -66,7 +66,7 @@ class RectanglePhysics {
             isStatic: true,
             ignoreGravity: true,
             isSensor : this.isSensor,
-            //angle: this.angle * Math.PI / 180,          // convert to degrees
+            angle: this.angle * Math.PI / 180,          // convert to degrees
             render: {
                 sprite: {
                     xOffset: this.spriteXOffset,
@@ -76,11 +76,7 @@ class RectanglePhysics {
                 }
             }
         })
-        this.gameObject.setAngle(this.angle);
-    }
-
-    setAngle(){
-       this.gameObject.setAngle(this.angle);
+        //this.gameObject.setAngle(this.angle);
     }
 
     update() {

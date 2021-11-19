@@ -40,9 +40,29 @@
                 "key": "boost-pad-anim"
             },
             {
+                "url": "prefabs/Movable/CircleBounce.js",
+                "type": "script",
+                "key": "CircleBounce"
+            },
+            {
+                "url": "prefabs/Unmovable/CircleBounceStatic.js",
+                "type": "script",
+                "key": "CircleBounceStatic"
+            },
+            {
                 "url": "src/components/user-components/CircleCollider.js",
                 "type": "script",
                 "key": "CircleCollider"
+            },
+            {
+                "url": "prefabs/Movable/CircleNoBounce.js",
+                "type": "script",
+                "key": "CircleNoBounce"
+            },
+            {
+                "url": "prefabs/Unmovable/CircleNoBounceStatic.js",
+                "type": "script",
+                "key": "CircleNoBounceStatic"
             },
             {
                 "url": "src/components/user-components/CirclePhysics.js",
@@ -161,6 +181,16 @@
                 "url": "assets/tiled/Level02.json",
                 "type": "tilemapTiledJSON",
                 "key": "Level02"
+            },
+            {
+                "url": "assets/tiled/Level03.json",
+                "type": "tilemapTiledJSON",
+                "key": "Level03"
+            },
+            {
+                "url": "assets/tiled/Level04.json",
+                "type": "tilemapTiledJSON",
+                "key": "Level04"
             },
             {
                 "url": "assets/tiled/Test/LevelTest_map.json",

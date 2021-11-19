@@ -210,6 +210,10 @@ class Level02 extends Phaser.Scene {
 		this.matter.world.convertTilemapLayer(this.solid_1);
 	}
 
+	nextLevel(){
+		this.scene.start("Level03");
+	}
+
 	/* END-USER-CODE */
 }
 

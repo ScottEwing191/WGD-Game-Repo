@@ -23,10 +23,16 @@ class CircleCollider extends UserComponent {
 
 	/** @type {Phaser.GameObjects.Image} */
 	gameObject;
+	/** @type {number} */
+	radius = 32;
+	/** @type {number} */
+	bounce = 0.5;
+	/** @type {boolean} */
+	isStatic = true;
 
 	/* START-USER-CODE */
 
-	start() {
+	/*start() {
 		this.scene.matter.add.gameObject(this.gameObject);
 		this.gameObject.setBody({
 			x: this.gameObject.x,
@@ -36,6 +42,21 @@ class CircleCollider extends UserComponent {
 		},{
 			isStatic: true
 		})
+	}*/
+
+	start() {
+		this.scene.matter.add.gameObject(this.gameObject);
+		this.gameObject.setBody({
+			x: this.gameObject.x,
+			y: this.gameObject.y,
+			type: 'circle',
+			radius: this.radius
+		}, {
+			isStatic: this.isStatic,
+			//mass: 25,
+			//inverseMass: (1 / 25)
+		});
+		this.gameObject.setBounce(this.bounce, this.bounce);
 	}
 
 	/* END-USER-CODE */

@@ -50,7 +50,7 @@ class Level1 extends Phaser.Scene {
 		this.add.existing(jump_Pad);
 
 		// spikePrefab
-		const spikePrefab = new SpikePrefab(this, 192, 192);
+		const spikePrefab = new SpikePrefab(this, 32, 160);
 		this.add.existing(spikePrefab);
 
 		// platformGrassSmall
@@ -66,27 +66,12 @@ class Level1 extends Phaser.Scene {
 		this.add.existing(antiGravZonePrefab);
 
 		// player
-		const player = new PlayerPrefab(this, 224, 96);
+		const player = new PlayerPrefab(this, 160, 96);
 		this.add.existing(player);
 
 		// platformGrassBig_1
-		const platformGrassBig_1 = new PlatformGrassBig(this, 416, 192);
+		const platformGrassBig_1 = new PlatformGrassBig(this, 352, 224);
 		this.add.existing(platformGrassBig_1);
-
-		// pencil_256100
-		const pencil_256100 = this.add.image(416, 320, "Pencil_256", 100);
-		pencil_256100.scaleX = 0.25;
-		pencil_256100.scaleY = 0.25;
-
-		// pencil_256100_1
-		const pencil_256100_1 = this.add.image(320, 320, "Pencil_256", 100);
-		pencil_256100_1.scaleX = 0.25;
-		pencil_256100_1.scaleY = 0.25;
-
-		// roundNoBounce
-		const roundNoBounce = this.add.image(384, 256, "Pencil_256", 100);
-		roundNoBounce.scaleX = 0.25;
-		roundNoBounce.scaleY = 0.25;
 
 		// antiGravZonePrefab_1
 		const antiGravZonePrefab_1 = new AntiGravZonePrefab(this, 352, 448);
@@ -108,6 +93,22 @@ class Level1 extends Phaser.Scene {
 		const antiGravZone1x2Prefab_1 = new AntiGravZone1x2Prefab(this, 608, 384);
 		this.add.existing(antiGravZone1x2Prefab_1);
 
+		// circleNoBounceStatic
+		const circleNoBounceStatic = new CircleNoBounceStatic(this, 160, 320);
+		this.add.existing(circleNoBounceStatic);
+
+		// circleBounceStatic
+		const circleBounceStatic = new CircleBounceStatic(this, 224, 320);
+		this.add.existing(circleBounceStatic);
+
+		// circleNoBounce
+		const circleNoBounce = new CircleNoBounce(this, 160, 256);
+		this.add.existing(circleNoBounce);
+
+		// circleBounce
+		const circleBounce = new CircleBounce(this, 224, 256);
+		this.add.existing(circleBounce);
+
 		// lists
 		const movableObjects = []
 		const jumpPads = []
@@ -115,24 +116,6 @@ class Level1 extends Phaser.Scene {
 
 		// gameManager (components)
 		new GameManager(gameManager);
-
-		// pencil_256100 (components)
-		new ControllableObject(pencil_256100);
-		const pencil_256100CirclePhysics = new CirclePhysics(pencil_256100);
-		pencil_256100CirclePhysics.bounce = 0;
-		pencil_256100CirclePhysics.isStatic = true;
-
-		// pencil_256100_1 (components)
-		new ControllableObject(pencil_256100_1);
-		const pencil_256100_1CirclePhysics = new CirclePhysics(pencil_256100_1);
-		pencil_256100_1CirclePhysics.bounce = 0;
-		pencil_256100_1CirclePhysics.isStatic = true;
-
-		// roundNoBounce (components)
-		new ControllableObject(roundNoBounce);
-		const roundNoBounceCirclePhysics = new CirclePhysics(roundNoBounce);
-		roundNoBounceCirclePhysics.bounce = 0;
-		roundNoBounceCirclePhysics.isStatic = true;
 
 		this.gameManager = gameManager;
 		this.player = player;

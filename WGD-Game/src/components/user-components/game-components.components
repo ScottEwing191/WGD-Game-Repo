@@ -244,7 +244,38 @@
             "name": "CircleCollider",
             "baseClass": "UserComponent",
             "gameObjectType": "Phaser.GameObjects.Image",
-            "properties": []
+            "properties": [
+                {
+                    "name": "radius",
+                    "label": "Radius",
+                    "tooltip": "The radius of the colider",
+                    "defValue": 32,
+                    "customDefinition": false,
+                    "type": {
+                        "id": "number"
+                    }
+                },
+                {
+                    "name": "bounce",
+                    "label": "Bounce",
+                    "tooltip": "The bounciness of the colider (0-1)",
+                    "defValue": 0.5,
+                    "customDefinition": false,
+                    "type": {
+                        "id": "number"
+                    }
+                },
+                {
+                    "name": "isStatic",
+                    "label": "IsStatic",
+                    "tooltip": "Is the colider Static",
+                    "defValue": true,
+                    "customDefinition": false,
+                    "type": {
+                        "id": "boolean"
+                    }
+                }
+            ]
         }
     ],
     "meta": {

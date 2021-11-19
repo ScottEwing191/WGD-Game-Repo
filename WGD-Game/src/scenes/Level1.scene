@@ -106,8 +106,8 @@
             ],
             "label": "spikePrefab",
             "components": [],
-            "x": 192,
-            "y": 192
+            "x": 32,
+            "y": 160
         },
         {
             "prefabId": "4ea8129b-0371-4dd3-a1ae-7dfbf189ef70",
@@ -160,7 +160,7 @@
             "label": "player",
             "scope": "PUBLIC",
             "components": [],
-            "x": 224,
+            "x": 160,
             "y": 96
         },
         {
@@ -172,65 +172,8 @@
             ],
             "label": "platformGrassBig_1",
             "components": [],
-            "x": 416,
-            "y": 192
-        },
-        {
-            "type": "Image",
-            "id": "20341337-392b-4a60-bd57-dc2c6cc15a7b",
-            "label": "pencil_256100",
-            "components": [
-                "ControllableObject",
-                "CirclePhysics"
-            ],
-            "CirclePhysics.bounce": 0,
-            "CirclePhysics.isStatic": true,
-            "texture": {
-                "key": "Pencil_256",
-                "frame": 100
-            },
-            "x": 416,
-            "y": 320,
-            "scaleX": 0.25,
-            "scaleY": 0.25
-        },
-        {
-            "type": "Image",
-            "id": "e372353c-f201-4c1b-ae6c-eae8cd760b8a",
-            "label": "pencil_256100_1",
-            "components": [
-                "ControllableObject",
-                "CirclePhysics"
-            ],
-            "CirclePhysics.bounce": 0,
-            "CirclePhysics.isStatic": true,
-            "texture": {
-                "key": "Pencil_256",
-                "frame": 100
-            },
-            "x": 320,
-            "y": 320,
-            "scaleX": 0.25,
-            "scaleY": 0.25
-        },
-        {
-            "type": "Image",
-            "id": "260a48fd-5623-45c7-baef-1669827ca60d",
-            "label": "roundNoBounce",
-            "components": [
-                "ControllableObject",
-                "CirclePhysics"
-            ],
-            "CirclePhysics.bounce": 0,
-            "CirclePhysics.isStatic": true,
-            "texture": {
-                "key": "Pencil_256",
-                "frame": 100
-            },
-            "x": 384,
-            "y": 256,
-            "scaleX": 0.25,
-            "scaleY": 0.25
+            "x": 352,
+            "y": 224
         },
         {
             "prefabId": "6c6124bf-0368-4efa-a5ff-6f7e4b79645d",
@@ -291,6 +234,54 @@
             "components": [],
             "x": 608,
             "y": 384
+        },
+        {
+            "prefabId": "cb09e21f-1dab-4202-95b0-0172f23e3f57",
+            "id": "5045f1ee-9312-4fd4-84b9-6f550e19b52e",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "circleNoBounceStatic",
+            "components": [],
+            "x": 160,
+            "y": 320
+        },
+        {
+            "prefabId": "a401073e-f487-406d-9164-eedb49f19742",
+            "id": "2e68922a-8e50-49c2-b355-3b5694e022e9",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "circleBounceStatic",
+            "components": [],
+            "x": 224,
+            "y": 320
+        },
+        {
+            "prefabId": "5bb1365e-8cbc-4940-8828-b3930daff56a",
+            "id": "5cfa25a0-bc22-43f4-8180-392f38e71ece",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "circleNoBounce",
+            "components": [],
+            "x": 160,
+            "y": 256
+        },
+        {
+            "prefabId": "4d54abe2-b9e1-4eb4-bf11-76a7ede9cbef",
+            "id": "8274e168-783c-4c11-8523-fb4fe36fe393",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "circleBounce",
+            "components": [],
+            "x": 224,
+            "y": 256
         }
     ],
     "plainObjects": [

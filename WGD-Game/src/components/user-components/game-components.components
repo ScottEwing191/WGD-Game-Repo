@@ -274,8 +274,24 @@
                     "type": {
                         "id": "boolean"
                     }
+                },
+                {
+                    "name": "isSensor",
+                    "label": "Is Sensor",
+                    "tooltip": "Is the gameObject A trigger",
+                    "defValue": false,
+                    "customDefinition": false,
+                    "type": {
+                        "id": "boolean"
+                    }
                 }
             ]
+        },
+        {
+            "name": "LevelEnd",
+            "baseClass": "UserComponent",
+            "gameObjectType": "Phaser.GameObjects.Sprite",
+            "properties": []
         }
     ],
     "meta": {

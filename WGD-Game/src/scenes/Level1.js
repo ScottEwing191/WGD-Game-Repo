@@ -65,10 +65,6 @@ class Level1 extends Phaser.Scene {
 		const antiGravZonePrefab = new AntiGravZonePrefab(this, 480, 448);
 		this.add.existing(antiGravZonePrefab);
 
-		// player
-		const player = new PlayerPrefab(this, 160, 96);
-		this.add.existing(player);
-
 		// platformGrassBig_1
 		const platformGrassBig_1 = new PlatformGrassBig(this, 352, 224);
 		this.add.existing(platformGrassBig_1);
@@ -109,6 +105,15 @@ class Level1 extends Phaser.Scene {
 		const circleBounce = new CircleBounce(this, 224, 256);
 		this.add.existing(circleBounce);
 
+		// levelEnd
+		const levelEnd = this.add.sprite(288, 135, "LevelEnd_sheet", 0);
+		levelEnd.scaleX = 0.25;
+		levelEnd.scaleY = 0.25;
+
+		// player
+		const player = new PlayerPrefab(this, 160, 96);
+		this.add.existing(player);
+
 		// lists
 		const movableObjects = []
 		const jumpPads = []
@@ -116,6 +121,11 @@ class Level1 extends Phaser.Scene {
 
 		// gameManager (components)
 		new GameManager(gameManager);
+
+		// levelEnd (components)
+		const levelEndCircleCollider = new CircleCollider(levelEnd);
+		levelEndCircleCollider.isSensor = true;
+		new LevelEnd(levelEnd);
 
 		this.gameManager = gameManager;
 		this.player = player;

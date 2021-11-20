@@ -33,7 +33,6 @@ class AntiGravZone extends UserComponent {
 		this.scene.matter.world.on('collisionstart', function(event, bodyA, bodyB){
 			if ((bodyA.gameObject === this.gameObject && bodyB.gameObject === this.scene.player) ||
 				bodyA.gameObject === this.scene.player && bodyB.gameObject === this.gameObject){
-				console.log('Enter Grav')
 				this.enterGravZone();
 			}
 		},this);
@@ -42,7 +41,6 @@ class AntiGravZone extends UserComponent {
 		this.scene.matter.world.on('collisionend', function(event, bodyA, bodyB){
 			if (bodyA.gameObject === this.gameObject && bodyB.gameObject === this.scene.player ||
 				bodyA.gameObject === this.scene.player && bodyB.gameObject === this.gameObject){
-				console.log('Leave Grav')
 				this.leaveGravZone();
 			}
 		},this);
@@ -55,7 +53,6 @@ class AntiGravZone extends UserComponent {
 		//--If there are multiple anti gravity zones beside each other it is possible for the ball to enter one zone while...
 		//--it is still in another. In this case the ball doesnt need to set the setIgnoreGravity and setFrictionAir again.
 		//--gravZoneCount is used to keep track of whether the player is still in a ant gravity zone or not.
-		console.log('Enter: '+playerScript.gravZoneCount);
 		if (playerScript.gravZoneCount == 0) {
 			playerScript.gameObject.setIgnoreGravity(true);
 			playerScript.gameObject.setFrictionAir(this.zoneAirFriction);
@@ -67,8 +64,6 @@ class AntiGravZone extends UserComponent {
 	leaveGravZone() {
 		const playerScript =  Player.getComponent(this.scene.player);
 		//--The setIgnoreGravity and setFrictionAir only need to be set if the ball is leaving this anti gravity zone and is also NOT still in another anti gravity zone
-		console.log('Leave: '+playerScript.gravZoneCount);
-
 		playerScript.gravZoneCount--;
 		if (playerScript.gravZoneCount == 0) {
 			playerScript.gameObject.setIgnoreGravity(false);

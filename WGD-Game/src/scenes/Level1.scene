@@ -151,19 +151,6 @@
             "y": 448
         },
         {
-            "prefabId": "087f3cc7-41c9-46b0-833a-38a6197b98f1",
-            "id": "b612e812-d89b-4a49-871f-aadcb78dcde1",
-            "unlock": [
-                "x",
-                "y"
-            ],
-            "label": "player",
-            "scope": "PUBLIC",
-            "components": [],
-            "x": 160,
-            "y": 96
-        },
-        {
             "prefabId": "78f1afa5-31bd-4118-a357-1ee073f288bb",
             "id": "2ff81caf-24f4-42a9-a800-2378eb389d1f",
             "unlock": [
@@ -282,6 +269,37 @@
             "components": [],
             "x": 224,
             "y": 256
+        },
+        {
+            "type": "Sprite",
+            "id": "47c5d01e-16ec-495e-9ce5-c18f9b65a5cf",
+            "label": "levelEnd",
+            "components": [
+                "CircleCollider",
+                "LevelEnd"
+            ],
+            "CircleCollider.isSensor": true,
+            "texture": {
+                "key": "LevelEnd_sheet",
+                "frame": 0
+            },
+            "x": 288,
+            "y": 135,
+            "scaleX": 0.25,
+            "scaleY": 0.25
+        },
+        {
+            "prefabId": "087f3cc7-41c9-46b0-833a-38a6197b98f1",
+            "id": "b612e812-d89b-4a49-871f-aadcb78dcde1",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "player",
+            "scope": "PUBLIC",
+            "components": [],
+            "x": 160,
+            "y": 96
         }
     ],
     "plainObjects": [

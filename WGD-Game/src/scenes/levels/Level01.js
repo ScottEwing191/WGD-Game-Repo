@@ -28,7 +28,7 @@ class Level01 extends Phaser.Scene {
 		tilesprite.tileScaleY = 0.177;
 
 		// gameManager
-		const gameManager = this.add.rectangle(1152, 96, 128, 128);
+		const gameManager = this.add.rectangle(1088, 64, 128, 128);
 		gameManager.isFilled = true;
 
 		// decoration
@@ -95,6 +95,8 @@ class Level01 extends Phaser.Scene {
 
 	create() {
 		this.editorCreate();
+
+		//--Add collision to the Tile Layer
 		this.level01.setCollisionByProperty({collider :true});
 		this.matter.world.convertTilemapLayer(this.solid_1);
 	}

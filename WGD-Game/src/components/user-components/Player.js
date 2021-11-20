@@ -68,6 +68,19 @@ class Player extends UserComponent {
 		GameManager.getComponent(this.scene.gameManager).levelFailed();
 		this.gameObject.play('ball-reform');
 	}
+
+	levelWon(xValue, yValue){
+		this.gameObject.setVelocity(0, 0);
+		this.gameObject.setIgnoreGravity(true);
+		this.gameObject.play('ball-shrink');
+
+		this.scene.tweens.add({
+			targets: this.gameObject,
+			x: xValue,
+			y: yValue,
+			duration: 666
+		})
+	}
 	/* END-USER-CODE */
 }
 

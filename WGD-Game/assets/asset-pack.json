@@ -35,6 +35,19 @@
                 "key": "BallPop_256"
             },
             {
+                "url": "assets/images/pencil/BallShrink_256.png",
+                "frameConfig": {
+                    "frameWidth": 256,
+                    "frameHeight": 256,
+                    "startFrame": 0,
+                    "endFrame": -1,
+                    "spacing": 0,
+                    "margin": 0
+                },
+                "type": "spritesheet",
+                "key": "BallShrink_256"
+            },
+            {
                 "url": "assets/animation/boost-pad-anim.json",
                 "type": "animation",
                 "key": "boost-pad-anim"
@@ -191,6 +204,24 @@
                 "url": "assets/tiled/Level04.json",
                 "type": "tilemapTiledJSON",
                 "key": "Level04"
+            },
+            {
+                "url": "src/components/user-components/LevelEnd.js",
+                "type": "script",
+                "key": "LevelEnd"
+            },
+            {
+                "url": "assets/images/pencil/LevelEnd_sheet.png",
+                "frameConfig": {
+                    "frameWidth": 512,
+                    "frameHeight": 512,
+                    "startFrame": 0,
+                    "endFrame": -1,
+                    "spacing": 0,
+                    "margin": 0
+                },
+                "type": "spritesheet",
+                "key": "LevelEnd_sheet"
             },
             {
                 "url": "assets/tiled/Test/LevelTest_map.json",

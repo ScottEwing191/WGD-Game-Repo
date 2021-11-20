@@ -29,6 +29,8 @@ class CircleCollider extends UserComponent {
 	bounce = 0.5;
 	/** @type {boolean} */
 	isStatic = true;
+	/** @type {boolean} */
+	isSensor = false;
 
 	/* START-USER-CODE */
 
@@ -53,6 +55,7 @@ class CircleCollider extends UserComponent {
 			radius: this.radius
 		}, {
 			isStatic: this.isStatic,
+			isSensor : this.isSensor,
 			//mass: 25,
 			//inverseMass: (1 / 25)
 		});

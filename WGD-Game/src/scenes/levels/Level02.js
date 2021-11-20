@@ -206,6 +206,8 @@ class Level02 extends Phaser.Scene {
 
 	create() {
 		this.editorCreate();
+
+		//--Add collision to the Tile Layer
 		this.level02.setCollisionByProperty({collider :true});
 		this.matter.world.convertTilemapLayer(this.solid_1);
 	}

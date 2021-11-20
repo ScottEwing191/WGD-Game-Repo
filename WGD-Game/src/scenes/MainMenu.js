@@ -68,12 +68,14 @@ class MainMenu extends Phaser.Scene {
 		const buttons_sheet0 = this.add.image(0, 0, "Buttons_sheet", 0);
 		container_1.add(buttons_sheet0);
 
-		// text
-		const text = this.add.text(0, 37, "", {});
-		text.setOrigin(0.5, 0.5);
-		text.text = "Click to \nPlay!\n\n\n";
-		text.setStyle({"align":"center","color":"#000000ff","fontFamily":"Scottscript","fontSize":"23px","fontStyle":"bold","stroke":"#000000ff","strokeThickness":1});
-		container_1.add(text);
+		// clickToPlayText
+		const clickToPlayText = this.add.bitmapText(0, 0, "scott-script-bold-3", "Click to \nPlay!");
+		clickToPlayText.setOrigin(0.5, 0.5);
+		clickToPlayText.text = "Click to \nPlay!";
+		clickToPlayText.fontSize = 25;
+		clickToPlayText.align = 1;
+		clickToPlayText.dropShadowAlpha = 0;
+		container_1.add(clickToPlayText);
 
 		// lists
 		const jumpPads = []

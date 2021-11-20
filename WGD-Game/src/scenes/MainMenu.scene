@@ -161,19 +161,15 @@
                     }
                 },
                 {
-                    "type": "Text",
-                    "id": "a4eaa295-df1a-42f7-b8cd-37b8766a9047",
-                    "label": "text",
+                    "type": "BitmapText",
+                    "id": "6cfe580d-4182-4e75-95f3-aff88f8832a1",
+                    "label": "clickToPlayText",
                     "components": [],
-                    "y": 37,
-                    "text": "Click to \nPlay!\n\n\n",
-                    "align": "center",
-                    "fontFamily": "Scottscript",
-                    "fontSize": "23px",
-                    "fontStyle": "bold",
-                    "color": "#000000ff",
-                    "stroke": "#000000ff",
-                    "strokeThickness": 1
+                    "text": "Click to \nPlay!",
+                    "font": "scott-script-bold-3",
+                    "align": 1,
+                    "fontSize": 25,
+                    "dropShadowAlpha": 0
                 }
             ]
         }

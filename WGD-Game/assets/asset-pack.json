@@ -370,6 +370,18 @@
                 "key": "Respawn"
             },
             {
+                "textureURL": "assets/fonts/scott-script-bold.png",
+                "fontDataURL": "assets/fonts/scott-script-bold.xml",
+                "type": "bitmapFont",
+                "key": "scott-script-bold"
+            },
+            {
+                "textureURL": "assets/fonts/scott-script-bold-3.png",
+                "fontDataURL": "assets/fonts/scott-script-bold-3.xml",
+                "type": "bitmapFont",
+                "key": "scott-script-bold-3"
+            },
+            {
                 "url": "assets/images/space/Space_1x2_512px.png",
                 "type": "image",
                 "key": "Space_1x2_512px"

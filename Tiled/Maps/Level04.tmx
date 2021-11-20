@@ -53,7 +53,7 @@
 18,0,0,0,0,0,0,0,0,0,0,0,0,0,0,18
 </data>
  </layer>
- <layer id="5" name="Spikes/Springs" width="16" height="13" visible="0">
+ <layer id="5" name="Spikes/Springs" width="16" height="13">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,201,0,0,0,0,0,0,0,0,

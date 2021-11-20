@@ -53,6 +53,19 @@
                 "key": "boost-pad-anim"
             },
             {
+                "url": "assets/images/ui/Buttons_sheet.png",
+                "frameConfig": {
+                    "frameWidth": 180,
+                    "frameHeight": 111,
+                    "startFrame": 0,
+                    "endFrame": -1,
+                    "spacing": 0,
+                    "margin": 0
+                },
+                "type": "spritesheet",
+                "key": "Buttons_sheet"
+            },
+            {
                 "url": "prefabs/Movable/CircleBounce.js",
                 "type": "script",
                 "key": "CircleBounce"
@@ -141,6 +154,16 @@
                 "type": "image"
             },
             {
+                "url": "assets/images/pencil/DoodleCourse Curved.png",
+                "type": "image",
+                "key": "DoodleCourse Curved"
+            },
+            {
+                "url": "assets/images/pencil/Game Logo.png",
+                "type": "image",
+                "key": "Game Logo"
+            },
+            {
                 "url": "src/components/user-components/GameManager.js",
                 "type": "script",
                 "key": "GameManager"
@@ -227,6 +250,11 @@
                 "url": "assets/tiled/Test/LevelTest_map.json",
                 "type": "tilemapTiledJSON",
                 "key": "LevelTest_map"
+            },
+            {
+                "url": "assets/tiled/MainMenu.json",
+                "type": "tilemapTiledJSON",
+                "key": "MainMenu"
             },
             {
                 "url": "assets/images/pencil/Pencil_256.png",

@@ -1,0 +1,221 @@
+{
+    "id": "d89d1804-6345-47dd-a577-1579dfd7f694",
+    "sceneType": "SCENE",
+    "settings": {
+        "snapWidth": 32,
+        "snapHeight": 32,
+        "preloadPackFiles": [],
+        "createMethodName": "editorCreate",
+        "sceneKey": "MainMenu",
+        "borderWidth": 1024,
+        "borderHeight": 832
+    },
+    "displayList": [
+        {
+            "type": "TileSprite",
+            "id": "12a8c321-14c5-41db-9520-57cdc2317e21",
+            "label": "tilesprite",
+            "components": [],
+            "texture": {
+                "key": "Square Paper 2 Seamless_On Grid"
+            },
+            "originX": 0,
+            "originY": 0,
+            "width": 1024,
+            "height": 832,
+            "tileScaleX": 0.177,
+            "tileScaleY": 0.177
+        },
+        {
+            "type": "TilemapLayer",
+            "id": "7bfc9222-c7e8-43d2-8de1-22c16d1d63d3",
+            "label": "decoration",
+            "components": [],
+            "scaleX": 0.25,
+            "scaleY": 0.25,
+            "tilemapId": "662d00d1-fc82-4231-a285-691b94ed29c4",
+            "layerName": "Decoration",
+            "tilesets": [
+                "Crayon_Tileset",
+                "Pencil_Tileset"
+            ]
+        },
+        {
+            "type": "TilemapLayer",
+            "id": "8ff488df-3c5b-4543-ba54-159918797ad8",
+            "label": "background",
+            "components": [],
+            "scaleX": 0.25,
+            "scaleY": 0.25,
+            "tilemapId": "662d00d1-fc82-4231-a285-691b94ed29c4",
+            "layerName": "Background",
+            "tilesets": [
+                "Crayon_Tileset",
+                "Pencil_Tileset"
+            ]
+        },
+        {
+            "type": "TilemapLayer",
+            "id": "79b799c9-62a9-4e3e-8ce0-6d73943fda9b",
+            "label": "ground_1",
+            "components": [],
+            "scaleX": 0.25,
+            "scaleY": 0.25,
+            "tilemapId": "662d00d1-fc82-4231-a285-691b94ed29c4",
+            "layerName": "Ground",
+            "tilesets": [
+                "Crayon_Tileset",
+                "Pencil_Tileset"
+            ]
+        },
+        {
+            "prefabId": "ed55f365-5162-403a-b28b-f0655a7227a5",
+            "id": "64a99b35-6589-4645-a2a9-de91e61fe7fb",
+            "unlock": [
+                "x",
+                "y",
+                "JumpPad.force",
+                "RectanglePhysics.angle",
+                "RectanglePhysics.modifyXPosition"
+            ],
+            "label": "jump_Pad",
+            "components": [],
+            "JumpPad.force": 10,
+            "RectanglePhysics.modifyXPosition": 32,
+            "RectanglePhysics.angle": 45,
+            "x": 315,
+            "y": 444
+        },
+        {
+            "prefabId": "ed55f365-5162-403a-b28b-f0655a7227a5",
+            "id": "f14d8f77-e1c6-443e-9ca8-a9964a3ef206",
+            "unlock": [
+                "x",
+                "y",
+                "JumpPad.force",
+                "RectanglePhysics.angle",
+                "RectanglePhysics.modifyXPosition"
+            ],
+            "label": "jump_Pad_1",
+            "components": [],
+            "JumpPad.force": 10,
+            "RectanglePhysics.modifyXPosition": -32,
+            "RectanglePhysics.angle": -45,
+            "x": 704,
+            "y": 448
+        },
+        {
+            "prefabId": "087f3cc7-41c9-46b0-833a-38a6197b98f1",
+            "id": "945cab17-3a11-4956-8a04-825532b0fe2e",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "player",
+            "scope": "PUBLIC",
+            "components": [],
+            "x": 288,
+            "y": 384
+        },
+        {
+            "type": "Rectangle",
+            "id": "2c603f85-4fa2-4d6a-9938-e51f7162d000",
+            "label": "gameManager",
+            "scope": "PUBLIC",
+            "components": [
+                "GameManager"
+            ],
+            "x": 1088,
+            "y": 64,
+            "isFilled": true,
+            "width": 128,
+            "height": 128
+        },
+        {
+            "type": "Image",
+            "id": "b8007cd2-ef18-42a5-8f03-9190b8948efe",
+            "label": "doodleCourse_Curved",
+            "components": [],
+            "texture": {
+                "key": "DoodleCourse Curved"
+            },
+            "x": 512,
+            "y": 192
+        },
+        {
+            "type": "Container",
+            "id": "f9b5faa3-3ecc-4568-907e-85137854750b",
+            "label": "container_1",
+            "components": [],
+            "x": 512,
+            "y": 576,
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "97f31364-c1c5-4520-a232-79512d5d4d62",
+                    "label": "buttons_sheet0",
+                    "components": [],
+                    "texture": {
+                        "key": "Buttons_sheet",
+                        "frame": 0
+                    }
+                },
+                {
+                    "type": "Text",
+                    "id": "a4eaa295-df1a-42f7-b8cd-37b8766a9047",
+                    "label": "text",
+                    "components": [],
+                    "y": 37,
+                    "text": "Click to \nPlay!\n\n\n",
+                    "align": "center",
+                    "fontFamily": "Scottscript",
+                    "fontSize": "23px",
+                    "fontStyle": "bold",
+                    "color": "#000000ff",
+                    "stroke": "#000000ff",
+                    "strokeThickness": 1
+                }
+            ]
+        }
+    ],
+    "plainObjects": [
+        {
+            "id": "662d00d1-fc82-4231-a285-691b94ed29c4",
+            "type": "Tilemap",
+            "label": "mainMenu",
+            "key": "MainMenu",
+            "tilesets": [
+                {
+                    "name": "Crayon_Tileset",
+                    "imageKey": "Crayon_256"
+                },
+                {
+                    "name": "Pencil_Tileset",
+                    "imageKey": "Pencil_256"
+                }
+            ]
+        }
+    ],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 2
+    },
+    "lists": [
+        {
+            "id": "ce099a10-7033-402d-afbc-8f87227e32ee",
+            "label": "jumpPads",
+            "scope": "PUBLIC"
+        },
+        {
+            "id": "dceca81f-966c-46ab-b9e1-55cecc02611c",
+            "label": "movableObjects"
+        },
+        {
+            "id": "60cd8123-1d72-4705-8e71-5ae1143f88de",
+            "label": "spikes",
+            "scope": "PUBLIC"
+        }
+    ]
+}

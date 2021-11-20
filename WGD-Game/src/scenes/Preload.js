@@ -49,9 +49,9 @@ class Preload extends Phaser.Scene {
 
 		this.editorPreload();
 
-		this.load.on(Phaser.Loader.Events.COMPLETE, () => this.scene.start("Level1"));
+		//this.load.on(Phaser.Loader.Events.COMPLETE, () => this.scene.start("Level1"));
 		//this.load.on(Phaser.Loader.Events.COMPLETE, () => this.scene.start("Level04"));
-		//this.load.on(Phaser.Loader.Events.COMPLETE, () => this.scene.start("LevelTest"));
+		this.load.on(Phaser.Loader.Events.COMPLETE, () => this.scene.start("MainMenu"));
 
 	}
 

@@ -64,7 +64,7 @@ class Level04 extends Phaser.Scene {
 		spikesLayer.add(spike4Up_1);
 
 		// spike4Up_2
-		const spike4Up_2 = new Spike4Up(this, 416, 672);
+		const spike4Up_2 = new Spike4Up(this, 224, 672);
 		spikesLayer.add(spike4Up_2);
 
 		// spike1Down
@@ -76,15 +76,15 @@ class Level04 extends Phaser.Scene {
 		spikesLayer.add(spike1Down_1);
 
 		// spike1Down_2
-		const spike1Down_2 = new Spike1Down(this, 416, 736, "Spikes_Crayon", 6);
+		const spike1Down_2 = new Spike1Down(this, 224, 736, "Spikes_Crayon", 6);
 		spikesLayer.add(spike1Down_2);
 
 		// spike4Up_3
-		const spike4Up_3 = new Spike4Up(this, 544, 672);
+		const spike4Up_3 = new Spike4Up(this, 800, 672);
 		spikesLayer.add(spike4Up_3);
 
 		// spike4Down
-		const spike4Down = new Spike4Down(this, 544, 736);
+		const spike4Down = new Spike4Down(this, 800, 736);
 		spikesLayer.add(spike4Down);
 
 		// spike4Up_3_1
@@ -151,6 +151,10 @@ class Level04 extends Phaser.Scene {
 		// player
 		const player = new PlayerPrefab(this, 480, 64);
 		this.add.existing(player);
+
+		// levelEnd_P
+		const levelEnd_P = new LevelEnd_P(this, 480, 704);
+		this.add.existing(levelEnd_P);
 
 		// lists
 		const movableObjects = []

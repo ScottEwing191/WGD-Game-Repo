@@ -234,6 +234,11 @@
                 "key": "LevelEnd"
             },
             {
+                "url": "prefabs/Unmovable/LevelEnd_P.js",
+                "type": "script",
+                "key": "LevelEnd_P"
+            },
+            {
                 "url": "assets/images/pencil/LevelEnd_sheet.png",
                 "frameConfig": {
                     "frameWidth": 512,
@@ -255,6 +260,11 @@
                 "url": "assets/tiled/MainMenu.json",
                 "type": "tilemapTiledJSON",
                 "key": "MainMenu"
+            },
+            {
+                "url": "src/components/user-components/MenuPlayButton.js",
+                "type": "script",
+                "key": "MenuPlayButton"
             },
             {
                 "url": "assets/images/pencil/Pencil_256.png",
@@ -348,6 +358,11 @@
                 "url": "prefabs/Movable/PlatformGrassSmall.js",
                 "type": "script",
                 "key": "PlatformGrassSmall"
+            },
+            {
+                "url": "assets/animation/play-button-anim.json",
+                "type": "animation",
+                "key": "play-button-anim"
             },
             {
                 "url": "src/components/user-components/Player.js",

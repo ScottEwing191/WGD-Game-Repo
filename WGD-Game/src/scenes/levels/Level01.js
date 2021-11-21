@@ -57,6 +57,10 @@ class Level01 extends Phaser.Scene {
 		const player = new PlayerPrefab(this, 192, 192);
 		this.add.existing(player);
 
+		// levelEnd_P
+		const levelEnd_P = new LevelEnd_P(this, 832, 576);
+		this.add.existing(levelEnd_P);
+
 		// lists
 		const movableObjects = []
 		const jumpPads = []

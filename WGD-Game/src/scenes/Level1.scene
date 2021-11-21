@@ -271,22 +271,20 @@
             "y": 256
         },
         {
-            "type": "Sprite",
+            "prefabId": "a439648d-2f0f-40dd-9682-e97863778497",
             "id": "47c5d01e-16ec-495e-9ce5-c18f9b65a5cf",
+            "unlock": [
+                "x",
+                "y"
+            ],
             "label": "levelEnd",
             "components": [
                 "CircleCollider",
                 "LevelEnd"
             ],
             "CircleCollider.isSensor": true,
-            "texture": {
-                "key": "LevelEnd_sheet",
-                "frame": 0
-            },
             "x": 288,
-            "y": 135,
-            "scaleX": 0.25,
-            "scaleY": 0.25
+            "y": 135
         },
         {
             "prefabId": "087f3cc7-41c9-46b0-833a-38a6197b98f1",

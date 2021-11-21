@@ -366,6 +366,18 @@
             "components": [],
             "x": 224,
             "y": 64
+        },
+        {
+            "prefabId": "a439648d-2f0f-40dd-9682-e97863778497",
+            "id": "c1910abc-bfeb-42d1-b626-7509bdaa053c",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "levelEnd_P",
+            "components": [],
+            "x": 832,
+            "y": 704
         }
     ],
     "plainObjects": [

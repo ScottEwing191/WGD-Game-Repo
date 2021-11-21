@@ -292,6 +292,12 @@
             "baseClass": "UserComponent",
             "gameObjectType": "Phaser.GameObjects.Sprite",
             "properties": []
+        },
+        {
+            "name": "MenuPlayButton",
+            "baseClass": "UserComponent",
+            "gameObjectType": "Phaser.GameObjects.Image",
+            "properties": []
         }
     ],
     "meta": {

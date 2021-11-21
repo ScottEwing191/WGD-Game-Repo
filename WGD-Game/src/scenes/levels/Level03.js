@@ -121,6 +121,10 @@ class Level03 extends Phaser.Scene {
 		const jump_Pad_3 = new Jump_Pad(this, 317, 163);
 		this.add.existing(jump_Pad_3);
 
+		// levelEnd_P
+		const levelEnd_P = new LevelEnd_P(this, 736, 704);
+		this.add.existing(levelEnd_P);
+
 		// lists
 		const movableObjects = []
 		const jumpPads = []

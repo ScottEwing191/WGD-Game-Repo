@@ -58,14 +58,12 @@ class ControllableObject {
             this.yPositionOffset = 0;
         }
 
-
-
-        //--Start Event Listener for mouse click
+        //--Start Event Listener for mouse click - this will check if objects has been deselected
         this.scene.input.on('pointerdown', (event) => {
             this.checkIfPointInBox(event.x, event.y);
         });
         //--Setup variable to make sure objects is only moved the frame the key was clicked
-        //this.isUpOnce = new Boolean(false);
+
         this.isUpOnce = false;
         this.isDownOnce = false;
         this.isLeftOnce = false;
@@ -75,43 +73,38 @@ class ControllableObject {
 
         //--Allow user to drag object
         this.gameObject.setInteractive({draggable: true});
-        //this.scene.input.setDraggable(this.gameObject);
-        //this.gameObject.input.draggable = true;
 
-        this.gameObject.on('dragstart', function (pointer, dragX, dragY) {
-            //console.debug('Drag Start');
+        this.gameObject.on('dragstart',  (pointer, dragX, dragY) =>{
+            this.isSelected = true;
         });
 
         this.gameObject.on('drag', (pointer, dragX, dragY) => {
             this.dragObject(dragX, dragY);
-            //console.debug('Drag');
-        });
+        } );
 
-        this.gameObject.on('dragend', function (pointer, dragX, dragY, dropped) {
-            //console.debug('Drag End');
+        this.gameObject.on('dragend',  (pointer, dragX, dragY, dropped) =>{
         });
-
     }
 
 //=== END START
 
-
-
     update() {
-        //this.gameObject.y = this.testInput(this.input.up.isDown, this.isUpOnce, this.gameObject.y, -1, this.moveDst);
         if (this.refToGameManager.currentMode === 'EDIT_MODE'){
             this.pollMovementInput();
         }
     }
-    //--If the point the player clicked is inside the collision box of the object then mark the object as selected
-    //--Multiple objects can be selected at once
+
+    //--The Phaser click and drag events are used to detect when the object is selected. This method is called whenever the mouse is clicked and checks if the object has been unselected
     checkIfPointInBox(pX, pY) {
+        //-Dont need to do this if object is already not selected
+        if (!this.isSelected){
+            return;
+        }
+        //--If the point the player clicked is outside the collision box of the object then mark the object as not selected
         let matterPhysics = new Phaser.Physics.Matter.MatterPhysics(this.scene);
         let bodiesArray = [this.gameObject.body];           // intersectPoint method requires an array so make one just containing one element
         let intersectingBodies = matterPhysics.intersectPoint(pX, pY, bodiesArray);
-        if (intersectingBodies.length > 0) {
-            this.isSelected = true;
-        } else {
+        if (intersectingBodies.length == 0) {
             this.isSelected = false;
         }
     }
@@ -133,7 +126,6 @@ class ControllableObject {
         this.gameObject.x = Math.min(Math.max(this.gameObject.x, xMin), xMax)
         this.gameObject.y = Math.min(Math.max(this.gameObject.y, yMin), yMax)
     }
-
 
     pollMovementInput(){
         //--UP
@@ -188,9 +180,6 @@ class ControllableObject {
         //this.gameObject.setInteractive({draggable: true});    // works
         this.gameObject.input.draggable = true;                 // also works
     }
-
-
-
     /* END-USER-CODE */
 }
 

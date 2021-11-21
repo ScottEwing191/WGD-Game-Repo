@@ -106,9 +106,8 @@ class Level1 extends Phaser.Scene {
 		this.add.existing(circleBounce);
 
 		// levelEnd
-		const levelEnd = this.add.sprite(288, 135, "LevelEnd_sheet", 0);
-		levelEnd.scaleX = 0.25;
-		levelEnd.scaleY = 0.25;
+		const levelEnd = new LevelEnd_P(this, 288, 135);
+		this.add.existing(levelEnd);
 
 		// player
 		const player = new PlayerPrefab(this, 160, 96);
@@ -123,8 +122,7 @@ class Level1 extends Phaser.Scene {
 		new GameManager(gameManager);
 
 		// levelEnd (components)
-		const levelEndCircleCollider = new CircleCollider(levelEnd);
-		levelEndCircleCollider.isSensor = true;
+		new CircleCollider(levelEnd);
 		new LevelEnd(levelEnd);
 
 		this.gameManager = gameManager;

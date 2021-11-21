@@ -42,31 +42,12 @@ class MainMenu extends Phaser.Scene {
 		ground_1.scaleX = 0.25;
 		ground_1.scaleY = 0.25;
 
-		// jump_Pad
-		const jump_Pad = new Jump_Pad(this, 315, 444);
-		this.add.existing(jump_Pad);
-
-		// jump_Pad_1
-		const jump_Pad_1 = new Jump_Pad(this, 704, 448);
-		this.add.existing(jump_Pad_1);
-
-		// player
-		const player = new PlayerPrefab(this, 288, 384);
-		this.add.existing(player);
-
-		// gameManager
-		const gameManager = this.add.rectangle(1088, 64, 128, 128);
-		gameManager.isFilled = true;
-
-		// doodleCourse_Curved
-		this.add.image(512, 192, "DoodleCourse Curved");
-
-		// container_1
-		const container_1 = this.add.container(512, 576);
+		// PlayButton
+		const playButton = this.add.container(512, 576);
 
 		// buttons_sheet0
-		const buttons_sheet0 = this.add.image(0, 0, "Buttons_sheet", 0);
-		container_1.add(buttons_sheet0);
+		const buttons_sheet0 = this.add.sprite(0, 0, "Buttons_sheet", 0);
+		playButton.add(buttons_sheet0);
 
 		// clickToPlayText
 		const clickToPlayText = this.add.bitmapText(0, 0, "scott-script-bold-3", "Click to \nPlay!");
@@ -75,23 +56,45 @@ class MainMenu extends Phaser.Scene {
 		clickToPlayText.fontSize = 25;
 		clickToPlayText.align = 1;
 		clickToPlayText.dropShadowAlpha = 0;
-		container_1.add(clickToPlayText);
+		playButton.add(clickToPlayText);
+
+		// jump_Pad
+		const jump_Pad = new Jump_Pad(this, 315, 444);
+		this.add.existing(jump_Pad);
+
+		// jump_Pad_1
+		const jump_Pad_1 = new Jump_Pad(this, 704, 448);
+		this.add.existing(jump_Pad_1);
+
+		// gameManager
+		const gameManager = this.add.rectangle(1088, 64, 128, 128);
+		gameManager.isFilled = true;
+
+		// doodleCourse_Curved
+		this.add.image(512, 192, "DoodleCourse Curved");
+
+		// player
+		const player = new PlayerPrefab(this, 496, 336);
+		this.add.existing(player);
 
 		// lists
 		const jumpPads = []
 		const movableObjects = []
 		const spikes = []
 
+		// buttons_sheet0 (components)
+		new MenuPlayButton(buttons_sheet0);
+
 		// jump_Pad (components)
 		const jump_PadJumpPad = JumpPad.getComponent(jump_Pad);
-		jump_PadJumpPad.force = 10;
+		jump_PadJumpPad.force = 10.25;
 		const jump_PadRectanglePhysics = RectanglePhysics.getComponent(jump_Pad);
 		jump_PadRectanglePhysics.modifyXPosition = 32;
 		jump_PadRectanglePhysics.angle = 45;
 
 		// jump_Pad_1 (components)
 		const jump_Pad_1JumpPad = JumpPad.getComponent(jump_Pad_1);
-		jump_Pad_1JumpPad.force = 10;
+		jump_Pad_1JumpPad.force = 10.25;
 		const jump_Pad_1RectanglePhysics = RectanglePhysics.getComponent(jump_Pad_1);
 		jump_Pad_1RectanglePhysics.modifyXPosition = -32;
 		jump_Pad_1RectanglePhysics.angle = -45;
@@ -99,8 +102,12 @@ class MainMenu extends Phaser.Scene {
 		// gameManager (components)
 		new GameManager(gameManager);
 
-		this.player = player;
+		// player (components)
+		const playerPlayer = Player.getComponent(player);
+		playerPlayer.xVelocity = 13;
+
 		this.gameManager = gameManager;
+		this.player = player;
 		this.mainMenu = mainMenu;
 		this.jumpPads = jumpPads;
 		this.movableObjects = movableObjects;
@@ -109,10 +116,10 @@ class MainMenu extends Phaser.Scene {
 		this.events.emit("scene-awake");
 	}
 
-	/** @type {PlayerPrefab} */
-	player;
 	/** @type {Phaser.GameObjects.Rectangle} */
 	gameManager;
+	/** @type {PlayerPrefab} */
+	player;
 	/** @type {Array<any>} */
 	jumpPads;
 	/** @type {Array<any>} */
@@ -129,6 +136,9 @@ class MainMenu extends Phaser.Scene {
 		this.editorCreate();
 	}
 
+	nextLevel(){
+		this.scene.start("Level01");
+	}
 	/* END-USER-CODE */
 }
 

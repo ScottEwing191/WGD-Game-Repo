@@ -2,8 +2,7 @@
     "id": "d89d1804-6345-47dd-a577-1579dfd7f694",
     "sceneType": "SCENE",
     "settings": {
-        "snapWidth": 32,
-        "snapHeight": 32,
+        "snapEnabled": true,
         "preloadPackFiles": [],
         "createMethodName": "editorCreate",
         "sceneKey": "MainMenu",
@@ -69,6 +68,39 @@
             ]
         },
         {
+            "type": "Container",
+            "id": "f9b5faa3-3ecc-4568-907e-85137854750b",
+            "label": "PlayButton",
+            "components": [],
+            "x": 512,
+            "y": 576,
+            "list": [
+                {
+                    "type": "Sprite",
+                    "id": "97f31364-c1c5-4520-a232-79512d5d4d62",
+                    "label": "buttons_sheet0",
+                    "components": [
+                        "MenuPlayButton"
+                    ],
+                    "texture": {
+                        "key": "Buttons_sheet",
+                        "frame": 0
+                    }
+                },
+                {
+                    "type": "BitmapText",
+                    "id": "6cfe580d-4182-4e75-95f3-aff88f8832a1",
+                    "label": "clickToPlayText",
+                    "components": [],
+                    "text": "Click to \nPlay!",
+                    "font": "scott-script-bold-3",
+                    "align": 1,
+                    "fontSize": 25,
+                    "dropShadowAlpha": 0
+                }
+            ]
+        },
+        {
             "prefabId": "ed55f365-5162-403a-b28b-f0655a7227a5",
             "id": "64a99b35-6589-4645-a2a9-de91e61fe7fb",
             "unlock": [
@@ -80,7 +112,7 @@
             ],
             "label": "jump_Pad",
             "components": [],
-            "JumpPad.force": 10,
+            "JumpPad.force": 10.25,
             "RectanglePhysics.modifyXPosition": 32,
             "RectanglePhysics.angle": 45,
             "x": 315,
@@ -98,24 +130,11 @@
             ],
             "label": "jump_Pad_1",
             "components": [],
-            "JumpPad.force": 10,
+            "JumpPad.force": 10.25,
             "RectanglePhysics.modifyXPosition": -32,
             "RectanglePhysics.angle": -45,
             "x": 704,
             "y": 448
-        },
-        {
-            "prefabId": "087f3cc7-41c9-46b0-833a-38a6197b98f1",
-            "id": "945cab17-3a11-4956-8a04-825532b0fe2e",
-            "unlock": [
-                "x",
-                "y"
-            ],
-            "label": "player",
-            "scope": "PUBLIC",
-            "components": [],
-            "x": 288,
-            "y": 384
         },
         {
             "type": "Rectangle",
@@ -143,35 +162,19 @@
             "y": 192
         },
         {
-            "type": "Container",
-            "id": "f9b5faa3-3ecc-4568-907e-85137854750b",
-            "label": "container_1",
+            "prefabId": "087f3cc7-41c9-46b0-833a-38a6197b98f1",
+            "id": "945cab17-3a11-4956-8a04-825532b0fe2e",
+            "unlock": [
+                "x",
+                "y",
+                "Player.xVelocity"
+            ],
+            "label": "player",
+            "scope": "PUBLIC",
             "components": [],
-            "x": 512,
-            "y": 576,
-            "list": [
-                {
-                    "type": "Image",
-                    "id": "97f31364-c1c5-4520-a232-79512d5d4d62",
-                    "label": "buttons_sheet0",
-                    "components": [],
-                    "texture": {
-                        "key": "Buttons_sheet",
-                        "frame": 0
-                    }
-                },
-                {
-                    "type": "BitmapText",
-                    "id": "6cfe580d-4182-4e75-95f3-aff88f8832a1",
-                    "label": "clickToPlayText",
-                    "components": [],
-                    "text": "Click to \nPlay!",
-                    "font": "scott-script-bold-3",
-                    "align": 1,
-                    "fontSize": 25,
-                    "dropShadowAlpha": 0
-                }
-            ]
+            "Player.xVelocity": 13,
+            "x": 496,
+            "y": 336
         }
     ],
     "plainObjects": [

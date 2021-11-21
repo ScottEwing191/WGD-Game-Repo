@@ -141,7 +141,7 @@
                     ],
                     "label": "spike4Up_2",
                     "components": [],
-                    "x": 416,
+                    "x": 224,
                     "y": 672
                 },
                 {
@@ -192,7 +192,7 @@
                         "key": "Spikes_Crayon",
                         "frame": 6
                     },
-                    "x": 416,
+                    "x": 224,
                     "y": 736
                 },
                 {
@@ -204,7 +204,7 @@
                     ],
                     "label": "spike4Up_3",
                     "components": [],
-                    "x": 544,
+                    "x": 800,
                     "y": 672
                 },
                 {
@@ -216,7 +216,7 @@
                     ],
                     "label": "spike4Down",
                     "components": [],
-                    "x": 544,
+                    "x": 800,
                     "y": 736
                 },
                 {
@@ -413,6 +413,18 @@
             "components": [],
             "x": 480,
             "y": 64
+        },
+        {
+            "prefabId": "a439648d-2f0f-40dd-9682-e97863778497",
+            "id": "bf410fea-c209-41ed-ba2d-33ad3643aa6a",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "levelEnd_P",
+            "components": [],
+            "x": 480,
+            "y": 704
         }
     ],
     "plainObjects": [

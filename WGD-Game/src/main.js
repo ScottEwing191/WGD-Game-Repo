@@ -21,7 +21,7 @@ window.addEventListener('load', function () {
                 }
             },
             matter: {
-                debug: true,
+                //debug: true,
                 gravity: {y: 0.5}
             }
         },

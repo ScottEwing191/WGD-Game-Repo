@@ -200,8 +200,14 @@ class Level04 extends Phaser.Scene {
 		this.matter.world.convertTilemapLayer(this.solid);
 	}
 
-	nextLevel(){
+	/*nextLevel(){
 		this.scene.start("Level01");
+	}*/
+	nextLevel(levelName){
+		if (levelName == undefined){
+			levelName = 'MainMenu';
+		}
+		this.scene.start(levelName);
 	}
 	/* END-USER-CODE */
 }

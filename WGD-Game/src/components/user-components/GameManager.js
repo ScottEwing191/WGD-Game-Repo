@@ -45,7 +45,7 @@ class GameManager {
         this.modeInput.newScene.on('down', () => {
             this.newScene();
         });
-        this.attempts = 0;
+        this.resets = 0;
     }
 
     update() {
@@ -78,9 +78,12 @@ class GameManager {
 
     switchToEditMode() {
         //--Check if already in EDIT MODE and if not set current mode
-        if (this.currentMode === 'EDIT_MODE')
+        if (this.currentMode == 'EDIT_MODE')
             return;
         this.currentMode = 'EDIT_MODE';
+        //--Increase the resets counter and set the resets text
+        this.resets++;
+        this.tryResetsText();
 
         //--Tell all ControllableObjects to go into EDIT MODE
         for (let i = 0; i < this.scene.movableObjects.length; i++) {
@@ -97,8 +100,6 @@ class GameManager {
     }
 
     levelFailed() {
-        //Score
-        this.attempts++;
         //ResetPlayer
         this.switchToEditMode();
     }
@@ -106,16 +107,24 @@ class GameManager {
     levelWon(){
         console.log('GM WON');
         this.scene.time.addEvent({
-            delay: 2000,
+            delay: 1000,
             callback: ()=>{
-                this.scene.nextLevel();         //--Start New Scene
+                this.scene.levelCompletePanel_P.setVisible(true);         // display level complete screen
             }
         })
     }
 
+    tryResetsText(){
+        if (this.scene.resetsText != null){
+            this.scene.resetsText.text = "Resets: " + this.resets;
+        }
+        if (this.scene.levelCompletePanel_P.resetsText_1 != null){
+            this.scene.levelCompletePanel_P.resetsText_1.text = "Resets: " + this.resets;
+        }
+    }
+
     newScene() {
         this.scene.nextLevel();
-        //this.scene.launch('LevelStart');
     }
 
     /* END-USER-CODE */

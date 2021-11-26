@@ -26,6 +26,7 @@ window.addEventListener('load', function () {
             }
         },
 
+
     });
 
     game.scene.add("Preload", Preload);

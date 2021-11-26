@@ -66,6 +66,16 @@
                 "key": "Buttons_sheet"
             },
             {
+                "url": "assets/animation/change-level-buttons-anim.json",
+                "type": "animation",
+                "key": "change-level-buttons-anim"
+            },
+            {
+                "url": "src/components/user-components/ChangeLevelButton.js",
+                "type": "script",
+                "key": "ChangeLevelButton"
+            },
+            {
                 "url": "prefabs/Movable/CircleBounce.js",
                 "type": "script",
                 "key": "CircleBounce"
@@ -227,6 +237,21 @@
                 "url": "assets/tiled/Level04.json",
                 "type": "tilemapTiledJSON",
                 "key": "Level04"
+            },
+            {
+                "url": "src/components/user-components/LevelCompletePanel.js",
+                "type": "script",
+                "key": "LevelCompletePanel"
+            },
+            {
+                "url": "prefabs/Unmovable/LevelCompletePanel_P.js",
+                "type": "script",
+                "key": "LevelCompletePanel_P"
+            },
+            {
+                "url": "assets/images/pencil/LevelCompleteScreen.png",
+                "type": "image",
+                "key": "LevelCompleteScreen"
             },
             {
                 "url": "src/components/user-components/LevelEnd.js",

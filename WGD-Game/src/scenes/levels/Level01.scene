@@ -103,7 +103,7 @@
             ],
             "label": "platformGrassBig_1",
             "components": [],
-            "x": 832,
+            "x": 640,
             "y": 448
         },
         {
@@ -116,8 +116,8 @@
             "label": "player",
             "scope": "PUBLIC",
             "components": [],
-            "x": 192,
-            "y": 192
+            "x": 832,
+            "y": 416
         },
         {
             "prefabId": "a439648d-2f0f-40dd-9682-e97863778497",
@@ -130,6 +130,53 @@
             "components": [],
             "x": 832,
             "y": 576
+        },
+        {
+            "type": "Container",
+            "id": "2df8a0e3-539e-4a71-bace-3a2563cb1067",
+            "label": "AttemptsPanel",
+            "components": [],
+            "x": 896,
+            "y": 800,
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "8b9a005d-099c-4784-9b68-91b8fa82b540",
+                    "label": "attemptsBackground",
+                    "components": [],
+                    "texture": {
+                        "key": "Buttons_sheet",
+                        "frame": 7
+                    },
+                    "scaleX": 1.1,
+                    "scaleY": 0.5
+                },
+                {
+                    "type": "BitmapText",
+                    "id": "79dbb967-e4c5-418b-85a0-c194fc1ce618",
+                    "label": "resetsText",
+                    "scope": "CLASS",
+                    "components": [],
+                    "text": "Resets: 0",
+                    "font": "scott-script-bold",
+                    "fontSize": 30,
+                    "dropShadowX": 1,
+                    "dropShadowY": 1
+                }
+            ]
+        },
+        {
+            "prefabId": "0096356b-5f82-4b1e-bf17-f59fa8f880ba",
+            "id": "18153e5e-541f-4f74-9cb5-f8b664df6b75",
+            "unlock": [
+                "x",
+                "y",
+                "visible"
+            ],
+            "label": "levelCompletePanel_P",
+            "scope": "CLASS",
+            "components": [],
+            "nestedPrefabs": []
         }
     ],
     "plainObjects": [

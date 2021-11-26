@@ -40,6 +40,14 @@ class Player extends UserComponent {
 		});
 	}
 
+	update(){
+
+		//let matterPhysics = new Phaser.Physics.Matter.MatterPhysics(this.scene);
+		//let bodiesArray = [this.gameObject.body];
+		//matterPhysics.setAngularVelocity(bodiesArray, 0)
+
+	}
+
 	playModeEntered(){
 		this.gravZoneCount = 0;				// reset the grave zone count. If player is in gravity zone when Play Mode start then that gravity zone will be ignored
 		this.gameObject.setStatic(false);

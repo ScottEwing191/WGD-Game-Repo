@@ -298,6 +298,39 @@
             "baseClass": "UserComponent",
             "gameObjectType": "Phaser.GameObjects.Image",
             "properties": []
+        },
+        {
+            "name": "ChangeLevelButton",
+            "baseClass": "UserComponent",
+            "gameObjectType": "Phaser.GameObjects.Sprite",
+            "properties": [
+                {
+                    "name": "changeAnimation",
+                    "label": "Change Animation",
+                    "tooltip": "The name of the animation to use to change the button image when the button is selected",
+                    "defValue": "yellow",
+                    "customDefinition": false,
+                    "type": {
+                        "id": "string"
+                    }
+                },
+                {
+                    "name": "levelName",
+                    "label": "Level Name",
+                    "tooltip": "The name of the Level This button is changing to",
+                    "defValue": "MainMenu",
+                    "customDefinition": false,
+                    "type": {
+                        "id": "string"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "LevelCompletePanel",
+            "baseClass": "UserComponent",
+            "gameObjectType": "Phaser.GameObjects.Image",
+            "properties": []
         }
     ],
     "meta": {

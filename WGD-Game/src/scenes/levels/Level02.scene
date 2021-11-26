@@ -364,8 +364,8 @@
             "label": "player",
             "scope": "PUBLIC",
             "components": [],
-            "x": 224,
-            "y": 64
+            "x": 672,
+            "y": 736
         },
         {
             "prefabId": "a439648d-2f0f-40dd-9682-e97863778497",
@@ -378,6 +378,18 @@
             "components": [],
             "x": 832,
             "y": 704
+        },
+        {
+            "prefabId": "0096356b-5f82-4b1e-bf17-f59fa8f880ba",
+            "id": "8ad6781a-03fb-412c-88fa-caa823c96fda",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "levelCompletePanel_P",
+            "scope": "CLASS",
+            "components": [],
+            "nestedPrefabs": []
         }
     ],
     "plainObjects": [

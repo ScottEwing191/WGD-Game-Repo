@@ -1,0 +1,177 @@
+{
+    "id": "0096356b-5f82-4b1e-bf17-f59fa8f880ba",
+    "sceneType": "PREFAB",
+    "settings": {
+        "preloadMethodName": "",
+        "preloadPackFiles": [],
+        "createMethodName": "",
+        "borderWidth": 1024,
+        "borderHeight": 832
+    },
+    "displayList": [
+        {
+            "type": "Container",
+            "id": "c9f62c83-223e-4d18-be37-ec3df758bdb2",
+            "label": "levelCompletePanel",
+            "scope": "CLASS",
+            "components": [],
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "caaa79d6-3590-4437-9ecf-b3a4b7a35ad9",
+                    "label": "levelCompleteScreen",
+                    "components": [],
+                    "texture": {
+                        "key": "LevelCompleteScreen"
+                    },
+                    "x": 507,
+                    "y": 413
+                },
+                {
+                    "type": "Container",
+                    "id": "9dab8182-f477-4add-8d51-a7e378b72721",
+                    "label": "AttemptsPanel_1",
+                    "components": [],
+                    "x": 512,
+                    "y": 320,
+                    "list": [
+                        {
+                            "type": "Image",
+                            "id": "c86f8480-36bd-47e2-97e0-a51f6bec5c46",
+                            "label": "attemptsBackground_1",
+                            "components": [],
+                            "texture": {
+                                "key": "Buttons_sheet",
+                                "frame": 7
+                            },
+                            "scaleX": 1.3,
+                            "scaleY": 0.5
+                        },
+                        {
+                            "type": "BitmapText",
+                            "id": "4cdc7535-2b63-446e-bbcb-ac8a9f8f94bc",
+                            "label": "resetsText_1",
+                            "scope": "CLASS",
+                            "components": [],
+                            "text": "Resets: 0",
+                            "font": "scott-script-bold",
+                            "fontSize": 30,
+                            "dropShadowX": 1,
+                            "dropShadowY": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "Container",
+                    "id": "fe2a4964-1cbe-4e18-be91-a1c1592e98ef",
+                    "label": "returnToMenu_C",
+                    "components": [],
+                    "x": 512,
+                    "y": 608,
+                    "list": [
+                        {
+                            "type": "Sprite",
+                            "id": "32ff3d74-dba5-4213-9a1c-a6fc188f007b",
+                            "label": "buttons_sheet4_1",
+                            "components": [
+                                "ChangeLevelButton"
+                            ],
+                            "ChangeLevelButton.changeAnimation": "purple",
+                            "texture": {
+                                "key": "Buttons_sheet",
+                                "frame": 4
+                            },
+                            "scaleX": 1.5,
+                            "scaleY": 0.5
+                        },
+                        {
+                            "type": "BitmapText",
+                            "id": "efefba4c-847b-443c-9b29-cd76bb71fa5a",
+                            "label": "bitmaptext",
+                            "components": [],
+                            "text": "Return To Menu",
+                            "font": "scott-script-bold-3",
+                            "fontSize": 25
+                        }
+                    ]
+                },
+                {
+                    "type": "Container",
+                    "id": "a4d6e682-ffa1-433d-97ee-eb9a1f76c745",
+                    "label": "replayLevel_C",
+                    "components": [],
+                    "list": [
+                        {
+                            "type": "Sprite",
+                            "id": "0f5807e5-3de7-4e1b-8378-0664d6cc5752",
+                            "label": "replayButton",
+                            "components": [
+                                "ChangeLevelButton"
+                            ],
+                            "ChangeLevelButton.changeAnimation": "pink",
+                            "ChangeLevelButton.levelName": "Level01",
+                            "texture": {
+                                "key": "Buttons_sheet",
+                                "frame": 2
+                            },
+                            "x": 416,
+                            "y": 512
+                        },
+                        {
+                            "type": "BitmapText",
+                            "id": "df53a0d0-1368-4d10-87e0-adcdbce95ba9",
+                            "label": "replayLevelText",
+                            "components": [],
+                            "x": 416,
+                            "y": 512,
+                            "text": "Replay\nLevel",
+                            "font": "scott-script-bold-3",
+                            "fontSize": 30
+                        }
+                    ]
+                },
+                {
+                    "type": "Container",
+                    "id": "6c4c5f9c-85d4-4700-9810-3fe0f2186e69",
+                    "label": "nextLevel_C",
+                    "components": [],
+                    "list": [
+                        {
+                            "type": "Sprite",
+                            "id": "89df7175-1767-48b8-8548-65a7f80ba625",
+                            "label": "nextLevel",
+                            "components": [
+                                "ChangeLevelButton"
+                            ],
+                            "ChangeLevelButton.levelName": "Level02",
+                            "texture": {
+                                "key": "Buttons_sheet",
+                                "frame": 0
+                            },
+                            "x": 608,
+                            "y": 512
+                        },
+                        {
+                            "type": "BitmapText",
+                            "id": "7a69be4f-3955-42fe-8d89-89e9e2f31ff3",
+                            "label": "nextLevelText",
+                            "components": [],
+                            "x": 608,
+                            "y": 512,
+                            "text": "Next\nLevel",
+                            "font": "scott-script-bold-3",
+                            "fontSize": 30
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 2
+    }
+}

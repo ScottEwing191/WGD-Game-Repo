@@ -133,12 +133,16 @@ class Level02 extends Phaser.Scene {
 		this.add.existing(antiGravZone1x2Prefab);
 
 		// player
-		const player = new PlayerPrefab(this, 224, 64);
+		const player = new PlayerPrefab(this, 672, 736);
 		this.add.existing(player);
 
 		// levelEnd_P
 		const levelEnd_P = new LevelEnd_P(this, 832, 704);
 		this.add.existing(levelEnd_P);
+
+		// levelCompletePanel_P
+		const levelCompletePanel_P = new LevelCompletePanel_P(this, 0, 0);
+		this.add.existing(levelCompletePanel_P);
 
 		// lists
 		const movableObjects = []
@@ -183,6 +187,7 @@ class Level02 extends Phaser.Scene {
 		this.gameManager = gameManager;
 		this.solid_1 = solid_1;
 		this.player = player;
+		this.levelCompletePanel_P = levelCompletePanel_P;
 		this.level02 = level02;
 		this.movableObjects = movableObjects;
 		this.jumpPads = jumpPads;
@@ -197,6 +202,8 @@ class Level02 extends Phaser.Scene {
 	solid_1;
 	/** @type {PlayerPrefab} */
 	player;
+	/** @type {LevelCompletePanel_P} */
+	levelCompletePanel_P;
 	/** @type {Array<any>} */
 	movableObjects;
 	/** @type {Array<any>} */
@@ -216,8 +223,14 @@ class Level02 extends Phaser.Scene {
 		this.matter.world.convertTilemapLayer(this.solid_1);
 	}
 
-	nextLevel(){
+	/*nextLevel(){
 		this.scene.start("Level03");
+	}*/
+	nextLevel(levelName){
+		if (levelName == undefined){
+			levelName = 'Level03';
+		}
+		this.scene.start(levelName);
 	}
 
 	/* END-USER-CODE */

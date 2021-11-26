@@ -1,5 +1,6 @@
 
 // You can write more code here
+// noinspection DuplicatedCode
 
 /* START OF COMPILED CODE */
 
@@ -50,16 +51,38 @@ class Level01 extends Phaser.Scene {
 		this.add.existing(platformGrassBig);
 
 		// platformGrassBig_1
-		const platformGrassBig_1 = new PlatformGrassBig(this, 832, 448);
+		const platformGrassBig_1 = new PlatformGrassBig(this, 640, 448);
 		this.add.existing(platformGrassBig_1);
 
 		// player
-		const player = new PlayerPrefab(this, 192, 192);
+		const player = new PlayerPrefab(this, 832, 416);
 		this.add.existing(player);
 
 		// levelEnd_P
 		const levelEnd_P = new LevelEnd_P(this, 832, 576);
 		this.add.existing(levelEnd_P);
+
+		// AttemptsPanel
+		const attemptsPanel = this.add.container(896, 800);
+
+		// attemptsBackground
+		const attemptsBackground = this.add.image(0, 0, "Buttons_sheet", 7);
+		attemptsBackground.scaleX = 1.1;
+		attemptsBackground.scaleY = 0.5;
+		attemptsPanel.add(attemptsBackground);
+
+		// resetsText
+		const resetsText = this.add.bitmapText(0, 0, "scott-script-bold", "Resets: 0");
+		resetsText.setOrigin(0.5, 0.5);
+		resetsText.text = "Resets: 0";
+		resetsText.fontSize = 30;
+		resetsText.dropShadowX = 1;
+		resetsText.dropShadowY = 1;
+		attemptsPanel.add(resetsText);
+
+		// levelCompletePanel_P
+		const levelCompletePanel_P = new LevelCompletePanel_P(this, 0, 0);
+		this.add.existing(levelCompletePanel_P);
 
 		// lists
 		const movableObjects = []
@@ -72,6 +95,8 @@ class Level01 extends Phaser.Scene {
 		this.gameManager = gameManager;
 		this.solid_1 = solid_1;
 		this.player = player;
+		this.resetsText = resetsText;
+		this.levelCompletePanel_P = levelCompletePanel_P;
 		this.level01 = level01;
 		this.movableObjects = movableObjects;
 		this.jumpPads = jumpPads;
@@ -86,6 +111,10 @@ class Level01 extends Phaser.Scene {
 	solid_1;
 	/** @type {PlayerPrefab} */
 	player;
+	/** @type {Phaser.GameObjects.BitmapText} */
+	resetsText;
+	/** @type {LevelCompletePanel_P} */
+	levelCompletePanel_P;
 	/** @type {Array<any>} */
 	movableObjects;
 	/** @type {Array<any>} */
@@ -105,9 +134,14 @@ class Level01 extends Phaser.Scene {
 		this.matter.world.convertTilemapLayer(this.solid_1);
 	}
 
-	nextLevel(){
-		this.scene.start("Level02");
+
+	nextLevel(levelName){
+		if (levelName == undefined){
+			levelName = 'Level02';
+		}
+		this.scene.start(levelName);
 	}
+
 
 	/* END-USER-CODE */
 }

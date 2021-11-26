@@ -1,8 +1,6 @@
 window.addEventListener('load', function () {
 
     var game = new Phaser.Game({
-        //width: 896,
-        //height: 704,
         width: 1024,
         height: 832,
         type: Phaser.AUTO,
@@ -11,22 +9,17 @@ window.addEventListener('load', function () {
             mode: Phaser.Scale.FIT,
             autoCenter: Phaser.Scale.CENTER_BOTH
         },
-
         physics: {
              default: 'matter',
-            arcade: {
-                debug: true,
-                gravity: {
-                    y: 200
-                }
-            },
             matter: {
                 //debug: true,
-                gravity: {y: 0.5}
+                gravity: {y: 0.5},
+                /*runner:{
+                    isFixed: true,
+                    fps: 60
+                }*/
             }
         },
-
-
     });
 
     game.scene.add("Preload", Preload);

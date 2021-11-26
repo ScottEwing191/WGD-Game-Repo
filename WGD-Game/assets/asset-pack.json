@@ -17,6 +17,11 @@
                 "key": "AntiGravZonePrefab"
             },
             {
+                "url": "prefabs/Unmovable/AttemptsPanel_P.js",
+                "type": "script",
+                "key": "AttemptsPanel_P"
+            },
+            {
                 "url": "assets/animation/ball-anim.json",
                 "type": "animation",
                 "key": "ball-anim"

@@ -8,6 +8,8 @@ class LevelCompletePanel_P extends Phaser.GameObjects.Container {
 	constructor(scene, x, y) {
 		super(scene, x ?? 0, y ?? 0);
 
+		this.visible = false;
+
 		// levelCompleteScreen
 		const levelCompleteScreen = scene.add.image(507, 413, "LevelCompleteScreen");
 		this.add(levelCompleteScreen);
@@ -31,15 +33,15 @@ class LevelCompletePanel_P extends Phaser.GameObjects.Container {
 		resetsText_1.dropShadowY = 1;
 		attemptsPanel_1.add(resetsText_1);
 
+		// returnToMenu
+		const returnToMenu = scene.add.sprite(512, 608, "Buttons_sheet", 4);
+		returnToMenu.scaleX = 1.5;
+		returnToMenu.scaleY = 0.5;
+		this.add(returnToMenu);
+
 		// returnToMenu_C
 		const returnToMenu_C = scene.add.container(512, 608);
 		this.add(returnToMenu_C);
-
-		// buttons_sheet4_1
-		const buttons_sheet4_1 = scene.add.sprite(0, 0, "Buttons_sheet", 4);
-		buttons_sheet4_1.scaleX = 1.5;
-		buttons_sheet4_1.scaleY = 0.5;
-		returnToMenu_C.add(buttons_sheet4_1);
 
 		// bitmaptext
 		const bitmaptext = scene.add.bitmapText(0, 0, "scott-script-bold-3", "Return To Menu");
@@ -48,13 +50,13 @@ class LevelCompletePanel_P extends Phaser.GameObjects.Container {
 		bitmaptext.fontSize = 25;
 		returnToMenu_C.add(bitmaptext);
 
+		// replayButton
+		const replayButton = scene.add.sprite(416, 512, "Buttons_sheet", 2);
+		this.add(replayButton);
+
 		// replayLevel_C
 		const replayLevel_C = scene.add.container(0, 0);
 		this.add(replayLevel_C);
-
-		// replayButton
-		const replayButton = scene.add.sprite(416, 512, "Buttons_sheet", 2);
-		replayLevel_C.add(replayButton);
 
 		// replayLevelText
 		const replayLevelText = scene.add.bitmapText(416, 512, "scott-script-bold-3", "Replay\nLevel");
@@ -63,13 +65,13 @@ class LevelCompletePanel_P extends Phaser.GameObjects.Container {
 		replayLevelText.fontSize = 30;
 		replayLevel_C.add(replayLevelText);
 
+		// nextLevel
+		const nextLevel = scene.add.sprite(608, 512, "Buttons_sheet", 0);
+		this.add(nextLevel);
+
 		// nextLevel_C
 		const nextLevel_C = scene.add.container(0, 0);
 		this.add(nextLevel_C);
-
-		// nextLevel
-		const nextLevel = scene.add.sprite(608, 512, "Buttons_sheet", 0);
-		nextLevel_C.add(nextLevel);
 
 		// nextLevelText
 		const nextLevelText = scene.add.bitmapText(608, 512, "scott-script-bold-3", "Next\nLevel");
@@ -78,9 +80,9 @@ class LevelCompletePanel_P extends Phaser.GameObjects.Container {
 		nextLevelText.fontSize = 30;
 		nextLevel_C.add(nextLevelText);
 
-		// buttons_sheet4_1 (components)
-		const buttons_sheet4_1ChangeLevelButton = new ChangeLevelButton(buttons_sheet4_1);
-		buttons_sheet4_1ChangeLevelButton.changeAnimation = "purple";
+		// returnToMenu (components)
+		const returnToMenuChangeLevelButton = new ChangeLevelButton(returnToMenu);
+		returnToMenuChangeLevelButton.changeAnimation = "purple";
 
 		// replayButton (components)
 		const replayButtonChangeLevelButton = new ChangeLevelButton(replayButton);
@@ -92,6 +94,10 @@ class LevelCompletePanel_P extends Phaser.GameObjects.Container {
 		nextLevelChangeLevelButton.levelName = "Level02";
 
 		this.resetsText_1 = resetsText_1;
+		this.returnToMenu_C = returnToMenu_C;
+		this.replayButton = replayButton;
+		this.replayLevel_C = replayLevel_C;
+		this.nextLevel = nextLevel;
 
 		/* START-USER-CTR-CODE */
 		// Write your code here.
@@ -100,6 +106,14 @@ class LevelCompletePanel_P extends Phaser.GameObjects.Container {
 
 	/** @type {Phaser.GameObjects.BitmapText} */
 	resetsText_1;
+	/** @type {Phaser.GameObjects.Container} */
+	returnToMenu_C;
+	/** @type {Phaser.GameObjects.Sprite} */
+	replayButton;
+	/** @type {Phaser.GameObjects.Container} */
+	replayLevel_C;
+	/** @type {Phaser.GameObjects.Sprite} */
+	nextLevel;
 
 	/* START-USER-CODE */
 

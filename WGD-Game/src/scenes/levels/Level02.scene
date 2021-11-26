@@ -364,8 +364,8 @@
             "label": "player",
             "scope": "PUBLIC",
             "components": [],
-            "x": 672,
-            "y": 736
+            "x": 192,
+            "y": 64
         },
         {
             "prefabId": "a439648d-2f0f-40dd-9682-e97863778497",
@@ -376,8 +376,8 @@
             ],
             "label": "levelEnd_P",
             "components": [],
-            "x": 832,
-            "y": 704
+            "x": 192,
+            "y": 192
         },
         {
             "prefabId": "0096356b-5f82-4b1e-bf17-f59fa8f880ba",
@@ -389,7 +389,28 @@
             "label": "levelCompletePanel_P",
             "scope": "CLASS",
             "components": [],
-            "nestedPrefabs": []
+            "nestedPrefabs": [
+                {
+                    "prefabId": "0f5807e5-3de7-4e1b-8378-0664d6cc5752",
+                    "id": "32ca63a7-01a1-45fd-b62c-f849ccbfc821",
+                    "unlock": [
+                        "ChangeLevelButton.levelName"
+                    ],
+                    "label": "replayButton",
+                    "components": [],
+                    "ChangeLevelButton.levelName": "Level02"
+                },
+                {
+                    "prefabId": "89df7175-1767-48b8-8548-65a7f80ba625",
+                    "id": "e3f8b018-478c-4cfa-b837-a36b080b84f8",
+                    "unlock": [
+                        "ChangeLevelButton.levelName"
+                    ],
+                    "label": "nextLevel",
+                    "components": [],
+                    "ChangeLevelButton.levelName": "Level03"
+                }
+            ]
         }
     ],
     "plainObjects": [

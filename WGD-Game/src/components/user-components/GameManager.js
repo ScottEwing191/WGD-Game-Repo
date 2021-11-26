@@ -46,6 +46,7 @@ class GameManager {
             this.newScene();
         });
         this.resets = 0;
+        this.levelFinished = false;
     }
 
     update() {
@@ -54,7 +55,7 @@ class GameManager {
 
     switchToPlayMode() {
         //--Check if already in PLAY MODE and if not set current mode
-        if (this.currentMode === 'PLAY_MODE')
+        if (this.currentMode == 'PLAY_MODE' || this.levelFinished)
             return;
         this.currentMode = 'PLAY_MODE';
 
@@ -78,7 +79,7 @@ class GameManager {
 
     switchToEditMode() {
         //--Check if already in EDIT MODE and if not set current mode
-        if (this.currentMode == 'EDIT_MODE')
+        if (this.currentMode == 'EDIT_MODE' || this.levelFinished)
             return;
         this.currentMode = 'EDIT_MODE';
         //--Increase the resets counter and set the resets text
@@ -105,7 +106,7 @@ class GameManager {
     }
 
     levelWon(){
-        console.log('GM WON');
+        this.levelFinished = true;
         this.scene.time.addEvent({
             delay: 1000,
             callback: ()=>{
@@ -115,8 +116,8 @@ class GameManager {
     }
 
     tryResetsText(){
-        if (this.scene.resetsText != null){
-            this.scene.resetsText.text = "Resets: " + this.resets;
+        if (this.scene.attemptsPanel_P.resetsText != null){
+            this.scene.attemptsPanel_P.resetsText.text = "Resets: " + this.resets;
         }
         if (this.scene.levelCompletePanel_P.resetsText_1 != null){
             this.scene.levelCompletePanel_P.resetsText_1.text = "Resets: " + this.resets;

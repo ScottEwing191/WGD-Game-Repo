@@ -15,6 +15,7 @@
             "label": "levelCompletePanel",
             "scope": "CLASS",
             "components": [],
+            "visible": false,
             "list": [
                 {
                     "type": "Image",
@@ -62,28 +63,31 @@
                     ]
                 },
                 {
+                    "type": "Sprite",
+                    "id": "32ff3d74-dba5-4213-9a1c-a6fc188f007b",
+                    "label": "returnToMenu",
+                    "components": [
+                        "ChangeLevelButton"
+                    ],
+                    "ChangeLevelButton.changeAnimation": "purple",
+                    "texture": {
+                        "key": "Buttons_sheet",
+                        "frame": 4
+                    },
+                    "x": 512,
+                    "y": 608,
+                    "scaleX": 1.5,
+                    "scaleY": 0.5
+                },
+                {
                     "type": "Container",
                     "id": "fe2a4964-1cbe-4e18-be91-a1c1592e98ef",
                     "label": "returnToMenu_C",
+                    "scope": "NESTED_PREFAB",
                     "components": [],
                     "x": 512,
                     "y": 608,
                     "list": [
-                        {
-                            "type": "Sprite",
-                            "id": "32ff3d74-dba5-4213-9a1c-a6fc188f007b",
-                            "label": "buttons_sheet4_1",
-                            "components": [
-                                "ChangeLevelButton"
-                            ],
-                            "ChangeLevelButton.changeAnimation": "purple",
-                            "texture": {
-                                "key": "Buttons_sheet",
-                                "frame": 4
-                            },
-                            "scaleX": 1.5,
-                            "scaleY": 0.5
-                        },
                         {
                             "type": "BitmapText",
                             "id": "efefba4c-847b-443c-9b29-cd76bb71fa5a",
@@ -96,27 +100,29 @@
                     ]
                 },
                 {
+                    "type": "Sprite",
+                    "id": "0f5807e5-3de7-4e1b-8378-0664d6cc5752",
+                    "label": "replayButton",
+                    "scope": "NESTED_PREFAB",
+                    "components": [
+                        "ChangeLevelButton"
+                    ],
+                    "ChangeLevelButton.changeAnimation": "pink",
+                    "ChangeLevelButton.levelName": "Level01",
+                    "texture": {
+                        "key": "Buttons_sheet",
+                        "frame": 2
+                    },
+                    "x": 416,
+                    "y": 512
+                },
+                {
                     "type": "Container",
                     "id": "a4d6e682-ffa1-433d-97ee-eb9a1f76c745",
                     "label": "replayLevel_C",
+                    "scope": "NESTED_PREFAB",
                     "components": [],
                     "list": [
-                        {
-                            "type": "Sprite",
-                            "id": "0f5807e5-3de7-4e1b-8378-0664d6cc5752",
-                            "label": "replayButton",
-                            "components": [
-                                "ChangeLevelButton"
-                            ],
-                            "ChangeLevelButton.changeAnimation": "pink",
-                            "ChangeLevelButton.levelName": "Level01",
-                            "texture": {
-                                "key": "Buttons_sheet",
-                                "frame": 2
-                            },
-                            "x": 416,
-                            "y": 512
-                        },
                         {
                             "type": "BitmapText",
                             "id": "df53a0d0-1368-4d10-87e0-adcdbce95ba9",
@@ -131,26 +137,27 @@
                     ]
                 },
                 {
+                    "type": "Sprite",
+                    "id": "89df7175-1767-48b8-8548-65a7f80ba625",
+                    "label": "nextLevel",
+                    "scope": "NESTED_PREFAB",
+                    "components": [
+                        "ChangeLevelButton"
+                    ],
+                    "ChangeLevelButton.levelName": "Level02",
+                    "texture": {
+                        "key": "Buttons_sheet",
+                        "frame": 0
+                    },
+                    "x": 608,
+                    "y": 512
+                },
+                {
                     "type": "Container",
                     "id": "6c4c5f9c-85d4-4700-9810-3fe0f2186e69",
                     "label": "nextLevel_C",
                     "components": [],
                     "list": [
-                        {
-                            "type": "Sprite",
-                            "id": "89df7175-1767-48b8-8548-65a7f80ba625",
-                            "label": "nextLevel",
-                            "components": [
-                                "ChangeLevelButton"
-                            ],
-                            "ChangeLevelButton.levelName": "Level02",
-                            "texture": {
-                                "key": "Buttons_sheet",
-                                "frame": 0
-                            },
-                            "x": 608,
-                            "y": 512
-                        },
                         {
                             "type": "BitmapText",
                             "id": "7a69be4f-3955-42fe-8d89-89e9e2f31ff3",

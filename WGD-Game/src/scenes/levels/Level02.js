@@ -133,11 +133,11 @@ class Level02 extends Phaser.Scene {
 		this.add.existing(antiGravZone1x2Prefab);
 
 		// player
-		const player = new PlayerPrefab(this, 672, 736);
+		const player = new PlayerPrefab(this, 192, 64);
 		this.add.existing(player);
 
 		// levelEnd_P
-		const levelEnd_P = new LevelEnd_P(this, 832, 704);
+		const levelEnd_P = new LevelEnd_P(this, 192, 192);
 		this.add.existing(levelEnd_P);
 
 		// levelCompletePanel_P
@@ -184,6 +184,14 @@ class Level02 extends Phaser.Scene {
 		spike2_upRectanglePhysics.spriteYOffset = -0.34375;
 		new Spike(spike2_up);
 
+		// levelCompletePanel_P.replayButton (components)
+		const levelCompletePanel_P_replayButtonChangeLevelButton = ChangeLevelButton.getComponent(levelCompletePanel_P.replayButton);
+		levelCompletePanel_P_replayButtonChangeLevelButton.levelName = "Level02";
+
+		// levelCompletePanel_P.nextLevel (components)
+		const levelCompletePanel_P_nextLevelChangeLevelButton = ChangeLevelButton.getComponent(levelCompletePanel_P.nextLevel);
+		levelCompletePanel_P_nextLevelChangeLevelButton.levelName = "Level03";
+
 		this.gameManager = gameManager;
 		this.solid_1 = solid_1;
 		this.player = player;
@@ -221,6 +229,8 @@ class Level02 extends Phaser.Scene {
 		//--Add collision to the Tile Layer
 		this.level02.setCollisionByProperty({collider :true});
 		this.matter.world.convertTilemapLayer(this.solid_1);
+
+		//this.matter.set60Hz();
 	}
 
 	/*nextLevel(){

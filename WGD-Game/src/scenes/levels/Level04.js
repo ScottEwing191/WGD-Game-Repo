@@ -153,8 +153,12 @@ class Level04 extends Phaser.Scene {
 		this.add.existing(player);
 
 		// levelEnd_P
-		const levelEnd_P = new LevelEnd_P(this, 480, 704);
+		const levelEnd_P = new LevelEnd_P(this, 448, 224);
 		this.add.existing(levelEnd_P);
+
+		// levelCompletePanel_P
+		const levelCompletePanel_P = new LevelCompletePanel_P(this, 0, 0);
+		this.add.existing(levelCompletePanel_P);
 
 		// lists
 		const movableObjects = []
@@ -164,9 +168,18 @@ class Level04 extends Phaser.Scene {
 		// gameManager (components)
 		new GameManager(gameManager);
 
+		// levelCompletePanel_P.replayButton (components)
+		const levelCompletePanel_P_replayButtonChangeLevelButton = ChangeLevelButton.getComponent(levelCompletePanel_P.replayButton);
+		levelCompletePanel_P_replayButtonChangeLevelButton.levelName = "Level04";
+
+		// levelCompletePanel_P.nextLevel (components)
+		const levelCompletePanel_P_nextLevelChangeLevelButton = ChangeLevelButton.getComponent(levelCompletePanel_P.nextLevel);
+		levelCompletePanel_P_nextLevelChangeLevelButton.levelName = "MainMenu";
+
 		this.solid = solid;
 		this.gameManager = gameManager;
 		this.player = player;
+		this.levelCompletePanel_P = levelCompletePanel_P;
 		this.level04 = level04;
 		this.movableObjects = movableObjects;
 		this.jumpPads = jumpPads;
@@ -181,6 +194,8 @@ class Level04 extends Phaser.Scene {
 	gameManager;
 	/** @type {PlayerPrefab} */
 	player;
+	/** @type {LevelCompletePanel_P} */
+	levelCompletePanel_P;
 	/** @type {Array<any>} */
 	movableObjects;
 	/** @type {Array<any>} */

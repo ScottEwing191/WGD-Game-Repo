@@ -344,8 +344,41 @@
             ],
             "label": "levelEnd_P",
             "components": [],
-            "x": 736,
-            "y": 704
+            "x": 896,
+            "y": 160
+        },
+        {
+            "prefabId": "0096356b-5f82-4b1e-bf17-f59fa8f880ba",
+            "id": "bc498b0e-0307-4b2e-a884-1704cd09f9ce",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "levelCompletePanel_P",
+            "scope": "CLASS",
+            "components": [],
+            "nestedPrefabs": [
+                {
+                    "prefabId": "0f5807e5-3de7-4e1b-8378-0664d6cc5752",
+                    "id": "99134aee-21da-4163-812f-00a33d9f3352",
+                    "unlock": [
+                        "ChangeLevelButton.levelName"
+                    ],
+                    "label": "replayButton",
+                    "components": [],
+                    "ChangeLevelButton.levelName": "Level03"
+                },
+                {
+                    "prefabId": "89df7175-1767-48b8-8548-65a7f80ba625",
+                    "id": "de2301fe-ee24-414a-abb3-eaab97b81501",
+                    "unlock": [
+                        "ChangeLevelButton.levelName"
+                    ],
+                    "label": "nextLevel",
+                    "components": [],
+                    "ChangeLevelButton.levelName": "Level04"
+                }
+            ]
         }
     ],
     "plainObjects": [

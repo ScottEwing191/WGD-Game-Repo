@@ -122,8 +122,12 @@ class Level03 extends Phaser.Scene {
 		this.add.existing(jump_Pad_3);
 
 		// levelEnd_P
-		const levelEnd_P = new LevelEnd_P(this, 736, 704);
+		const levelEnd_P = new LevelEnd_P(this, 896, 160);
 		this.add.existing(levelEnd_P);
+
+		// levelCompletePanel_P
+		const levelCompletePanel_P = new LevelCompletePanel_P(this, 0, 0);
+		this.add.existing(levelCompletePanel_P);
 
 		// lists
 		const movableObjects = []
@@ -140,9 +144,18 @@ class Level03 extends Phaser.Scene {
 		// player (components)
 		new ControllableObject(player);
 
+		// levelCompletePanel_P.replayButton (components)
+		const levelCompletePanel_P_replayButtonChangeLevelButton = ChangeLevelButton.getComponent(levelCompletePanel_P.replayButton);
+		levelCompletePanel_P_replayButtonChangeLevelButton.levelName = "Level03";
+
+		// levelCompletePanel_P.nextLevel (components)
+		const levelCompletePanel_P_nextLevelChangeLevelButton = ChangeLevelButton.getComponent(levelCompletePanel_P.nextLevel);
+		levelCompletePanel_P_nextLevelChangeLevelButton.levelName = "Level04";
+
 		this.gameManager = gameManager;
 		this.solid_1 = solid_1;
 		this.player = player;
+		this.levelCompletePanel_P = levelCompletePanel_P;
 		this.level03 = level03;
 		this.movableObjects = movableObjects;
 		this.jumpPads = jumpPads;
@@ -157,6 +170,8 @@ class Level03 extends Phaser.Scene {
 	solid_1;
 	/** @type {PlayerPrefab} */
 	player;
+	/** @type {LevelCompletePanel_P} */
+	levelCompletePanel_P;
 	/** @type {Array<any>} */
 	movableObjects;
 	/** @type {Array<any>} */
@@ -174,6 +189,8 @@ class Level03 extends Phaser.Scene {
 		//--Add collision to the Tile Layer
 		this.level03.setCollisionByProperty({collider :true});
 		this.matter.world.convertTilemapLayer(this.solid_1);
+		//this.matter.set60Hz();
+
 	}
 
 	/*nextLevel(){

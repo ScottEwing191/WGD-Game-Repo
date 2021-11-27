@@ -129,6 +129,10 @@ class Level03 extends Phaser.Scene {
 		const levelCompletePanel_P = new LevelCompletePanel_P(this, 0, 0);
 		this.add.existing(levelCompletePanel_P);
 
+		// attemptsPanel_P
+		const attemptsPanel_P = new AttemptsPanel_P(this, 896, 800);
+		this.add.existing(attemptsPanel_P);
+
 		// lists
 		const movableObjects = []
 		const jumpPads = []
@@ -156,6 +160,7 @@ class Level03 extends Phaser.Scene {
 		this.solid_1 = solid_1;
 		this.player = player;
 		this.levelCompletePanel_P = levelCompletePanel_P;
+		this.attemptsPanel_P = attemptsPanel_P;
 		this.level03 = level03;
 		this.movableObjects = movableObjects;
 		this.jumpPads = jumpPads;
@@ -172,6 +177,8 @@ class Level03 extends Phaser.Scene {
 	player;
 	/** @type {LevelCompletePanel_P} */
 	levelCompletePanel_P;
+	/** @type {AttemptsPanel_P} */
+	attemptsPanel_P;
 	/** @type {Array<any>} */
 	movableObjects;
 	/** @type {Array<any>} */

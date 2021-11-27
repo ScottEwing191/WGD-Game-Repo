@@ -59,7 +59,7 @@ class Level01 extends Phaser.Scene {
 		this.add.existing(player);
 
 		// levelEnd_P
-		const levelEnd_P = new LevelEnd_P(this, 160, 320);
+		const levelEnd_P = new LevelEnd_P(this, 160, 448);
 		this.add.existing(levelEnd_P);
 
 		// levelCompletePanel_P
@@ -67,8 +67,18 @@ class Level01 extends Phaser.Scene {
 		this.add.existing(levelCompletePanel_P);
 
 		// attemptsPanel_P
-		const attemptsPanel_P = new AttemptsPanel_P(this, 634, 721);
+		const attemptsPanel_P = new AttemptsPanel_P(this, 896, 800);
 		this.add.existing(attemptsPanel_P);
+
+		// coin
+		const coin = this.add.sprite(160, 224, "Pencil_256", 91);
+		coin.scaleX = 0.25;
+		coin.scaleY = 0.25;
+
+		// coin_empty_place
+		const coin_empty_place = this.add.image(736, 800, "coin empty place");
+		coin_empty_place.scaleX = 0.25;
+		coin_empty_place.scaleY = 0.25;
 
 		// lists
 		const movableObjects = []
@@ -77,6 +87,13 @@ class Level01 extends Phaser.Scene {
 
 		// gameManager (components)
 		new GameManager(gameManager);
+
+		// coin (components)
+		const coinCircleCollider = new CircleCollider(coin);
+		coinCircleCollider.radius = 16;
+		coinCircleCollider.bounce = 0;
+		coinCircleCollider.isSensor = true;
+		new CoinCollectable(coin);
 
 		this.gameManager = gameManager;
 		this.solid_1 = solid_1;

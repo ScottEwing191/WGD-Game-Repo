@@ -46,11 +46,13 @@ class CirclePhysics {
 			x: this.gameObject.x,
 			y: this.gameObject.y,
 			type: 'circle',
-            radius: this.radius
+            radius: this.radius,
+			maxSides: 100
         }, {
 			isStatic: this.isStatic,
             mass: 25,
-            inverseMass: (1 / 25)
+            inverseMass: (1 / 25),
+
         });
 		this.gameObject.setBounce(this.bounce, this.bounce);
     }

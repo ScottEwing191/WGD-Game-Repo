@@ -58,20 +58,16 @@ class MainMenu extends Phaser.Scene {
 		clickToPlayText.dropShadowAlpha = 0;
 		playButton.add(clickToPlayText);
 
-		// jump_Pad
-		const jump_Pad = new Jump_Pad(this, 315, 444);
-		this.add.existing(jump_Pad);
-
-		// jump_Pad_1
-		const jump_Pad_1 = new Jump_Pad(this, 704, 448);
-		this.add.existing(jump_Pad_1);
-
-		// gameManager
-		const gameManager = this.add.rectangle(1088, 64, 128, 128);
-		gameManager.isFilled = true;
-
 		// doodleCourse_Curved
 		this.add.image(512, 192, "DoodleCourse Curved");
+
+		// jumpPadUnmovable_1
+		const jumpPadUnmovable_1 = new JumpPadUnmovable(this, 704, 448);
+		this.add.existing(jumpPadUnmovable_1);
+
+		// jumpPadUnmovable
+		const jumpPadUnmovable = new JumpPadUnmovable(this, 315, 444);
+		this.add.existing(jumpPadUnmovable);
 
 		// player
 		const player = new PlayerPrefab(this, 496, 336);
@@ -85,28 +81,24 @@ class MainMenu extends Phaser.Scene {
 		// buttons_sheet0 (components)
 		new MenuPlayButton(buttons_sheet0);
 
-		// jump_Pad (components)
-		const jump_PadJumpPad = JumpPad.getComponent(jump_Pad);
-		jump_PadJumpPad.force = 10.25;
-		const jump_PadRectanglePhysics = RectanglePhysics.getComponent(jump_Pad);
-		jump_PadRectanglePhysics.modifyXPosition = 32;
-		jump_PadRectanglePhysics.angle = 45;
+		// jumpPadUnmovable_1 (components)
+		const jumpPadUnmovable_1JumpPad = JumpPad.getComponent(jumpPadUnmovable_1);
+		jumpPadUnmovable_1JumpPad.force = 10.25;
+		const jumpPadUnmovable_1RectanglePhysics = RectanglePhysics.getComponent(jumpPadUnmovable_1);
+		jumpPadUnmovable_1RectanglePhysics.modifyXPosition = -32;
+		jumpPadUnmovable_1RectanglePhysics.angle = -45;
 
-		// jump_Pad_1 (components)
-		const jump_Pad_1JumpPad = JumpPad.getComponent(jump_Pad_1);
-		jump_Pad_1JumpPad.force = 10.25;
-		const jump_Pad_1RectanglePhysics = RectanglePhysics.getComponent(jump_Pad_1);
-		jump_Pad_1RectanglePhysics.modifyXPosition = -32;
-		jump_Pad_1RectanglePhysics.angle = -45;
-
-		// gameManager (components)
-		new GameManager(gameManager);
+		// jumpPadUnmovable (components)
+		const jumpPadUnmovableJumpPad = JumpPad.getComponent(jumpPadUnmovable);
+		jumpPadUnmovableJumpPad.force = 10.25;
+		const jumpPadUnmovableRectanglePhysics = RectanglePhysics.getComponent(jumpPadUnmovable);
+		jumpPadUnmovableRectanglePhysics.modifyXPosition = 32;
+		jumpPadUnmovableRectanglePhysics.angle = 45;
 
 		// player (components)
 		const playerPlayer = Player.getComponent(player);
 		playerPlayer.xVelocity = 13;
 
-		this.gameManager = gameManager;
 		this.player = player;
 		this.mainMenu = mainMenu;
 		this.jumpPads = jumpPads;
@@ -116,8 +108,6 @@ class MainMenu extends Phaser.Scene {
 		this.events.emit("scene-awake");
 	}
 
-	/** @type {Phaser.GameObjects.Rectangle} */
-	gameManager;
 	/** @type {PlayerPrefab} */
 	player;
 	/** @type {Array<any>} */

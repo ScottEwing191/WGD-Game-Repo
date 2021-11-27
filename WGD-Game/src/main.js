@@ -1,6 +1,6 @@
 window.addEventListener('load', function () {
 
-    var game = new Phaser.Game({
+    const game = new Phaser.Game({
         width: 1024,
         height: 832,
         type: Phaser.AUTO,

@@ -34,6 +34,7 @@ class Player extends UserComponent {
 
 	start(){
 		this.startPosition = this.gameObject.getCenter();
+		this.startAngle = this.gameObject.angle;
 		this.editModeEntered();
 		this.gameObject.on(Phaser.Animations.Events.ANIMATION_COMPLETE_KEY + 'ball-pop', () =>{
 			this.playerDeathAnimComplete();
@@ -56,6 +57,7 @@ class Player extends UserComponent {
 	}
 
 	editModeEntered(){
+		this.gameObject.setVelocity(0,0);
 		if (this.gameObject.body.isStatic === false){
 			this.gameObject.setStatic(true);
 		}
@@ -64,6 +66,7 @@ class Player extends UserComponent {
 		this.gameObject.setIgnoreGravity(false);    // make sure gravity is on after being turned off in player death method. Ball still won't move just now since isStatic = true
 		this.gameObject.x = this.startPosition.x;
 		this.gameObject.y = this.startPosition.y;
+		this.gameObject.angle = this.startAngle;
 	}
 
 	playerDeath(){

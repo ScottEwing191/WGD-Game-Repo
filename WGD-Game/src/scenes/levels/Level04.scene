@@ -457,6 +457,20 @@
                     "components": []
                 }
             ]
+        },
+        {
+            "prefabId": "a68bd93d-7ce4-42bf-a34b-7c34006d3f23",
+            "id": "a5152203-5244-44e2-82d7-87eb6cc8c440",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "attemptsPanel_P",
+            "scope": "CLASS",
+            "components": [],
+            "x": 896,
+            "y": 800,
+            "nestedPrefabs": []
         }
     ],
     "plainObjects": [

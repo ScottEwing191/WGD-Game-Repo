@@ -411,6 +411,20 @@
                     "ChangeLevelButton.levelName": "Level03"
                 }
             ]
+        },
+        {
+            "prefabId": "a68bd93d-7ce4-42bf-a34b-7c34006d3f23",
+            "id": "f0d96c28-1d53-431d-a626-0b54602cd9c0",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "attemptsPanel_P",
+            "scope": "CLASS",
+            "components": [],
+            "x": 896,
+            "y": 800,
+            "nestedPrefabs": []
         }
     ],
     "plainObjects": [

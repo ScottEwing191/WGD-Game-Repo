@@ -129,7 +129,7 @@
             "label": "levelEnd_P",
             "components": [],
             "x": 160,
-            "y": 320
+            "y": 448
         },
         {
             "prefabId": "0096356b-5f82-4b1e-bf17-f59fa8f880ba",
@@ -155,9 +155,42 @@
             "label": "attemptsPanel_P",
             "scope": "CLASS",
             "components": [],
-            "x": 634,
-            "y": 721,
+            "x": 896,
+            "y": 800,
             "nestedPrefabs": []
+        },
+        {
+            "type": "Sprite",
+            "id": "b3fafbad-48c3-4c4d-99aa-2a68c202ecb0",
+            "label": "coin",
+            "components": [
+                "CircleCollider",
+                "CoinCollectable"
+            ],
+            "CircleCollider.radius": 16,
+            "CircleCollider.bounce": 0,
+            "CircleCollider.isSensor": true,
+            "texture": {
+                "key": "Pencil_256",
+                "frame": 91
+            },
+            "x": 160,
+            "y": 224,
+            "scaleX": 0.25,
+            "scaleY": 0.25
+        },
+        {
+            "type": "Image",
+            "id": "ee5e8e6c-4e26-4892-af52-6fd98cc0e1ec",
+            "label": "coin_empty_place",
+            "components": [],
+            "texture": {
+                "key": "coin empty place"
+            },
+            "x": 736,
+            "y": 800,
+            "scaleX": 0.25,
+            "scaleY": 0.25
         }
     ],
     "plainObjects": [

@@ -111,6 +111,16 @@
                 "key": "CirclePhysics"
             },
             {
+                "url": "assets/images/coin/coin empty place.png",
+                "type": "image",
+                "key": "coin empty place"
+            },
+            {
+                "url": "src/components/user-components/CoinCollectable.js",
+                "type": "script",
+                "key": "CoinCollectable"
+            },
+            {
                 "url": "src/components/user-components/ControllableObject.js",
                 "type": "script",
                 "key": "ControllableObject"

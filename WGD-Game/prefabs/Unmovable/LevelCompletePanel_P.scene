@@ -2,6 +2,7 @@
     "id": "0096356b-5f82-4b1e-bf17-f59fa8f880ba",
     "sceneType": "PREFAB",
     "settings": {
+        "snapEnabled": true,
         "preloadMethodName": "",
         "preloadPackFiles": [],
         "createMethodName": "",
@@ -15,7 +16,6 @@
             "label": "levelCompletePanel",
             "scope": "CLASS",
             "components": [],
-            "visible": false,
             "list": [
                 {
                     "type": "Image",
@@ -25,8 +25,8 @@
                     "texture": {
                         "key": "LevelCompleteScreen"
                     },
-                    "x": 507,
-                    "y": 413
+                    "x": 512,
+                    "y": 416
                 },
                 {
                     "type": "Container",
@@ -170,6 +170,19 @@
                             "fontSize": 30
                         }
                     ]
+                },
+                {
+                    "type": "Image",
+                    "id": "0d59cf66-1203-408e-b56f-472bf914f270",
+                    "label": "coin_empty_place",
+                    "components": [],
+                    "texture": {
+                        "key": "coin empty place"
+                    },
+                    "x": 512,
+                    "y": 400,
+                    "scaleX": 0.25,
+                    "scaleY": 0.25
                 }
             ]
         }

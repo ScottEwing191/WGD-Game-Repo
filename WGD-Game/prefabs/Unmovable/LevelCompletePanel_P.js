@@ -8,10 +8,8 @@ class LevelCompletePanel_P extends Phaser.GameObjects.Container {
 	constructor(scene, x, y) {
 		super(scene, x ?? 0, y ?? 0);
 
-		this.visible = false;
-
 		// levelCompleteScreen
-		const levelCompleteScreen = scene.add.image(507, 413, "LevelCompleteScreen");
+		const levelCompleteScreen = scene.add.image(512, 416, "LevelCompleteScreen");
 		this.add(levelCompleteScreen);
 
 		// AttemptsPanel_1
@@ -79,6 +77,12 @@ class LevelCompletePanel_P extends Phaser.GameObjects.Container {
 		nextLevelText.text = "Next\nLevel";
 		nextLevelText.fontSize = 30;
 		nextLevel_C.add(nextLevelText);
+
+		// coin_empty_place
+		const coin_empty_place = scene.add.image(512, 400, "coin empty place");
+		coin_empty_place.scaleX = 0.25;
+		coin_empty_place.scaleY = 0.25;
+		this.add(coin_empty_place);
 
 		// returnToMenu (components)
 		const returnToMenuChangeLevelButton = new ChangeLevelButton(returnToMenu);

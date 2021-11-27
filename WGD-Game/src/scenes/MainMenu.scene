@@ -101,56 +101,6 @@
             ]
         },
         {
-            "prefabId": "ed55f365-5162-403a-b28b-f0655a7227a5",
-            "id": "64a99b35-6589-4645-a2a9-de91e61fe7fb",
-            "unlock": [
-                "x",
-                "y",
-                "JumpPad.force",
-                "RectanglePhysics.angle",
-                "RectanglePhysics.modifyXPosition"
-            ],
-            "label": "jump_Pad",
-            "components": [],
-            "JumpPad.force": 10.25,
-            "RectanglePhysics.modifyXPosition": 32,
-            "RectanglePhysics.angle": 45,
-            "x": 315,
-            "y": 444
-        },
-        {
-            "prefabId": "ed55f365-5162-403a-b28b-f0655a7227a5",
-            "id": "f14d8f77-e1c6-443e-9ca8-a9964a3ef206",
-            "unlock": [
-                "x",
-                "y",
-                "JumpPad.force",
-                "RectanglePhysics.angle",
-                "RectanglePhysics.modifyXPosition"
-            ],
-            "label": "jump_Pad_1",
-            "components": [],
-            "JumpPad.force": 10.25,
-            "RectanglePhysics.modifyXPosition": -32,
-            "RectanglePhysics.angle": -45,
-            "x": 704,
-            "y": 448
-        },
-        {
-            "type": "Rectangle",
-            "id": "2c603f85-4fa2-4d6a-9938-e51f7162d000",
-            "label": "gameManager",
-            "scope": "PUBLIC",
-            "components": [
-                "GameManager"
-            ],
-            "x": 1088,
-            "y": 64,
-            "isFilled": true,
-            "width": 128,
-            "height": 128
-        },
-        {
             "type": "Image",
             "id": "b8007cd2-ef18-42a5-8f03-9190b8948efe",
             "label": "doodleCourse_Curved",
@@ -160,6 +110,42 @@
             },
             "x": 512,
             "y": 192
+        },
+        {
+            "prefabId": "0e346f50-687e-4921-8ee4-b493a15f351e",
+            "id": "77647667-8d77-4fe6-a089-f528e886577d",
+            "unlock": [
+                "x",
+                "y",
+                "JumpPad.force",
+                "RectanglePhysics.modifyXPosition",
+                "RectanglePhysics.angle"
+            ],
+            "label": "jumpPadUnmovable_1",
+            "components": [],
+            "JumpPad.force": 10.25,
+            "RectanglePhysics.modifyXPosition": -32,
+            "RectanglePhysics.angle": -45,
+            "x": 704,
+            "y": 448
+        },
+        {
+            "prefabId": "0e346f50-687e-4921-8ee4-b493a15f351e",
+            "id": "ae310a95-fd9c-4977-a041-9ee6db9cfbca",
+            "unlock": [
+                "x",
+                "y",
+                "JumpPad.force",
+                "RectanglePhysics.modifyXPosition",
+                "RectanglePhysics.angle"
+            ],
+            "label": "jumpPadUnmovable",
+            "components": [],
+            "JumpPad.force": 10.25,
+            "RectanglePhysics.modifyXPosition": 32,
+            "RectanglePhysics.angle": 45,
+            "x": 315,
+            "y": 444
         },
         {
             "prefabId": "087f3cc7-41c9-46b0-833a-38a6197b98f1",

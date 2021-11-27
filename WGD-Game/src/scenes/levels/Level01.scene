@@ -162,22 +162,24 @@
         {
             "type": "Sprite",
             "id": "b3fafbad-48c3-4c4d-99aa-2a68c202ecb0",
-            "label": "coin",
+            "label": "coin_P",
+            "scope": "CLASS",
             "components": [
-                "CircleCollider",
+                "RectanglePhysics",
                 "CoinCollectable"
             ],
-            "CircleCollider.radius": 16,
-            "CircleCollider.bounce": 0,
-            "CircleCollider.isSensor": true,
+            "RectanglePhysics.isSensor": true,
+            "RectanglePhysics.modifyBodyWidth": -10,
+            "RectanglePhysics.modifyBodyHeight": -45,
+            "RectanglePhysics.spriteYOffset": 0.2,
             "texture": {
-                "key": "Pencil_256",
-                "frame": 91
+                "key": "Coin_Idle_Sheet",
+                "frame": 0
             },
             "x": 160,
-            "y": 224,
-            "scaleX": 0.25,
-            "scaleY": 0.25
+            "y": 256,
+            "scaleX": 0.2,
+            "scaleY": 0.2
         },
         {
             "type": "Image",

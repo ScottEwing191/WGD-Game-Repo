@@ -116,6 +116,37 @@
                 "key": "coin empty place"
             },
             {
+                "url": "assets/images/coin/Coin_Idle_Sheet.png",
+                "frameConfig": {
+                    "frameWidth": 256,
+                    "frameHeight": 443,
+                    "startFrame": 0,
+                    "endFrame": -1,
+                    "spacing": 0,
+                    "margin": 0
+                },
+                "type": "spritesheet",
+                "key": "Coin_Idle_Sheet"
+            },
+            {
+                "url": "assets/images/coin/Coin_Pickup_Sheet.png",
+                "frameConfig": {
+                    "frameWidth": 256,
+                    "frameHeight": 443,
+                    "startFrame": 0,
+                    "endFrame": -1,
+                    "spacing": 0,
+                    "margin": 0
+                },
+                "type": "spritesheet",
+                "key": "Coin_Pickup_Sheet"
+            },
+            {
+                "url": "assets/animation/coin-anim.json",
+                "type": "animation",
+                "key": "coin-anim"
+            },
+            {
                 "url": "src/components/user-components/CoinCollectable.js",
                 "type": "script",
                 "key": "CoinCollectable"

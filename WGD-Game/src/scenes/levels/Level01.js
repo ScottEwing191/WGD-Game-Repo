@@ -65,15 +65,16 @@ class Level01 extends Phaser.Scene {
 		// levelCompletePanel_P
 		const levelCompletePanel_P = new LevelCompletePanel_P(this, 0, 0);
 		this.add.existing(levelCompletePanel_P);
+		levelCompletePanel_P.visible = false;
 
 		// attemptsPanel_P
 		const attemptsPanel_P = new AttemptsPanel_P(this, 896, 800);
 		this.add.existing(attemptsPanel_P);
 
-		// coin
-		const coin = this.add.sprite(160, 224, "Pencil_256", 91);
-		coin.scaleX = 0.25;
-		coin.scaleY = 0.25;
+		// coin_P
+		const coin_P = this.add.sprite(160, 256, "Coin_Idle_Sheet", 0);
+		coin_P.scaleX = 0.2;
+		coin_P.scaleY = 0.2;
 
 		// coin_empty_place
 		const coin_empty_place = this.add.image(736, 800, "coin empty place");
@@ -88,18 +89,20 @@ class Level01 extends Phaser.Scene {
 		// gameManager (components)
 		new GameManager(gameManager);
 
-		// coin (components)
-		const coinCircleCollider = new CircleCollider(coin);
-		coinCircleCollider.radius = 16;
-		coinCircleCollider.bounce = 0;
-		coinCircleCollider.isSensor = true;
-		new CoinCollectable(coin);
+		// coin_P (components)
+		const coin_PRectanglePhysics = new RectanglePhysics(coin_P);
+		coin_PRectanglePhysics.isSensor = true;
+		coin_PRectanglePhysics.modifyBodyWidth = -10;
+		coin_PRectanglePhysics.modifyBodyHeight = -45;
+		coin_PRectanglePhysics.spriteYOffset = 0.2;
+		new CoinCollectable(coin_P);
 
 		this.gameManager = gameManager;
 		this.solid_1 = solid_1;
 		this.player = player;
 		this.levelCompletePanel_P = levelCompletePanel_P;
 		this.attemptsPanel_P = attemptsPanel_P;
+		this.coin_P = coin_P;
 		this.level01 = level01;
 		this.movableObjects = movableObjects;
 		this.jumpPads = jumpPads;
@@ -118,6 +121,8 @@ class Level01 extends Phaser.Scene {
 	levelCompletePanel_P;
 	/** @type {AttemptsPanel_P} */
 	attemptsPanel_P;
+	/** @type {Phaser.GameObjects.Sprite} */
+	coin_P;
 	/** @type {Array<any>} */
 	movableObjects;
 	/** @type {Array<any>} */

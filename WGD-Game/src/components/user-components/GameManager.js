@@ -75,6 +75,8 @@ class GameManager {
         for (let i = 0; i < this.scene.spikes.length; i++) {
             Spike.getComponent(this.scene.spikes[i]).playModeEntered();
         }
+
+
     }
 
     switchToEditMode() {
@@ -97,6 +99,11 @@ class GameManager {
         if (player.gameObject.getCenter().x !== player.startPosition.x) {
             console.log("Went Wrong");
             this.scene.resetPlayer();
+        }
+
+        //--Get coin to reset if it has been collected
+        if (this.scene.coin_P != null){
+            CoinCollectable.getComponent(this.scene.coin_P).editModeEntered();
         }
     }
 

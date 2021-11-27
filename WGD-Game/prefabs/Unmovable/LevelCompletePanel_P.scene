@@ -16,6 +16,7 @@
             "label": "levelCompletePanel",
             "scope": "CLASS",
             "components": [],
+            "visible": false,
             "list": [
                 {
                     "type": "Image",
@@ -174,7 +175,7 @@
                 {
                     "type": "Image",
                     "id": "0d59cf66-1203-408e-b56f-472bf914f270",
-                    "label": "coin_empty_place",
+                    "label": "coinEmptyPlace",
                     "components": [],
                     "texture": {
                         "key": "coin empty place"

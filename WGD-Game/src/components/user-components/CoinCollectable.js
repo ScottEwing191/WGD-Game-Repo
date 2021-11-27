@@ -29,14 +29,20 @@ class CoinCollectable extends UserComponent {
 	start(){
 		this.startPosition = this.gameObject.getCenter();
 		this.collected = false;
+		this.gameObject.play('coin-idle');
 		this.gameObject.body.setOnCollideWith(this.scene.player.body, () => {
 			this.collideWithPlayer()
 		} );
 	}
 
 	collideWithPlayer(){
+		if (this.collected){
+			return;
+		}
 		console.log('coin');
 		this.collected = true;
+		this.gameObject.play('coin-pickup');
+
 		//--Play animation
 		//--Play sound
 		//--Change UI
@@ -50,6 +56,7 @@ class CoinCollectable extends UserComponent {
 		if (this.collected){
 			this.gameObject.setX(this.startPosition.x);
 			this.gameObject.setY(this.startPosition.y);
+			this.gameObject.play('coin-idle');
 			this.collected = false;
 		}
 	}

@@ -153,7 +153,7 @@ class Level04 extends Phaser.Scene {
 		this.add.existing(player);
 
 		// levelEnd_P
-		const levelEnd_P = new LevelEnd_P(this, 448, 224);
+		const levelEnd_P = new LevelEnd_P(this, 480, 704);
 		this.add.existing(levelEnd_P);
 
 		// levelCompletePanel_P

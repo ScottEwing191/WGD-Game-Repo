@@ -103,7 +103,7 @@
             ],
             "label": "platformGrassBig_1",
             "components": [],
-            "x": 640,
+            "x": 832,
             "y": 448
         },
         {
@@ -128,8 +128,8 @@
             ],
             "label": "levelEnd_P",
             "components": [],
-            "x": 160,
-            "y": 448
+            "x": 832,
+            "y": 576
         },
         {
             "prefabId": "0096356b-5f82-4b1e-bf17-f59fa8f880ba",

@@ -352,7 +352,7 @@
             "label": "antiGravZone1x2Prefab",
             "components": [],
             "x": 928,
-            "y": 160
+            "y": 192
         },
         {
             "prefabId": "087f3cc7-41c9-46b0-833a-38a6197b98f1",
@@ -376,8 +376,8 @@
             ],
             "label": "levelEnd_P",
             "components": [],
-            "x": 192,
-            "y": 192
+            "x": 800,
+            "y": 704
         },
         {
             "prefabId": "0096356b-5f82-4b1e-bf17-f59fa8f880ba",

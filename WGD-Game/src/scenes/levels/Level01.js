@@ -51,7 +51,7 @@ class Level01 extends Phaser.Scene {
 		this.add.existing(platformGrassBig);
 
 		// platformGrassBig_1
-		const platformGrassBig_1 = new PlatformGrassBig(this, 640, 448);
+		const platformGrassBig_1 = new PlatformGrassBig(this, 832, 448);
 		this.add.existing(platformGrassBig_1);
 
 		// player
@@ -59,13 +59,12 @@ class Level01 extends Phaser.Scene {
 		this.add.existing(player);
 
 		// levelEnd_P
-		const levelEnd_P = new LevelEnd_P(this, 160, 448);
+		const levelEnd_P = new LevelEnd_P(this, 832, 576);
 		this.add.existing(levelEnd_P);
 
 		// levelCompletePanel_P
 		const levelCompletePanel_P = new LevelCompletePanel_P(this, 0, 0);
 		this.add.existing(levelCompletePanel_P);
-		levelCompletePanel_P.visible = false;
 
 		// attemptsPanel_P
 		const attemptsPanel_P = new AttemptsPanel_P(this, 896, 800);

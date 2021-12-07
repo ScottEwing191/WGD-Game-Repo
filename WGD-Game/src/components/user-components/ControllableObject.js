@@ -127,6 +127,8 @@ class ControllableObject {
         this.gameObject.y = Math.min(Math.max(this.gameObject.y, yMin), yMax)
     }
 
+
+
     pollMovementInput(){
         //--UP
         if (this.input.up.isDown && this.isSelected && !this.isUpOnce) {
@@ -170,6 +172,7 @@ class ControllableObject {
         } else if (!this.input.rotateRight.isDown)
             this.isRotateRightOnce = false;
     }
+
 
     playModeEntered(){
         //this.gameObject.disableInteractive();                 // works

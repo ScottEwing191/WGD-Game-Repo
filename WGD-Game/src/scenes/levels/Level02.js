@@ -129,7 +129,7 @@ class Level02 extends Phaser.Scene {
 		this.add.existing(platformGrassSmall);
 
 		// antiGravZone1x2Prefab
-		const antiGravZone1x2Prefab = new AntiGravZone1x2Prefab(this, 928, 160);
+		const antiGravZone1x2Prefab = new AntiGravZone1x2Prefab(this, 928, 192);
 		this.add.existing(antiGravZone1x2Prefab);
 
 		// player
@@ -137,7 +137,7 @@ class Level02 extends Phaser.Scene {
 		this.add.existing(player);
 
 		// levelEnd_P
-		const levelEnd_P = new LevelEnd_P(this, 192, 192);
+		const levelEnd_P = new LevelEnd_P(this, 800, 704);
 		this.add.existing(levelEnd_P);
 
 		// levelCompletePanel_P

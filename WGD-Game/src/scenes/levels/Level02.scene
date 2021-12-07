@@ -376,8 +376,8 @@
             ],
             "label": "levelEnd_P",
             "components": [],
-            "x": 800,
-            "y": 704
+            "x": 320,
+            "y": 128
         },
         {
             "prefabId": "0096356b-5f82-4b1e-bf17-f59fa8f880ba",
@@ -425,6 +425,32 @@
             "x": 896,
             "y": 800,
             "nestedPrefabs": []
+        },
+        {
+            "type": "Image",
+            "id": "1f27897f-0dd2-45ce-9a22-103f5d56ee7b",
+            "label": "coin_empty_place",
+            "components": [],
+            "texture": {
+                "key": "coin empty place"
+            },
+            "x": 736,
+            "y": 800,
+            "scaleX": 0.2,
+            "scaleY": 0.2
+        },
+        {
+            "prefabId": "e2f3078e-5848-44b5-bd4f-2da25a4c0e94",
+            "id": "dd1c53d3-79fd-4dc9-9045-05afeca0d88e",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "coin_P",
+            "scope": "CLASS",
+            "components": [],
+            "x": 192,
+            "y": 128
         }
     ],
     "plainObjects": [

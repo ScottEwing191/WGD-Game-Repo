@@ -393,6 +393,32 @@
             "x": 896,
             "y": 800,
             "nestedPrefabs": []
+        },
+        {
+            "type": "Image",
+            "id": "60e33d1e-c04d-472b-86a5-ff0d6c8bdede",
+            "label": "coin_empty_place",
+            "components": [],
+            "texture": {
+                "key": "coin empty place"
+            },
+            "x": 736,
+            "y": 800,
+            "scaleX": 0.2,
+            "scaleY": 0.2
+        },
+        {
+            "prefabId": "e2f3078e-5848-44b5-bd4f-2da25a4c0e94",
+            "id": "9bcbb986-844f-44c7-9cf6-70a6a7fb20d4",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "coin_P",
+            "scope": "CLASS",
+            "components": [],
+            "x": 960,
+            "y": 128
         }
     ],
     "plainObjects": [

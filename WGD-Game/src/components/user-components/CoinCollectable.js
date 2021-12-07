@@ -23,6 +23,10 @@ class CoinCollectable extends UserComponent {
 
 	/** @type {Phaser.GameObjects.Sprite} */
 	gameObject;
+	/** @type {number} */
+	moveToX = 0;
+	/** @type {number} */
+	moveToY = 0;
 
 	/* START-USER-CODE */
 
@@ -33,6 +37,13 @@ class CoinCollectable extends UserComponent {
 		this.gameObject.body.setOnCollideWith(this.scene.player.body, () => {
 			this.collideWithPlayer()
 		} );
+
+		this.gameObject.on(Phaser.Animations.Events.ANIMATION_COMPLETE_KEY + 'coin-pickup', () =>{
+			this.respawnAtMoveToLocation();
+		});
+		this.gameObject.on(Phaser.Animations.Events.ANIMATION_COMPLETE_KEY + 'coin-respawn', () =>{
+			this.switchToIdle();
+		});
 	}
 
 	collideWithPlayer(){
@@ -48,15 +59,22 @@ class CoinCollectable extends UserComponent {
 		//--Change UI
 	}
 
-	playModeEntered(){
-
+	respawnAtMoveToLocation(){
+		this.gameObject.setX(this.moveToX);
+		this.gameObject.setY(this.moveToY + 18);
+		this.gameObject.play('coin-respawn-and-stay');
 	}
+
+	switchToIdle(){
+		this.gameObject.play('coin-idle');
+	}
+
 	editModeEntered(){
 		//--Reset Coin if it has been collected
 		if (this.collected){
 			this.gameObject.setX(this.startPosition.x);
 			this.gameObject.setY(this.startPosition.y);
-			this.gameObject.play('coin-idle');
+			this.gameObject.play('coin-respawn');
 			this.collected = false;
 		}
 	}

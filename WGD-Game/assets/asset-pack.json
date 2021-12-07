@@ -129,6 +129,11 @@
                 "key": "Coin_Idle_Sheet"
             },
             {
+                "url": "prefabs/Unmovable/Coin_P.js",
+                "type": "script",
+                "key": "Coin_P"
+            },
+            {
                 "url": "assets/images/coin/Coin_Pickup_Sheet.png",
                 "frameConfig": {
                     "frameWidth": 256,

@@ -153,7 +153,7 @@ class Level04 extends Phaser.Scene {
 		this.add.existing(player);
 
 		// levelEnd_P
-		const levelEnd_P = new LevelEnd_P(this, 480, 704);
+		const levelEnd_P = new LevelEnd_P(this, 320, 224);
 		this.add.existing(levelEnd_P);
 
 		// levelCompletePanel_P
@@ -163,6 +163,15 @@ class Level04 extends Phaser.Scene {
 		// attemptsPanel_P
 		const attemptsPanel_P = new AttemptsPanel_P(this, 896, 800);
 		this.add.existing(attemptsPanel_P);
+
+		// coin_empty_place
+		const coin_empty_place = this.add.image(736, 800, "coin empty place");
+		coin_empty_place.scaleX = 0.2;
+		coin_empty_place.scaleY = 0.2;
+
+		// coin_P
+		const coin_P = new Coin_P(this, 416, 128);
+		this.add.existing(coin_P);
 
 		// lists
 		const movableObjects = []
@@ -185,6 +194,7 @@ class Level04 extends Phaser.Scene {
 		this.player = player;
 		this.levelCompletePanel_P = levelCompletePanel_P;
 		this.attemptsPanel_P = attemptsPanel_P;
+		this.coin_P = coin_P;
 		this.level04 = level04;
 		this.movableObjects = movableObjects;
 		this.jumpPads = jumpPads;
@@ -203,6 +213,8 @@ class Level04 extends Phaser.Scene {
 	levelCompletePanel_P;
 	/** @type {AttemptsPanel_P} */
 	attemptsPanel_P;
+	/** @type {Coin_P} */
+	coin_P;
 	/** @type {Array<any>} */
 	movableObjects;
 	/** @type {Array<any>} */

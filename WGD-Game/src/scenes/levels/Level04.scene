@@ -423,8 +423,8 @@
             ],
             "label": "levelEnd_P",
             "components": [],
-            "x": 480,
-            "y": 704
+            "x": 320,
+            "y": 224
         },
         {
             "prefabId": "0096356b-5f82-4b1e-bf17-f59fa8f880ba",
@@ -471,6 +471,32 @@
             "x": 896,
             "y": 800,
             "nestedPrefabs": []
+        },
+        {
+            "type": "Image",
+            "id": "52f34abf-dc9c-41ea-829d-71199daa1700",
+            "label": "coin_empty_place",
+            "components": [],
+            "texture": {
+                "key": "coin empty place"
+            },
+            "x": 736,
+            "y": 800,
+            "scaleX": 0.2,
+            "scaleY": 0.2
+        },
+        {
+            "prefabId": "e2f3078e-5848-44b5-bd4f-2da25a4c0e94",
+            "id": "0b04a452-bee6-4bdd-8443-eebe229efbc6",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "coin_P",
+            "scope": "CLASS",
+            "components": [],
+            "x": 416,
+            "y": 128
         }
     ],
     "plainObjects": [

@@ -59,7 +59,7 @@ class Level01 extends Phaser.Scene {
 		this.add.existing(player);
 
 		// levelEnd_P
-		const levelEnd_P = new LevelEnd_P(this, 832, 576);
+		const levelEnd_P = new LevelEnd_P(this, 160, 448);
 		this.add.existing(levelEnd_P);
 
 		// levelCompletePanel_P
@@ -70,15 +70,14 @@ class Level01 extends Phaser.Scene {
 		const attemptsPanel_P = new AttemptsPanel_P(this, 896, 800);
 		this.add.existing(attemptsPanel_P);
 
-		// coin_P
-		const coin_P = this.add.sprite(160, 256, "Coin_Idle_Sheet", 0);
-		coin_P.scaleX = 0.2;
-		coin_P.scaleY = 0.2;
+		// coinEmpty
+		const coinEmpty = this.add.image(736, 800, "coin empty place");
+		coinEmpty.scaleX = 0.2;
+		coinEmpty.scaleY = 0.2;
 
-		// coin_empty_place
-		const coin_empty_place = this.add.image(736, 800, "coin empty place");
-		coin_empty_place.scaleX = 0.25;
-		coin_empty_place.scaleY = 0.25;
+		// coin_P
+		const coin_P = new Coin_P(this, 160, 256);
+		this.add.existing(coin_P);
 
 		// lists
 		const movableObjects = []
@@ -87,14 +86,6 @@ class Level01 extends Phaser.Scene {
 
 		// gameManager (components)
 		new GameManager(gameManager);
-
-		// coin_P (components)
-		const coin_PRectanglePhysics = new RectanglePhysics(coin_P);
-		coin_PRectanglePhysics.isSensor = true;
-		coin_PRectanglePhysics.modifyBodyWidth = -10;
-		coin_PRectanglePhysics.modifyBodyHeight = -45;
-		coin_PRectanglePhysics.spriteYOffset = 0.2;
-		new CoinCollectable(coin_P);
 
 		this.gameManager = gameManager;
 		this.solid_1 = solid_1;
@@ -120,7 +111,7 @@ class Level01 extends Phaser.Scene {
 	levelCompletePanel_P;
 	/** @type {AttemptsPanel_P} */
 	attemptsPanel_P;
-	/** @type {Phaser.GameObjects.Sprite} */
+	/** @type {Coin_P} */
 	coin_P;
 	/** @type {Array<any>} */
 	movableObjects;

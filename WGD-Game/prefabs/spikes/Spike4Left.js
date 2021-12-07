@@ -3,21 +3,24 @@
 
 /* START OF COMPILED CODE */
 
-class Spike4Left extends Phaser.GameObjects.Image {
+class Spike4Left extends Phaser.GameObjects.Container {
 
-	constructor(scene, x, y, texture, frame) {
-		super(scene, x ?? 0, y ?? 0, texture || "Spikes_Pencill", frame ?? 15);
+	constructor(scene, x, y) {
+		super(scene, x ?? 0, y ?? 0);
 
-		this.scaleX = 0.25;
-		this.scaleY = 0.25;
+		// spike4_left
+		const spike4_left = scene.add.image(0, 0, "Spikes_Pencill", 15);
+		spike4_left.scaleX = 0.25;
+		spike4_left.scaleY = 0.25;
+		this.add(spike4_left);
 
-		// this (components)
-		const thisRectanglePhysics = new RectanglePhysics(this);
-		thisRectanglePhysics.modifyBodyWidth = -44;
-		thisRectanglePhysics.modifyBodyHeight = -16;
-		thisRectanglePhysics.modifyXPosition = 22;
-		thisRectanglePhysics.spriteXOffset = -0.34375;
-		new Spike(this);
+		// spike4_left (components)
+		const spike4_leftRectanglePhysics = new RectanglePhysics(spike4_left);
+		spike4_leftRectanglePhysics.modifyBodyWidth = -44;
+		spike4_leftRectanglePhysics.modifyBodyHeight = -16;
+		spike4_leftRectanglePhysics.modifyXPosition = 22;
+		spike4_leftRectanglePhysics.spriteXOffset = -0.34375;
+		new Spike(spike4_left);
 
 		/* START-USER-CTR-CODE */
 		// Write your code here.

@@ -336,7 +336,28 @@
             "name": "CoinCollectable",
             "baseClass": "UserComponent",
             "gameObjectType": "Phaser.GameObjects.Sprite",
-            "properties": []
+            "properties": [
+                {
+                    "name": "moveToX",
+                    "label": "Move To X",
+                    "tooltip": "the xposition that the coin gameobject will move to once it is collected",
+                    "defValue": 0,
+                    "customDefinition": false,
+                    "type": {
+                        "id": "number"
+                    }
+                },
+                {
+                    "name": "moveToY",
+                    "label": "Move To Y",
+                    "tooltip": "The Y position the coin Gameobject will move to once collected",
+                    "defValue": 0,
+                    "customDefinition": false,
+                    "type": {
+                        "id": "number"
+                    }
+                }
+            ]
         }
     ],
     "meta": {

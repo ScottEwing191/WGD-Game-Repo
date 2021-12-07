@@ -118,6 +118,15 @@ class GameManager {
             delay: 1000,
             callback: ()=>{
                 this.scene.levelCompletePanel_P.setVisible(true);         // display level complete screen
+                //--If the player has collected the coin then display the coin in the level complete screen
+                if (this.scene.coin_P != null){
+                    const coin = CoinCollectable.getComponent(this.scene.coin_P);
+                    if (coin.collected == true){
+                        this.scene.levelCompletePanel_P.coinCollectedIndicator.setVisible(true);
+                    }else{
+                        this.scene.levelCompletePanel_P.coinCollectedIndicator.setVisible(false);
+                    }
+                }
             }
         })
     }

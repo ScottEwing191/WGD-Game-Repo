@@ -86,6 +86,13 @@ class LevelCompletePanel_P extends Phaser.GameObjects.Container {
 		coinEmptyPlace.scaleY = 0.25;
 		this.add(coinEmptyPlace);
 
+		// coinCollectedIndicator
+		const coinCollectedIndicator = scene.add.image(512, 377, "Coin_Idle_Sheet", 0);
+		coinCollectedIndicator.scaleX = 0.25;
+		coinCollectedIndicator.scaleY = 0.25;
+		coinCollectedIndicator.visible = false;
+		this.add(coinCollectedIndicator);
+
 		// returnToMenu (components)
 		const returnToMenuChangeLevelButton = new ChangeLevelButton(returnToMenu);
 		returnToMenuChangeLevelButton.changeAnimation = "purple";
@@ -104,6 +111,7 @@ class LevelCompletePanel_P extends Phaser.GameObjects.Container {
 		this.replayButton = replayButton;
 		this.replayLevel_C = replayLevel_C;
 		this.nextLevel = nextLevel;
+		this.coinCollectedIndicator = coinCollectedIndicator;
 
 		/* START-USER-CTR-CODE */
 		// Write your code here.
@@ -120,6 +128,8 @@ class LevelCompletePanel_P extends Phaser.GameObjects.Container {
 	replayLevel_C;
 	/** @type {Phaser.GameObjects.Sprite} */
 	nextLevel;
+	/** @type {Phaser.GameObjects.Image} */
+	coinCollectedIndicator;
 
 	/* START-USER-CODE */
 

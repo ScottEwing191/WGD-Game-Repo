@@ -50,13 +50,9 @@ class CoinCollectable extends UserComponent {
 		if (this.collected){
 			return;
 		}
-		console.log('coin');
 		this.collected = true;
-		this.gameObject.play('coin-pickup');
-
-		//--Play animation
-		//--Play sound
-		//--Change UI
+		this.gameObject.play('coin-pickup');		//--Play animation
+		this.scene.sound.play("Coin_pickup");		//--Play sound
 	}
 
 	respawnAtMoveToLocation(){

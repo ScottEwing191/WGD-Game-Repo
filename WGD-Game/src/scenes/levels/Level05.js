@@ -212,6 +212,7 @@ class Level05 extends Phaser.Scene {
 		this.level05.setCollisionByProperty({collider :true});
 		this.matter.world.convertTilemapLayer(this.ground_1);
 
+		this.sound.play("book_Page_Turn");					// play paper sound on scene start
 	}
 
 	nextLevel(levelName){

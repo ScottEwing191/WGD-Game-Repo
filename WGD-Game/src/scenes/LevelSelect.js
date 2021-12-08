@@ -198,8 +198,9 @@ class LevelSelect extends Phaser.Scene {
 	// Write your code here
 
 	create() {
-
 		this.editorCreate();
+
+		this.sound.play("book_Page_Turn");					// play paper sound on scene start
 	}
 
 	nextLevel(levelName){

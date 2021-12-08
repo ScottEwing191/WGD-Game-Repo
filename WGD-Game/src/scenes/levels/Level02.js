@@ -256,7 +256,7 @@ class Level02 extends Phaser.Scene {
 		this.level02.setCollisionByProperty({collider :true});
 		this.matter.world.convertTilemapLayer(this.solid_1);
 
-		//this.matter.set60Hz();
+		this.sound.play("book_Page_Turn");					// play paper sound on scene start
 	}
 
 	/*nextLevel(){

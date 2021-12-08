@@ -215,8 +215,8 @@ class Level03 extends Phaser.Scene {
 		//--Add collision to the Tile Layer
 		this.level03.setCollisionByProperty({collider :true});
 		this.matter.world.convertTilemapLayer(this.solid_1);
-		//this.matter.set60Hz();
 
+		this.sound.play("book_Page_Turn");					// play paper sound on scene start
 	}
 
 	/*nextLevel(){

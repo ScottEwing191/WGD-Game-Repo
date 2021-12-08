@@ -58,6 +58,13 @@
                 "key": "BallShrink_256"
             },
             {
+                "url": [
+                    "assets/sounds/book_Page_Turn.wav"
+                ],
+                "type": "audio",
+                "key": "book_Page_Turn"
+            },
+            {
                 "url": "assets/animation/boost-pad-anim.json",
                 "type": "animation",
                 "key": "boost-pad-anim"
@@ -142,6 +149,13 @@
                 "url": "prefabs/Unmovable/Coin_P.js",
                 "type": "script",
                 "key": "Coin_P"
+            },
+            {
+                "url": [
+                    "assets/sounds/Coin_pickup.wav"
+                ],
+                "type": "audio",
+                "key": "Coin_pickup"
             },
             {
                 "url": "assets/images/coin/Coin_Pickup_Sheet.png",

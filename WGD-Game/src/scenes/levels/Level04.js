@@ -187,7 +187,7 @@ class Level04 extends Phaser.Scene {
 
 		// levelCompletePanel_P.nextLevel (components)
 		const levelCompletePanel_P_nextLevelChangeLevelButton = ChangeLevelButton.getComponent(levelCompletePanel_P.nextLevel);
-		levelCompletePanel_P_nextLevelChangeLevelButton.levelName = "MainMenu";
+		levelCompletePanel_P_nextLevelChangeLevelButton.levelName = "Level05";
 
 		this.solid = solid;
 		this.gameManager = gameManager;

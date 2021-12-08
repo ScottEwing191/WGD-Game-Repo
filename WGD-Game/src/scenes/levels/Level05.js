@@ -21,7 +21,7 @@ class Level05 extends Phaser.Scene {
 		level05.addTilesetImage("Crayon_Tileset", "Crayon_256");
 
 		// tilesprite
-		const tilesprite = this.add.tileSprite(0, 0, 1032, 832, "Square Paper 2 Seamless_On Grid");
+		const tilesprite = this.add.tileSprite(0, 16, 1032, 832, "Square Paper 2 Seamless_On Grid");
 		tilesprite.setOrigin(0, 0);
 		tilesprite.tileScaleX = 0.177;
 		tilesprite.tileScaleY = 0.177;
@@ -30,6 +30,10 @@ class Level05 extends Phaser.Scene {
 		const ground_1 = level05.createLayer("Ground", ["Crayon_Tileset"], 0, 0);
 		ground_1.scaleX = 0.25;
 		ground_1.scaleY = 0.25;
+
+		// gameManager
+		const gameManager = this.add.rectangle(1104, 80, 128, 128);
+		gameManager.isFilled = true;
 
 		// spikes_Layer
 		const spikes_Layer = this.add.layer();
@@ -114,9 +118,17 @@ class Level05 extends Phaser.Scene {
 		const spike1Up_1 = new Spike1Up(this, 672, 672, "Spikes_Crayon", 8);
 		spikes_Layer.add(spike1Up_1);
 
-		// gameManager
-		const gameManager = this.add.rectangle(1104, 64, 128, 128);
-		gameManager.isFilled = true;
+		// player
+		const player = new PlayerPrefab(this, 816, 144);
+		this.add.existing(player);
+
+		// levelEnd_P
+		const levelEnd_P = new LevelEnd_P(this, 832, 448);
+		this.add.existing(levelEnd_P);
+
+		// levelCompletePanel_P
+		const levelCompletePanel_P = new LevelCompletePanel_P(this, 0, 0);
+		this.add.existing(levelCompletePanel_P);
 
 		// attemptsPanel_P
 		const attemptsPanel_P = new AttemptsPanel_P(this, 352, 800);
@@ -128,20 +140,8 @@ class Level05 extends Phaser.Scene {
 		coin_empty_place.scaleY = 0.2;
 
 		// coin_P
-		const coin_P = new Coin_P(this, 544, 96);
+		const coin_P = new Coin_P(this, 544, 128);
 		this.add.existing(coin_P);
-
-		// levelEnd_P
-		const levelEnd_P = new LevelEnd_P(this, 816, 304);
-		this.add.existing(levelEnd_P);
-
-		// player
-		const player = new PlayerPrefab(this, 816, 144);
-		this.add.existing(player);
-
-		// levelCompletePanel_P
-		const levelCompletePanel_P = new LevelCompletePanel_P(this, 0, 0);
-		this.add.existing(levelCompletePanel_P);
 
 		// lists
 		const movableObjects = []
@@ -151,11 +151,6 @@ class Level05 extends Phaser.Scene {
 		// gameManager (components)
 		new GameManager(gameManager);
 
-		// coin_P (components)
-		const coin_PCoinCollectable = CoinCollectable.getComponent(coin_P);
-		coin_PCoinCollectable.moveToX = 352;
-		coin_PCoinCollectable.moveToY = 736;
-
 		// levelCompletePanel_P.replayButton (components)
 		const levelCompletePanel_P_replayButtonChangeLevelButton = ChangeLevelButton.getComponent(levelCompletePanel_P.replayButton);
 		levelCompletePanel_P_replayButtonChangeLevelButton.levelName = "Level05";
@@ -164,11 +159,16 @@ class Level05 extends Phaser.Scene {
 		const levelCompletePanel_P_nextLevelChangeLevelButton = ChangeLevelButton.getComponent(levelCompletePanel_P.nextLevel);
 		levelCompletePanel_P_nextLevelChangeLevelButton.levelName = "Level01";
 
+		// coin_P (components)
+		const coin_PCoinCollectable = CoinCollectable.getComponent(coin_P);
+		coin_PCoinCollectable.moveToX = 352;
+		coin_PCoinCollectable.moveToY = 736;
+
 		this.ground_1 = ground_1;
 		this.gameManager = gameManager;
-		this.attemptsPanel_P = attemptsPanel_P;
 		this.player = player;
 		this.levelCompletePanel_P = levelCompletePanel_P;
+		this.attemptsPanel_P = attemptsPanel_P;
 		this.level05 = level05;
 		this.movableObjects = movableObjects;
 		this.jumpPads = jumpPads;
@@ -181,12 +181,12 @@ class Level05 extends Phaser.Scene {
 	ground_1;
 	/** @type {Phaser.GameObjects.Rectangle} */
 	gameManager;
-	/** @type {AttemptsPanel_P} */
-	attemptsPanel_P;
 	/** @type {PlayerPrefab} */
 	player;
 	/** @type {LevelCompletePanel_P} */
 	levelCompletePanel_P;
+	/** @type {AttemptsPanel_P} */
+	attemptsPanel_P;
 	/** @type {Array<any>} */
 	movableObjects;
 	/** @type {Array<any>} */
@@ -209,7 +209,7 @@ class Level05 extends Phaser.Scene {
 
 	nextLevel(levelName){
 		if (levelName == undefined){
-			levelName = 'Level01';
+			levelName = 'Level04';
 		}
 		this.scene.start(levelName);
 	}

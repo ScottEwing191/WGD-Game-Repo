@@ -1,0 +1,93 @@
+{
+    "id": "bea69876-cb43-45c4-836c-3b235e278feb",
+    "sceneType": "SCENE",
+    "settings": {
+        "snapEnabled": true,
+        "preloadPackFiles": [],
+        "createMethodName": "editorCreate",
+        "sceneKey": "Level06",
+        "borderWidth": 1024,
+        "borderHeight": 832
+    },
+    "displayList": [
+        {
+            "type": "TileSprite",
+            "id": "ed905159-46fb-42dd-b6a6-2a05d4565c93",
+            "label": "tilesprite",
+            "components": [],
+            "texture": {
+                "key": "Square Paper 2 Seamless_On Grid"
+            },
+            "originX": 0,
+            "originY": 0,
+            "width": 1024,
+            "height": 832,
+            "tileScaleX": 0.177,
+            "tileScaleY": 0.177
+        },
+        {
+            "type": "TilemapLayer",
+            "id": "30da5a12-a886-47e6-a333-e8f686b0750e",
+            "label": "ground_1",
+            "scope": "CLASS",
+            "components": [],
+            "scaleX": 0.25,
+            "scaleY": 0.25,
+            "tilemapId": "7e528420-115d-409b-988d-62d340311f1d",
+            "layerName": "Ground",
+            "tilesets": [
+                "Crayon_Tileset"
+            ]
+        },
+        {
+            "type": "Rectangle",
+            "id": "63881506-3a54-404b-a676-10b12caa5739",
+            "label": "gameManager",
+            "components": [
+                "GameManager"
+            ],
+            "x": 1114,
+            "y": 165,
+            "isFilled": true,
+            "width": 128,
+            "height": 128
+        }
+    ],
+    "plainObjects": [
+        {
+            "id": "7e528420-115d-409b-988d-62d340311f1d",
+            "type": "Tilemap",
+            "label": "level06",
+            "key": "Level06",
+            "tilesets": [
+                {
+                    "name": "Crayon_Tileset",
+                    "imageKey": "Crayon_256"
+                }
+            ]
+        }
+    ],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 2
+    },
+    "lists": [
+        {
+            "id": "2f7cbe1a-224c-4c19-81c0-75ad03ce25ab",
+            "label": "movableObjects",
+            "scope": "PUBLIC"
+        },
+        {
+            "id": "94cf5379-3956-4064-b7cf-b70cde6a2dfa",
+            "label": "jumpPads",
+            "scope": "PUBLIC"
+        },
+        {
+            "id": "a5fb7234-50c5-4296-a3d0-97e6a273a9a9",
+            "label": "spikes",
+            "scope": "PUBLIC"
+        }
+    ]
+}

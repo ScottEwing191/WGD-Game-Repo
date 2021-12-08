@@ -18,6 +18,7 @@
             "texture": {
                 "key": "Square Paper 2 Seamless_On Grid"
             },
+            "y": 16,
             "originX": 0,
             "originY": 0,
             "width": 1032,
@@ -38,6 +39,20 @@
             "tilesets": [
                 "Crayon_Tileset"
             ]
+        },
+        {
+            "type": "Rectangle",
+            "id": "38eae4d8-4005-47b5-9867-309c76d9f511",
+            "label": "gameManager",
+            "scope": "PUBLIC",
+            "components": [
+                "GameManager"
+            ],
+            "x": 1104,
+            "y": 80,
+            "isFilled": true,
+            "width": 128,
+            "height": 128
         },
         {
             "type": "Layer",
@@ -388,18 +403,62 @@
             ]
         },
         {
-            "type": "Rectangle",
-            "id": "38eae4d8-4005-47b5-9867-309c76d9f511",
-            "label": "gameManager",
-            "scope": "PUBLIC",
-            "components": [
-                "GameManager"
+            "prefabId": "087f3cc7-41c9-46b0-833a-38a6197b98f1",
+            "id": "a117f0c0-0756-4892-b60f-cac6f8785a5f",
+            "unlock": [
+                "x",
+                "y"
             ],
-            "x": 1104,
-            "y": 64,
-            "isFilled": true,
-            "width": 128,
-            "height": 128
+            "label": "player",
+            "scope": "PUBLIC",
+            "components": [],
+            "x": 816,
+            "y": 144
+        },
+        {
+            "prefabId": "a439648d-2f0f-40dd-9682-e97863778497",
+            "id": "d3e788a9-a9c4-47d9-ba3e-3c57c5f588bd",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "levelEnd_P",
+            "components": [],
+            "x": 832,
+            "y": 448
+        },
+        {
+            "prefabId": "0096356b-5f82-4b1e-bf17-f59fa8f880ba",
+            "id": "91d760f2-d5ff-4523-b61e-5eb9a0b5bc00",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "levelCompletePanel_P",
+            "scope": "CLASS",
+            "components": [],
+            "nestedPrefabs": [
+                {
+                    "prefabId": "0f5807e5-3de7-4e1b-8378-0664d6cc5752",
+                    "id": "df0ef4c3-b527-4c69-aa7d-023178fd6c77",
+                    "unlock": [
+                        "ChangeLevelButton.levelName"
+                    ],
+                    "label": "replayButton",
+                    "components": [],
+                    "ChangeLevelButton.levelName": "Level05"
+                },
+                {
+                    "prefabId": "89df7175-1767-48b8-8548-65a7f80ba625",
+                    "id": "d7d6bb07-a419-4ea6-932a-8e327a24c0b5",
+                    "unlock": [
+                        "ChangeLevelButton.levelName"
+                    ],
+                    "label": "nextLevel",
+                    "components": [],
+                    "ChangeLevelButton.levelName": "Level01"
+                }
+            ]
         },
         {
             "prefabId": "a68bd93d-7ce4-42bf-a34b-7c34006d3f23",
@@ -442,65 +501,7 @@
             "CoinCollectable.moveToX": 352,
             "CoinCollectable.moveToY": 736,
             "x": 544,
-            "y": 96
-        },
-        {
-            "prefabId": "a439648d-2f0f-40dd-9682-e97863778497",
-            "id": "d3e788a9-a9c4-47d9-ba3e-3c57c5f588bd",
-            "unlock": [
-                "x",
-                "y"
-            ],
-            "label": "levelEnd_P",
-            "components": [],
-            "x": 816,
-            "y": 304
-        },
-        {
-            "prefabId": "087f3cc7-41c9-46b0-833a-38a6197b98f1",
-            "id": "a117f0c0-0756-4892-b60f-cac6f8785a5f",
-            "unlock": [
-                "x",
-                "y"
-            ],
-            "label": "player",
-            "scope": "PUBLIC",
-            "components": [],
-            "x": 816,
-            "y": 144
-        },
-        {
-            "prefabId": "0096356b-5f82-4b1e-bf17-f59fa8f880ba",
-            "id": "91d760f2-d5ff-4523-b61e-5eb9a0b5bc00",
-            "unlock": [
-                "x",
-                "y"
-            ],
-            "label": "levelCompletePanel_P",
-            "scope": "CLASS",
-            "components": [],
-            "nestedPrefabs": [
-                {
-                    "prefabId": "0f5807e5-3de7-4e1b-8378-0664d6cc5752",
-                    "id": "df0ef4c3-b527-4c69-aa7d-023178fd6c77",
-                    "unlock": [
-                        "ChangeLevelButton.levelName"
-                    ],
-                    "label": "replayButton",
-                    "components": [],
-                    "ChangeLevelButton.levelName": "Level05"
-                },
-                {
-                    "prefabId": "89df7175-1767-48b8-8548-65a7f80ba625",
-                    "id": "d7d6bb07-a419-4ea6-932a-8e327a24c0b5",
-                    "unlock": [
-                        "ChangeLevelButton.levelName"
-                    ],
-                    "label": "nextLevel",
-                    "components": [],
-                    "ChangeLevelButton.levelName": "Level01"
-                }
-            ]
+            "y": 128
         }
     ],
     "plainObjects": [

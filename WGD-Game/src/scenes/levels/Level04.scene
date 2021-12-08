@@ -454,7 +454,8 @@
                         "ChangeLevelButton.levelName"
                     ],
                     "label": "nextLevel",
-                    "components": []
+                    "components": [],
+                    "ChangeLevelButton.levelName": "Level05"
                 }
             ]
         },

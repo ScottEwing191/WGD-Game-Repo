@@ -22,6 +22,11 @@
                 "key": "AttemptsPanel_P"
             },
             {
+                "url": "assets/images/levelSelectScreen/back.png",
+                "type": "image",
+                "key": "back"
+            },
+            {
                 "url": "assets/animation/ball-anim.json",
                 "type": "animation",
                 "key": "ball-anim"
@@ -300,6 +305,36 @@
                 "key": "Level06"
             },
             {
+                "url": "assets/images/levelSelectScreen/Level1.png",
+                "type": "image",
+                "key": "Level1"
+            },
+            {
+                "url": "assets/images/levelSelectScreen/Level2.png",
+                "type": "image",
+                "key": "Level2"
+            },
+            {
+                "url": "assets/images/levelSelectScreen/Level3.png",
+                "type": "image",
+                "key": "Level3"
+            },
+            {
+                "url": "assets/images/levelSelectScreen/Level4.png",
+                "type": "image",
+                "key": "Level4"
+            },
+            {
+                "url": "assets/images/levelSelectScreen/Level5.png",
+                "type": "image",
+                "key": "Level5"
+            },
+            {
+                "url": "assets/images/levelSelectScreen/Level6.png",
+                "type": "image",
+                "key": "Level6"
+            },
+            {
                 "url": "src/components/user-components/LevelCompletePanel.js",
                 "type": "script",
                 "key": "LevelCompletePanel"
@@ -336,6 +371,11 @@
                 },
                 "type": "spritesheet",
                 "key": "LevelEnd_sheet"
+            },
+            {
+                "url": "assets/tiled/LevelSelect.json",
+                "type": "tilemapTiledJSON",
+                "key": "LevelSelect"
             },
             {
                 "url": "assets/tiled/Test/LevelTest_map.json",

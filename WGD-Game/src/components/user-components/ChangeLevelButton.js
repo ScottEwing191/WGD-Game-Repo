@@ -33,7 +33,9 @@ class ChangeLevelButton extends UserComponent {
 	start(){
 		this.gameObject.setInteractive({draggable: true});
 		this.gameObject.on('dragstart', function (pointer, dragX, dragY) {
-			this.gameObject.play(this.changeAnimation);
+			if (this.changeAnimation != ""){
+				this.gameObject.play(this.changeAnimation);
+			}
 		}, this);
 
 		this.gameObject.on('dragend', function (pointer, dragX, dragY, dropped) {

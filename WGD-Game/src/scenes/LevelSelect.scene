@@ -1,0 +1,356 @@
+{
+    "id": "334d37aa-7165-4a94-bbc9-f073ee9b1949",
+    "sceneType": "SCENE",
+    "settings": {
+        "snapEnabled": true,
+        "preloadPackFiles": [],
+        "createMethodName": "editorCreate",
+        "sceneKey": "LevelSelect",
+        "borderWidth": 1024,
+        "borderHeight": 832
+    },
+    "displayList": [
+        {
+            "type": "TileSprite",
+            "id": "07b4774e-bcfd-4fa6-994d-a6759cacc383",
+            "label": "tilesprite",
+            "components": [],
+            "texture": {
+                "key": "Square Paper 2 Seamless_On Grid"
+            },
+            "originX": 0,
+            "originY": 0,
+            "width": 1024,
+            "height": 832,
+            "tileScaleX": 0.177,
+            "tileScaleY": 0.177
+        },
+        {
+            "type": "TilemapLayer",
+            "id": "a704e999-c81b-4b01-9bdf-bdeb36ff0eab",
+            "label": "solid_1",
+            "components": [],
+            "scaleX": 0.25,
+            "scaleY": 0.25,
+            "tilemapId": "6fe56142-bf5f-4e8c-8b2c-4f56b238dac7",
+            "layerName": "Solid",
+            "tilesets": [
+                "Crayon_Tileset",
+                "Pencil_Tileset"
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "dd4235e1-02c0-4af6-a2fd-f3d99584c340",
+            "label": "selectLevel06",
+            "components": [],
+            "x": 784,
+            "y": 512,
+            "list": [
+                {
+                    "type": "Sprite",
+                    "id": "1cbd5f0c-fa34-461e-a968-bb532f554759",
+                    "label": "buttons_sheet06",
+                    "components": [
+                        "ChangeLevelButton"
+                    ],
+                    "ChangeLevelButton.levelName": "Level06",
+                    "texture": {
+                        "key": "Buttons_sheet",
+                        "frame": 4
+                    },
+                    "y": 160
+                },
+                {
+                    "type": "BitmapText",
+                    "id": "ff74dbf8-f0c0-444a-8981-491c16b2a44c",
+                    "label": "bitmaptext6",
+                    "components": [],
+                    "y": 160,
+                    "text": "Level 06",
+                    "font": "scott-script-bold-3",
+                    "fontSize": 30
+                },
+                {
+                    "type": "Image",
+                    "id": "1691f388-8f77-4969-a748-6f8c1830c7c8",
+                    "label": "level6",
+                    "components": [],
+                    "texture": {
+                        "key": "Level6"
+                    },
+                    "scaleX": 0.35,
+                    "scaleY": 0.35
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "15d59015-47d9-4d7f-9a34-ed7e9bfd4518",
+            "label": "selectLevel05",
+            "components": [],
+            "x": 512,
+            "y": 512,
+            "list": [
+                {
+                    "type": "Sprite",
+                    "id": "b4155603-08f3-410b-ad8f-c989334a383a",
+                    "label": "buttons_sheet05",
+                    "components": [
+                        "ChangeLevelButton"
+                    ],
+                    "ChangeLevelButton.levelName": "Level05",
+                    "texture": {
+                        "key": "Buttons_sheet",
+                        "frame": 0
+                    },
+                    "y": 160
+                },
+                {
+                    "type": "BitmapText",
+                    "id": "db222b4b-2da2-49db-ab83-4be6ab7d89db",
+                    "label": "bitmaptext5",
+                    "components": [],
+                    "y": 160,
+                    "text": "Level 05",
+                    "font": "scott-script-bold-3",
+                    "fontSize": 30
+                },
+                {
+                    "type": "Image",
+                    "id": "c382e5c4-3e00-419b-9ab9-247650af1245",
+                    "label": "level5",
+                    "components": [],
+                    "texture": {
+                        "key": "Level5"
+                    },
+                    "scaleX": 0.35,
+                    "scaleY": 0.35
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "d78302bf-7a61-4737-b4c8-5c6caf733a38",
+            "label": "selectLevel04",
+            "components": [],
+            "x": 240,
+            "y": 512,
+            "list": [
+                {
+                    "type": "Sprite",
+                    "id": "48816b63-3c0d-4b99-995a-2505d6742c05",
+                    "label": "buttons_sheet04",
+                    "components": [
+                        "ChangeLevelButton"
+                    ],
+                    "ChangeLevelButton.changeAnimation": "pink",
+                    "ChangeLevelButton.levelName": "Level04",
+                    "texture": {
+                        "key": "Buttons_sheet",
+                        "frame": 2
+                    },
+                    "y": 160
+                },
+                {
+                    "type": "BitmapText",
+                    "id": "5cbb11a5-2106-4549-8e2b-b38c94be6a3e",
+                    "label": "bitmaptext4",
+                    "components": [],
+                    "y": 160,
+                    "text": "Level 04",
+                    "font": "scott-script-bold-3",
+                    "fontSize": 30
+                },
+                {
+                    "type": "Image",
+                    "id": "4c3234fb-8854-4b71-950f-11332fc8b554",
+                    "label": "level4",
+                    "components": [],
+                    "texture": {
+                        "key": "Level4"
+                    },
+                    "scaleX": 0.35,
+                    "scaleY": 0.35
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "d952094b-d258-4b5a-993c-bf8085522e33",
+            "label": "selectLevel03",
+            "components": [],
+            "x": 784,
+            "y": 144,
+            "list": [
+                {
+                    "type": "Sprite",
+                    "id": "a258b749-ca52-4873-91ad-146df1701107",
+                    "label": "buttons_sheet03",
+                    "components": [
+                        "ChangeLevelButton"
+                    ],
+                    "ChangeLevelButton.changeAnimation": "pink",
+                    "ChangeLevelButton.levelName": "Level03",
+                    "texture": {
+                        "key": "Buttons_sheet",
+                        "frame": 2
+                    },
+                    "y": 160
+                },
+                {
+                    "type": "BitmapText",
+                    "id": "5018b8da-b856-4330-aa3a-9e91729a3b8d",
+                    "label": "bitmaptext3",
+                    "components": [],
+                    "y": 160,
+                    "text": "Level 03",
+                    "font": "scott-script-bold-3",
+                    "fontSize": 30
+                },
+                {
+                    "type": "Image",
+                    "id": "2c7a748b-0949-40f7-a3cf-57abe055fd58",
+                    "label": "level3",
+                    "components": [],
+                    "texture": {
+                        "key": "Level3"
+                    },
+                    "scaleX": 0.35,
+                    "scaleY": 0.35
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "04196a8a-83bd-4331-bd46-cb46c5d44f61",
+            "label": "selectLevel02",
+            "components": [],
+            "x": 512,
+            "y": 144,
+            "list": [
+                {
+                    "type": "Sprite",
+                    "id": "77e61768-aec5-4850-a6c4-1681449e961e",
+                    "label": "buttons_sheet02",
+                    "components": [
+                        "ChangeLevelButton"
+                    ],
+                    "ChangeLevelButton.changeAnimation": "purple",
+                    "ChangeLevelButton.levelName": "Level02",
+                    "texture": {
+                        "key": "Buttons_sheet",
+                        "frame": 4
+                    },
+                    "y": 160
+                },
+                {
+                    "type": "BitmapText",
+                    "id": "c66d9582-41b2-4339-9d48-1530772ba0b4",
+                    "label": "bitmaptext2",
+                    "components": [],
+                    "y": 160,
+                    "text": "Level 02",
+                    "font": "scott-script-bold-3",
+                    "fontSize": 30
+                },
+                {
+                    "type": "Image",
+                    "id": "45cd763e-4ce7-4a3d-bdca-df37262c5549",
+                    "label": "level2",
+                    "components": [],
+                    "texture": {
+                        "key": "Level2"
+                    },
+                    "scaleX": 0.35,
+                    "scaleY": 0.35
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "82638078-d600-4967-aec7-9b514df7ddd7",
+            "label": "selectLevel01",
+            "components": [],
+            "x": 240,
+            "y": 144,
+            "list": [
+                {
+                    "type": "Sprite",
+                    "id": "6b2bbafe-02f0-48ea-b002-36314edab1c0",
+                    "label": "buttons_sheet01",
+                    "components": [
+                        "ChangeLevelButton"
+                    ],
+                    "ChangeLevelButton.levelName": "Level01",
+                    "texture": {
+                        "key": "Buttons_sheet",
+                        "frame": 0
+                    },
+                    "y": 160
+                },
+                {
+                    "type": "BitmapText",
+                    "id": "a3379475-fad1-434a-b41d-c2d0f159c7b6",
+                    "label": "bitmaptext1",
+                    "components": [],
+                    "y": 160,
+                    "text": "Level 01",
+                    "font": "scott-script-bold-3",
+                    "fontSize": 30
+                },
+                {
+                    "type": "Image",
+                    "id": "5d163756-4c78-4193-b2db-b85e1d4a7520",
+                    "label": "level1",
+                    "components": [],
+                    "texture": {
+                        "key": "Level1"
+                    },
+                    "scaleX": 0.35,
+                    "scaleY": 0.35
+                }
+            ]
+        },
+        {
+            "type": "Sprite",
+            "id": "17e93d17-51fb-44ad-8ae7-dd435c5206e6",
+            "label": "back",
+            "components": [
+                "ChangeLevelButton"
+            ],
+            "ChangeLevelButton.changeAnimation": "\n",
+            "texture": {
+                "key": "back"
+            },
+            "x": 80,
+            "y": 704,
+            "scaleX": 0.6,
+            "scaleY": 0.6
+        }
+    ],
+    "plainObjects": [
+        {
+            "id": "6fe56142-bf5f-4e8c-8b2c-4f56b238dac7",
+            "type": "Tilemap",
+            "label": "levelSelect",
+            "key": "LevelSelect",
+            "tilesets": [
+                {
+                    "name": "Crayon_Tileset",
+                    "imageKey": "Crayon_256"
+                },
+                {
+                    "name": "Pencil_Tileset",
+                    "imageKey": "Pencil_256"
+                }
+            ]
+        }
+    ],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 2
+    }
+}

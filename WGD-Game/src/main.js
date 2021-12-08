@@ -24,6 +24,7 @@ window.addEventListener('load', function () {
 
     game.scene.add("Preload", Preload);
     game.scene.add("MainMenu", MainMenu);
+    game.scene.add("LevelSelect", LevelSelect);
     game.scene.add("Level01", Level01);
     game.scene.add("Level02", Level02);
     game.scene.add("Level03", Level03);

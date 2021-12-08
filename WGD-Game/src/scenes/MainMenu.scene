@@ -69,11 +69,46 @@
         },
         {
             "type": "Container",
+            "id": "15a5339b-cebb-4b90-9f9e-1584eddd700d",
+            "label": "LevelSelectScreen",
+            "components": [],
+            "x": 512,
+            "y": 608,
+            "list": [
+                {
+                    "type": "Sprite",
+                    "id": "042ccab0-41fa-40f8-b2b9-cfc0cbbfee30",
+                    "label": "buttons_sheet01",
+                    "components": [
+                        "ChangeLevelButton"
+                    ],
+                    "ChangeLevelButton.changeAnimation": "purple",
+                    "ChangeLevelButton.levelName": "LevelSelect",
+                    "texture": {
+                        "key": "Buttons_sheet",
+                        "frame": 4
+                    }
+                },
+                {
+                    "type": "BitmapText",
+                    "id": "13f95c2f-200f-4b0e-94e2-d3f05099030e",
+                    "label": "LevelSelectText",
+                    "components": [],
+                    "text": "Select \nLevel!",
+                    "font": "scott-script-bold-3",
+                    "align": 1,
+                    "fontSize": 25,
+                    "dropShadowAlpha": 0
+                }
+            ]
+        },
+        {
+            "type": "Container",
             "id": "f9b5faa3-3ecc-4568-907e-85137854750b",
             "label": "PlayButton",
             "components": [],
             "x": 512,
-            "y": 576,
+            "y": 480,
             "list": [
                 {
                     "type": "Sprite",

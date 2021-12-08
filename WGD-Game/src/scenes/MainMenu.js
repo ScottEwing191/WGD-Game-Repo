@@ -42,8 +42,24 @@ class MainMenu extends Phaser.Scene {
 		ground_1.scaleX = 0.25;
 		ground_1.scaleY = 0.25;
 
+		// LevelSelectScreen
+		const levelSelectScreen = this.add.container(512, 608);
+
+		// buttons_sheet01
+		const buttons_sheet01 = this.add.sprite(0, 0, "Buttons_sheet", 4);
+		levelSelectScreen.add(buttons_sheet01);
+
+		// LevelSelectText
+		const levelSelectText = this.add.bitmapText(0, 0, "scott-script-bold-3", "Select \nLevel!");
+		levelSelectText.setOrigin(0.5, 0.5);
+		levelSelectText.text = "Select \nLevel!";
+		levelSelectText.fontSize = 25;
+		levelSelectText.align = 1;
+		levelSelectText.dropShadowAlpha = 0;
+		levelSelectScreen.add(levelSelectText);
+
 		// PlayButton
-		const playButton = this.add.container(512, 576);
+		const playButton = this.add.container(512, 480);
 
 		// buttons_sheet0
 		const buttons_sheet0 = this.add.sprite(0, 0, "Buttons_sheet", 0);
@@ -77,6 +93,11 @@ class MainMenu extends Phaser.Scene {
 		const jumpPads = []
 		const movableObjects = []
 		const spikes = []
+
+		// buttons_sheet01 (components)
+		const buttons_sheet01ChangeLevelButton = new ChangeLevelButton(buttons_sheet01);
+		buttons_sheet01ChangeLevelButton.changeAnimation = "purple";
+		buttons_sheet01ChangeLevelButton.levelName = "LevelSelect";
 
 		// buttons_sheet0 (components)
 		new MenuPlayButton(buttons_sheet0);
@@ -126,8 +147,15 @@ class MainMenu extends Phaser.Scene {
 		this.editorCreate();
 	}
 
-	nextLevel(){
+	/*nextLevel(){
 		this.scene.start("Level01");
+	}*/
+
+	nextLevel(levelName){
+		if (levelName == undefined){
+			levelName = 'Level06';
+		}
+		this.scene.start(levelName);
 	}
 	/* END-USER-CODE */
 }

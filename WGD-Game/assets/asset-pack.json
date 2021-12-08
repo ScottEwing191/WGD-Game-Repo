@@ -290,6 +290,16 @@
                 "key": "Level04"
             },
             {
+                "url": "assets/tiled/Level05.json",
+                "type": "tilemapTiledJSON",
+                "key": "Level05"
+            },
+            {
+                "url": "assets/tiled/Level06.json",
+                "type": "tilemapTiledJSON",
+                "key": "Level06"
+            },
+            {
                 "url": "src/components/user-components/LevelCompletePanel.js",
                 "type": "script",
                 "key": "LevelCompletePanel"

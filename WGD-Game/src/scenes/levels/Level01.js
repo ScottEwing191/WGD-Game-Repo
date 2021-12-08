@@ -87,6 +87,10 @@ class Level01 extends Phaser.Scene {
 		// gameManager (components)
 		new GameManager(gameManager);
 
+		// coin_P (components)
+		const coin_PCoinCollectable = CoinCollectable.getComponent(coin_P);
+		coin_PCoinCollectable.moveToY = 800;
+
 		this.gameManager = gameManager;
 		this.solid_1 = solid_1;
 		this.player = player;

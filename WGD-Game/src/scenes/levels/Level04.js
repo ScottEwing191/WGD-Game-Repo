@@ -239,7 +239,7 @@ class Level04 extends Phaser.Scene {
 	}*/
 	nextLevel(levelName){
 		if (levelName == undefined){
-			levelName = 'MainMenu';
+			levelName = 'Level05';
 		}
 		this.scene.start(levelName);
 	}

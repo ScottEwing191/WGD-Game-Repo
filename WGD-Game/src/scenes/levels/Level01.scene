@@ -177,11 +177,13 @@
             "id": "3e9dd88f-e318-4775-ae75-7bcca48acb04",
             "unlock": [
                 "x",
-                "y"
+                "y",
+                "CoinCollectable.moveToY"
             ],
             "label": "coin_P",
             "scope": "CLASS",
             "components": [],
+            "CoinCollectable.moveToY": 800,
             "x": 160,
             "y": 256
         }

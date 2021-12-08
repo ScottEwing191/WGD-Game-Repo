@@ -23,7 +23,7 @@
             "RectanglePhysics.modifyBodyHeight": -45,
             "RectanglePhysics.spriteYOffset": 0.2,
             "CoinCollectable.moveToX": 736,
-            "CoinCollectable.moveToY": 780,
+            "CoinCollectable.moveToY": 800,
             "texture": {
                 "key": "Coin_Idle_Sheet",
                 "frame": 0

@@ -61,7 +61,7 @@ class CoinCollectable extends UserComponent {
 
 	respawnAtMoveToLocation(){
 		this.gameObject.setX(this.moveToX);
-		this.gameObject.setY(this.moveToY + 18);
+		this.gameObject.setY(this.moveToY);
 		this.gameObject.play('coin-respawn-and-stay');
 	}
 

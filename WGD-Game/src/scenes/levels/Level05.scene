@@ -1,0 +1,543 @@
+{
+    "id": "0465a751-d511-4f5f-87b0-044594ae7e56",
+    "sceneType": "SCENE",
+    "settings": {
+        "snapEnabled": true,
+        "preloadPackFiles": [],
+        "createMethodName": "editorCreate",
+        "sceneKey": "Level05",
+        "borderWidth": 1024,
+        "borderHeight": 832
+    },
+    "displayList": [
+        {
+            "type": "TileSprite",
+            "id": "78e26783-501c-4b82-bef5-1d6f3bdd678f",
+            "label": "tilesprite",
+            "components": [],
+            "texture": {
+                "key": "Square Paper 2 Seamless_On Grid"
+            },
+            "originX": 0,
+            "originY": 0,
+            "width": 1032,
+            "height": 832,
+            "tileScaleX": 0.177,
+            "tileScaleY": 0.177
+        },
+        {
+            "type": "TilemapLayer",
+            "id": "5697257a-1e47-4237-8897-6e54f4b022eb",
+            "label": "ground_1",
+            "scope": "CLASS",
+            "components": [],
+            "scaleX": 0.25,
+            "scaleY": 0.25,
+            "tilemapId": "4bffb6be-7654-4110-98f3-997b54f0ddff",
+            "layerName": "Ground",
+            "tilesets": [
+                "Crayon_Tileset"
+            ]
+        },
+        {
+            "type": "Layer",
+            "id": "bda4a576-a32e-49fd-9891-70fb1e3c78ea",
+            "label": "spikes_Layer",
+            "components": [],
+            "list": [
+                {
+                    "prefabId": "abc4a117-2b06-4411-87b1-beb07b520dcb",
+                    "id": "caf496c6-f748-43d5-9fd7-0da59037bf1a",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "texture"
+                    ],
+                    "label": "spike1Left",
+                    "components": [],
+                    "texture": {
+                        "key": "Spikes_Crayon",
+                        "frame": 11
+                    },
+                    "x": 32,
+                    "y": 480
+                },
+                {
+                    "prefabId": "abc4a117-2b06-4411-87b1-beb07b520dcb",
+                    "id": "6c1e5e77-a557-4e65-a306-b210371cc96a",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "texture"
+                    ],
+                    "label": "spike1Left_1",
+                    "components": [],
+                    "texture": {
+                        "key": "Spikes_Crayon",
+                        "frame": 11
+                    },
+                    "x": 32,
+                    "y": 544
+                },
+                {
+                    "prefabId": "abc4a117-2b06-4411-87b1-beb07b520dcb",
+                    "id": "56172182-5f38-46a4-85db-a653adfc30da",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "texture"
+                    ],
+                    "label": "spike1Left_2",
+                    "components": [],
+                    "texture": {
+                        "key": "Spikes_Crayon",
+                        "frame": 11
+                    },
+                    "x": 32,
+                    "y": 608
+                },
+                {
+                    "prefabId": "6740e86a-1cf8-4ae7-87fd-b8676ffe9640",
+                    "id": "b27ab5cc-3917-48ab-899e-9283acf44ef8",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "texture"
+                    ],
+                    "label": "spike1Right",
+                    "components": [],
+                    "texture": {
+                        "key": "Spikes_Crayon",
+                        "frame": 9
+                    },
+                    "x": 160,
+                    "y": 480
+                },
+                {
+                    "prefabId": "6740e86a-1cf8-4ae7-87fd-b8676ffe9640",
+                    "id": "ec216545-ec7a-4eb6-a04d-f98ebfee507d",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "texture"
+                    ],
+                    "label": "spike1Right_2",
+                    "components": [],
+                    "texture": {
+                        "key": "Spikes_Crayon",
+                        "frame": 9
+                    },
+                    "x": 160,
+                    "y": 608
+                },
+                {
+                    "prefabId": "6740e86a-1cf8-4ae7-87fd-b8676ffe9640",
+                    "id": "f4d2ad19-c221-42c8-a8ba-29bbaaa1dcbe",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "texture"
+                    ],
+                    "label": "spike1Right_1",
+                    "components": [],
+                    "texture": {
+                        "key": "Spikes_Crayon",
+                        "frame": 9
+                    },
+                    "x": 160,
+                    "y": 544
+                },
+                {
+                    "prefabId": "ec4256ea-8d89-44c7-ad6e-23916b2f440f",
+                    "id": "a74b7474-0505-421d-bebf-676ec2d33354",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "texture"
+                    ],
+                    "label": "spikePrefab",
+                    "components": [],
+                    "texture": {
+                        "key": "Spikes_Crayon",
+                        "frame": 10
+                    },
+                    "x": 928,
+                    "y": 800
+                },
+                {
+                    "prefabId": "ec4256ea-8d89-44c7-ad6e-23916b2f440f",
+                    "id": "1cc39f64-2493-4525-aa5c-008945292605",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "texture"
+                    ],
+                    "label": "spikePrefab_1",
+                    "components": [],
+                    "texture": {
+                        "key": "Spikes_Crayon",
+                        "frame": 10
+                    },
+                    "x": 864,
+                    "y": 800
+                },
+                {
+                    "prefabId": "ec4256ea-8d89-44c7-ad6e-23916b2f440f",
+                    "id": "0f690d7c-323f-40a1-a82d-9eef2f6ddfc2",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "texture"
+                    ],
+                    "label": "spikePrefab_2",
+                    "components": [],
+                    "texture": {
+                        "key": "Spikes_Crayon",
+                        "frame": 10
+                    },
+                    "x": 800,
+                    "y": 800
+                },
+                {
+                    "prefabId": "ec4256ea-8d89-44c7-ad6e-23916b2f440f",
+                    "id": "1b9611ae-546a-493f-b2df-54494330e6f8",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "texture"
+                    ],
+                    "label": "spikePrefab_3",
+                    "components": [],
+                    "texture": {
+                        "key": "Spikes_Crayon",
+                        "frame": 10
+                    },
+                    "x": 736,
+                    "y": 800
+                },
+                {
+                    "prefabId": "ec4256ea-8d89-44c7-ad6e-23916b2f440f",
+                    "id": "2a4ae142-88fc-494e-aa26-6a279f1dc101",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "texture"
+                    ],
+                    "label": "spikePrefab_4",
+                    "components": [],
+                    "texture": {
+                        "key": "Spikes_Crayon",
+                        "frame": 10
+                    },
+                    "x": 672,
+                    "y": 800
+                },
+                {
+                    "prefabId": "ec4256ea-8d89-44c7-ad6e-23916b2f440f",
+                    "id": "1dbaa7cc-2e02-4821-bc02-8730e5180158",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "texture"
+                    ],
+                    "label": "spikePrefab_5",
+                    "components": [],
+                    "texture": {
+                        "key": "Spikes_Crayon",
+                        "frame": 10
+                    },
+                    "x": 608,
+                    "y": 800
+                },
+                {
+                    "prefabId": "ec4256ea-8d89-44c7-ad6e-23916b2f440f",
+                    "id": "7d0de353-329b-49d1-b0a3-a3876449b9c1",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "texture"
+                    ],
+                    "label": "spikePrefab_6",
+                    "components": [],
+                    "texture": {
+                        "key": "Spikes_Crayon",
+                        "frame": 10
+                    },
+                    "x": 544,
+                    "y": 800
+                },
+                {
+                    "prefabId": "abc4a117-2b06-4411-87b1-beb07b520dcb",
+                    "id": "068b8b85-5464-4df8-858b-d51c25a01b81",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "texture"
+                    ],
+                    "label": "spike1Left_3",
+                    "components": [],
+                    "texture": {
+                        "key": "Spikes_Crayon",
+                        "frame": 11
+                    },
+                    "x": 800,
+                    "y": 608
+                },
+                {
+                    "prefabId": "6740e86a-1cf8-4ae7-87fd-b8676ffe9640",
+                    "id": "11492892-9185-401d-a109-d0516e790bec",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "texture"
+                    ],
+                    "label": "spike1Right_1_1",
+                    "components": [],
+                    "texture": {
+                        "key": "Spikes_Crayon",
+                        "frame": 9
+                    },
+                    "x": 928,
+                    "y": 608
+                },
+                {
+                    "prefabId": "abc4a117-2b06-4411-87b1-beb07b520dcb",
+                    "id": "0b78aabd-abf3-420c-a4fd-6a77063d1773",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "texture"
+                    ],
+                    "label": "spike1Left_3_1",
+                    "components": [],
+                    "texture": {
+                        "key": "Spikes_Crayon",
+                        "frame": 11
+                    },
+                    "x": 416,
+                    "y": 480
+                },
+                {
+                    "prefabId": "abc4a117-2b06-4411-87b1-beb07b520dcb",
+                    "id": "e2af75de-1b9f-4264-ba8d-ce7694d2e847",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "texture"
+                    ],
+                    "label": "spike1Left_3_2",
+                    "components": [],
+                    "texture": {
+                        "key": "Spikes_Crayon",
+                        "frame": 11
+                    },
+                    "x": 416,
+                    "y": 544
+                },
+                {
+                    "prefabId": "abc4a117-2b06-4411-87b1-beb07b520dcb",
+                    "id": "a6e84b20-a1ac-4145-b853-6e2d58d80e1d",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "texture"
+                    ],
+                    "label": "spike1Left_3_3",
+                    "components": [],
+                    "texture": {
+                        "key": "Spikes_Crayon",
+                        "frame": 11
+                    },
+                    "x": 416,
+                    "y": 608
+                },
+                {
+                    "prefabId": "755d40f7-0046-4a8a-b6e4-b8ac8bf2aea5",
+                    "id": "6818e0e8-01eb-4dc1-bb43-1fbb746e8bad",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "texture"
+                    ],
+                    "label": "spike1Up",
+                    "components": [],
+                    "texture": {
+                        "key": "Spikes_Crayon",
+                        "frame": 8
+                    },
+                    "x": 736,
+                    "y": 672
+                },
+                {
+                    "prefabId": "755d40f7-0046-4a8a-b6e4-b8ac8bf2aea5",
+                    "id": "c8408a5c-6034-4c6b-a4b1-f19f7c170087",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "texture"
+                    ],
+                    "label": "spike1Up_1",
+                    "components": [],
+                    "texture": {
+                        "key": "Spikes_Crayon",
+                        "frame": 8
+                    },
+                    "x": 672,
+                    "y": 672
+                }
+            ]
+        },
+        {
+            "type": "Rectangle",
+            "id": "38eae4d8-4005-47b5-9867-309c76d9f511",
+            "label": "gameManager",
+            "scope": "PUBLIC",
+            "components": [
+                "GameManager"
+            ],
+            "x": 1104,
+            "y": 64,
+            "isFilled": true,
+            "width": 128,
+            "height": 128
+        },
+        {
+            "prefabId": "a68bd93d-7ce4-42bf-a34b-7c34006d3f23",
+            "id": "b5abc88e-ba1b-42a1-94d8-b495711b7df9",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "attemptsPanel_P",
+            "scope": "CLASS",
+            "components": [],
+            "x": 352,
+            "y": 800,
+            "nestedPrefabs": []
+        },
+        {
+            "type": "Image",
+            "id": "06c034ca-f528-4aa6-a64e-c974a6feff6c",
+            "label": "coin_empty_place",
+            "components": [],
+            "texture": {
+                "key": "coin empty place"
+            },
+            "x": 352,
+            "y": 736,
+            "scaleX": 0.2,
+            "scaleY": 0.2
+        },
+        {
+            "prefabId": "e2f3078e-5848-44b5-bd4f-2da25a4c0e94",
+            "id": "8d18f636-aa11-464c-b72c-4f2cc3340d04",
+            "unlock": [
+                "x",
+                "y",
+                "CoinCollectable.moveToX",
+                "CoinCollectable.moveToY"
+            ],
+            "label": "coin_P",
+            "components": [],
+            "CoinCollectable.moveToX": 352,
+            "CoinCollectable.moveToY": 736,
+            "x": 544,
+            "y": 96
+        },
+        {
+            "prefabId": "a439648d-2f0f-40dd-9682-e97863778497",
+            "id": "d3e788a9-a9c4-47d9-ba3e-3c57c5f588bd",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "levelEnd_P",
+            "components": [],
+            "x": 816,
+            "y": 304
+        },
+        {
+            "prefabId": "087f3cc7-41c9-46b0-833a-38a6197b98f1",
+            "id": "a117f0c0-0756-4892-b60f-cac6f8785a5f",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "player",
+            "scope": "PUBLIC",
+            "components": [],
+            "x": 816,
+            "y": 144
+        },
+        {
+            "prefabId": "0096356b-5f82-4b1e-bf17-f59fa8f880ba",
+            "id": "91d760f2-d5ff-4523-b61e-5eb9a0b5bc00",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "levelCompletePanel_P",
+            "scope": "CLASS",
+            "components": [],
+            "nestedPrefabs": [
+                {
+                    "prefabId": "0f5807e5-3de7-4e1b-8378-0664d6cc5752",
+                    "id": "df0ef4c3-b527-4c69-aa7d-023178fd6c77",
+                    "unlock": [
+                        "ChangeLevelButton.levelName"
+                    ],
+                    "label": "replayButton",
+                    "components": [],
+                    "ChangeLevelButton.levelName": "Level05"
+                },
+                {
+                    "prefabId": "89df7175-1767-48b8-8548-65a7f80ba625",
+                    "id": "d7d6bb07-a419-4ea6-932a-8e327a24c0b5",
+                    "unlock": [
+                        "ChangeLevelButton.levelName"
+                    ],
+                    "label": "nextLevel",
+                    "components": [],
+                    "ChangeLevelButton.levelName": "Level01"
+                }
+            ]
+        }
+    ],
+    "plainObjects": [
+        {
+            "id": "4bffb6be-7654-4110-98f3-997b54f0ddff",
+            "type": "Tilemap",
+            "label": "level05",
+            "key": "Level05",
+            "tilesets": [
+                {
+                    "name": "Crayon_Tileset",
+                    "imageKey": "Crayon_256"
+                }
+            ]
+        }
+    ],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 2
+    },
+    "lists": [
+        {
+            "id": "405cb920-a13d-49b5-9919-e7841dc5693e",
+            "label": "movableObjects",
+            "scope": "PUBLIC"
+        },
+        {
+            "id": "85358e9d-6d7b-47e8-bd7f-03d7f936c51f",
+            "label": "jumpPads",
+            "scope": "PUBLIC"
+        },
+        {
+            "id": "e251798c-6e66-45b4-9107-4d1e7e88db39",
+            "label": "spikes",
+            "scope": "PUBLIC"
+        }
+    ]
+}

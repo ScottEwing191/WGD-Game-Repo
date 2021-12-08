@@ -19,7 +19,7 @@ class Coin_P extends Phaser.GameObjects.Sprite {
 		thisRectanglePhysics.spriteYOffset = 0.2;
 		const thisCoinCollectable = new CoinCollectable(this);
 		thisCoinCollectable.moveToX = 736;
-		thisCoinCollectable.moveToY = 780;
+		thisCoinCollectable.moveToY = 800;
 
 		/* START-USER-CTR-CODE */
 		// Write your code here.

@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="16" height="13" tilewidth="256" tileheight="256" infinite="0" nextlayerid="7" nextobjectid="1">
- <tileset firstgid="1" source="WGD-Game-Repo/Tiled/Tilesets/Crayon_Tileset.tsx"/>
- <layer id="3" name="Border" width="16" height="13">
+ <editorsettings>
+  <export target="../Exported JSON's/Levels/Level06.json" format="json"/>
+ </editorsettings>
+ <tileset firstgid="1" source="../Tilesets/Crayon_Tileset.tsx"/>
+ <layer id="3" name="Border" width="16" height="13" visible="0" locked="1">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,

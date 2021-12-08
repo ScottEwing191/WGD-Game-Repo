@@ -2,7 +2,6 @@
     "id": "b658ac34-3698-4466-ba57-c6c20222e77b",
     "sceneType": "SCENE",
     "settings": {
-        "snapEnabled": true,
         "snapWidth": 32,
         "snapHeight": 32,
         "preloadPackFiles": [],
@@ -79,8 +78,8 @@
             ],
             "label": "platformGrassSmall",
             "components": [],
-            "x": 832,
-            "y": 256
+            "x": 736,
+            "y": 160
         },
         {
             "prefabId": "78f1afa5-31bd-4118-a357-1ee073f288bb",
@@ -91,8 +90,8 @@
             ],
             "label": "platformGrassBig",
             "components": [],
-            "x": 832,
-            "y": 352
+            "x": 736,
+            "y": 256
         },
         {
             "prefabId": "78f1afa5-31bd-4118-a357-1ee073f288bb",
@@ -103,8 +102,8 @@
             ],
             "label": "platformGrassBig_1",
             "components": [],
-            "x": 832,
-            "y": 448
+            "x": 736,
+            "y": 352
         },
         {
             "prefabId": "087f3cc7-41c9-46b0-833a-38a6197b98f1",
@@ -128,8 +127,108 @@
             ],
             "label": "levelEnd_P",
             "components": [],
-            "x": 160,
-            "y": 448
+            "x": 832,
+            "y": 576
+        },
+        {
+            "type": "Layer",
+            "id": "9e7e04f3-a754-4fe5-beef-48c06deae538",
+            "label": "text_Layer",
+            "components": [],
+            "list": [
+                {
+                    "type": "BitmapText",
+                    "id": "79cf9e27-d24d-4ce5-aa65-3812c64f847f",
+                    "label": "click",
+                    "components": [],
+                    "x": 512,
+                    "y": 96,
+                    "originX": 0,
+                    "originY": 0,
+                    "text": "Click objects to select them.",
+                    "font": "scott-script-bold-3",
+                    "fontSize": 30
+                },
+                {
+                    "type": "BitmapText",
+                    "id": "9e04d21b-ed08-4ff6-ab75-0a627ac60e51",
+                    "label": "playText",
+                    "components": [],
+                    "x": 32,
+                    "y": 64,
+                    "originX": 0,
+                    "originY": 0,
+                    "text": "Hit space to play.",
+                    "font": "scott-script-bold-3",
+                    "fontSize": 30
+                },
+                {
+                    "type": "BitmapText",
+                    "id": "be668f73-7364-4c3f-b565-7a2253e1d87f",
+                    "label": "resetText",
+                    "components": [],
+                    "x": 96,
+                    "y": 736,
+                    "originX": 0,
+                    "originY": 0,
+                    "text": "Hit R to reset.",
+                    "font": "scott-script-bold-3",
+                    "fontSize": 30
+                },
+                {
+                    "type": "BitmapText",
+                    "id": "56487659-721d-4087-a065-49526cd601ab",
+                    "label": "endText",
+                    "components": [],
+                    "x": 736,
+                    "y": 480,
+                    "originX": 0,
+                    "originY": 0,
+                    "text": "Get ball here.",
+                    "font": "scott-script-bold-3",
+                    "fontSize": 30
+                },
+                {
+                    "type": "BitmapText",
+                    "id": "91bf4421-b1b8-4504-ae8a-8e1e01932322",
+                    "label": "moveText",
+                    "components": [],
+                    "x": 608,
+                    "y": 192,
+                    "originX": 0,
+                    "originY": 0,
+                    "text": "Move with WASD...",
+                    "font": "scott-script-bold-3",
+                    "fontSize": 30
+                },
+                {
+                    "type": "BitmapText",
+                    "id": "a83980ad-981f-46cc-a107-afe0f25a2fac",
+                    "label": "dragText",
+                    "components": [],
+                    "x": 512,
+                    "y": 288,
+                    "originX": 0,
+                    "originY": 0,
+                    "text": "...or click and drag with mouse.",
+                    "font": "scott-script-bold-3",
+                    "fontSize": 30
+                },
+                {
+                    "type": "BitmapText",
+                    "id": "597cfd48-5b59-4136-9e69-e13369967983",
+                    "label": "rotateText",
+                    "components": [],
+                    "x": 191,
+                    "y": 394,
+                    "angle": 30,
+                    "originX": 0,
+                    "originY": 0,
+                    "text": "Hit Q or E to rotate.",
+                    "font": "scott-script-bold-3",
+                    "fontSize": 30
+                }
+            ]
         },
         {
             "prefabId": "0096356b-5f82-4b1e-bf17-f59fa8f880ba",
@@ -184,8 +283,8 @@
             "scope": "CLASS",
             "components": [],
             "CoinCollectable.moveToY": 800,
-            "x": 160,
-            "y": 256
+            "x": 352,
+            "y": 352
         }
     ],
     "plainObjects": [

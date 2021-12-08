@@ -137,7 +137,7 @@ class Level02 extends Phaser.Scene {
 		this.add.existing(player);
 
 		// levelEnd_P
-		const levelEnd_P = new LevelEnd_P(this, 320, 128);
+		const levelEnd_P = new LevelEnd_P(this, 800, 704);
 		this.add.existing(levelEnd_P);
 
 		// levelCompletePanel_P
@@ -154,7 +154,7 @@ class Level02 extends Phaser.Scene {
 		coin_empty_place.scaleY = 0.2;
 
 		// coin_P
-		const coin_P = new Coin_P(this, 192, 128);
+		const coin_P = new Coin_P(this, 96, 416);
 		this.add.existing(coin_P);
 
 		// lists

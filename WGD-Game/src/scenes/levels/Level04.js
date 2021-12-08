@@ -43,6 +43,7 @@ class Level04 extends Phaser.Scene {
 
 		// spaceLayer
 		const spaceLayer = this.add.layer();
+		spaceLayer.visible = false;
 
 		// antiGravZone1x2Prefab
 		const antiGravZone1x2Prefab = new AntiGravZone1x2Prefab(this, 640, 704);
@@ -113,6 +114,7 @@ class Level04 extends Phaser.Scene {
 
 		// circlesLayer
 		const circlesLayer = this.add.layer();
+		circlesLayer.visible = false;
 
 		// circleBounce
 		const circleBounce = new CircleBounce(this, 512, 160);
@@ -128,6 +130,7 @@ class Level04 extends Phaser.Scene {
 
 		// padsLayer
 		const padsLayer = this.add.layer();
+		padsLayer.visible = false;
 
 		// jump_Pad
 		const jump_Pad = new Jump_Pad(this, 960, 352);
@@ -143,6 +146,7 @@ class Level04 extends Phaser.Scene {
 
 		// layer
 		const layer = this.add.layer();
+		layer.visible = false;
 
 		// platformGrassSmall
 		const platformGrassSmall = new PlatformGrassSmall(this, 896, 704);
@@ -153,7 +157,7 @@ class Level04 extends Phaser.Scene {
 		this.add.existing(player);
 
 		// levelEnd_P
-		const levelEnd_P = new LevelEnd_P(this, 320, 224);
+		const levelEnd_P = new LevelEnd_P(this, 480, 704);
 		this.add.existing(levelEnd_P);
 
 		// levelCompletePanel_P
@@ -170,7 +174,7 @@ class Level04 extends Phaser.Scene {
 		coin_empty_place.scaleY = 0.2;
 
 		// coin_P
-		const coin_P = new Coin_P(this, 416, 128);
+		const coin_P = new Coin_P(this, 480, 352);
 		this.add.existing(coin_P);
 
 		// lists

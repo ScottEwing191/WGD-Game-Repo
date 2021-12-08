@@ -35,13 +35,6 @@ class Level06 extends Phaser.Scene {
 		const gameManager = this.add.rectangle(1114, 165, 128, 128);
 		gameManager.isFilled = true;
 
-		// jumpPads_Layer
-		const jumpPads_Layer = this.add.layer();
-
-		// jump_Pad
-		const jump_Pad = new Jump_Pad(this, 80, 272);
-		jumpPads_Layer.add(jump_Pad);
-
 		// spikes_Layer
 		const spikes_Layer = this.add.layer();
 
@@ -281,9 +274,25 @@ class Level06 extends Phaser.Scene {
 		const spike1Up_5_4_1 = new Spike1Up(this, 224, 672, "Spikes_Crayon", 4);
 		spikes_Layer.add(spike1Up_5_4_1);
 
+		// jumpPads_Layer
+		const jumpPads_Layer = this.add.layer();
+
+		// jumpPadUnmovable
+		const jumpPadUnmovable = new JumpPadUnmovable(this, 96, 768);
+		jumpPadUnmovable.angle = 90;
+		jumpPads_Layer.add(jumpPadUnmovable);
+
 		// player
-		const player = new PlayerPrefab(this, 88, 106);
+		const player = new PlayerPrefab(this, 96, 96);
 		this.add.existing(player);
+
+		// coin_P
+		const coin_P = new Coin_P(this, 896, 336);
+		this.add.existing(coin_P);
+
+		// levelCompletePanel_P
+		const levelCompletePanel_P = new LevelCompletePanel_P(this, 0, 0);
+		this.add.existing(levelCompletePanel_P);
 
 		// attemptsPanel_P
 		const attemptsPanel_P = new AttemptsPanel_P(this, 896, 800);
@@ -294,9 +303,9 @@ class Level06 extends Phaser.Scene {
 		coin_empty_place.scaleX = 0.2;
 		coin_empty_place.scaleY = 0.2;
 
-		// levelCompletePanel_P
-		const levelCompletePanel_P = new LevelCompletePanel_P(this, 0, 0);
-		this.add.existing(levelCompletePanel_P);
+		// levelEnd_P
+		const levelEnd_P = new LevelEnd_P(this, 928, 128);
+		this.add.existing(levelEnd_P);
 
 		// lists
 		const movableObjects = []
@@ -305,6 +314,10 @@ class Level06 extends Phaser.Scene {
 
 		// gameManager (components)
 		new GameManager(gameManager);
+
+		// jumpPadUnmovable (components)
+		const jumpPadUnmovableRectanglePhysics = RectanglePhysics.getComponent(jumpPadUnmovable);
+		jumpPadUnmovableRectanglePhysics.angle = 90;
 
 		// levelCompletePanel_P.replayButton (components)
 		const levelCompletePanel_P_replayButtonChangeLevelButton = ChangeLevelButton.getComponent(levelCompletePanel_P.replayButton);
@@ -317,8 +330,9 @@ class Level06 extends Phaser.Scene {
 		this.ground_1 = ground_1;
 		this.gameManager = gameManager;
 		this.player = player;
-		this.attemptsPanel_P = attemptsPanel_P;
+		this.coin_P = coin_P;
 		this.levelCompletePanel_P = levelCompletePanel_P;
+		this.attemptsPanel_P = attemptsPanel_P;
 		this.level06 = level06;
 		this.movableObjects = movableObjects;
 		this.jumpPads = jumpPads;
@@ -333,10 +347,12 @@ class Level06 extends Phaser.Scene {
 	gameManager;
 	/** @type {PlayerPrefab} */
 	player;
-	/** @type {AttemptsPanel_P} */
-	attemptsPanel_P;
+	/** @type {Coin_P} */
+	coin_P;
 	/** @type {LevelCompletePanel_P} */
 	levelCompletePanel_P;
+	/** @type {AttemptsPanel_P} */
+	attemptsPanel_P;
 	/** @type {Array<any>} */
 	movableObjects;
 	/** @type {Array<any>} */

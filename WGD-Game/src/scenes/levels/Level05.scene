@@ -403,30 +403,6 @@
             ]
         },
         {
-            "prefabId": "6c6124bf-0368-4efa-a5ff-6f7e4b79645d",
-            "id": "a1b11cd1-2426-4247-9f7f-650ccc283735",
-            "unlock": [
-                "x",
-                "y"
-            ],
-            "label": "antiGravZonePrefab",
-            "components": [],
-            "x": 689,
-            "y": 255
-        },
-        {
-            "prefabId": "c9974d39-92b8-4294-bcd4-b8cce4f2fb93",
-            "id": "00d0f00a-58f8-49aa-af84-2604eb37cb5e",
-            "unlock": [
-                "x",
-                "y"
-            ],
-            "label": "antiGravZone1x2Prefab",
-            "components": [],
-            "x": 588,
-            "y": 362
-        },
-        {
             "prefabId": "087f3cc7-41c9-46b0-833a-38a6197b98f1",
             "id": "a117f0c0-0756-4892-b60f-cac6f8785a5f",
             "unlock": [
@@ -448,8 +424,8 @@
             ],
             "label": "levelEnd_P",
             "components": [],
-            "x": 832,
-            "y": 448
+            "x": 112,
+            "y": 736
         },
         {
             "prefabId": "0096356b-5f82-4b1e-bf17-f59fa8f880ba",
@@ -526,30 +502,6 @@
             "CoinCollectable.moveToY": 736,
             "x": 544,
             "y": 96
-        },
-        {
-            "prefabId": "ed55f365-5162-403a-b28b-f0655a7227a5",
-            "id": "689136cf-d976-4673-804d-f53a831fc561",
-            "unlock": [
-                "x",
-                "y"
-            ],
-            "label": "jump_Pad",
-            "components": [],
-            "x": 800,
-            "y": 272
-        },
-        {
-            "prefabId": "4ea8129b-0371-4dd3-a1ae-7dfbf189ef70",
-            "id": "f287a218-fbca-4cd6-99dd-a7665040a6f2",
-            "unlock": [
-                "x",
-                "y"
-            ],
-            "label": "platformGrassSmall",
-            "components": [],
-            "x": 899,
-            "y": 239
         }
     ],
     "plainObjects": [

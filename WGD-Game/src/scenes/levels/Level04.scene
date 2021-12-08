@@ -75,6 +75,7 @@
             "id": "964258e6-c10c-4cdd-8198-957263ad82fa",
             "label": "spaceLayer",
             "components": [],
+            "visible": false,
             "list": [
                 {
                     "prefabId": "c9974d39-92b8-4294-bcd4-b8cce4f2fb93",
@@ -298,6 +299,7 @@
             "id": "b13744c7-54bf-4859-8035-f47f10b3ac11",
             "label": "circlesLayer",
             "components": [],
+            "visible": false,
             "list": [
                 {
                     "prefabId": "4d54abe2-b9e1-4eb4-bf11-76a7ede9cbef",
@@ -342,6 +344,7 @@
             "id": "1476c53c-b842-4589-aecb-a1aef42a86a3",
             "label": "padsLayer",
             "components": [],
+            "visible": false,
             "list": [
                 {
                     "prefabId": "ed55f365-5162-403a-b28b-f0655a7227a5",
@@ -386,6 +389,7 @@
             "id": "def205eb-a05a-4840-8abb-28c0882d698c",
             "label": "layer",
             "components": [],
+            "visible": false,
             "list": [
                 {
                     "prefabId": "4ea8129b-0371-4dd3-a1ae-7dfbf189ef70",
@@ -423,8 +427,8 @@
             ],
             "label": "levelEnd_P",
             "components": [],
-            "x": 320,
-            "y": 224
+            "x": 480,
+            "y": 704
         },
         {
             "prefabId": "0096356b-5f82-4b1e-bf17-f59fa8f880ba",
@@ -496,8 +500,8 @@
             "label": "coin_P",
             "scope": "CLASS",
             "components": [],
-            "x": 416,
-            "y": 128
+            "x": 480,
+            "y": 352
         }
     ],
     "plainObjects": [

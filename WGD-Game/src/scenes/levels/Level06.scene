@@ -55,26 +55,6 @@
         },
         {
             "type": "Layer",
-            "id": "c1cdb7cf-9715-4891-8211-52d09f3fc9c7",
-            "label": "jumpPads_Layer",
-            "components": [],
-            "list": [
-                {
-                    "prefabId": "ed55f365-5162-403a-b28b-f0655a7227a5",
-                    "id": "98105c1c-195d-44d9-a8a1-34cde715faf6",
-                    "unlock": [
-                        "x",
-                        "y"
-                    ],
-                    "label": "jump_Pad",
-                    "components": [],
-                    "x": 80,
-                    "y": 272
-                }
-            ]
-        },
-        {
-            "type": "Layer",
             "id": "3d31c7ae-ab18-4671-bd08-50d99537cb2a",
             "label": "spikes_Layer",
             "components": [],
@@ -1085,6 +1065,30 @@
             ]
         },
         {
+            "type": "Layer",
+            "id": "c1cdb7cf-9715-4891-8211-52d09f3fc9c7",
+            "label": "jumpPads_Layer",
+            "components": [],
+            "list": [
+                {
+                    "prefabId": "0e346f50-687e-4921-8ee4-b493a15f351e",
+                    "id": "2e8e2982-28e4-41b6-b232-c3779195a6f8",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "RectanglePhysics.angle",
+                        "angle"
+                    ],
+                    "label": "jumpPadUnmovable",
+                    "components": [],
+                    "RectanglePhysics.angle": 90,
+                    "x": 96,
+                    "y": 768,
+                    "angle": 90
+                }
+            ]
+        },
+        {
             "prefabId": "087f3cc7-41c9-46b0-833a-38a6197b98f1",
             "id": "fa8540c4-5bc1-4fc7-a286-80a53413c407",
             "unlock": [
@@ -1094,35 +1098,21 @@
             "label": "player",
             "scope": "PUBLIC",
             "components": [],
-            "x": 88,
-            "y": 106
+            "x": 96,
+            "y": 96
         },
         {
-            "prefabId": "a68bd93d-7ce4-42bf-a34b-7c34006d3f23",
-            "id": "36fda0e5-7627-4293-ae4f-a89552a99e7c",
+            "prefabId": "e2f3078e-5848-44b5-bd4f-2da25a4c0e94",
+            "id": "48005bab-ea29-40af-b793-df9c670127b0",
             "unlock": [
                 "x",
                 "y"
             ],
-            "label": "attemptsPanel_P",
+            "label": "coin_P",
             "scope": "CLASS",
             "components": [],
             "x": 896,
-            "y": 800,
-            "nestedPrefabs": []
-        },
-        {
-            "type": "Image",
-            "id": "0c8386c8-c4b9-4b6e-9fa6-3479261d1a21",
-            "label": "coin_empty_place",
-            "components": [],
-            "texture": {
-                "key": "coin empty place"
-            },
-            "x": 736,
-            "y": 800,
-            "scaleX": 0.2,
-            "scaleY": 0.2
+            "y": 336
         },
         {
             "prefabId": "0096356b-5f82-4b1e-bf17-f59fa8f880ba",
@@ -1155,6 +1145,45 @@
                     "components": []
                 }
             ]
+        },
+        {
+            "prefabId": "a68bd93d-7ce4-42bf-a34b-7c34006d3f23",
+            "id": "36fda0e5-7627-4293-ae4f-a89552a99e7c",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "attemptsPanel_P",
+            "scope": "CLASS",
+            "components": [],
+            "x": 896,
+            "y": 800,
+            "nestedPrefabs": []
+        },
+        {
+            "type": "Image",
+            "id": "0c8386c8-c4b9-4b6e-9fa6-3479261d1a21",
+            "label": "coin_empty_place",
+            "components": [],
+            "texture": {
+                "key": "coin empty place"
+            },
+            "x": 736,
+            "y": 800,
+            "scaleX": 0.2,
+            "scaleY": 0.2
+        },
+        {
+            "prefabId": "a439648d-2f0f-40dd-9682-e97863778497",
+            "id": "93603c84-3d6a-449f-8345-4ca5bdb51ea6",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "levelEnd_P",
+            "components": [],
+            "x": 928,
+            "y": 128
         }
     ],
     "plainObjects": [

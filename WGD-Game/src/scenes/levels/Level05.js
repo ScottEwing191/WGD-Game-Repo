@@ -118,20 +118,12 @@ class Level05 extends Phaser.Scene {
 		const spike1Up_1 = new Spike1Up(this, 672, 672, "Spikes_Crayon", 8);
 		spikes_Layer.add(spike1Up_1);
 
-		// antiGravZonePrefab
-		const antiGravZonePrefab = new AntiGravZonePrefab(this, 689, 255);
-		this.add.existing(antiGravZonePrefab);
-
-		// antiGravZone1x2Prefab
-		const antiGravZone1x2Prefab = new AntiGravZone1x2Prefab(this, 588, 362);
-		this.add.existing(antiGravZone1x2Prefab);
-
 		// player
 		const player = new PlayerPrefab(this, 816, 144);
 		this.add.existing(player);
 
 		// levelEnd_P
-		const levelEnd_P = new LevelEnd_P(this, 832, 448);
+		const levelEnd_P = new LevelEnd_P(this, 112, 736);
 		this.add.existing(levelEnd_P);
 
 		// levelCompletePanel_P
@@ -150,14 +142,6 @@ class Level05 extends Phaser.Scene {
 		// coin_P
 		const coin_P = new Coin_P(this, 544, 96);
 		this.add.existing(coin_P);
-
-		// jump_Pad
-		const jump_Pad = new Jump_Pad(this, 800, 272);
-		this.add.existing(jump_Pad);
-
-		// platformGrassSmall
-		const platformGrassSmall = new PlatformGrassSmall(this, 899, 239);
-		this.add.existing(platformGrassSmall);
 
 		// lists
 		const movableObjects = []

@@ -43,15 +43,15 @@ class Level01 extends Phaser.Scene {
 		solid_1.scaleY = 0.25;
 
 		// platformGrassSmall
-		const platformGrassSmall = new PlatformGrassSmall(this, 832, 256);
+		const platformGrassSmall = new PlatformGrassSmall(this, 736, 160);
 		this.add.existing(platformGrassSmall);
 
 		// platformGrassBig
-		const platformGrassBig = new PlatformGrassBig(this, 832, 352);
+		const platformGrassBig = new PlatformGrassBig(this, 736, 256);
 		this.add.existing(platformGrassBig);
 
 		// platformGrassBig_1
-		const platformGrassBig_1 = new PlatformGrassBig(this, 832, 448);
+		const platformGrassBig_1 = new PlatformGrassBig(this, 736, 352);
 		this.add.existing(platformGrassBig_1);
 
 		// player
@@ -59,8 +59,54 @@ class Level01 extends Phaser.Scene {
 		this.add.existing(player);
 
 		// levelEnd_P
-		const levelEnd_P = new LevelEnd_P(this, 160, 448);
+		const levelEnd_P = new LevelEnd_P(this, 832, 576);
 		this.add.existing(levelEnd_P);
+
+		// text_Layer
+		const text_Layer = this.add.layer();
+
+		// click
+		const click = this.add.bitmapText(512, 96, "scott-script-bold-3", "Click objects to select them.");
+		click.text = "Click objects to select them.";
+		click.fontSize = 30;
+		text_Layer.add(click);
+
+		// playText
+		const playText = this.add.bitmapText(32, 64, "scott-script-bold-3", "Hit space to play.");
+		playText.text = "Hit space to play.";
+		playText.fontSize = 30;
+		text_Layer.add(playText);
+
+		// resetText
+		const resetText = this.add.bitmapText(96, 736, "scott-script-bold-3", "Hit R to reset.");
+		resetText.text = "Hit R to reset.";
+		resetText.fontSize = 30;
+		text_Layer.add(resetText);
+
+		// endText
+		const endText = this.add.bitmapText(736, 480, "scott-script-bold-3", "Get ball here.");
+		endText.text = "Get ball here.";
+		endText.fontSize = 30;
+		text_Layer.add(endText);
+
+		// moveText
+		const moveText = this.add.bitmapText(608, 192, "scott-script-bold-3", "Move with WASD...");
+		moveText.text = "Move with WASD...";
+		moveText.fontSize = 30;
+		text_Layer.add(moveText);
+
+		// dragText
+		const dragText = this.add.bitmapText(512, 288, "scott-script-bold-3", "...or click and drag with mouse.");
+		dragText.text = "...or click and drag with mouse.";
+		dragText.fontSize = 30;
+		text_Layer.add(dragText);
+
+		// rotateText
+		const rotateText = this.add.bitmapText(191, 394, "scott-script-bold-3", "Hit Q or E to rotate.");
+		rotateText.angle = 30;
+		rotateText.text = "Hit Q or E to rotate.";
+		rotateText.fontSize = 30;
+		text_Layer.add(rotateText);
 
 		// levelCompletePanel_P
 		const levelCompletePanel_P = new LevelCompletePanel_P(this, 0, 0);
@@ -76,7 +122,7 @@ class Level01 extends Phaser.Scene {
 		coinEmpty.scaleY = 0.2;
 
 		// coin_P
-		const coin_P = new Coin_P(this, 160, 256);
+		const coin_P = new Coin_P(this, 352, 352);
 		this.add.existing(coin_P);
 
 		// lists
@@ -86,10 +132,6 @@ class Level01 extends Phaser.Scene {
 
 		// gameManager (components)
 		new GameManager(gameManager);
-
-		// coin_P (components)
-		const coin_PCoinCollectable = CoinCollectable.getComponent(coin_P);
-		coin_PCoinCollectable.moveToY = 800;
 
 		this.gameManager = gameManager;
 		this.solid_1 = solid_1;

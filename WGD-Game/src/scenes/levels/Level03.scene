@@ -66,8 +66,7 @@
             "label": "antiGravZonePrefab",
             "components": [],
             "x": 608,
-            "y": 704,
-            "visible": false
+            "y": 704
         },
         {
             "prefabId": "c9974d39-92b8-4294-bcd4-b8cce4f2fb93",
@@ -84,8 +83,7 @@
             "RectanglePhysics.angle": 90,
             "x": 416,
             "y": 480,
-            "angle": 90,
-            "visible": false
+            "angle": 90
         },
         {
             "type": "Layer",
@@ -198,8 +196,7 @@
             "label": "platformGrassSmall",
             "components": [],
             "x": 461,
-            "y": 370,
-            "visible": false
+            "y": 370
         },
         {
             "prefabId": "4ea8129b-0371-4dd3-a1ae-7dfbf189ef70",
@@ -212,8 +209,7 @@
             "label": "platformGrassSmall_1",
             "components": [],
             "x": 192,
-            "y": 320,
-            "visible": false
+            "y": 320
         },
         {
             "prefabId": "ed55f365-5162-403a-b28b-f0655a7227a5",
@@ -226,8 +222,7 @@
             "label": "jump_Pad",
             "components": [],
             "x": 96,
-            "y": 64,
-            "visible": false
+            "y": 64
         },
         {
             "prefabId": "0e346f50-687e-4921-8ee4-b493a15f351e",
@@ -284,8 +279,7 @@
             "components": [],
             "RectanglePhysics.modifyYPosition": -28,
             "x": 800,
-            "y": 160,
-            "visible": false
+            "y": 160
         },
         {
             "prefabId": "4ea8129b-0371-4dd3-a1ae-7dfbf189ef70",
@@ -298,8 +292,7 @@
             "label": "platformGrassSmall_2",
             "components": [],
             "x": 928,
-            "y": 192,
-            "visible": false
+            "y": 192
         },
         {
             "prefabId": "ed55f365-5162-403a-b28b-f0655a7227a5",
@@ -312,8 +305,7 @@
             "label": "jump_Pad_2",
             "components": [],
             "x": 320,
-            "y": 256,
-            "visible": false
+            "y": 256
         },
         {
             "prefabId": "4d54abe2-b9e1-4eb4-bf11-76a7ede9cbef",
@@ -326,8 +318,7 @@
             "label": "circleBounce",
             "components": [],
             "x": 288,
-            "y": 416,
-            "visible": false
+            "y": 416
         },
         {
             "prefabId": "cb09e21f-1dab-4202-95b0-0172f23e3f57",
@@ -352,8 +343,7 @@
             "label": "jump_Pad_3",
             "components": [],
             "x": 317,
-            "y": 163,
-            "visible": false
+            "y": 163
         },
         {
             "prefabId": "a439648d-2f0f-40dd-9682-e97863778497",
@@ -439,6 +429,20 @@
             "components": [],
             "x": 160,
             "y": 96
+        },
+        {
+            "type": "Sprite",
+            "id": "6341a875-bf2b-454d-aabf-83d126359407",
+            "label": "MainMenuButton",
+            "components": [
+                "ChangeLevelButton"
+            ],
+            "ChangeLevelButton.changeAnimation": "",
+            "texture": {
+                "key": "btn_icon_home_1"
+            },
+            "x": 32,
+            "y": 32
         }
     ],
     "plainObjects": [

@@ -157,6 +157,9 @@ class Level02 extends Phaser.Scene {
 		const coin_P = new Coin_P(this, 96, 416);
 		this.add.existing(coin_P);
 
+		// MainMenuButton
+		const mainMenuButton = this.add.sprite(32, 32, "btn_icon_home_1");
+
 		// lists
 		const movableObjects = []
 		const jumpPads = []
@@ -204,6 +207,10 @@ class Level02 extends Phaser.Scene {
 		// levelCompletePanel_P.nextLevel (components)
 		const levelCompletePanel_P_nextLevelChangeLevelButton = ChangeLevelButton.getComponent(levelCompletePanel_P.nextLevel);
 		levelCompletePanel_P_nextLevelChangeLevelButton.levelName = "Level03";
+
+		// mainMenuButton (components)
+		const mainMenuButtonChangeLevelButton = new ChangeLevelButton(mainMenuButton);
+		mainMenuButtonChangeLevelButton.changeAnimation = "";
 
 		this.gameManager = gameManager;
 		this.solid_1 = solid_1;

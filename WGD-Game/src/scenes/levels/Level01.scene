@@ -2,6 +2,7 @@
     "id": "b658ac34-3698-4466-ba57-c6c20222e77b",
     "sceneType": "SCENE",
     "settings": {
+        "snapEnabled": true,
         "snapWidth": 32,
         "snapHeight": 32,
         "preloadPackFiles": [],
@@ -285,6 +286,20 @@
             "CoinCollectable.moveToY": 800,
             "x": 352,
             "y": 352
+        },
+        {
+            "type": "Sprite",
+            "id": "f8a52e4f-d068-43cf-9b27-417dc8976cbc",
+            "label": "btn_icon_home_1",
+            "components": [
+                "ChangeLevelButton"
+            ],
+            "ChangeLevelButton.changeAnimation": "\n",
+            "texture": {
+                "key": "btn_icon_home_1"
+            },
+            "x": 32,
+            "y": 32
         }
     ],
     "plainObjects": [

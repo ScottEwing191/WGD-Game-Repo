@@ -143,6 +143,9 @@ class Level05 extends Phaser.Scene {
 		const coin_P = new Coin_P(this, 544, 96);
 		this.add.existing(coin_P);
 
+		// MainMenuButton
+		const mainMenuButton = this.add.sprite(32, 32, "btn_icon_home_1");
+
 		// lists
 		const movableObjects = []
 		const jumpPads = []
@@ -163,6 +166,10 @@ class Level05 extends Phaser.Scene {
 		const coin_PCoinCollectable = CoinCollectable.getComponent(coin_P);
 		coin_PCoinCollectable.moveToX = 352;
 		coin_PCoinCollectable.moveToY = 736;
+
+		// mainMenuButton (components)
+		const mainMenuButtonChangeLevelButton = new ChangeLevelButton(mainMenuButton);
+		mainMenuButtonChangeLevelButton.changeAnimation = "";
 
 		this.ground_1 = ground_1;
 		this.gameManager = gameManager;

@@ -1184,6 +1184,20 @@
             "components": [],
             "x": 928,
             "y": 128
+        },
+        {
+            "type": "Sprite",
+            "id": "ce1f3ff2-bcf9-4e1a-a43e-c31ec9edb744",
+            "label": "MainMenuButton",
+            "components": [
+                "ChangeLevelButton"
+            ],
+            "ChangeLevelButton.changeAnimation": "",
+            "texture": {
+                "key": "btn_icon_home_1"
+            },
+            "x": 32,
+            "y": 32
         }
     ],
     "plainObjects": [

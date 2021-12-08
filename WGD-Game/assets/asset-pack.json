@@ -63,6 +63,11 @@
                 "key": "boost-pad-anim"
             },
             {
+                "url": "assets/images/ui/btn_icon_home_1.png",
+                "type": "image",
+                "key": "btn_icon_home_1"
+            },
+            {
                 "url": "assets/images/ui/Buttons_sheet.png",
                 "frameConfig": {
                     "frameWidth": 180,

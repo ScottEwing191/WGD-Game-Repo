@@ -502,6 +502,20 @@
             "CoinCollectable.moveToY": 736,
             "x": 544,
             "y": 96
+        },
+        {
+            "type": "Sprite",
+            "id": "75809798-4524-4a97-8f27-fb9d172bc2a2",
+            "label": "MainMenuButton",
+            "components": [
+                "ChangeLevelButton"
+            ],
+            "ChangeLevelButton.changeAnimation": "",
+            "texture": {
+                "key": "btn_icon_home_1"
+            },
+            "x": 32,
+            "y": 32
         }
     ],
     "plainObjects": [

@@ -118,6 +118,14 @@ class Level05 extends Phaser.Scene {
 		const spike1Up_1 = new Spike1Up(this, 672, 672, "Spikes_Crayon", 8);
 		spikes_Layer.add(spike1Up_1);
 
+		// antiGravZonePrefab
+		const antiGravZonePrefab = new AntiGravZonePrefab(this, 689, 255);
+		this.add.existing(antiGravZonePrefab);
+
+		// antiGravZone1x2Prefab
+		const antiGravZone1x2Prefab = new AntiGravZone1x2Prefab(this, 588, 362);
+		this.add.existing(antiGravZone1x2Prefab);
+
 		// player
 		const player = new PlayerPrefab(this, 816, 144);
 		this.add.existing(player);
@@ -140,8 +148,16 @@ class Level05 extends Phaser.Scene {
 		coin_empty_place.scaleY = 0.2;
 
 		// coin_P
-		const coin_P = new Coin_P(this, 544, 128);
+		const coin_P = new Coin_P(this, 544, 96);
 		this.add.existing(coin_P);
+
+		// jump_Pad
+		const jump_Pad = new Jump_Pad(this, 800, 272);
+		this.add.existing(jump_Pad);
+
+		// platformGrassSmall
+		const platformGrassSmall = new PlatformGrassSmall(this, 899, 239);
+		this.add.existing(platformGrassSmall);
 
 		// lists
 		const movableObjects = []
@@ -157,7 +173,7 @@ class Level05 extends Phaser.Scene {
 
 		// levelCompletePanel_P.nextLevel (components)
 		const levelCompletePanel_P_nextLevelChangeLevelButton = ChangeLevelButton.getComponent(levelCompletePanel_P.nextLevel);
-		levelCompletePanel_P_nextLevelChangeLevelButton.levelName = "Level01";
+		levelCompletePanel_P_nextLevelChangeLevelButton.levelName = "Level06";
 
 		// coin_P (components)
 		const coin_PCoinCollectable = CoinCollectable.getComponent(coin_P);
@@ -209,7 +225,7 @@ class Level05 extends Phaser.Scene {
 
 	nextLevel(levelName){
 		if (levelName == undefined){
-			levelName = 'Level04';
+			levelName = 'Level06';
 		}
 		this.scene.start(levelName);
 	}

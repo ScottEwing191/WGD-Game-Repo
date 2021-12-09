@@ -132,6 +132,20 @@
             "y": 576
         },
         {
+            "type": "TilemapLayer",
+            "id": "0e29f9e4-0b61-4112-b525-1e525cbd9aea",
+            "label": "border_1",
+            "components": [],
+            "scaleX": 0.25,
+            "scaleY": 0.25,
+            "tilemapId": "34420835-4617-4d46-be5a-4cbf7dd2c318",
+            "layerName": "Border",
+            "tilesets": [
+                "Crayon_Tileset",
+                "Pencil_Tileset"
+            ]
+        },
+        {
             "type": "Layer",
             "id": "9e7e04f3-a754-4fe5-beef-48c06deae538",
             "label": "text_Layer",
@@ -307,6 +321,22 @@
             "id": "fa02bd71-2abe-4566-b9bb-f48e05fd0942",
             "type": "Tilemap",
             "label": "level01",
+            "key": "Level01",
+            "tilesets": [
+                {
+                    "name": "Crayon_Tileset",
+                    "imageKey": "Crayon_256"
+                },
+                {
+                    "name": "Pencil_Tileset",
+                    "imageKey": "Pencil_256"
+                }
+            ]
+        },
+        {
+            "id": "34420835-4617-4d46-be5a-4cbf7dd2c318",
+            "type": "Tilemap",
+            "label": "level01_1",
             "key": "Level01",
             "tilesets": [
                 {

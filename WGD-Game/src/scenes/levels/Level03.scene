@@ -65,8 +65,8 @@
             ],
             "label": "antiGravZonePrefab",
             "components": [],
-            "x": 608,
-            "y": 704
+            "x": 928,
+            "y": 256
         },
         {
             "prefabId": "c9974d39-92b8-4294-bcd4-b8cce4f2fb93",
@@ -81,8 +81,8 @@
             "label": "antiGravZone1x2Prefab",
             "components": [],
             "RectanglePhysics.angle": 90,
-            "x": 416,
-            "y": 480,
+            "x": 896,
+            "y": 416,
             "angle": 90
         },
         {
@@ -186,57 +186,6 @@
             ]
         },
         {
-            "prefabId": "4ea8129b-0371-4dd3-a1ae-7dfbf189ef70",
-            "id": "0fd99afb-c581-4354-a0a3-1dbe1e6a4651",
-            "unlock": [
-                "x",
-                "y",
-                "visible"
-            ],
-            "label": "platformGrassSmall",
-            "components": [],
-            "x": 461,
-            "y": 370
-        },
-        {
-            "prefabId": "4ea8129b-0371-4dd3-a1ae-7dfbf189ef70",
-            "id": "8a4e1bb4-3dd5-4ee8-b4de-4d4284aae372",
-            "unlock": [
-                "x",
-                "y",
-                "visible"
-            ],
-            "label": "platformGrassSmall_1",
-            "components": [],
-            "x": 192,
-            "y": 320
-        },
-        {
-            "prefabId": "ed55f365-5162-403a-b28b-f0655a7227a5",
-            "id": "7aebf309-21d5-4793-842b-1234099bb9b2",
-            "unlock": [
-                "x",
-                "y",
-                "visible"
-            ],
-            "label": "jump_Pad",
-            "components": [],
-            "x": 96,
-            "y": 64
-        },
-        {
-            "prefabId": "0e346f50-687e-4921-8ee4-b493a15f351e",
-            "id": "1f3a2674-477d-47c4-b9bb-5aabe06bd0dd",
-            "unlock": [
-                "x",
-                "y"
-            ],
-            "label": "jumpPadUnmovable",
-            "components": [],
-            "x": 96,
-            "y": 736
-        },
-        {
             "type": "TilemapLayer",
             "id": "327bb911-b85f-46f9-b4ef-bc6ee42ad6fb",
             "label": "solid_1",
@@ -252,19 +201,68 @@
             ]
         },
         {
-            "prefabId": "087f3cc7-41c9-46b0-833a-38a6197b98f1",
-            "id": "a9d54b18-7970-4196-bd83-10da119b0770",
+            "prefabId": "4ea8129b-0371-4dd3-a1ae-7dfbf189ef70",
+            "id": "0fd99afb-c581-4354-a0a3-1dbe1e6a4651",
+            "unlock": [
+                "x",
+                "y",
+                "visible"
+            ],
+            "label": "platformGrassSmall",
+            "components": [],
+            "x": 928,
+            "y": 448
+        },
+        {
+            "prefabId": "4ea8129b-0371-4dd3-a1ae-7dfbf189ef70",
+            "id": "8a4e1bb4-3dd5-4ee8-b4de-4d4284aae372",
+            "unlock": [
+                "x",
+                "y",
+                "visible"
+            ],
+            "label": "platformGrassSmall_1",
+            "components": [],
+            "x": 928,
+            "y": 320
+        },
+        {
+            "prefabId": "4ea8129b-0371-4dd3-a1ae-7dfbf189ef70",
+            "id": "80ec937f-9846-47f9-943e-4d069cd6104d",
+            "unlock": [
+                "x",
+                "y",
+                "visible"
+            ],
+            "label": "platformGrassSmall_2",
+            "components": [],
+            "x": 928,
+            "y": 384
+        },
+        {
+            "prefabId": "ed55f365-5162-403a-b28b-f0655a7227a5",
+            "id": "7aebf309-21d5-4793-842b-1234099bb9b2",
+            "unlock": [
+                "x",
+                "y",
+                "visible"
+            ],
+            "label": "jump_Pad",
+            "components": [],
+            "x": 960,
+            "y": 320
+        },
+        {
+            "prefabId": "0e346f50-687e-4921-8ee4-b493a15f351e",
+            "id": "1f3a2674-477d-47c4-b9bb-5aabe06bd0dd",
             "unlock": [
                 "x",
                 "y"
             ],
-            "label": "player",
-            "scope": "PUBLIC",
-            "components": [
-                "ControllableObject"
-            ],
-            "x": 960,
-            "y": 64
+            "label": "jumpPadUnmovable",
+            "components": [],
+            "x": 96,
+            "y": 736
         },
         {
             "prefabId": "ed55f365-5162-403a-b28b-f0655a7227a5",
@@ -278,21 +276,8 @@
             "label": "jump_Pad_1",
             "components": [],
             "RectanglePhysics.modifyYPosition": -28,
-            "x": 800,
-            "y": 160
-        },
-        {
-            "prefabId": "4ea8129b-0371-4dd3-a1ae-7dfbf189ef70",
-            "id": "80ec937f-9846-47f9-943e-4d069cd6104d",
-            "unlock": [
-                "x",
-                "y",
-                "visible"
-            ],
-            "label": "platformGrassSmall_2",
-            "components": [],
-            "x": 928,
-            "y": 192
+            "x": 960,
+            "y": 384
         },
         {
             "prefabId": "ed55f365-5162-403a-b28b-f0655a7227a5",
@@ -304,8 +289,21 @@
             ],
             "label": "jump_Pad_2",
             "components": [],
-            "x": 320,
-            "y": 256
+            "x": 896,
+            "y": 320
+        },
+        {
+            "prefabId": "ed55f365-5162-403a-b28b-f0655a7227a5",
+            "id": "b02f7bfb-c94b-4eee-8777-cfd572088e7f",
+            "unlock": [
+                "x",
+                "y",
+                "visible"
+            ],
+            "label": "jump_Pad_3",
+            "components": [],
+            "x": 896,
+            "y": 384
         },
         {
             "prefabId": "4d54abe2-b9e1-4eb4-bf11-76a7ede9cbef",
@@ -317,8 +315,8 @@
             ],
             "label": "circleBounce",
             "components": [],
-            "x": 288,
-            "y": 416
+            "x": 960,
+            "y": 256
         },
         {
             "prefabId": "cb09e21f-1dab-4202-95b0-0172f23e3f57",
@@ -333,17 +331,19 @@
             "y": 192
         },
         {
-            "prefabId": "ed55f365-5162-403a-b28b-f0655a7227a5",
-            "id": "b02f7bfb-c94b-4eee-8777-cfd572088e7f",
+            "prefabId": "087f3cc7-41c9-46b0-833a-38a6197b98f1",
+            "id": "a9d54b18-7970-4196-bd83-10da119b0770",
             "unlock": [
                 "x",
-                "y",
-                "visible"
+                "y"
             ],
-            "label": "jump_Pad_3",
-            "components": [],
-            "x": 317,
-            "y": 163
+            "label": "player",
+            "scope": "PUBLIC",
+            "components": [
+                "ControllableObject"
+            ],
+            "x": 960,
+            "y": 64
         },
         {
             "prefabId": "a439648d-2f0f-40dd-9682-e97863778497",
@@ -427,7 +427,7 @@
             "label": "coin_P",
             "scope": "CLASS",
             "components": [],
-            "x": 160,
+            "x": 224,
             "y": 96
         },
         {

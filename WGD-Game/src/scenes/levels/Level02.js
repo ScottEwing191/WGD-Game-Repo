@@ -36,6 +36,10 @@ class Level02 extends Phaser.Scene {
 		decoration.scaleX = 0.25;
 		decoration.scaleY = 0.25;
 
+		// antiGravZone1x2Prefab
+		const antiGravZone1x2Prefab = new AntiGravZone1x2Prefab(this, 928, 192);
+		this.add.existing(antiGravZone1x2Prefab);
+
 		// solid_1
 		const solid_1 = level02.createLayer("Solid", ["Crayon_Tileset"], 0, 0);
 		solid_1.scaleX = 0.25;
@@ -100,37 +104,33 @@ class Level02 extends Phaser.Scene {
 		const spike1Down_2 = new Spike1Down(this, 416, 800);
 		spikesLayer.add(spike1Down_2);
 
-		// jump_Pad
-		const jump_Pad = new Jump_Pad(this, 960, 384);
-		this.add.existing(jump_Pad);
-
-		// jump_Pad_1
-		const jump_Pad_1 = new Jump_Pad(this, 960, 480);
-		this.add.existing(jump_Pad_1);
-
-		// jump_Pad_2
-		const jump_Pad_2 = new Jump_Pad(this, 896, 480);
-		this.add.existing(jump_Pad_2);
-
-		// jump_Pad_3
-		const jump_Pad_3 = new Jump_Pad(this, 832, 480);
-		this.add.existing(jump_Pad_3);
-
 		// platformGrassBig
 		const platformGrassBig = new PlatformGrassBig(this, 896, 544);
 		this.add.existing(platformGrassBig);
 
 		// platformGrassSmall_1
-		const platformGrassSmall_1 = new PlatformGrassSmall(this, 928, 448);
+		const platformGrassSmall_1 = new PlatformGrassSmall(this, 928, 416);
 		this.add.existing(platformGrassSmall_1);
 
 		// platformGrassSmall
-		const platformGrassSmall = new PlatformGrassSmall(this, 928, 352);
+		const platformGrassSmall = new PlatformGrassSmall(this, 928, 320);
 		this.add.existing(platformGrassSmall);
 
-		// antiGravZone1x2Prefab
-		const antiGravZone1x2Prefab = new AntiGravZone1x2Prefab(this, 928, 192);
-		this.add.existing(antiGravZone1x2Prefab);
+		// jump_Pad
+		const jump_Pad = new Jump_Pad(this, 960, 320);
+		this.add.existing(jump_Pad);
+
+		// jump_Pad_1
+		const jump_Pad_1 = new Jump_Pad(this, 960, 416);
+		this.add.existing(jump_Pad_1);
+
+		// jump_Pad_2
+		const jump_Pad_2 = new Jump_Pad(this, 896, 416);
+		this.add.existing(jump_Pad_2);
+
+		// jump_Pad_3
+		const jump_Pad_3 = new Jump_Pad(this, 832, 416);
+		this.add.existing(jump_Pad_3);
 
 		// player
 		const player = new PlayerPrefab(this, 192, 64);

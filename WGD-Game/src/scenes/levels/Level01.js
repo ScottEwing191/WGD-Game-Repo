@@ -22,6 +22,11 @@ class Level01 extends Phaser.Scene {
 		level01.addTilesetImage("Crayon_Tileset", "Crayon_256");
 		level01.addTilesetImage("Pencil_Tileset", "Pencil_256");
 
+		// level01_1
+		const level01_1 = this.add.tilemap("Level01");
+		level01_1.addTilesetImage("Crayon_Tileset", "Crayon_256");
+		level01_1.addTilesetImage("Pencil_Tileset", "Pencil_256");
+
 		// tilesprite
 		const tilesprite = this.add.tileSprite(0, 0, 1024, 832, "Square Paper 2 Seamless_On Grid");
 		tilesprite.setOrigin(0, 0);
@@ -61,6 +66,11 @@ class Level01 extends Phaser.Scene {
 		// levelEnd_P
 		const levelEnd_P = new LevelEnd_P(this, 832, 576);
 		this.add.existing(levelEnd_P);
+
+		// border_1
+		const border_1 = level01_1.createLayer("Border", ["Crayon_Tileset"], 0, 0);
+		border_1.scaleX = 0.25;
+		border_1.scaleY = 0.25;
 
 		// text_Layer
 		const text_Layer = this.add.layer();
@@ -147,6 +157,7 @@ class Level01 extends Phaser.Scene {
 		this.attemptsPanel_P = attemptsPanel_P;
 		this.coin_P = coin_P;
 		this.level01 = level01;
+		this.level01_1 = level01_1;
 		this.movableObjects = movableObjects;
 		this.jumpPads = jumpPads;
 		this.spikes = spikes;

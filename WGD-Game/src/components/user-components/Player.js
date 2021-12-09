@@ -67,6 +67,7 @@ class Player extends UserComponent {
 		this.gameObject.x = this.startPosition.x;
 		this.gameObject.y = this.startPosition.y;
 		this.gameObject.angle = this.startAngle;
+		this.gameObject.setFrictionAir(0.01);
 	}
 
 	playerDeath(){

@@ -37,11 +37,11 @@ class Level03 extends Phaser.Scene {
 		decoration.scaleY = 0.25;
 
 		// antiGravZonePrefab
-		const antiGravZonePrefab = new AntiGravZonePrefab(this, 608, 704);
+		const antiGravZonePrefab = new AntiGravZonePrefab(this, 928, 256);
 		this.add.existing(antiGravZonePrefab);
 
 		// antiGravZone1x2Prefab
-		const antiGravZone1x2Prefab = new AntiGravZone1x2Prefab(this, 416, 480);
+		const antiGravZone1x2Prefab = new AntiGravZone1x2Prefab(this, 896, 416);
 		this.add.existing(antiGravZone1x2Prefab);
 		antiGravZone1x2Prefab.angle = 90;
 
@@ -72,54 +72,54 @@ class Level03 extends Phaser.Scene {
 		const spike4Down = new Spike4Down(this, 608, 736);
 		spikesLayer.add(spike4Down);
 
+		// solid_1
+		const solid_1 = level03.createLayer("Solid", ["Crayon_Tileset"], 0, 0);
+		solid_1.scaleX = 0.25;
+		solid_1.scaleY = 0.25;
+
 		// platformGrassSmall
-		const platformGrassSmall = new PlatformGrassSmall(this, 461, 370);
+		const platformGrassSmall = new PlatformGrassSmall(this, 928, 448);
 		this.add.existing(platformGrassSmall);
 
 		// platformGrassSmall_1
-		const platformGrassSmall_1 = new PlatformGrassSmall(this, 192, 320);
+		const platformGrassSmall_1 = new PlatformGrassSmall(this, 928, 320);
 		this.add.existing(platformGrassSmall_1);
 
+		// platformGrassSmall_2
+		const platformGrassSmall_2 = new PlatformGrassSmall(this, 928, 384);
+		this.add.existing(platformGrassSmall_2);
+
 		// jump_Pad
-		const jump_Pad = new Jump_Pad(this, 96, 64);
+		const jump_Pad = new Jump_Pad(this, 960, 320);
 		this.add.existing(jump_Pad);
 
 		// jumpPadUnmovable
 		const jumpPadUnmovable = new JumpPadUnmovable(this, 96, 736);
 		this.add.existing(jumpPadUnmovable);
 
-		// solid_1
-		const solid_1 = level03.createLayer("Solid", ["Crayon_Tileset"], 0, 0);
-		solid_1.scaleX = 0.25;
-		solid_1.scaleY = 0.25;
-
-		// player
-		const player = new PlayerPrefab(this, 960, 64);
-		this.add.existing(player);
-
 		// jump_Pad_1
-		const jump_Pad_1 = new Jump_Pad(this, 800, 160);
+		const jump_Pad_1 = new Jump_Pad(this, 960, 384);
 		this.add.existing(jump_Pad_1);
 
-		// platformGrassSmall_2
-		const platformGrassSmall_2 = new PlatformGrassSmall(this, 928, 192);
-		this.add.existing(platformGrassSmall_2);
-
 		// jump_Pad_2
-		const jump_Pad_2 = new Jump_Pad(this, 320, 256);
+		const jump_Pad_2 = new Jump_Pad(this, 896, 320);
 		this.add.existing(jump_Pad_2);
 
+		// jump_Pad_3
+		const jump_Pad_3 = new Jump_Pad(this, 896, 384);
+		this.add.existing(jump_Pad_3);
+
 		// circleBounce
-		const circleBounce = new CircleBounce(this, 288, 416);
+		const circleBounce = new CircleBounce(this, 960, 256);
 		this.add.existing(circleBounce);
 
 		// circleNoBounceStatic
 		const circleNoBounceStatic = new CircleNoBounceStatic(this, 544, 192);
 		this.add.existing(circleNoBounceStatic);
 
-		// jump_Pad_3
-		const jump_Pad_3 = new Jump_Pad(this, 317, 163);
-		this.add.existing(jump_Pad_3);
+		// player
+		const player = new PlayerPrefab(this, 960, 64);
+		this.add.existing(player);
 
 		// levelEnd_P
 		const levelEnd_P = new LevelEnd_P(this, 736, 672);
@@ -139,7 +139,7 @@ class Level03 extends Phaser.Scene {
 		coin_empty_place.scaleY = 0.2;
 
 		// coin_P
-		const coin_P = new Coin_P(this, 160, 96);
+		const coin_P = new Coin_P(this, 224, 96);
 		this.add.existing(coin_P);
 
 		// MainMenuButton

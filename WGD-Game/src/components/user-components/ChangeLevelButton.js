@@ -39,7 +39,14 @@ class ChangeLevelButton extends UserComponent {
 		}, this);
 
 		this.gameObject.on('dragend', function (pointer, dragX, dragY, dropped) {
-			this.scene.nextLevel(this.levelName);
+			this.scene.sound.play("button_press");
+			//this.scene.nextLevel(this.levelName);
+			this.scene.time.addEvent({
+				delay: 500,
+				callback: ()=>{
+					this.scene.nextLevel(this.levelName);
+				}
+			})
 		}, this);
 	}
 	/* END-USER-CODE */

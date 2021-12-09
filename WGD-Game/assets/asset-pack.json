@@ -75,6 +75,13 @@
                 "key": "btn_icon_home_1"
             },
             {
+                "url": [
+                    "assets/sounds/button_press.wav"
+                ],
+                "type": "audio",
+                "key": "button_press"
+            },
+            {
                 "url": "assets/images/ui/Buttons_sheet.png",
                 "frameConfig": {
                     "frameWidth": 180,
@@ -254,6 +261,13 @@
                 "key": "GameManager"
             },
             {
+                "url": [
+                    "assets/sounds/jump_Pad.wav"
+                ],
+                "type": "audio",
+                "key": "jump_Pad"
+            },
+            {
                 "url": "prefabs/Jump_Pad.js",
                 "type": "script",
                 "key": "Jump_Pad"
@@ -410,6 +424,34 @@
                 "url": "src/components/user-components/MenuPlayButton.js",
                 "type": "script",
                 "key": "MenuPlayButton"
+            },
+            {
+                "url": [
+                    "assets/sounds/paper press 1.wav"
+                ],
+                "type": "audio",
+                "key": "paper press 1"
+            },
+            {
+                "url": [
+                    "assets/sounds/paper_move.wav"
+                ],
+                "type": "audio",
+                "key": "paper_move"
+            },
+            {
+                "url": [
+                    "assets/sounds/paper_press_1_short.wav"
+                ],
+                "type": "audio",
+                "key": "paper_press_1_short"
+            },
+            {
+                "url": [
+                    "assets/sounds/paper_rip.wav"
+                ],
+                "type": "audio",
+                "key": "paper_rip"
             },
             {
                 "url": "assets/images/pencil/Pencil_256.png",

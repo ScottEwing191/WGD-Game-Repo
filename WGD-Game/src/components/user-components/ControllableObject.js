@@ -76,6 +76,7 @@ class ControllableObject {
 
         this.gameObject.on('dragstart',  (pointer, dragX, dragY) =>{
             this.isSelected = true;
+            this.scene.sound.play("paper_press_1_short");
         });
 
         this.gameObject.on('drag', (pointer, dragX, dragY) => {
@@ -84,6 +85,9 @@ class ControllableObject {
 
         this.gameObject.on('dragend',  (pointer, dragX, dragY, dropped) =>{
         });
+
+        //--Set up audio instances
+        this.objectMoveSound = this.scene.sound.add("paper_move");
     }
 
 //=== END START
@@ -113,10 +117,21 @@ class ControllableObject {
         // Move the game object with the mouse but snap it to the grid (each grid cell is 32x32 pixels)
         let gridX = Math.floor(dragX / 32);
         let gridY = Math.floor(dragY / 32);
+
+        //-- used to check if object has moved this frame
+        let originalX =this.gameObject.x;
+        let originalY =this.gameObject.y;
+
         this.gameObject.x = gridX * 32;
         this.gameObject.y = gridY * 32;
         this.gameObject.y -= this.yPositionOffset;  // this accounts for some objects colliders and sprite position being different from the default positions that
                                                     //... resulted from the sprite
+        //--Make sure audio only plays when object moves a place on the grid
+        if (this.gameObject.x != originalX || this.gameObject.y != originalY){
+            if (!this.objectMoveSound.isPlaying){
+                this.objectMoveSound.play()
+            }
+        }
 
         //--clamp the center of the game object to the bounds of the scene. Problem with only clamping the center is the sides of the object can go out of bounds
         let xMin = 32;
@@ -134,6 +149,7 @@ class ControllableObject {
         if (this.input.up.isDown && this.isSelected && !this.isUpOnce) {
             this.isUpOnce = true
             this.gameObject.y -= this.moveDst
+            this.scene.sound.play("paper_move");
         } else if (!this.input.up.isDown)
             this.isUpOnce = false;
 
@@ -141,6 +157,7 @@ class ControllableObject {
         if (this.input.down.isDown && this.isSelected && !this.isDownOnce) {
             this.isDownOnce = true
             this.gameObject.y += this.moveDst;
+            this.scene.sound.play("paper_move");
         } else if (!this.input.down.isDown)
             this.isDownOnce = false;
 
@@ -148,6 +165,7 @@ class ControllableObject {
         if (this.input.left.isDown && this.isSelected && !this.isLeftOnce) {
             this.isLeftOnce = true
             this.gameObject.x -= this.moveDst;
+            this.scene.sound.play("paper_move");
         } else if (!this.input.left.isDown)
             this.isLeftOnce = false;
 
@@ -155,6 +173,7 @@ class ControllableObject {
         if (this.input.right.isDown && this.isSelected && !this.isRightOnce) {
             this.isRightOnce = true
             this.gameObject.x += this.moveDst;
+            this.scene.sound.play("paper_move");
         } else if (!this.input.right.isDown)
             this.isRightOnce = false;
 
@@ -162,6 +181,7 @@ class ControllableObject {
         if (this.input.rotateLeft.isDown && this.isSelected && !this.isRotateLeftOnce) {
             this.isRotateLeftOnce = true
             this.gameObject.angle -= this.rotateDegrees;
+            this.scene.sound.play("paper_move");
         } else if (!this.input.rotateLeft.isDown)
             this.isRotateLeftOnce = false;
 
@@ -169,6 +189,7 @@ class ControllableObject {
         if (this.input.rotateRight.isDown && this.isSelected && !this.isRotateRightOnce) {
             this.isRotateRightOnce = true
             this.gameObject.angle += this.rotateDegrees;
+            this.scene.sound.play("paper_move");
         } else if (!this.input.rotateRight.isDown)
             this.isRotateRightOnce = false;
     }

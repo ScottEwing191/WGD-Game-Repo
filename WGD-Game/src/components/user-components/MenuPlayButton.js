@@ -41,6 +41,9 @@ class MenuPlayButton extends UserComponent {
 
 		this.gameObject.on('dragend', function (pointer, dragX, dragY, dropped) {
 			//console.debug('Drag End');
+
+
+
 			this.scene.nextLevel("Level01");
 			//this.isSelected = false;
 		});

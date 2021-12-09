@@ -59,6 +59,8 @@ class JumpPad extends UserComponent {
 		let velocity = new Phaser.Math.Vector2(0,-this.force);
 		let rotatedVelocity = this.scene.matter.vector.rotate(velocity,this.gameObject.rotation)
 		this.scene.player.setVelocity(rotatedVelocity.x,rotatedVelocity.y);
+		//-- Play Sound
+		this.scene.sound.play("jump_Pad");
 	}
 
 	playModeEntered(){

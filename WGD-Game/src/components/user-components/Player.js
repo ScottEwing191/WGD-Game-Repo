@@ -72,6 +72,7 @@ class Player extends UserComponent {
 	playerDeath(){
 		this.gameObject.setStatic(true);			// stop ball from moving when colliding with spikes
 		this.gameObject.setIgnoreGravity(true);    	// isStatic is about to be set to true to fix a bug. So this will make is so the ball will not start falling if the spikes are on a wall
+		this.scene.sound.play("paper_rip");
 		this.gameObject.play('ball-pop');
 		this.gameObject.setStatic(false);			// this line seams to fix the bug where the ball disappears when colliding with a wal after being killed by a spike
 	}

@@ -2,7 +2,7 @@
 <map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="16" height="13" tilewidth="256" tileheight="256" infinite="0" nextlayerid="6" nextobjectid="1">
  <tileset firstgid="1" source="../Tilesets/Crayon_Tileset.tsx"/>
  <tileset firstgid="111" source="../Tilesets/Pencil_Tileset.tsx"/>
- <layer id="3" name="Decoration" width="16" height="13">
+ <layer id="3" name="Decoration" width="16" height="13" visible="0">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -36,7 +36,7 @@
 15,15,64,64,64,64,64,64,15,15,15,15,15,15,15,15
 </data>
  </layer>
- <layer id="2" name="Border" width="16" height="13" visible="0">
+ <layer id="2" name="Border" width="16" height="13">
   <data encoding="csv">
 4,5,5,5,5,5,5,5,5,5,5,5,5,5,5,6,
 14,0,0,0,0,0,0,0,0,0,0,0,0,0,0,16,
@@ -53,7 +53,7 @@
 15,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15
 </data>
  </layer>
- <layer id="5" name="spike/spring" width="16" height="13">
+ <layer id="5" name="spike/spring" width="16" height="13" visible="0">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,205,205,0,0,0,0,0,0,0,0,0,0,0,0,0,

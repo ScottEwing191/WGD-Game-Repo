@@ -26,20 +26,6 @@
             "tileScaleY": 0.177
         },
         {
-            "type": "TilemapLayer",
-            "id": "30da5a12-a886-47e6-a333-e8f686b0750e",
-            "label": "ground_1",
-            "scope": "CLASS",
-            "components": [],
-            "scaleX": 0.25,
-            "scaleY": 0.25,
-            "tilemapId": "7e528420-115d-409b-988d-62d340311f1d",
-            "layerName": "Ground",
-            "tilesets": [
-                "Crayon_Tileset"
-            ]
-        },
-        {
             "type": "Rectangle",
             "id": "63881506-3a54-404b-a676-10b12caa5739",
             "label": "gameManager",
@@ -52,6 +38,104 @@
             "isFilled": true,
             "width": 128,
             "height": 128
+        },
+        {
+            "type": "Layer",
+            "id": "790df36a-9571-4746-ac37-9841463e0542",
+            "label": "antiGrav_Layer",
+            "components": [],
+            "list": [
+                {
+                    "prefabId": "c9974d39-92b8-4294-bcd4-b8cce4f2fb93",
+                    "id": "13639579-a358-4926-a887-92d82aebe6a2",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "scaleX",
+                        "scaleY",
+                        "texture"
+                    ],
+                    "label": "antiGravZone1x2Prefab",
+                    "components": [],
+                    "texture": {
+                        "key": "Space_1x2_noBorder"
+                    },
+                    "x": 416,
+                    "y": -512,
+                    "scaleX": 0.6,
+                    "scaleY": 0.6
+                },
+                {
+                    "prefabId": "c9974d39-92b8-4294-bcd4-b8cce4f2fb93",
+                    "id": "9b8930a1-772f-47f7-a265-0a5d4ddc65be",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "scaleX",
+                        "scaleY",
+                        "texture"
+                    ],
+                    "label": "antiGravZone1x2Prefab_1",
+                    "components": [],
+                    "texture": {
+                        "key": "Space_1x2_noBorder"
+                    },
+                    "x": 880,
+                    "y": -512,
+                    "scaleX": 0.6,
+                    "scaleY": 0.6
+                },
+                {
+                    "type": "Image",
+                    "id": "e873d15c-af8b-430c-9e9d-c92ad3eeba9e",
+                    "label": "space_1x2_noBorder",
+                    "components": [
+                        "RectanglePhysics",
+                        "AntiGravZone"
+                    ],
+                    "RectanglePhysics.isSensor": true,
+                    "AntiGravZone.zoneAirFriction": 0.001,
+                    "texture": {
+                        "key": "Space_1x2_noBorder"
+                    },
+                    "x": 416,
+                    "y": 416,
+                    "scaleX": 0.6,
+                    "scaleY": 0.6
+                },
+                {
+                    "type": "Image",
+                    "id": "4af238c2-c488-4890-8d2a-b33f9fc3739d",
+                    "label": "space_1x2_noBorder_1",
+                    "components": [
+                        "RectanglePhysics",
+                        "AntiGravZone"
+                    ],
+                    "RectanglePhysics.isSensor": true,
+                    "AntiGravZone.zoneAirFriction": 0.001,
+                    "texture": {
+                        "key": "Space_1x2_noBorder"
+                    },
+                    "x": 880,
+                    "y": 416,
+                    "scaleX": 0.6,
+                    "scaleY": 0.6
+                }
+            ]
+        },
+        {
+            "type": "TilemapLayer",
+            "id": "30da5a12-a886-47e6-a333-e8f686b0750e",
+            "label": "ground_1",
+            "scope": "CLASS",
+            "components": [],
+            "scaleX": 0.25,
+            "scaleY": 0.25,
+            "tilemapId": "7e528420-115d-409b-988d-62d340311f1d",
+            "layerName": "Ground",
+            "tilesets": [
+                "Crayon_Tileset"
+            ]
         },
         {
             "type": "Layer",
@@ -1085,6 +1169,226 @@
                     "x": 96,
                     "y": 768,
                     "angle": 90
+                },
+                {
+                    "prefabId": "ed55f365-5162-403a-b28b-f0655a7227a5",
+                    "id": "9ff9a14f-f984-44f9-8bd4-ded2c477df17",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "jump_Pad",
+                    "components": [],
+                    "x": 64,
+                    "y": 96
+                },
+                {
+                    "prefabId": "ed55f365-5162-403a-b28b-f0655a7227a5",
+                    "id": "599dd649-7603-4a06-b6bb-baaa1add6830",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "RectanglePhysics.modifyBodyWidth"
+                    ],
+                    "label": "jump_Pad_2",
+                    "components": [],
+                    "RectanglePhysics.modifyBodyWidth": -56,
+                    "x": 128,
+                    "y": 96
+                },
+                {
+                    "prefabId": "ed55f365-5162-403a-b28b-f0655a7227a5",
+                    "id": "bc9c0190-a8ce-445d-931e-a25ad5fd33de",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "jump_Pad_3",
+                    "components": [],
+                    "x": 64,
+                    "y": 64
+                },
+                {
+                    "prefabId": "ed55f365-5162-403a-b28b-f0655a7227a5",
+                    "id": "57204dda-c8ae-4d8d-ad6c-6ec29592ac67",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "jump_Pad_4",
+                    "components": [],
+                    "x": 128,
+                    "y": 64
+                }
+            ]
+        },
+        {
+            "type": "Layer",
+            "id": "ce14ecc3-a987-455e-a3a8-60640fea4406",
+            "label": "unmovableCircles_Layer",
+            "components": [],
+            "list": [
+                {
+                    "prefabId": "a401073e-f487-406d-9164-eedb49f19742",
+                    "id": "3adef8a9-0012-47fc-8860-9160950d45e3",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "texture",
+                        "CircleCollider.isSensor"
+                    ],
+                    "label": "circleBounceStatic",
+                    "components": [],
+                    "texture": {
+                        "key": "Crayon_256",
+                        "frame": 102
+                    },
+                    "x": 416,
+                    "y": 352
+                },
+                {
+                    "prefabId": "a401073e-f487-406d-9164-eedb49f19742",
+                    "id": "0ce2a859-41c1-4a4f-976b-507558421081",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "texture",
+                        "CircleCollider.isSensor"
+                    ],
+                    "label": "circleBounceStatic_1",
+                    "components": [],
+                    "texture": {
+                        "key": "Crayon_256",
+                        "frame": 102
+                    },
+                    "x": 544,
+                    "y": 288
+                },
+                {
+                    "prefabId": "a401073e-f487-406d-9164-eedb49f19742",
+                    "id": "f743a34c-4666-4a1e-8c32-fc94bf8b4992",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "texture",
+                        "CircleCollider.isSensor"
+                    ],
+                    "label": "circleBounceStatic_2",
+                    "components": [],
+                    "texture": {
+                        "key": "Crayon_256",
+                        "frame": 102
+                    },
+                    "x": 736,
+                    "y": 224
+                },
+                {
+                    "prefabId": "a401073e-f487-406d-9164-eedb49f19742",
+                    "id": "02b95c30-42ae-4c0c-98a6-ba683821c71c",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "texture",
+                        "CircleCollider.isSensor"
+                    ],
+                    "label": "circleBounceStatic_3",
+                    "components": [],
+                    "texture": {
+                        "key": "Crayon_256",
+                        "frame": 102
+                    },
+                    "x": 608,
+                    "y": 160
+                },
+                {
+                    "prefabId": "a401073e-f487-406d-9164-eedb49f19742",
+                    "id": "db4603a9-dd40-458a-8a89-0201c3a9abee",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "texture",
+                        "CircleCollider.isSensor"
+                    ],
+                    "label": "circleBounceStatic_4",
+                    "components": [],
+                    "texture": {
+                        "key": "Crayon_256",
+                        "frame": 102
+                    },
+                    "x": 416,
+                    "y": 160
+                },
+                {
+                    "prefabId": "a401073e-f487-406d-9164-eedb49f19742",
+                    "id": "4d04b911-34f2-4fa2-a8a4-240071679c30",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "texture",
+                        "CircleCollider.isSensor"
+                    ],
+                    "label": "circleBounceStatic_5",
+                    "components": [],
+                    "texture": {
+                        "key": "Crayon_256",
+                        "frame": 102
+                    },
+                    "x": 736,
+                    "y": 352
+                },
+                {
+                    "prefabId": "a401073e-f487-406d-9164-eedb49f19742",
+                    "id": "6c45e46c-f16d-4868-b3df-7fdbafb84335",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "texture",
+                        "CircleCollider.isSensor"
+                    ],
+                    "label": "circleBounceStatic_6",
+                    "components": [],
+                    "texture": {
+                        "key": "Crayon_256",
+                        "frame": 102
+                    },
+                    "x": 608,
+                    "y": 544
+                },
+                {
+                    "prefabId": "a401073e-f487-406d-9164-eedb49f19742",
+                    "id": "ecadd807-938f-4487-ad40-e028f38731f7",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "texture",
+                        "CircleCollider.isSensor"
+                    ],
+                    "label": "circleBounceStatic_7",
+                    "components": [],
+                    "texture": {
+                        "key": "Crayon_256",
+                        "frame": 102
+                    },
+                    "x": 480,
+                    "y": 608
+                },
+                {
+                    "prefabId": "a401073e-f487-406d-9164-eedb49f19742",
+                    "id": "356a5826-a40d-4b65-8d3f-4103b2e6bbdf",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "texture",
+                        "CircleCollider.isSensor"
+                    ],
+                    "label": "circleBounceStatic_8",
+                    "components": [],
+                    "texture": {
+                        "key": "Crayon_256",
+                        "frame": 102
+                    },
+                    "x": 864,
+                    "y": 608
                 }
             ]
         },
@@ -1099,7 +1403,7 @@
             "scope": "PUBLIC",
             "components": [],
             "x": 96,
-            "y": 96
+            "y": 192
         },
         {
             "prefabId": "e2f3078e-5848-44b5-bd4f-2da25a4c0e94",
@@ -1142,7 +1446,8 @@
                         "ChangeLevelButton.levelName"
                     ],
                     "label": "nextLevel",
-                    "components": []
+                    "components": [],
+                    "ChangeLevelButton.levelName": "Level05"
                 }
             ]
         },

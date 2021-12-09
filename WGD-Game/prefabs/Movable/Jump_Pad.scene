@@ -20,7 +20,7 @@
             ],
             "JumpPad.force": 8,
             "RectanglePhysics.isSensor": true,
-            "RectanglePhysics.modifyBodyWidth": -24,
+            "RectanglePhysics.modifyBodyWidth": -56,
             "RectanglePhysics.modifyBodyHeight": -56,
             "RectanglePhysics.modifyYPosition": -28,
             "RectanglePhysics.spriteYOffset": 0.4375,

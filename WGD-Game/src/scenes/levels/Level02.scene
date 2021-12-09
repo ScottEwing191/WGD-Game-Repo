@@ -42,6 +42,18 @@
             "height": 128
         },
         {
+            "prefabId": "c9974d39-92b8-4294-bcd4-b8cce4f2fb93",
+            "id": "6e0257cb-3e9f-4bf5-9bdd-259ee45bf376",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "antiGravZone1x2Prefab",
+            "components": [],
+            "x": 928,
+            "y": 192
+        },
+        {
             "type": "TilemapLayer",
             "id": "73cb03ef-a07a-4a6d-a06f-e35caff7b36d",
             "label": "decoration",
@@ -54,18 +66,6 @@
                 "Crayon_Tileset",
                 "Pencil_Tileset"
             ]
-        },
-        {
-            "prefabId": "c9974d39-92b8-4294-bcd4-b8cce4f2fb93",
-            "id": "6e0257cb-3e9f-4bf5-9bdd-259ee45bf376",
-            "unlock": [
-                "x",
-                "y"
-            ],
-            "label": "antiGravZone1x2Prefab",
-            "components": [],
-            "x": 928,
-            "y": 192
         },
         {
             "type": "TilemapLayer",
@@ -292,7 +292,7 @@
             "label": "platformGrassSmall_1",
             "components": [],
             "x": 928,
-            "y": 416
+            "y": 448
         },
         {
             "prefabId": "4ea8129b-0371-4dd3-a1ae-7dfbf189ef70",
@@ -304,7 +304,7 @@
             "label": "platformGrassSmall",
             "components": [],
             "x": 928,
-            "y": 320
+            "y": 384
         },
         {
             "prefabId": "ed55f365-5162-403a-b28b-f0655a7227a5",
@@ -316,7 +316,7 @@
             "label": "jump_Pad",
             "components": [],
             "x": 960,
-            "y": 320
+            "y": 384
         },
         {
             "prefabId": "ed55f365-5162-403a-b28b-f0655a7227a5",
@@ -328,7 +328,7 @@
             "label": "jump_Pad_1",
             "components": [],
             "x": 960,
-            "y": 416
+            "y": 480
         },
         {
             "prefabId": "ed55f365-5162-403a-b28b-f0655a7227a5",
@@ -340,7 +340,7 @@
             "label": "jump_Pad_2",
             "components": [],
             "x": 896,
-            "y": 416
+            "y": 480
         },
         {
             "prefabId": "ed55f365-5162-403a-b28b-f0655a7227a5",
@@ -352,7 +352,7 @@
             "label": "jump_Pad_3",
             "components": [],
             "x": 832,
-            "y": 416
+            "y": 480
         },
         {
             "prefabId": "087f3cc7-41c9-46b0-833a-38a6197b98f1",

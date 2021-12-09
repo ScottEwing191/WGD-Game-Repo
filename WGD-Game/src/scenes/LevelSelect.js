@@ -40,14 +40,14 @@ class LevelSelect extends Phaser.Scene {
 		selectLevel06.add(buttons_sheet06);
 
 		// bitmaptext6
-		const bitmaptext6 = this.add.bitmapText(0, 160, "scott-script-bold-3", "Level 06");
+		const bitmaptext6 = this.add.bitmapText(0, 160, "scott-script-bold-3", "Level 6");
 		bitmaptext6.setOrigin(0.5, 0.5);
-		bitmaptext6.text = "Level 06";
+		bitmaptext6.text = "Level 6";
 		bitmaptext6.fontSize = 30;
 		selectLevel06.add(bitmaptext6);
 
 		// level6
-		const level6 = this.add.image(0, 0, "Level6");
+		const level6 = this.add.image(0, 0, "Level5");
 		level6.scaleX = 0.35;
 		level6.scaleY = 0.35;
 		selectLevel06.add(level6);
@@ -60,14 +60,14 @@ class LevelSelect extends Phaser.Scene {
 		selectLevel05.add(buttons_sheet05);
 
 		// bitmaptext5
-		const bitmaptext5 = this.add.bitmapText(0, 160, "scott-script-bold-3", "Level 05");
+		const bitmaptext5 = this.add.bitmapText(0, 160, "scott-script-bold-3", "Level 5");
 		bitmaptext5.setOrigin(0.5, 0.5);
-		bitmaptext5.text = "Level 05";
+		bitmaptext5.text = "Level 5";
 		bitmaptext5.fontSize = 30;
 		selectLevel05.add(bitmaptext5);
 
 		// level5
-		const level5 = this.add.image(0, 0, "Level5");
+		const level5 = this.add.image(0, 0, "Level6");
 		level5.scaleX = 0.35;
 		level5.scaleY = 0.35;
 		selectLevel05.add(level5);
@@ -80,9 +80,9 @@ class LevelSelect extends Phaser.Scene {
 		selectLevel04.add(buttons_sheet04);
 
 		// bitmaptext4
-		const bitmaptext4 = this.add.bitmapText(0, 160, "scott-script-bold-3", "Level 04");
+		const bitmaptext4 = this.add.bitmapText(0, 160, "scott-script-bold-3", "Level 4");
 		bitmaptext4.setOrigin(0.5, 0.5);
-		bitmaptext4.text = "Level 04";
+		bitmaptext4.text = "Level 4";
 		bitmaptext4.fontSize = 30;
 		selectLevel04.add(bitmaptext4);
 
@@ -100,9 +100,9 @@ class LevelSelect extends Phaser.Scene {
 		selectLevel03.add(buttons_sheet03);
 
 		// bitmaptext3
-		const bitmaptext3 = this.add.bitmapText(0, 160, "scott-script-bold-3", "Level 03");
+		const bitmaptext3 = this.add.bitmapText(0, 160, "scott-script-bold-3", "Level 3");
 		bitmaptext3.setOrigin(0.5, 0.5);
-		bitmaptext3.text = "Level 03";
+		bitmaptext3.text = "Level 3";
 		bitmaptext3.fontSize = 30;
 		selectLevel03.add(bitmaptext3);
 
@@ -120,9 +120,9 @@ class LevelSelect extends Phaser.Scene {
 		selectLevel02.add(buttons_sheet02);
 
 		// bitmaptext2
-		const bitmaptext2 = this.add.bitmapText(0, 160, "scott-script-bold-3", "Level 02");
+		const bitmaptext2 = this.add.bitmapText(0, 160, "scott-script-bold-3", "Level 2");
 		bitmaptext2.setOrigin(0.5, 0.5);
-		bitmaptext2.text = "Level 02";
+		bitmaptext2.text = "Level 2";
 		bitmaptext2.fontSize = 30;
 		selectLevel02.add(bitmaptext2);
 
@@ -140,9 +140,9 @@ class LevelSelect extends Phaser.Scene {
 		selectLevel01.add(buttons_sheet01);
 
 		// bitmaptext1
-		const bitmaptext1 = this.add.bitmapText(0, 160, "scott-script-bold-3", "Level 01");
+		const bitmaptext1 = this.add.bitmapText(0, 160, "scott-script-bold-3", "Level 1");
 		bitmaptext1.setOrigin(0.5, 0.5);
-		bitmaptext1.text = "Level 01";
+		bitmaptext1.text = "Level 1";
 		bitmaptext1.fontSize = 30;
 		selectLevel01.add(bitmaptext1);
 
@@ -159,11 +159,11 @@ class LevelSelect extends Phaser.Scene {
 
 		// buttons_sheet06 (components)
 		const buttons_sheet06ChangeLevelButton = new ChangeLevelButton(buttons_sheet06);
-		buttons_sheet06ChangeLevelButton.levelName = "Level06";
+		buttons_sheet06ChangeLevelButton.levelName = "Level05";
 
 		// buttons_sheet05 (components)
 		const buttons_sheet05ChangeLevelButton = new ChangeLevelButton(buttons_sheet05);
-		buttons_sheet05ChangeLevelButton.levelName = "Level05";
+		buttons_sheet05ChangeLevelButton.levelName = "Level06";
 
 		// buttons_sheet04 (components)
 		const buttons_sheet04ChangeLevelButton = new ChangeLevelButton(buttons_sheet04);

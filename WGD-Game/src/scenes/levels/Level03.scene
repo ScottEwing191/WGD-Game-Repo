@@ -42,20 +42,6 @@
             "height": 128
         },
         {
-            "type": "TilemapLayer",
-            "id": "0485d66e-479f-425d-8b9d-7fa91260bd6c",
-            "label": "decoration",
-            "components": [],
-            "scaleX": 0.25,
-            "scaleY": 0.25,
-            "tilemapId": "b700d51c-e4d6-411e-8dbe-120fc54d0ea9",
-            "layerName": "Decoration",
-            "tilesets": [
-                "Crayon_Tileset",
-                "Pencil_Tileset"
-            ]
-        },
-        {
             "prefabId": "6c6124bf-0368-4efa-a5ff-6f7e4b79645d",
             "id": "bff376ea-bcf4-49d8-aa47-15b657f5c704",
             "unlock": [
@@ -183,6 +169,20 @@
                     "x": 608,
                     "y": 736
                 }
+            ]
+        },
+        {
+            "type": "TilemapLayer",
+            "id": "0485d66e-479f-425d-8b9d-7fa91260bd6c",
+            "label": "decoration",
+            "components": [],
+            "scaleX": 0.25,
+            "scaleY": 0.25,
+            "tilemapId": "b700d51c-e4d6-411e-8dbe-120fc54d0ea9",
+            "layerName": "Decoration",
+            "tilesets": [
+                "Crayon_Tileset",
+                "Pencil_Tileset"
             ]
         },
         {

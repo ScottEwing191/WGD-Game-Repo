@@ -3,6 +3,8 @@
     "sceneType": "SCENE",
     "settings": {
         "snapEnabled": true,
+        "snapWidth": 32,
+        "snapHeight": 32,
         "preloadPackFiles": [],
         "createMethodName": "editorCreate",
         "sceneKey": "Level05",
@@ -27,6 +29,64 @@
             "tileScaleY": 0.177
         },
         {
+            "type": "Rectangle",
+            "id": "38eae4d8-4005-47b5-9867-309c76d9f511",
+            "label": "gameManager",
+            "scope": "PUBLIC",
+            "components": [
+                "GameManager"
+            ],
+            "x": 1104,
+            "y": 80,
+            "isFilled": true,
+            "width": 128,
+            "height": 128
+        },
+        {
+            "type": "Layer",
+            "id": "05ccb655-d7ff-4acc-af30-57eea5e0742d",
+            "label": "antiGrav_Layer",
+            "components": [],
+            "list": [
+                {
+                    "prefabId": "6c6124bf-0368-4efa-a5ff-6f7e4b79645d",
+                    "id": "ca1385c0-816a-4668-9ad5-a81aaa81d898",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "antiGravZonePrefab_1",
+                    "components": [],
+                    "x": 96,
+                    "y": 224
+                },
+                {
+                    "prefabId": "c9974d39-92b8-4294-bcd4-b8cce4f2fb93",
+                    "id": "fa6282e5-aa6c-4fe6-b6f5-99460db8ab52",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "antiGravZone1x2Prefab",
+                    "components": [],
+                    "x": 96,
+                    "y": 672
+                },
+                {
+                    "prefabId": "c9974d39-92b8-4294-bcd4-b8cce4f2fb93",
+                    "id": "49eb75ac-5489-4a09-809d-01a79d4640c8",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "antiGravZone1x2Prefab_1",
+                    "components": [],
+                    "x": 96,
+                    "y": 416
+                }
+            ]
+        },
+        {
             "type": "TilemapLayer",
             "id": "5697257a-1e47-4237-8897-6e54f4b022eb",
             "label": "ground_1",
@@ -41,18 +101,132 @@
             ]
         },
         {
-            "type": "Rectangle",
-            "id": "38eae4d8-4005-47b5-9867-309c76d9f511",
-            "label": "gameManager",
-            "scope": "PUBLIC",
-            "components": [
-                "GameManager"
-            ],
-            "x": 1104,
-            "y": 80,
-            "isFilled": true,
-            "width": 128,
-            "height": 128
+            "type": "Layer",
+            "id": "25f16f4a-cbd7-42ab-92ce-d9e2df7da763",
+            "label": "platform_Layer",
+            "components": [],
+            "list": [
+                {
+                    "prefabId": "4ea8129b-0371-4dd3-a1ae-7dfbf189ef70",
+                    "id": "38dd9466-3fa1-4c2f-9761-a1961b0e9db6",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "texture"
+                    ],
+                    "label": "platformGrassSmall",
+                    "components": [],
+                    "texture": {
+                        "key": "Pencil_ice_2_crop"
+                    },
+                    "x": 96,
+                    "y": 416
+                },
+                {
+                    "prefabId": "4ea8129b-0371-4dd3-a1ae-7dfbf189ef70",
+                    "id": "378bfa30-dd4e-40c7-9f7c-9d1cb7e49304",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "texture"
+                    ],
+                    "label": "platformGrassSmall_1",
+                    "components": [],
+                    "texture": {
+                        "key": "Pencil_ice_2_crop"
+                    },
+                    "x": 224,
+                    "y": 96
+                },
+                {
+                    "prefabId": "4ea8129b-0371-4dd3-a1ae-7dfbf189ef70",
+                    "id": "5e64bb6a-6869-4e20-80c0-44a2104e30ad",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "texture"
+                    ],
+                    "label": "platformGrassSmall_2",
+                    "components": [],
+                    "texture": {
+                        "key": "Pencil_ice_2_crop"
+                    },
+                    "x": 96,
+                    "y": 256
+                },
+                {
+                    "prefabId": "78f1afa5-31bd-4118-a357-1ee073f288bb",
+                    "id": "db9ffdfd-0d4a-4c99-9ece-0bbfe9afa04f",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "texture"
+                    ],
+                    "label": "platformGrassBig",
+                    "components": [],
+                    "texture": {
+                        "key": "Pencil_ice_3_crop"
+                    },
+                    "x": 256,
+                    "y": 192
+                }
+            ]
+        },
+        {
+            "type": "Layer",
+            "id": "81f7fa6c-5348-444b-8b47-1897184319f4",
+            "label": "circle_Layer",
+            "components": [],
+            "list": [
+                {
+                    "prefabId": "5bb1365e-8cbc-4940-8828-b3930daff56a",
+                    "id": "f2a1354c-a7f7-4132-8a1d-455786709e28",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "circleNoBounce_5",
+                    "components": [],
+                    "x": 96,
+                    "y": 480
+                },
+                {
+                    "prefabId": "5bb1365e-8cbc-4940-8828-b3930daff56a",
+                    "id": "54330862-befb-46ba-aae2-1410e2e5dfac",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "circleNoBounce_3",
+                    "components": [],
+                    "x": 96,
+                    "y": 608
+                },
+                {
+                    "prefabId": "5bb1365e-8cbc-4940-8828-b3930daff56a",
+                    "id": "2e881d4e-7c01-426c-9853-37be1768ccb2",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "circleNoBounce",
+                    "components": [],
+                    "x": 96,
+                    "y": 736
+                },
+                {
+                    "prefabId": "5bb1365e-8cbc-4940-8828-b3930daff56a",
+                    "id": "231a8c98-bfd4-4d36-8e9f-f451d9ad7596",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "circleNoBounce_1",
+                    "components": [],
+                    "x": 96,
+                    "y": 672
+                }
+            ]
         },
         {
             "type": "Layer",
@@ -403,6 +577,62 @@
             ]
         },
         {
+            "type": "Layer",
+            "id": "08c09272-e245-4f83-80af-84c986de94cd",
+            "label": "jumpPads_Layer",
+            "components": [],
+            "list": [
+                {
+                    "prefabId": "ed55f365-5162-403a-b28b-f0655a7227a5",
+                    "id": "d146c8b7-4bd4-492a-a1ef-09aed952fc81",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "jump_Pad",
+                    "components": [],
+                    "x": 320,
+                    "y": 128
+                },
+                {
+                    "prefabId": "ed55f365-5162-403a-b28b-f0655a7227a5",
+                    "id": "22b204dd-b2d5-48e7-9567-ba4252ec0f6f",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "jump_Pad_1",
+                    "components": [],
+                    "x": 192,
+                    "y": 128
+                },
+                {
+                    "prefabId": "ed55f365-5162-403a-b28b-f0655a7227a5",
+                    "id": "061a424b-e115-41b5-87a3-8785ee3f15fc",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "jump_Pad_2",
+                    "components": [],
+                    "x": 192,
+                    "y": 32
+                },
+                {
+                    "prefabId": "ed55f365-5162-403a-b28b-f0655a7227a5",
+                    "id": "e4e95412-a46a-49ec-a946-7a14147e36d1",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "jump_Pad_3",
+                    "components": [],
+                    "x": 256,
+                    "y": 128
+                }
+            ]
+        },
+        {
             "prefabId": "087f3cc7-41c9-46b0-833a-38a6197b98f1",
             "id": "a117f0c0-0756-4892-b60f-cac6f8785a5f",
             "unlock": [
@@ -424,7 +654,7 @@
             ],
             "label": "levelEnd_P",
             "components": [],
-            "x": 112,
+            "x": 192,
             "y": 736
         },
         {
@@ -455,8 +685,7 @@
                         "ChangeLevelButton.levelName"
                     ],
                     "label": "nextLevel",
-                    "components": [],
-                    "ChangeLevelButton.levelName": "Level06"
+                    "components": []
                 }
             ]
         },
@@ -497,6 +726,7 @@
                 "CoinCollectable.moveToY"
             ],
             "label": "coin_P",
+            "scope": "CLASS",
             "components": [],
             "CoinCollectable.moveToX": 352,
             "CoinCollectable.moveToY": 736,

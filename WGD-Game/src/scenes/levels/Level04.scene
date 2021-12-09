@@ -28,35 +28,6 @@
             "tileScaleY": 0.177
         },
         {
-            "type": "TilemapLayer",
-            "id": "ad3a87f5-152c-49bc-b2cc-e1c525357b88",
-            "label": "decoration",
-            "components": [],
-            "scaleX": 0.25,
-            "scaleY": 0.25,
-            "tilemapId": "1fb93737-9204-4821-a822-1c5a617d69d5",
-            "layerName": "Decoration",
-            "tilesets": [
-                "Crayon_Tileset",
-                "Pencil_Tileset"
-            ]
-        },
-        {
-            "type": "TilemapLayer",
-            "id": "5c3563e9-f85c-4147-b6eb-c9a1f31c7d94",
-            "label": "solid",
-            "scope": "CLASS",
-            "components": [],
-            "scaleX": 0.25,
-            "scaleY": 0.25,
-            "tilemapId": "1fb93737-9204-4821-a822-1c5a617d69d5",
-            "layerName": "Solid",
-            "tilesets": [
-                "Crayon_Tileset",
-                "Pencil_Tileset"
-            ]
-        },
-        {
             "type": "Rectangle",
             "id": "15b885c1-f2eb-4bde-9388-4b8c7ad132d7",
             "label": "gameManager",
@@ -85,8 +56,8 @@
                     ],
                     "label": "antiGravZone1x2Prefab",
                     "components": [],
-                    "x": 640,
-                    "y": 704
+                    "x": 928,
+                    "y": 160
                 },
                 {
                     "prefabId": "6c6124bf-0368-4efa-a5ff-6f7e4b79645d",
@@ -97,9 +68,38 @@
                     ],
                     "label": "antiGravZonePrefab",
                     "components": [],
-                    "x": 576,
-                    "y": 320
+                    "x": 800,
+                    "y": 96
                 }
+            ]
+        },
+        {
+            "type": "TilemapLayer",
+            "id": "ad3a87f5-152c-49bc-b2cc-e1c525357b88",
+            "label": "decoration",
+            "components": [],
+            "scaleX": 0.25,
+            "scaleY": 0.25,
+            "tilemapId": "1fb93737-9204-4821-a822-1c5a617d69d5",
+            "layerName": "Decoration",
+            "tilesets": [
+                "Crayon_Tileset",
+                "Pencil_Tileset"
+            ]
+        },
+        {
+            "type": "TilemapLayer",
+            "id": "5c3563e9-f85c-4147-b6eb-c9a1f31c7d94",
+            "label": "solid",
+            "scope": "CLASS",
+            "components": [],
+            "scaleX": 0.25,
+            "scaleY": 0.25,
+            "tilemapId": "1fb93737-9204-4821-a822-1c5a617d69d5",
+            "layerName": "Solid",
+            "tilesets": [
+                "Crayon_Tileset",
+                "Pencil_Tileset"
             ]
         },
         {
@@ -308,8 +308,8 @@
                     ],
                     "label": "circleBounce",
                     "components": [],
-                    "x": 512,
-                    "y": 160
+                    "x": 704,
+                    "y": 224
                 },
                 {
                     "prefabId": "4d54abe2-b9e1-4eb4-bf11-76a7ede9cbef",
@@ -320,8 +320,8 @@
                     ],
                     "label": "circleBounce_1",
                     "components": [],
-                    "x": 320,
-                    "y": 384
+                    "x": 704,
+                    "y": 160
                 },
                 {
                     "prefabId": "5bb1365e-8cbc-4940-8828-b3930daff56a",
@@ -332,7 +332,27 @@
                     ],
                     "label": "circleNoBounce",
                     "components": [],
-                    "x": 256,
+                    "x": 704,
+                    "y": 96
+                }
+            ]
+        },
+        {
+            "type": "Layer",
+            "id": "def205eb-a05a-4840-8abb-28c0882d698c",
+            "label": "layer",
+            "components": [],
+            "list": [
+                {
+                    "prefabId": "4ea8129b-0371-4dd3-a1ae-7dfbf189ef70",
+                    "id": "d92bf36b-ba69-4cee-81b6-46b134742ae3",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "platformGrassSmall",
+                    "components": [],
+                    "x": 800,
                     "y": 224
                 }
             ]
@@ -352,8 +372,8 @@
                     ],
                     "label": "jump_Pad",
                     "components": [],
-                    "x": 960,
-                    "y": 352
+                    "x": 832,
+                    "y": 160
                 },
                 {
                     "prefabId": "ed55f365-5162-403a-b28b-f0655a7227a5",
@@ -364,8 +384,8 @@
                     ],
                     "label": "jump_Pad_1",
                     "components": [],
-                    "x": 896,
-                    "y": 352
+                    "x": 768,
+                    "y": 160
                 },
                 {
                     "prefabId": "ed55f365-5162-403a-b28b-f0655a7227a5",
@@ -376,28 +396,8 @@
                     ],
                     "label": "jump_Pad_2",
                     "components": [],
-                    "x": 800,
-                    "y": 672
-                }
-            ]
-        },
-        {
-            "type": "Layer",
-            "id": "def205eb-a05a-4840-8abb-28c0882d698c",
-            "label": "layer",
-            "components": [],
-            "list": [
-                {
-                    "prefabId": "4ea8129b-0371-4dd3-a1ae-7dfbf189ef70",
-                    "id": "d92bf36b-ba69-4cee-81b6-46b134742ae3",
-                    "unlock": [
-                        "x",
-                        "y"
-                    ],
-                    "label": "platformGrassSmall",
-                    "components": [],
-                    "x": 896,
-                    "y": 704
+                    "x": 832,
+                    "y": 224
                 }
             ]
         },
@@ -455,7 +455,7 @@
                     ],
                     "label": "nextLevel",
                     "components": [],
-                    "ChangeLevelButton.levelName": "Level05"
+                    "ChangeLevelButton.levelName": "Level06"
                 }
             ]
         },

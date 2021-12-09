@@ -26,14 +26,67 @@ class Level05 extends Phaser.Scene {
 		tilesprite.tileScaleX = 0.177;
 		tilesprite.tileScaleY = 0.177;
 
+		// gameManager
+		const gameManager = this.add.rectangle(1104, 80, 128, 128);
+		gameManager.isFilled = true;
+
+		// antiGrav_Layer
+		const antiGrav_Layer = this.add.layer();
+
+		// antiGravZonePrefab_1
+		const antiGravZonePrefab_1 = new AntiGravZonePrefab(this, 96, 224);
+		antiGrav_Layer.add(antiGravZonePrefab_1);
+
+		// antiGravZone1x2Prefab
+		const antiGravZone1x2Prefab = new AntiGravZone1x2Prefab(this, 96, 672);
+		antiGrav_Layer.add(antiGravZone1x2Prefab);
+
+		// antiGravZone1x2Prefab_1
+		const antiGravZone1x2Prefab_1 = new AntiGravZone1x2Prefab(this, 96, 416);
+		antiGrav_Layer.add(antiGravZone1x2Prefab_1);
+
 		// ground_1
 		const ground_1 = level05.createLayer("Ground", ["Crayon_Tileset"], 0, 0);
 		ground_1.scaleX = 0.25;
 		ground_1.scaleY = 0.25;
 
-		// gameManager
-		const gameManager = this.add.rectangle(1104, 80, 128, 128);
-		gameManager.isFilled = true;
+		// platform_Layer
+		const platform_Layer = this.add.layer();
+
+		// platformGrassSmall
+		const platformGrassSmall = new PlatformGrassSmall(this, 96, 416, "Pencil_ice_2_crop");
+		platform_Layer.add(platformGrassSmall);
+
+		// platformGrassSmall_1
+		const platformGrassSmall_1 = new PlatformGrassSmall(this, 224, 96, "Pencil_ice_2_crop");
+		platform_Layer.add(platformGrassSmall_1);
+
+		// platformGrassSmall_2
+		const platformGrassSmall_2 = new PlatformGrassSmall(this, 96, 256, "Pencil_ice_2_crop");
+		platform_Layer.add(platformGrassSmall_2);
+
+		// platformGrassBig
+		const platformGrassBig = new PlatformGrassBig(this, 256, 192, "Pencil_ice_3_crop");
+		platform_Layer.add(platformGrassBig);
+
+		// circle_Layer
+		const circle_Layer = this.add.layer();
+
+		// circleNoBounce_5
+		const circleNoBounce_5 = new CircleNoBounce(this, 96, 480);
+		circle_Layer.add(circleNoBounce_5);
+
+		// circleNoBounce_3
+		const circleNoBounce_3 = new CircleNoBounce(this, 96, 608);
+		circle_Layer.add(circleNoBounce_3);
+
+		// circleNoBounce
+		const circleNoBounce = new CircleNoBounce(this, 96, 736);
+		circle_Layer.add(circleNoBounce);
+
+		// circleNoBounce_1
+		const circleNoBounce_1 = new CircleNoBounce(this, 96, 672);
+		circle_Layer.add(circleNoBounce_1);
 
 		// spikes_Layer
 		const spikes_Layer = this.add.layer();
@@ -118,12 +171,31 @@ class Level05 extends Phaser.Scene {
 		const spike1Up_1 = new Spike1Up(this, 672, 672, "Spikes_Crayon", 8);
 		spikes_Layer.add(spike1Up_1);
 
+		// jumpPads_Layer
+		const jumpPads_Layer = this.add.layer();
+
+		// jump_Pad
+		const jump_Pad = new Jump_Pad(this, 320, 128);
+		jumpPads_Layer.add(jump_Pad);
+
+		// jump_Pad_1
+		const jump_Pad_1 = new Jump_Pad(this, 192, 128);
+		jumpPads_Layer.add(jump_Pad_1);
+
+		// jump_Pad_2
+		const jump_Pad_2 = new Jump_Pad(this, 192, 32);
+		jumpPads_Layer.add(jump_Pad_2);
+
+		// jump_Pad_3
+		const jump_Pad_3 = new Jump_Pad(this, 256, 128);
+		jumpPads_Layer.add(jump_Pad_3);
+
 		// player
 		const player = new PlayerPrefab(this, 816, 144);
 		this.add.existing(player);
 
 		// levelEnd_P
-		const levelEnd_P = new LevelEnd_P(this, 112, 736);
+		const levelEnd_P = new LevelEnd_P(this, 192, 736);
 		this.add.existing(levelEnd_P);
 
 		// levelCompletePanel_P
@@ -160,7 +232,7 @@ class Level05 extends Phaser.Scene {
 
 		// levelCompletePanel_P.nextLevel (components)
 		const levelCompletePanel_P_nextLevelChangeLevelButton = ChangeLevelButton.getComponent(levelCompletePanel_P.nextLevel);
-		levelCompletePanel_P_nextLevelChangeLevelButton.levelName = "Level06";
+		levelCompletePanel_P_nextLevelChangeLevelButton.levelName = "MainMenu";
 
 		// coin_P (components)
 		const coin_PCoinCollectable = CoinCollectable.getComponent(coin_P);
@@ -171,11 +243,12 @@ class Level05 extends Phaser.Scene {
 		const mainMenuButtonChangeLevelButton = new ChangeLevelButton(mainMenuButton);
 		mainMenuButtonChangeLevelButton.changeAnimation = "";
 
-		this.ground_1 = ground_1;
 		this.gameManager = gameManager;
+		this.ground_1 = ground_1;
 		this.player = player;
 		this.levelCompletePanel_P = levelCompletePanel_P;
 		this.attemptsPanel_P = attemptsPanel_P;
+		this.coin_P = coin_P;
 		this.level05 = level05;
 		this.movableObjects = movableObjects;
 		this.jumpPads = jumpPads;
@@ -184,16 +257,18 @@ class Level05 extends Phaser.Scene {
 		this.events.emit("scene-awake");
 	}
 
-	/** @type {Phaser.Tilemaps.TilemapLayer} */
-	ground_1;
 	/** @type {Phaser.GameObjects.Rectangle} */
 	gameManager;
+	/** @type {Phaser.Tilemaps.TilemapLayer} */
+	ground_1;
 	/** @type {PlayerPrefab} */
 	player;
 	/** @type {LevelCompletePanel_P} */
 	levelCompletePanel_P;
 	/** @type {AttemptsPanel_P} */
 	attemptsPanel_P;
+	/** @type {Coin_P} */
+	coin_P;
 	/** @type {Array<any>} */
 	movableObjects;
 	/** @type {Array<any>} */
@@ -217,7 +292,7 @@ class Level05 extends Phaser.Scene {
 
 	nextLevel(levelName){
 		if (levelName == undefined){
-			levelName = 'Level06';
+			levelName = 'MainMenu';
 		}
 		this.scene.start(levelName);
 	}

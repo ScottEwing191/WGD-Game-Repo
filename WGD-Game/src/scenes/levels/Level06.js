@@ -26,14 +26,41 @@ class Level06 extends Phaser.Scene {
 		tilesprite.tileScaleX = 0.177;
 		tilesprite.tileScaleY = 0.177;
 
+		// gameManager
+		const gameManager = this.add.rectangle(1114, 165, 128, 128);
+		gameManager.isFilled = true;
+
+		// antiGrav_Layer
+		const antiGrav_Layer = this.add.layer();
+
+		// antiGravZone1x2Prefab
+		const antiGravZone1x2Prefab = new AntiGravZone1x2Prefab(this, 416, -512, "Space_1x2_noBorder");
+		antiGravZone1x2Prefab.scaleX = 0.6;
+		antiGravZone1x2Prefab.scaleY = 0.6;
+		antiGrav_Layer.add(antiGravZone1x2Prefab);
+
+		// antiGravZone1x2Prefab_1
+		const antiGravZone1x2Prefab_1 = new AntiGravZone1x2Prefab(this, 880, -512, "Space_1x2_noBorder");
+		antiGravZone1x2Prefab_1.scaleX = 0.6;
+		antiGravZone1x2Prefab_1.scaleY = 0.6;
+		antiGrav_Layer.add(antiGravZone1x2Prefab_1);
+
+		// space_1x2_noBorder
+		const space_1x2_noBorder = this.add.image(416, 416, "Space_1x2_noBorder");
+		space_1x2_noBorder.scaleX = 0.6;
+		space_1x2_noBorder.scaleY = 0.6;
+		antiGrav_Layer.add(space_1x2_noBorder);
+
+		// space_1x2_noBorder_1
+		const space_1x2_noBorder_1 = this.add.image(880, 416, "Space_1x2_noBorder");
+		space_1x2_noBorder_1.scaleX = 0.6;
+		space_1x2_noBorder_1.scaleY = 0.6;
+		antiGrav_Layer.add(space_1x2_noBorder_1);
+
 		// ground_1
 		const ground_1 = level06.createLayer("Ground", ["Crayon_Tileset"], 0, 0);
 		ground_1.scaleX = 0.25;
 		ground_1.scaleY = 0.25;
-
-		// gameManager
-		const gameManager = this.add.rectangle(1114, 165, 128, 128);
-		gameManager.isFilled = true;
 
 		// spikes_Layer
 		const spikes_Layer = this.add.layer();
@@ -282,8 +309,63 @@ class Level06 extends Phaser.Scene {
 		jumpPadUnmovable.angle = 90;
 		jumpPads_Layer.add(jumpPadUnmovable);
 
+		// jump_Pad
+		const jump_Pad = new Jump_Pad(this, 64, 96);
+		jumpPads_Layer.add(jump_Pad);
+
+		// jump_Pad_2
+		const jump_Pad_2 = new Jump_Pad(this, 128, 96);
+		jumpPads_Layer.add(jump_Pad_2);
+
+		// jump_Pad_3
+		const jump_Pad_3 = new Jump_Pad(this, 64, 64);
+		jumpPads_Layer.add(jump_Pad_3);
+
+		// jump_Pad_4
+		const jump_Pad_4 = new Jump_Pad(this, 128, 64);
+		jumpPads_Layer.add(jump_Pad_4);
+
+		// unmovableCircles_Layer
+		const unmovableCircles_Layer = this.add.layer();
+
+		// circleBounceStatic
+		const circleBounceStatic = new CircleBounceStatic(this, 416, 352, "Crayon_256", 102);
+		unmovableCircles_Layer.add(circleBounceStatic);
+
+		// circleBounceStatic_1
+		const circleBounceStatic_1 = new CircleBounceStatic(this, 544, 288, "Crayon_256", 102);
+		unmovableCircles_Layer.add(circleBounceStatic_1);
+
+		// circleBounceStatic_2
+		const circleBounceStatic_2 = new CircleBounceStatic(this, 736, 224, "Crayon_256", 102);
+		unmovableCircles_Layer.add(circleBounceStatic_2);
+
+		// circleBounceStatic_3
+		const circleBounceStatic_3 = new CircleBounceStatic(this, 608, 160, "Crayon_256", 102);
+		unmovableCircles_Layer.add(circleBounceStatic_3);
+
+		// circleBounceStatic_4
+		const circleBounceStatic_4 = new CircleBounceStatic(this, 416, 160, "Crayon_256", 102);
+		unmovableCircles_Layer.add(circleBounceStatic_4);
+
+		// circleBounceStatic_5
+		const circleBounceStatic_5 = new CircleBounceStatic(this, 736, 352, "Crayon_256", 102);
+		unmovableCircles_Layer.add(circleBounceStatic_5);
+
+		// circleBounceStatic_6
+		const circleBounceStatic_6 = new CircleBounceStatic(this, 608, 544, "Crayon_256", 102);
+		unmovableCircles_Layer.add(circleBounceStatic_6);
+
+		// circleBounceStatic_7
+		const circleBounceStatic_7 = new CircleBounceStatic(this, 480, 608, "Crayon_256", 102);
+		unmovableCircles_Layer.add(circleBounceStatic_7);
+
+		// circleBounceStatic_8
+		const circleBounceStatic_8 = new CircleBounceStatic(this, 864, 608, "Crayon_256", 102);
+		unmovableCircles_Layer.add(circleBounceStatic_8);
+
 		// player
-		const player = new PlayerPrefab(this, 96, 96);
+		const player = new PlayerPrefab(this, 96, 192);
 		this.add.existing(player);
 
 		// coin_P
@@ -318,6 +400,18 @@ class Level06 extends Phaser.Scene {
 		// gameManager (components)
 		new GameManager(gameManager);
 
+		// space_1x2_noBorder (components)
+		const space_1x2_noBorderRectanglePhysics = new RectanglePhysics(space_1x2_noBorder);
+		space_1x2_noBorderRectanglePhysics.isSensor = true;
+		const space_1x2_noBorderAntiGravZone = new AntiGravZone(space_1x2_noBorder);
+		space_1x2_noBorderAntiGravZone.zoneAirFriction = 0.001;
+
+		// space_1x2_noBorder_1 (components)
+		const space_1x2_noBorder_1RectanglePhysics = new RectanglePhysics(space_1x2_noBorder_1);
+		space_1x2_noBorder_1RectanglePhysics.isSensor = true;
+		const space_1x2_noBorder_1AntiGravZone = new AntiGravZone(space_1x2_noBorder_1);
+		space_1x2_noBorder_1AntiGravZone.zoneAirFriction = 0.001;
+
 		// jumpPadUnmovable (components)
 		const jumpPadUnmovableRectanglePhysics = RectanglePhysics.getComponent(jumpPadUnmovable);
 		jumpPadUnmovableRectanglePhysics.angle = 90;
@@ -328,14 +422,14 @@ class Level06 extends Phaser.Scene {
 
 		// levelCompletePanel_P.nextLevel (components)
 		const levelCompletePanel_P_nextLevelChangeLevelButton = ChangeLevelButton.getComponent(levelCompletePanel_P.nextLevel);
-		levelCompletePanel_P_nextLevelChangeLevelButton.levelName = "MainMenu";
+		levelCompletePanel_P_nextLevelChangeLevelButton.levelName = "Level05";
 
 		// mainMenuButton (components)
 		const mainMenuButtonChangeLevelButton = new ChangeLevelButton(mainMenuButton);
 		mainMenuButtonChangeLevelButton.changeAnimation = "";
 
-		this.ground_1 = ground_1;
 		this.gameManager = gameManager;
+		this.ground_1 = ground_1;
 		this.player = player;
 		this.coin_P = coin_P;
 		this.levelCompletePanel_P = levelCompletePanel_P;
@@ -348,10 +442,10 @@ class Level06 extends Phaser.Scene {
 		this.events.emit("scene-awake");
 	}
 
-	/** @type {Phaser.Tilemaps.TilemapLayer} */
-	ground_1;
 	/** @type {Phaser.GameObjects.Rectangle} */
 	gameManager;
+	/** @type {Phaser.Tilemaps.TilemapLayer} */
+	ground_1;
 	/** @type {PlayerPrefab} */
 	player;
 	/** @type {Coin_P} */
@@ -381,7 +475,7 @@ class Level06 extends Phaser.Scene {
 
 	nextLevel(levelName){
 		if (levelName == undefined){
-			levelName = 'MainMenu';
+			levelName = 'Level05';
 		}
 		this.scene.start(levelName);
 	}

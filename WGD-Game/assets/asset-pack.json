@@ -497,6 +497,16 @@
                 "key": "Pencil_grass_dirt_3"
             },
             {
+                "url": "assets/images/pencil/Pencil_ice_2_crop.png",
+                "type": "image",
+                "key": "Pencil_ice_2_crop"
+            },
+            {
+                "url": "assets/images/pencil/Pencil_ice_3_crop.png",
+                "type": "image",
+                "key": "Pencil_ice_3_crop"
+            },
+            {
                 "url": "assets/images/pencil/Pencil_rainbow_2_big.png",
                 "type": "image",
                 "key": "Pencil_rainbow_2_big"
@@ -587,6 +597,11 @@
                 "url": "assets/images/space/Space_1x2_512px.png",
                 "type": "image",
                 "key": "Space_1x2_512px"
+            },
+            {
+                "url": "assets/images/space/Space_1x2_noBorder.png",
+                "type": "image",
+                "key": "Space_1x2_noBorder"
             },
             {
                 "url": "assets/images/space/Space2_1x1_512px.png",

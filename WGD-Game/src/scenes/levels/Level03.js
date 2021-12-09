@@ -31,11 +31,6 @@ class Level03 extends Phaser.Scene {
 		const gameManager = this.add.rectangle(1088, 64, 128, 128);
 		gameManager.isFilled = true;
 
-		// decoration
-		const decoration = level03.createLayer("Decoration", ["Crayon_Tileset"], 0, 0);
-		decoration.scaleX = 0.25;
-		decoration.scaleY = 0.25;
-
 		// antiGravZonePrefab
 		const antiGravZonePrefab = new AntiGravZonePrefab(this, 928, 256);
 		this.add.existing(antiGravZonePrefab);
@@ -71,6 +66,11 @@ class Level03 extends Phaser.Scene {
 		// spike4Down
 		const spike4Down = new Spike4Down(this, 608, 736);
 		spikesLayer.add(spike4Down);
+
+		// decoration
+		const decoration = level03.createLayer("Decoration", ["Crayon_Tileset"], 0, 0);
+		decoration.scaleX = 0.25;
+		decoration.scaleY = 0.25;
 
 		// solid_1
 		const solid_1 = level03.createLayer("Solid", ["Crayon_Tileset"], 0, 0);

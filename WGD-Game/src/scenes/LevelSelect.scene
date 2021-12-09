@@ -54,7 +54,7 @@
                     "components": [
                         "ChangeLevelButton"
                     ],
-                    "ChangeLevelButton.levelName": "Level06",
+                    "ChangeLevelButton.levelName": "Level05",
                     "texture": {
                         "key": "Buttons_sheet",
                         "frame": 4
@@ -67,7 +67,7 @@
                     "label": "bitmaptext6",
                     "components": [],
                     "y": 160,
-                    "text": "Level 06",
+                    "text": "Level 6",
                     "font": "scott-script-bold-3",
                     "fontSize": 30
                 },
@@ -77,7 +77,7 @@
                     "label": "level6",
                     "components": [],
                     "texture": {
-                        "key": "Level6"
+                        "key": "Level5"
                     },
                     "scaleX": 0.35,
                     "scaleY": 0.35
@@ -99,7 +99,7 @@
                     "components": [
                         "ChangeLevelButton"
                     ],
-                    "ChangeLevelButton.levelName": "Level05",
+                    "ChangeLevelButton.levelName": "Level06",
                     "texture": {
                         "key": "Buttons_sheet",
                         "frame": 0
@@ -112,7 +112,7 @@
                     "label": "bitmaptext5",
                     "components": [],
                     "y": 160,
-                    "text": "Level 05",
+                    "text": "Level 5",
                     "font": "scott-script-bold-3",
                     "fontSize": 30
                 },
@@ -122,7 +122,7 @@
                     "label": "level5",
                     "components": [],
                     "texture": {
-                        "key": "Level5"
+                        "key": "Level6"
                     },
                     "scaleX": 0.35,
                     "scaleY": 0.35
@@ -158,7 +158,7 @@
                     "label": "bitmaptext4",
                     "components": [],
                     "y": 160,
-                    "text": "Level 04",
+                    "text": "Level 4",
                     "font": "scott-script-bold-3",
                     "fontSize": 30
                 },
@@ -204,7 +204,7 @@
                     "label": "bitmaptext3",
                     "components": [],
                     "y": 160,
-                    "text": "Level 03",
+                    "text": "Level 3",
                     "font": "scott-script-bold-3",
                     "fontSize": 30
                 },
@@ -250,7 +250,7 @@
                     "label": "bitmaptext2",
                     "components": [],
                     "y": 160,
-                    "text": "Level 02",
+                    "text": "Level 2",
                     "font": "scott-script-bold-3",
                     "fontSize": 30
                 },
@@ -295,7 +295,7 @@
                     "label": "bitmaptext1",
                     "components": [],
                     "y": 160,
-                    "text": "Level 01",
+                    "text": "Level 1",
                     "font": "scott-script-bold-3",
                     "fontSize": 30
                 },

@@ -157,9 +157,6 @@ class Level03 extends Phaser.Scene {
 		const antiGravZone1x2PrefabRectanglePhysics = RectanglePhysics.getComponent(antiGravZone1x2Prefab);
 		antiGravZone1x2PrefabRectanglePhysics.angle = 90;
 
-		// player (components)
-		new ControllableObject(player);
-
 		// levelCompletePanel_P.replayButton (components)
 		const levelCompletePanel_P_replayButtonChangeLevelButton = ChangeLevelButton.getComponent(levelCompletePanel_P.replayButton);
 		levelCompletePanel_P_replayButtonChangeLevelButton.levelName = "Level03";

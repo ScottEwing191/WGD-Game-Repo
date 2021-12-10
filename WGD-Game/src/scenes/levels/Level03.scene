@@ -339,9 +339,7 @@
             ],
             "label": "player",
             "scope": "PUBLIC",
-            "components": [
-                "ControllableObject"
-            ],
+            "components": [],
             "x": 960,
             "y": 64
         },

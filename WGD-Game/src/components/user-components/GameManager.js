@@ -42,9 +42,9 @@ class GameManager {
         this.modeInput.enterPlay.on('down', () => {
             this.switchToPlayMode();
         });
-        this.modeInput.newScene.on('down', () => {
+        /*this.modeInput.newScene.on('down', () => {
             this.newScene();
-        });
+        });*/
         this.resets = 0;
         this.levelFinished = false;
     }

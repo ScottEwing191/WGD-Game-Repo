@@ -487,16 +487,6 @@
                 "key": "Pencil_dirt_3"
             },
             {
-                "url": "assets/images/pencil/Pencil_grass_dirt_2.png",
-                "type": "image",
-                "key": "Pencil_grass_dirt_2"
-            },
-            {
-                "url": "assets/images/pencil/Pencil_grass_dirt_3.png",
-                "type": "image",
-                "key": "Pencil_grass_dirt_3"
-            },
-            {
                 "url": "assets/images/pencil/Pencil_ice_2_crop.png",
                 "type": "image",
                 "key": "Pencil_ice_2_crop"

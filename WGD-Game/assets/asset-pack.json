@@ -206,41 +206,6 @@
                 "key": "Crayon_256"
             },
             {
-                "url": "assets/images/crayon/Crayon_boost_1_128x128.png",
-                "type": "image",
-                "key": "Crayon_boost_1_128x128"
-            },
-            {
-                "url": "assets/images/crayon/Crayon_dirt_2.png",
-                "type": "image",
-                "key": "Crayon_dirt_2"
-            },
-            {
-                "url": "assets/images/crayon/Crayon_dirt_3.png",
-                "type": "image",
-                "key": "Crayon_dirt_3"
-            },
-            {
-                "url": "assets/images/crayon/Crayon_grass_dirt_2.png",
-                "type": "image",
-                "key": "Crayon_grass_dirt_2"
-            },
-            {
-                "url": "assets/images/crayon/Crayon_grass_dirt_3.png",
-                "type": "image",
-                "key": "Crayon_grass_dirt_3"
-            },
-            {
-                "url": "assets/images/crayon/Crayon_rock_2.png",
-                "type": "image",
-                "key": "Crayon_rock_2"
-            },
-            {
-                "url": "assets/images/crayon/Crayon_rock_3.png",
-                "type": "image",
-                "key": "Crayon_rock_3"
-            },
-            {
                 "url": "assets/dino.png",
                 "key": "dino",
                 "type": "image"
@@ -249,11 +214,6 @@
                 "url": "assets/images/pencil/DoodleCourse Curved.png",
                 "type": "image",
                 "key": "DoodleCourse Curved"
-            },
-            {
-                "url": "assets/images/pencil/Game Logo.png",
-                "type": "image",
-                "key": "Game Logo"
             },
             {
                 "url": "src/components/user-components/GameManager.js",
@@ -472,31 +432,6 @@
                 "key": "Pencil_ball_256"
             },
             {
-                "url": "assets/images/pencil/Pencil_boost_1_128x128.png",
-                "type": "image",
-                "key": "Pencil_boost_1_128x128"
-            },
-            {
-                "url": "assets/images/pencil/Pencil_dirt_2.png",
-                "type": "image",
-                "key": "Pencil_dirt_2"
-            },
-            {
-                "url": "assets/images/pencil/Pencil_dirt_3.png",
-                "type": "image",
-                "key": "Pencil_dirt_3"
-            },
-            {
-                "url": "assets/images/pencil/Pencil_grass_dirt_2.png",
-                "type": "image",
-                "key": "Pencil_grass_dirt_2"
-            },
-            {
-                "url": "assets/images/pencil/Pencil_grass_dirt_3.png",
-                "type": "image",
-                "key": "Pencil_grass_dirt_3"
-            },
-            {
                 "url": "assets/images/pencil/Pencil_ice_2_crop.png",
                 "type": "image",
                 "key": "Pencil_ice_2_crop"
@@ -505,36 +440,6 @@
                 "url": "assets/images/pencil/Pencil_ice_3_crop.png",
                 "type": "image",
                 "key": "Pencil_ice_3_crop"
-            },
-            {
-                "url": "assets/images/pencil/Pencil_rainbow_2_big.png",
-                "type": "image",
-                "key": "Pencil_rainbow_2_big"
-            },
-            {
-                "url": "assets/images/pencil/Pencil_rainbow_2_small.png",
-                "type": "image",
-                "key": "Pencil_rainbow_2_small"
-            },
-            {
-                "url": "assets/images/pencil/Pencil_rainbow_3_big.png",
-                "type": "image",
-                "key": "Pencil_rainbow_3_big"
-            },
-            {
-                "url": "assets/images/pencil/Pencil_rainbow_3_small.png",
-                "type": "image",
-                "key": "Pencil_rainbow_3_small"
-            },
-            {
-                "url": "assets/images/pencil/Pencil_rock_2.png",
-                "type": "image",
-                "key": "Pencil_rock_2"
-            },
-            {
-                "url": "assets/images/pencil/Pencil_rock_3.png",
-                "type": "image",
-                "key": "Pencil_rock_3"
             },
             {
                 "url": "assets/images/pencil/Pencil_grass_rock_2_crop.png",

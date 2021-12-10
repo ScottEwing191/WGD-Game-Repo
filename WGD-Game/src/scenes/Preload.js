@@ -26,12 +26,18 @@ class Preload extends Phaser.Scene {
 		const guapen = this.add.image(400, 219, "guapen");
 		guapen.scaleX = 0.5915891440784282;
 		guapen.scaleY = 0.5915891440784282;
+		guapen.visible = false;
 
 		// progress
-		const progress = this.add.text(400, 349, "", {});
+		const progress = this.add.text(512, 550, "", {});
+		progress.scaleX = 2;
+		progress.scaleY = 2;
 		progress.setOrigin(0.5, 0.5);
 		progress.text = "0%";
-		progress.setStyle({ "fontSize": "30px" });
+		progress.setStyle({"fontSize":"30px"});
+
+		// game_Logo
+		this.add.image(512, 416, "Game Logo");
 
 		// progress (components)
 		new PreloadText(progress);

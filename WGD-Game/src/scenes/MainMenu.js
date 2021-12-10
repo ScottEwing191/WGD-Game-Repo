@@ -145,6 +145,7 @@ class MainMenu extends Phaser.Scene {
 	create() {
 
 		this.editorCreate();
+		this.sound.play("book_Page_Turn");					// play paper sound on scene start
 	}
 
 	/*nextLevel(){

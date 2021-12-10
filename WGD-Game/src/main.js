@@ -12,12 +12,8 @@ window.addEventListener('load', function () {
         physics: {
              default: 'matter',
             matter: {
-                debug: true,
+                //debug: true,
                 gravity: {y: 0.5},
-                /*runner:{
-                    isFixed: true,
-                    fps: 60
-                }*/
             }
         },
     });
@@ -31,9 +27,9 @@ window.addEventListener('load', function () {
     game.scene.add("Level04", Level04);
     game.scene.add("Level05", Level05);
     game.scene.add("Level06", Level06);
-    game.scene.add("Level", Level);
-    game.scene.add("Level1", Level1);
-    game.scene.add("LevelTest", LevelTest);
+    //game.scene.add("Level", Level);
+    //game.scene.add("Level1", Level1);
+    //game.scene.add("LevelTest", LevelTest);
     game.scene.add("Boot", Boot, true);
 });
 

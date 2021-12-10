@@ -7,7 +7,9 @@
             "starter-template-basic-typescript/assets/asset-pack.json"
         ],
         "createMethodName": "editorCreate",
-        "sceneKey": "Preload"
+        "sceneKey": "Preload",
+        "borderWidth": 1024,
+        "borderHeight": 832
     },
     "displayList": [
         {
@@ -21,7 +23,8 @@
             "x": 400,
             "y": 219,
             "scaleX": 0.5915891440784282,
-            "scaleY": 0.5915891440784282
+            "scaleY": 0.5915891440784282,
+            "visible": false
         },
         {
             "type": "Text",
@@ -30,10 +33,23 @@
             "components": [
                 "PreloadText"
             ],
-            "x": 400,
-            "y": 349,
+            "x": 512,
+            "y": 550,
+            "scaleX": 2,
+            "scaleY": 2,
             "text": "0%",
             "fontSize": "30px"
+        },
+        {
+            "type": "Image",
+            "id": "17aa4f79-d258-4f4e-9dfb-b804491bfb0e",
+            "label": "game_Logo",
+            "components": [],
+            "texture": {
+                "key": "Game Logo"
+            },
+            "x": 512,
+            "y": 416
         }
     ],
     "plainObjects": [],
